@@ -27,6 +27,16 @@ Cara memverifikasi: lihat alur PubMed di [environment](environment.md). Teks len
 | 05 | Kompresi 100–120/menit, kedalaman 5–6 cm, recoil penuh, 30:2, cek napas/nadi ≤ 10 detik, jeda < 10 detik, ganti penolong tiap ± 2 menit | Del Rios 2025 Part 1 (hanya ringkasan eksekutif; bab BLS dewasa tidak dibaca) | Belum diverifikasi |
 | 06 | Diuretik loop IV dengan dosis awal ≥ dosis oral harian (contoh 40–80 mg); oksigen bila SpO₂ < 90%; NIV bila distres; nitrat bila TD sistolik adekuat; morfin tidak rutin; pencetus akut (SKA, krisis hipertensi, aritmia, penyebab mekanik, emboli paru; dalam ESC 2021 disingkat CHAMP); profil hangat–basah/dingin–basah | McDonagh 2021; Heidenreich 2022 | Belum diverifikasi |
 
+### Klaim tambahan di aplikasi (belum diverifikasi)
+
+| Stasiun | Klaim | Status |
+|---------|-------|--------|
+| 02 | Morfin IV rutin tidak dianjurkan pada STEMI; oksigen hanya bila SpO₂ < 90%; menunda reperfusi untuk menunggu troponin/CT koroner berisiko | Belum diverifikasi |
+| 03 | Uji treadmill tidak aman pada stenosis aorta berat bergejala; CT angiografi koroner bukan langkah awal menilai katup; gejala klasik (angina, sinkop, gagal jantung) | Belum diverifikasi; guideline katup belum dikutip |
+| 04 | Manset terlalu kecil membuat bacaan terlalu tinggi, terlalu besar terlalu rendah (di aplikasi: +10 / −8 mmHg, nilai ilustrasi); bicara saat pengukuran menaikkan TD; diagnosis hipertensi perlu dikonfirmasi sebelum obat | Arah efek standar; besaran ilustrasi; belum diverifikasi |
+| 05 | Pad AED di infraklavikula kanan dan apeks kiri; jangan cek nadi setelah syok, langsung RJP 2 menit; AED menganalisis ulang tiap ± 2 menit; ganti penolong tiap ± 2 menit | Belum diverifikasi ke bab BLS dewasa |
+| 06 | Furosemid 20 mg IV atau oral tidak memadai pada kongesti berat; inotrop tidak diindikasikan pada profil hangat–basah; penghambat beta IV pada dekompensasi akut dan bolus cairan berisiko; NSAID memperburuk retensi cairan | Belum diverifikasi |
+
 ## Yang sudah diverifikasi
 
 - Metadata 6 guideline (Gulati 2021, Rao 2025, Byrne 2023, McEvoy 2024, Jones 2025, Del Rios 2025 Part 1) lewat `get_article_metadata`.
