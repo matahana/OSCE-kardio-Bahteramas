@@ -31,6 +31,10 @@ Pelajaran teknis dari sesi pertama supaya tidak perlu ditemukan ulang.
 - Repo belum punya CI/workflow dan belum punya `.claude/skills/steward` atau `babysit`.
 - PubMed sesi 2: `lookup_article_by_citation` kena *rate limit* bila dipanggil beruntun (tunggu beberapa detik); pada satu panggilan hasilnya menukar isi bidang `pmid` dan `key`, jadi **selalu konfirmasi dengan `get_article_metadata`**. `search_articles` untuk judul guideline mengembalikan juga *erratum* dan versi ganda (AF ACC/AHA terbit di *Circulation* dan *JACC*); pilih artikel asli. Metadata guideline ESC tidak menyertakan abstrak.
 
+## Ketersediaan teks lengkap guideline di PMC (dicek sesi 2, `convert_article_ids`)
+
+Dari 15 guideline yang dirujuk repositori, **hanya Joglar 2023 (AF ACC/AHA, PMID 38033089) yang punya PMCID: PMC11095842** (versi JACC PMC11104284). Tidak ada PMCID untuk: Gulati 2021, Rao 2025, Byrne 2023, McEvoy 2024, Jones 2025, Del Rios 2025, McDonagh 2021, Heidenreich 2022, Virani 2023, Van Gelder 2024, Shen 2017, Brignole 2018, Otto 2020, Vahanian 2021. Akibatnya klaim klinis hanya dapat diverifikasi ke teks lengkap untuk **AF (S08, sebagian S11)**; selebihnya perlu teks dari pengguna (PDF/tempelan) atau review kardiolog.
+
 ## Alur verifikasi PubMed
 
 Tool `mcp__PubMed__*` bersifat deferred; muat dengan ToolSearch (`select:mcp__PubMed__search_articles,...`).

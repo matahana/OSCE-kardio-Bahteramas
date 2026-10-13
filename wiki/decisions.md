@@ -28,6 +28,7 @@ Format: keputusan, alasan, siapa yang memutuskan. "Usulan" berarti belum disetuj
 | D17 | PR #2 dibuat bertumpuk di atas branch PR #1 (basis = branch PR #1, bukan `main`) | Diff hanya memuat perubahan baru karena PR #1 belum di-merge | Claude (usulan, sesi 2); **diganti**: setelah PR #1 di-merge, basis dialihkan ke `main` |
 | D18 | S10 sinkop dipilih sebagai stasiun berikutnya atas permintaan "lanjut stasiun berikutnya"; kasus dibuat berisiko tinggi dengan pengecoh (tamsulosin) | Menguji stratifikasi risiko dan keputusan rawat, bukan sekadar menyalahkan hipotensi ortostatik; anamnesis sebelumnya hanya nyeri dada (S01) dan GJ/hipertensi | Claude (usulan, sesi 2) |
 | D19 | S11 pemeriksaan fisik kardiovaskular memakai sukarelawan sehat + penguji membacakan temuan; kasus stenosis mitral rematik dengan AF; bising diastolik hanya dibacakan bila bell + miring kiri + akhir ekspirasi | Mengisi domain pemeriksaan (teknik utuh) yang belum diuji; menyambung ke S08 (AF valvular) dan relevan dengan penyakit jantung rematik di Indonesia; sedikit angka klinis sehingga risiko konten belum terverifikasi lebih kecil | Claude (usulan, sesi 2) |
+| D20 | S12 ACLS irama tidak dapat disyok dengan penyebab hiperkalemia (pasien dialisis); alur waktu dikendalikan penguji; dosis obat tidak dinilai | Domain keselamatan dan kerja tim hanya punya satu stasiun utama (S05); menguji kepemimpinan tim, penyebab reversibel, dan serah terima. Dosis tidak dinilai karena belum terverifikasi dan bervariasi antar protokol | Claude (usulan, sesi 2) |
 
 ## Prinsip yang dipegang
 

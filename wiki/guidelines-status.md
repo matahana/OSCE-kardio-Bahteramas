@@ -49,6 +49,10 @@ Cara memverifikasi: lihat alur PubMed di [environment](environment.md). Teks len
 | 11 | Temuan auskultasi stenosis mitral: S1 keras, opening snap, rumble diastolik apeks yang terbaik dengan bell, miring kiri, akhir ekspirasi; tanpa aksentuasi presistolik pada AF; regurgitasi aorta terdengar terbaik duduk condong ke depan, akhir ekspirasi | Buku ajar; Otto 2020; Vahanian 2021 (isi tidak dibaca) | Standar buku ajar; belum dicocokkan ke guideline katup |
 | 11 | AF dengan stenosis mitral sedang–berat: antagonis vitamin K, bukan DOAC | Otto 2020; Vahanian 2021; Joglar 2024 (isi tidak dibaca) | **Belum diverifikasi** |
 | 11 | Profilaksis sekunder demam rematik/penyakit jantung rematik; rencana lanjut EKG dan ekokardiografi | Tidak ada rujukan khusus (WHO/guideline PJR belum ditambahkan) | Belum ada rujukan |
+| 12 | Asistol/PEA tidak dapat disyok; RJP berkualitas; epinefrin IV/IO sedini mungkin, diulang tiap 3–5 menit; cek irama tiap 2 menit | Del Rios 2025 Part 1 (hanya ringkasan eksekutif; bab ALS dewasa tidak dibaca) | **Belum diverifikasi** |
+| 12 | Penyebab reversibel H dan T (hipoksia, hipovolemia, hiperkalemia/elektrolit, hipotermia, ion hidrogen; tension pneumotoraks, tamponade, toksin, trombosis) | Del Rios 2025 Part 1 (tidak dibaca per bab) | Belum diverifikasi |
+| 12 | Hiperkalemia pada henti jantung: kalsium IV segera, insulin + dekstrosa, pertimbangan natrium bikarbonat; kalsium menstabilkan membran, tidak menurunkan kalium | Del Rios 2025 Part 1 (tidak dibaca per bab); pedoman hiperkalemia belum dikutip | **Belum diverifikasi; tidak ada rujukan khusus hiperkalemia** |
+| 12 | Pasca-ROSC: hindari hipoksia, hiperventilasi, dan hipotensi; EKG 12 sadapan; manajemen suhu terarah; glukosa | Del Rios 2025 Part 1 (tidak dibaca per bab) | Belum diverifikasi |
 
 ## Yang sudah diverifikasi
 

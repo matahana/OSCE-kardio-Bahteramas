@@ -77,3 +77,17 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 **Keputusan:** D19.
 
 **Belum selesai:** sama seperti entri sebelumnya, ditambah rujukan PJR/profilaksis sekunder, hubungan S03 ke guideline katup, dan uji waktu S11.
+
+## [2026-10-13] sesi 2 (lanjutan 3) | Stasiun 12 ACLS; ketersediaan teks lengkap PMC
+
+**Permintaan pengguna:** "lanjut stasiun berikutnya."
+
+**Tindakan dan hasil**
+- Sebelum menulis: `git fetch` (tidak ada commit baru), tidak ada notifikasi atau review.
+- Dicoba memverifikasi klaim klinis ke teks lengkap: `convert_article_ids` pada 15 guideline menunjukkan **hanya Joglar 2023 (AF) yang ada di PMC** (PMC11095842). Dicatat di [environment](environment.md); `open-items` diperbarui agar verifikasi AF (S08, sebagian S11) dikerjakan lebih dulu.
+- Stasiun dipilih dari bank blueprint: ACLS irama tidak dapat disyok (D20), karena domain keselamatan dan kerja tim hanya punya satu stasiun utama (S05). `stasiun/12-acls-irama-tidak-dapat-disyok.md`: 25 butir, butir kritis A1, A2, B2, B3, C1. Dosis obat tidak dinilai.
+- Diperbarui: README, blueprint (baris 12, aturan S05/S12 tidak satu sirkuit), standar penilaian (S12 = 25), `CLAUDE.md`, wiki (`stations`, `guidelines-status` dengan empat klaim S12 belum diverifikasi, `decisions` D20, `open-items`, `overview`, `index`, `environment`). `tools/cek_skor.py` keluar kode 0, total 265.
+
+**Keputusan:** D20.
+
+**Belum selesai:** sama seperti entri sebelumnya, ditambah rujukan hiperkalemia, verifikasi AF ke teks lengkap, dan uji waktu S12.

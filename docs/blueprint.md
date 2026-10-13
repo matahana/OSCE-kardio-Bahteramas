@@ -1,6 +1,6 @@
 # Blueprint OSCE Kardiovaskular
 
-> **DRAF v0.2** — bank berisi 11 stasiun; satu sirkuit ujian terdiri dari 6 stasiun yang dipilih dari bank (lihat [Menyusun sirkuit](#menyusun-sirkuit-dari-bank-stasiun)).
+> **DRAF v0.2** — bank berisi 12 stasiun; satu sirkuit ujian terdiri dari 6 stasiun yang dipilih dari bank (lihat [Menyusun sirkuit](#menyusun-sirkuit-dari-bank-stasiun)).
 
 Blueprint memastikan ujian mencakup kompetensi yang direncanakan secara proporsional, bukan sekadar kumpulan stasiun yang kebetulan tersedia.
 
@@ -29,6 +29,7 @@ Blueprint memastikan ujian mencakup kompetensi yang direncanakan secara proporsi
 | 09 | [Hipertensi emergensi](../stasiun/09-hipertensi-emergensi.md) | ● | ● | ○ | ● | ○ | ○ |
 | 10 | [Sinkop: anamnesis dan stratifikasi risiko](../stasiun/10-sinkop.md) | ● | ○ | ● | ○ | ○ | ○ |
 | 11 | [Pemeriksaan fisik kardiovaskular sistematis](../stasiun/11-pemeriksaan-fisik-kardiovaskular.md) |   | ● | ○ | ○ | ○ | ○ |
+| 12 | [ACLS: irama tidak dapat disyok](../stasiun/12-acls-irama-tidak-dapat-disyok.md) |   | ○ | ○ | ● | ○ | ● |
 
 ## Menyusun sirkuit dari bank stasiun
 
@@ -36,6 +37,7 @@ Pilih 6 stasiun per sirkuit dengan aturan berikut, lalu periksa matriks di atas:
 
 1. Tiap domain (kolom) punya **minimal satu stasiun utama (●)** dalam sirkuit.
 2. Bila lebih dari satu sirkuit dipakai pada hari yang sama, stasiun yang sama dinilai dengan lembar yang sama, dan batas lulus dihitung per stasiun (lihat [standar penilaian](standar-penilaian.md#7-lebih-dari-satu-sirkuit)).
+3. Disarankan tidak memasang dua stasiun resusitasi (S05 dan S12) dalam satu sirkuit.
 
 Contoh sirkuit (keduanya memenuhi aturan 1):
 
@@ -56,7 +58,7 @@ Petakan tiap stasiun ke area kompetensi dan tingkat kemampuan yang berlaku di in
 - [x] Edukasi pasca-infark miokard dan pencegahan sekunder (S07)
 - [x] Interpretasi EKG: fibrilasi atrium (S08)
 - [ ] Interpretasi EKG lain: blok AV derajat tinggi, takikardia kompleks lebar
-- [ ] ACLS: irama tidak dapat diberi syok dan penggunaan obat
+- [x] ACLS: irama tidak dapat diberi syok dan penggunaan obat (S12)
 - [x] Hipertensi emergensi: penilaian kerusakan organ target dan tatalaksana awal (S09)
 - [x] Sinkop: anamnesis, pemeriksaan ortostatik, dan stratifikasi risiko (S10)
 - [x] Pemeriksaan fisik kardiovaskular lengkap (S11; nadi perifer lengkap dan pemeriksaan arteri perifer belum tercakup)
