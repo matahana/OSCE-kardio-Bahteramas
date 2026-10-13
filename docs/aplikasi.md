@@ -14,7 +14,7 @@ Seluruh proses berjalan di peramban; tidak ada data yang dikirim ke server. Riwa
 
 ## Fitur
 
-- **Latihan mandiri** untuk 6 stasiun (01–06; stasiun 07–14 sudah ada di bank markdown dan generator, tetapi belum punya definisi interaksi sehingga beranda menandainya "Segera hadir"): bank pertanyaan/tindakan dengan respons pasien simulasi, form jawaban terstruktur, dan widget interaktif.
+- **Latihan mandiri** untuk seluruh 14 stasiun (stasiun baru yang belum punya definisi interaksi tetap tampil di beranda sebagai "Segera hadir"): bank pertanyaan/tindakan dengan respons pasien simulasi, form jawaban terstruktur, dan widget interaktif.
 - **Jam simulasi**: tiap tindakan memakan detik simulasi (tertera di tombol); stasiun berakhir saat jam habis. Waktu nyata tidak dihitung, sehingga hasil deterministik dan "klik semua" tidak berhasil. Pertanyaan wajar tetapi tidak menentukan skor sengaja ada agar kandidat harus memprioritaskan.
 - **Penilaian otomatis** per butir checklist, termasuk skor sebagian, butir kritis ⚠, tindakan tidak tepat (berisiko waktu) dan tindakan berisiko (menggagalkan perkiraan global).
 - **Hasil**: checklist, tindakan tidak tepat/berisiko, pertanyaan lanjutan, contoh urutan ideal, catatan pembuat soal, rujukan, rekam tindakan, ekspor JSON, cetak.
@@ -26,8 +26,8 @@ Seluruh proses berjalan di peramban; tidak ada data yang dikirim ke server. Riwa
 
 | Widget | Stasiun | Isi |
 |--------|---------|-----|
-| EKG 12 sadapan sintetis | 02 | Dibangkitkan dari parameter per sadapan (25 mm/dtk, 10 mm/mV); tombol layar penuh |
-| Steteskop | 03 | Bunyi jantung disintesis (Web Audio); titik auskultasi, diafragma/bell, bantuan teks |
+| EKG 12 sadapan sintetis | 02, 08, 14 | Dibangkitkan dari parameter per sadapan (25 mm/dtk, 10 mm/mV); tombol layar penuh. Irama `sinus` (default), `fa` (R–R ireguler tanpa P; 08) dan `blok_av3` (P teratur + QRS pelarian lebar teratur; 14) dibangkitkan deterministik oleh `OSCE.logika.irama` |
+| Steteskop | 03, 11 | Bunyi jantung disintesis (Web Audio); titik auskultasi (stasiun 11 menambah aksila), diafragma/bell, bantuan teks. Stasiun 11: irama tidak teratur, aksentuasi P2, opening snap, dan rumble diastolik apeks yang hanya terdengar dengan bell + miring kiri + tahan ekspirasi (`profil.diastolik.syarat`) |
 | Tensimeter aneroid + Korotkoff | 04 | Pompa, katup, nadi radialis, bunyi Korotkoff; ukuran manset memengaruhi pembacaan |
 | Uji ritme kompresi | 05 | Ketukan 15 detik; laju dari median selang; metronom untuk latihan |
 
@@ -62,7 +62,7 @@ Prinsip: **checklist hanya ada di markdown stasiun.** Generator membacanya (id, 
 | `pasien`, `tandaVital`, `petunjuk` | Kartu pasien dan tanda vital awal |
 | `waktu` | Detik jam simulasi (480 untuk 8 menit) |
 | `panel` | Tab: `aksi` (daftar tombol bergrup), `form` (jawaban terstruktur, `biaya`), `widget` (`widget` + `opsi`) |
-| `widgetUtama` | Widget yang selalu tampil (mis. EKG pada stasiun 02) |
+| `widgetUtama` | Widget yang selalu tampil (mis. EKG pada stasiun 02, 08, 14) |
 | `jadwal` | Peristiwa terpicu waktu: `{pada, id, pesan}` (mis. tim ACLS tiba pada 360 dtk) |
 | `acara` | Daftar id peristiwa yang boleh dipancarkan widget |
 | `skor` | Fungsi skor per id butir checklist |

@@ -12,7 +12,7 @@ Repositori materi OSCE kardiovaskular. Instruksi ini dimuat otomatis pada awal s
 
 - Pemilik: dokter spesialis kardiologi dan peneliti epidemiologi. Bahasa: **Bahasa Indonesia**, profesional dan akurat, berbasis guideline terkini (ACC/AHA, ESC, WHO, dan PERKI untuk konteks Indonesia).
 - **Hanya repositori ini** yang dikerjakan. Repositori `panduan-ibadah` tidak terkait: jangan dibaca, diubah, atau di-push (permintaan eksplisit pengguna, 13 Oktober 2026).
-- Isi: bank 14 stasiun OSCE kardiovaskular (DRAF v0.2; satu sirkuit memakai 6 stasiun), blueprint, standar penilaian, panduan penguji/pasien simulasi, rujukan, dan **aplikasi web simulasi** (`app/`; saat ini hanya stasiun 01–06 yang punya interaksi, stasiun 07–14 belum).
+- Isi: bank 14 stasiun OSCE kardiovaskular (DRAF v0.2; satu sirkuit memakai 6 stasiun), blueprint, standar penilaian, panduan penguji/pasien simulasi, rujukan, dan **aplikasi web simulasi** (`app/`; seluruh 14 stasiun punya interaksi, `cek_interaksi.mjs --ketat` lulus).
 
 ## Struktur
 

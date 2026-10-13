@@ -8,7 +8,7 @@ Repositori materi OSCE (*Objective Structured Clinical Examination*) kardiovasku
 
 Buka [`app/index.html`](app/index.html) di peramban (tanpa server, tanpa instalasi), atau lewat web setelah GitHub Pages diaktifkan (Settings → Pages → `main` / root): https://matahana.github.io/OSCE-kardio-Bahteramas/ (mengalihkan ke `app/`; belum masuk mesin pencari karena `noindex` sampai konten direview).
 
-- **Latihan mandiri** untuk stasiun 01–06 (stasiun 07–14 sudah ada di bank tetapi belum punya interaksi di aplikasi): pasien simulasi, form jawaban, EKG sintetis, steteskop, tensimeter virtual, dan uji ritme kompresi. Jam simulasi memaksa prioritas; hasil menampilkan checklist, tindakan berisiko, pembahasan, dan contoh urutan ideal.
+- **Latihan mandiri** untuk seluruh 14 stasiun: pasien simulasi, form jawaban, EKG sintetis (STEMI inferior, fibrilasi atrium, blok AV derajat tiga), steteskop (bunyi jantung dan bising mitral bersyarat), tensimeter virtual, dan uji ritme kompresi. Jam simulasi memaksa prioritas; hasil menampilkan checklist, tindakan berisiko, pembahasan, dan contoh urutan ideal.
 - **Mode penguji**: lembar penilaian digital dengan penghitung waktu, skor langsung, penilaian global, dan ekspor.
 - Checklist dibaca dari dokumen stasiun lewat generator, sehingga aplikasi dan dokumen tidak menyimpang. Rincian arsitektur, cara menambah stasiun, dan pemeriksaan: [docs/aplikasi.md](docs/aplikasi.md).
 

@@ -185,3 +185,22 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 
 **Belum selesai:** keputusan pengguna soal interaksi aplikasi stasiun 07–14; sisanya seperti entri sebelumnya.
 
+
+## [2026-10-13] sesi 2 (lanjutan 8) | Interaksi aplikasi stasiun 07–14 (opsi 1, 2, 3 bertahap) dan penutupan sesi
+
+**Permintaan:** "lakukan opsi 1, 2 dan 3 secara bertahap, lalu pull semua yang diperlukan agar sesi ini bisa diakhiri" (opsi = pilihan atas CI PR #2 yang gagal di `cek_interaksi.mjs`; lihat lanjutan 7).
+
+**Tindakan**
+- **Opsi 2:** `tools/cek_interaksi.mjs` melaporkan stasiun tanpa interaksi sebagai "segera hadir" (kode 0); `--ketat` menggagalkannya. Dicatat di `docs/aplikasi.md` dan `CLAUDE.md` (D34).
+- **Opsi 1:** interaksi `app/data/interaksi/07.js`–`14.js` ditulis dan diuji satu per satu (daftarkan `<script>`, jalankan pemeriksa, setel biaya, commit). Widget diperluas tanpa merusak 01–06: EKG sintetis irama `fa` (08) dan `blok_av3` (14) lewat `OSCE.logika.irama`; steteskop dengan situs aksila, irama tidak teratur, aksentuasi P2, opening snap, dan rumble diastolik bersyarat (bell + miring kiri + tahan ekspirasi) (S11). Parameter EKG disetel dari tangkapan layar (blok AV: `lebarQRS` 2,8, bukan 1,9 yang terlalu sempit).
+- Stasiun 12 mendapat satu baris data baru (EKG 12 sadapan pasca-ROSC: sinus, T runcing, tanpa elevasi ST) agar selaras dengan respons aplikasi; `buat_data.py` diregenerasi.
+- **Opsi 3:** tidak diperlukan; seluruh 14 stasiun lolos uji (D35).
+- `tests/e2e.mjs`: daftar stasiun berinteraksi dihitung dinamis dari data, asersi beranda diperbarui, `NAMA_SITUS.aksila` ditambah.
+
+**Hasil (pohon kerja, sebelum push):** `cek_skor.py` lulus (14 stasiun, total 305); `buat_data.py --cek` sinkron; `cek_interaksi.mjs` dan `--ketat`: 14 stasiun konsisten, ideal 100%, sisa waktu 66–239 dtk (terkecil S12), klik-semua 25–100% (S06 100% dan S09 95% sudah bercatatan); e2e Chromium **425 lulus, 0 gagal**; tangkapan layar S11, S12, S14 diperiksa visual.
+
+**Klaim klinis:** alasan "tidak tepat/berisiko" baru dicatat di [guidelines-status](guidelines-status.md#klaim-tambahan-di-aplikasi-belum-diverifikasi). Hanya yang terkait AF dan stenosis mitral (S08, S11) terverifikasi ke teks lengkap Joglar 2023; S07, S09, S10, S12, S13, S14 **belum diverifikasi**.
+
+**Keputusan:** D34–D38. PR #2 tidak di-merge oleh Claude; keputusan merge ada pada pengguna.
+
+**Belum selesai:** review kardiolog atas teks respons dan pengecoh 07–14; verifikasi klaim ke teks guideline (tertahan akses jaringan); uji coba pengguna dan uji waktu S12 (jam dipadatkan); gambar EKG nyata berlisensi; PERKI/PERHI.

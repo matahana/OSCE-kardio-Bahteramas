@@ -20,7 +20,9 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 ## P0 — aplikasi
 
 - [ ] Uji coba dengan pengguna nyata (kandidat dan penguji) lalu perbaiki alur, biaya waktu, dan teks respons berdasarkan umpan balik.
-- [ ] Review kardiolog juga atas teks respons pasien, pengecoh, dan alasan "tidak tepat/berisiko" di `app/data/interaksi/*.js`.
+- [ ] Review kardiolog juga atas teks respons pasien, pengecoh, dan alasan "tidak tepat/berisiko" di `app/data/interaksi/*.js` (07–14 baru ditulis tanpa uji pengguna; klaim yang belum terverifikasi ada di [guidelines-status](guidelines-status.md#klaim-tambahan-di-aplikasi-belum-diverifikasi)).
+- [ ] Uji coba waktu S12 di aplikasi: siklus RJP dipadatkan ≈ 45 dtk (D37); periksa apakah pemadatan itu wajar bagi kandidat atau sebaiknya jam S12 diubah.
+- [ ] Pertimbangkan pemeriksaan otomatis jumlah QRS pada EKG sintetis (08, 14) terhadap laju di `cek_interaksi.mjs`; saat ini laju diperiksa lewat tangkapan layar dan uji e2e.
 
 ## P1 — kelengkapan
 
@@ -54,7 +56,7 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 ## Proses
 
 - [x] PR #1, #3, dan #4 sudah di-merge pengguna ke `main` (13 Oktober 2026).
-- [ ] **PR #2 (draft, S07–S14): gabungkan dengan keputusan pengguna.** Branch sudah digabung dengan `main` (konflik di README, `CLAUDE.md`, `wiki/` diselesaikan; keputusan saya dinomori ulang D24–D33 karena D14–D23 dipakai `main`; `app/data/stasiun-data.js` diregenerasi). `cek_skor.py` dan `buat_data.py --cek` lulus; **`cek_interaksi.mjs` gagal hanya karena stasiun 07–14 belum punya `app/data/interaksi/NN.js`** (stasiun 01–06 identik dengan `main`). Pilihan: (a) tulis interaksi 07–14 sesuai aturan stasiun baru di `CLAUDE.md` (pekerjaan besar; menambah klaim "tidak tepat/berisiko" yang belum terverifikasi; S08/S14 butuh EKG sintetis, S11 butuh bunyi mitral); (b) ubah `cek_interaksi.mjs` agar stasiun tanpa interaksi dilaporkan "segera hadir" (informasional) dan tetap ketat untuk yang punya interaksi, lalu tulis interaksi bertahap; (c) tahan stasiun 07–14 di luar generator sampai interaksinya siap. Sesi 2 berlangganan pemantauan PR #2.
+- [x] **Penghambat CI PR #2 selesai (13 Oktober 2026, sesi 2 lanjutan 8):** pengguna memilih opsi 1, 2, dan 3 bertahap. Opsi 2: `cek_interaksi.mjs` mengenali stasiun tanpa interaksi sebagai "segera hadir" (`--ketat` menggagalkannya). Opsi 1: interaksi S07–S14 ditulis dan diuji satu per satu; widget EKG (AF, blok AV) dan steteskop (bising mitral bersyarat) diperluas. Opsi 3 tidak diperlukan (semua lolos). Hasil: `cek_skor.py`, `buat_data.py --cek`, `cek_interaksi.mjs --ketat` lulus untuk 14 stasiun; e2e Chromium 425 lulus, 0 gagal. **[PR #2](https://github.com/matahana/OSCE-kardio-Bahteramas/pull/2) masih draft: pengguna yang memutuskan merge.**
 - [ ] Pengguna mengaktifkan GitHub Pages (Settings → Pages → `main` / root); setelah itu verifikasi URL situs (jaringan sesi mungkin tidak menjangkau `github.io`).
 - [ ] Hapus `<meta name="robots" content="noindex, nofollow">` di `app/index.html` dan `index.html` setelah konten direview dan siap dipublikasikan.
 
@@ -68,4 +70,4 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 6. Apakah ingin versi bahasa Inggris?
 7. ~~Aplikasi untuk siapa?~~ **Dijawab 13 Okt 2026:** latihan mahasiswa (simulasi) dan penguji untuk menguji hasil belajar mahasiswa; diakses online lewat GitHub Pages.
 8. Apakah perkiraan penilaian global otomatis (ambang 55/70/85) sesuai, atau ingin kebijakan lain?
-9. Prioritas stasiun berikutnya? S07–S14 dipilih Claude dari bank blueprint (D26, D28–D30, D32, D33); apakah urutan ini sesuai, apakah S06 sebaiknya dipecah, dan apakah stasiun 07–14 perlu interaksi di aplikasi (lihat Proses)?
+9. Prioritas stasiun berikutnya? S07–S14 dipilih Claude dari bank blueprint (D26, D28–D30, D32, D33); apakah urutan ini sesuai, apakah S06 sebaiknya dipecah, dan dan apakah interaksi 07–14 yang kini ada sudah sesuai harapan?
