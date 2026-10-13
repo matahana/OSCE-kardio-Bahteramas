@@ -204,3 +204,13 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 **Keputusan:** D34–D38. PR #2 tidak di-merge oleh Claude; keputusan merge ada pada pengguna.
 
 **Belum selesai:** review kardiolog atas teks respons dan pengecoh 07–14; verifikasi klaim ke teks guideline (tertahan akses jaringan); uji coba pengguna dan uji waktu S12 (jam dipadatkan); gambar EKG nyata berlisensi; PERKI/PERHI.
+
+## [2026-10-13] sesi 2 (lanjutan 9) | Merge PR #2
+
+**Permintaan:** pengguna menulis "merge".
+
+**Tindakan:** status diperiksa dulu (draft, `mergeable_state: clean`, CI run #8 hijau pada head `09e1bb8`, `main` tidak bergerak di `5c52eb7`). PR ditandai siap ditinjau lalu **squash-merge** (pola PR #3 dan #4) menjadi `95f31cd`. Branch kerja di-reset ke `main` terbaru (riwayatnya sudah ter-merge); wiki diperbarui lewat PR draf kecil ini.
+
+**Hasil:** `main` memuat bank 14 stasiun, blueprint sirkuit, dan aplikasi dengan interaksi untuk seluruh 14 stasiun. Konten tetap **DRAF v0.2**, belum direview kardiolog; klaim di luar AF belum diverifikasi ke teks guideline.
+
+**Belum selesai:** tidak berubah dari entri lanjutan 8 (review kardiolog, verifikasi klaim, uji coba pengguna dan uji waktu S12, gambar EKG berlisensi, PERKI/PERHI, aktivasi GitHub Pages oleh pengguna).
