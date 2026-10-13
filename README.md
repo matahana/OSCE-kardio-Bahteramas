@@ -21,6 +21,8 @@ Semua stasiun berdurasi 8 menit (+ 2 menit pindah) dan menguji level Miller *Sho
 
 ```
 README.md
+CLAUDE.md                               instruksi untuk sesi Claude (dimuat otomatis)
+wiki/                                   memori kerja lintas sesi; mulai dari wiki/index.md
 docs/
   blueprint.md                          matriks domain × stasiun, rencana stasiun lanjutan
   standar-penilaian.md                  skor, butir kritis, penetapan batas lulus (BRM), analisis
@@ -31,7 +33,13 @@ templates/
 stasiun/                                satu berkas per stasiun
 referensi/
   README.md                             guideline dan pustaka (terverifikasi PubMed) + sumber yang belum terbaca
+tools/
+  cek_skor.py                           pemeriksa jumlah skor checklist (python3 -I tools/cek_skor.py)
 ```
+
+## Melanjutkan di sesi berikutnya
+
+Baca [wiki/index.md](wiki/index.md), lalu [wiki/open-items.md](wiki/open-items.md). Wiki berisi status proyek, keputusan desain, katalog stasiun, status verifikasi klaim klinis, sumber contoh, dan catatan lingkungan. Aturan kerja ada di [CLAUDE.md](CLAUDE.md).
 
 ## Isi satu stasiun
 
