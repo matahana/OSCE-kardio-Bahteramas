@@ -1,6 +1,6 @@
 # Blueprint OSCE Kardiovaskular
 
-> **DRAF v0.2** — bank berisi 10 stasiun; satu sirkuit ujian terdiri dari 6 stasiun yang dipilih dari bank (lihat [Menyusun sirkuit](#menyusun-sirkuit-dari-bank-stasiun)).
+> **DRAF v0.2** — bank berisi 11 stasiun; satu sirkuit ujian terdiri dari 6 stasiun yang dipilih dari bank (lihat [Menyusun sirkuit](#menyusun-sirkuit-dari-bank-stasiun)).
 
 Blueprint memastikan ujian mencakup kompetensi yang direncanakan secara proporsional, bukan sekadar kumpulan stasiun yang kebetulan tersedia.
 
@@ -28,6 +28,7 @@ Blueprint memastikan ujian mencakup kompetensi yang direncanakan secara proporsi
 | 08 | [Interpretasi EKG — fibrilasi atrium](../stasiun/08-ekg-fibrilasi-atrium.md) |   |   | ● | ● | ○ | ○ |
 | 09 | [Hipertensi emergensi](../stasiun/09-hipertensi-emergensi.md) | ● | ● | ○ | ● | ○ | ○ |
 | 10 | [Sinkop: anamnesis dan stratifikasi risiko](../stasiun/10-sinkop.md) | ● | ○ | ● | ○ | ○ | ○ |
+| 11 | [Pemeriksaan fisik kardiovaskular sistematis](../stasiun/11-pemeriksaan-fisik-kardiovaskular.md) |   | ● | ○ | ○ | ○ | ○ |
 
 ## Menyusun sirkuit dari bank stasiun
 
@@ -58,6 +59,6 @@ Petakan tiap stasiun ke area kompetensi dan tingkat kemampuan yang berlaku di in
 - [ ] ACLS: irama tidak dapat diberi syok dan penggunaan obat
 - [x] Hipertensi emergensi: penilaian kerusakan organ target dan tatalaksana awal (S09)
 - [x] Sinkop: anamnesis, pemeriksaan ortostatik, dan stratifikasi risiko (S10)
-- [ ] Pemeriksaan fisik kardiovaskular lengkap (palpasi prekordium, nadi perifer)
+- [x] Pemeriksaan fisik kardiovaskular lengkap (S11; nadi perifer lengkap dan pemeriksaan arteri perifer belum tercakup)
 - [ ] Interpretasi foto toraks: kardiomegali dan edema paru
 - [ ] Varian auskultasi: MR, MS, AR, S3/S4

@@ -63,3 +63,17 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 **Keputusan:** D18; D17 digantikan (basis PR #2 kini `main`).
 
 **Belum selesai:** sama seperti entri sesi 2 sebelumnya, ditambah guideline aritmia ventrikel/ICD untuk pertanyaan lanjutan S10 dan uji waktu S10.
+
+## [2026-10-13] sesi 2 (lanjutan 2) | Stasiun 11 pemeriksaan fisik kardiovaskular
+
+**Permintaan pengguna:** "lanjut stasiun berikutnya."
+
+**Tindakan dan hasil**
+- Sebelum menulis: `git fetch` (tidak ada commit baru di `main` atau branch sesi), PR #2 `mergeable_state` clean, belum ada review atau komentar, tidak ada notifikasi.
+- Stasiun dipilih dari bank blueprint: pemeriksaan fisik kardiovaskular lengkap (D19). `stasiun/11-pemeriksaan-fisik-kardiovaskular.md`: 20 butir, butir kritis E2 dan G1. Kasus stenosis mitral rematik dengan AF, menyambung ke S08.
+- Verifikasi PubMed (metadata): Otto 2020/2021 (PMID 33332150), Vahanian 2021/2022 (PMID 34453165). Tool lagi-lagi menukar bidang `pmid`/`key` pada `lookup_article_by_citation`; dikonfirmasi lewat `get_article_metadata`.
+- Diperbarui: README, blueprint (baris 11, butir bank dicentang), standar penilaian (S11 = 20), referensi (dua guideline katup), `CLAUDE.md`, wiki (`stations`, `guidelines-status` dengan empat klaim S11 dan catatan bahwa S03 belum merujuk guideline katup, `decisions` D19, `open-items`, `overview`, `index`). `tools/cek_skor.py` keluar kode 0, total 240.
+
+**Keputusan:** D19.
+
+**Belum selesai:** sama seperti entri sebelumnya, ditambah rujukan PJR/profilaksis sekunder, hubungan S03 ke guideline katup, dan uji waktu S11.

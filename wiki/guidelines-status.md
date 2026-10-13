@@ -21,7 +21,7 @@ Cara memverifikasi: lihat alur PubMed di [environment](environment.md). Teks len
 | 02 | Prasugrel/ticagrelor lebih dipilih; klopidogrel bila tidak tersedia; UFH sebagai antikoagulan | Byrne 2023; Rao 2025 | Belum diverifikasi |
 | 02 | PCI primer ≤ 120 menit dari diagnosis (ESC); kontak medis pertama ke alat ≤ 90 menit (ACC/AHA); fibrinolisis door-to-needle ≤ 30 menit | Byrne 2023; Rao 2025 | Belum diverifikasi |
 | 02 | Daftar kontraindikasi fibrinolisis (pertanyaan lanjutan) | Byrne 2023 | Belum diverifikasi |
-| 03 | Titik auskultasi dan temuan stenosis aorta; gejala klasik sebagai indikasi intervensi | Buku ajar; guideline katup tidak dikutip | Standar buku ajar; **guideline katup belum ditambahkan** |
+| 03 | Titik auskultasi dan temuan stenosis aorta; gejala klasik sebagai indikasi intervensi | Buku ajar; guideline katup tidak dikutip | Standar buku ajar; guideline katup (Otto 2020, Vahanian 2021) masuk `referensi/README.md` di sesi 2 tetapi **S03 belum merujuknya** |
 | 04 | Bladder ≥ 80% lingkar lengan; manset 2–3 cm di atas lipat siku; estimasi palpatoir; pompa 20–30 mmHg di atas sistolik; deflasi 2–3 mmHg/detik; Korotkoff I dan V; pembulatan 2 mmHg; ≥ 2 pengukuran selang 1–2 menit; kedua lengan pada kunjungan pertama; hindari kafein/rokok/olahraga 30 menit; istirahat ≥ 5 menit | McEvoy 2024; Jones 2025 | Belum diverifikasi |
 | 04 | TD kantor ≥ 140/90 = hipertensi menurut ACC/AHA, ESC, dan PERKI; konfirmasi dengan HBPM/ABPM | McEvoy 2024; Jones 2025; PERKI **tidak diperiksa** | Belum diverifikasi |
 | 05 | Kompresi 100–120/menit, kedalaman 5–6 cm, recoil penuh, 30:2, cek napas/nadi ≤ 10 detik, jeda < 10 detik, ganti penolong tiap ± 2 menit | Del Rios 2025 Part 1 (hanya ringkasan eksekutif; bab BLS dewasa tidak dibaca) | Belum diverifikasi |
@@ -45,11 +45,15 @@ Cara memverifikasi: lihat alur PubMed di [environment](environment.md). Teks len
 | 10 | Sinkop berisiko tinggi dengan dugaan aritmia: rawat dengan pemantauan telemetri, ekokardiografi, konsul kardiologi/EP | Shen 2017; Brignole 2018 | Belum diverifikasi; kriteria rawat tepat perlu dicek |
 | 10 | LVEF ≤ 35% setelah terapi optimal: evaluasi ICD pencegahan primer (pertanyaan lanjutan) | Heidenreich 2022 (tidak dibaca); guideline ICD/VT tidak dikutip | Belum diverifikasi; guideline aritmia ventrikel belum ditambahkan |
 | 10 | Sinkop refleks: edukasi, hindari pemicu, hidrasi, manuver kontra-tekanan (pertanyaan lanjutan); nasihat mengemudi setelah sinkop | Shen 2017; Brignole 2018 | Belum diverifikasi |
+| 11 | Nadi AF ireguler total; tidak ada gelombang a pada JVP saat AF; teknik: nadi ≥ 30 detik bila ireguler, JVP 45° diukur dari sudut sternum, karotis satu sisi per satu waktu | Buku ajar | Standar buku ajar; tidak dikutip spesifik |
+| 11 | Temuan auskultasi stenosis mitral: S1 keras, opening snap, rumble diastolik apeks yang terbaik dengan bell, miring kiri, akhir ekspirasi; tanpa aksentuasi presistolik pada AF; regurgitasi aorta terdengar terbaik duduk condong ke depan, akhir ekspirasi | Buku ajar; Otto 2020; Vahanian 2021 (isi tidak dibaca) | Standar buku ajar; belum dicocokkan ke guideline katup |
+| 11 | AF dengan stenosis mitral sedang–berat: antagonis vitamin K, bukan DOAC | Otto 2020; Vahanian 2021; Joglar 2024 (isi tidak dibaca) | **Belum diverifikasi** |
+| 11 | Profilaksis sekunder demam rematik/penyakit jantung rematik; rencana lanjut EKG dan ekokardiografi | Tidak ada rujukan khusus (WHO/guideline PJR belum ditambahkan) | Belum ada rujukan |
 
 ## Yang sudah diverifikasi
 
 - Metadata 6 guideline (Gulati 2021, Rao 2025, Byrne 2023, McEvoy 2024, Jones 2025, Del Rios 2025 Part 1) lewat `get_article_metadata`.
-- Sesi 2 (13 Oktober 2026), metadata lengkap lewat `get_article_metadata`: Joglar 2023/2024 AF ACC/AHA (PMID 38033089, DOI 10.1161/CIR.0000000000001193; versi JACC PMID 38043043 tidak dirujuk), Van Gelder 2024 AF ESC (PMID 39210723), Shen 2017 sinkop ACC/AHA/HRS (PMID 28280231), Brignole 2018 sinkop ESC (PMID 29562304), Virani 2023 penyakit koroner kronik (PMID 37471501; PMID 37747957 adalah *erratum*, bukan artikel asli), serta judul dan DOI McDonagh 2021 (PMID 34447992) dan Heidenreich 2022 (PMID 35363499).
+- Sesi 2 (13 Oktober 2026), metadata lengkap lewat `get_article_metadata`: Joglar 2023/2024 AF ACC/AHA (PMID 38033089, DOI 10.1161/CIR.0000000000001193; versi JACC PMID 38043043 tidak dirujuk), Van Gelder 2024 AF ESC (PMID 39210723), Shen 2017 sinkop ACC/AHA/HRS (PMID 28280231), Brignole 2018 sinkop ESC (PMID 29562304), Otto 2020/2021 penyakit katup ACC/AHA (PMID 33332150; terbit *Circulation* 2021;143:e72–e227), Vahanian 2021/2022 penyakit katup ESC/EACTS (PMID 34453165), Virani 2023 penyakit koroner kronik (PMID 37471501; PMID 37747957 adalah *erratum*, bukan artikel asli), serta judul dan DOI McDonagh 2021 (PMID 34447992) dan Heidenreich 2022 (PMID 35363499).
 - Harden 1975 (PMID 1115966), Miller 1990 (PMID 2400509), Kurtz 1996 (PMID 8736242): dicocokkan lewat `lookup_article_by_citation` (jurnal, tahun, volume, halaman awal, penulis pertama); judul dan DOI belum diambil.
 - PERKI/PERHI: tidak ada sitasi sama sekali.
 

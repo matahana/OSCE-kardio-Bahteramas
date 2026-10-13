@@ -19,6 +19,7 @@ Ringkasan untuk orientasi cepat. **Isi lengkap ada di `stasiun/NN-*.md`** (sumbe
 | 08 | `08-ekg-fibrilasi-atrium.md` | 20 | Data EKG + data klinis | I8 (diagnosis AF-RVR), J1 (stabilitas), K1 (kendali laju), K3 (skor risiko stroke) |
 | 09 | `09-hipertensi-emergensi.md` | 20 | SP + data | A2, A3, E1, E2, E3 |
 | 10 | `10-sinkop.md` | 20 | SP + data | A2 (monitor/IV), B4 (penyakit jantung struktural + riwayat keluarga), E1 (risiko tinggi), E2 (rawat dengan telemetri) |
+| 11 | `11-pemeriksaan-fisik-kardiovaskular.md` | 20 | Sukarelawan + penguji/simulator | E2 (bell, miring kiri, akhir ekspirasi), G1 (kesimpulan stenosis mitral + AF) |
 
 ## Biji skenario per stasiun
 
@@ -42,14 +43,16 @@ Ringkasan untuk orientasi cepat. **Isi lengkap ada di `stasiun/NN-*.md`** (sumbe
 
 **10 Sinkop.** Bapak Hendra, 64 th, pingsan 2 jam lalu saat jalan cepat, didahului berdebar 10 detik, tanpa prodromal refleks; saksi: pucat kebiruan, tanpa kejang, pulih ± 1 menit. Infark anterior 6 tahun lalu (PCI), sesak 300 m, 2 bantal; adik meninggal mendadak usia 44. Obat: aspirin, atorvastatin, bisoprolol, ramipril, **tamsulosin (pengecoh)**. SP menawarkan penjelasan salah (obat prostat, kurang minum) dan ingin pulang. Data: TD ortostatik 128/76 → 122/74 → 118/72 (tidak memenuhi kriteria); EKG Q V1–V4 dan PVC sering; troponin negatif; LVEF 35% setahun lalu. Jawaban benar: risiko tinggi, rawat dengan telemetri, konsul kardiologi/EP. Variasi: sinkop refleks (risiko rendah, pulang).
 
+**11 Pemeriksaan fisik kardiovaskular.** Ibu Rahayu, 38 th, sesak aktivitas dan berdebar 3 bulan, riwayat demam rematik SD (dibacakan). Sukarelawan sehat; penguji membacakan temuan setelah manuver: malar flush, nadi ireguler ± 96 volume kecil, JVP ± 3 cm tanpa gelombang a, apeks tidak bergeser *tapping*, heave RV ringan, P2 teraba; S1 keras, P2 keras. **Bising diastolik (opening snap + rumble apeks) hanya dibacakan bila bell + miring kiri + akhir ekspirasi.** Kesimpulan: stenosis mitral rematik dengan AF → antagonis vitamin K. Menyambung ke S08.
+
 ## Kelemahan yang diketahui (jangan diabaikan)
 
 - Semua stasiun belum direview kardiolog; angka klinis belum diverifikasi ke teks lengkap ([guidelines-status](guidelines-status.md)).
 - 06 padat untuk 8 menit; uji coba waktu atau pecah menjadi S06a dan S06b.
 - 02 dan 08 tanpa gambar EKG; 03 tanpa audio/simulator yang ditentukan.
-- 07–10 ditulis di sesi 2 dari pengetahuan klinis; angka-angkanya belum diverifikasi ([guidelines-status](guidelines-status.md)). Terutama target penurunan TD di 09, lama antiplatelet ganda dan target LDL di 07, syarat kardioversi di 08.
+- 07–11 ditulis di sesi 2 dari pengetahuan klinis; angka-angkanya belum diverifikasi ([guidelines-status](guidelines-status.md)). Terutama target penurunan TD di 09, lama antiplatelet ganda dan target LDL di 07, syarat kardioversi di 08.
 - 09 dan 06 sama-sama menyentuh hipertensi/edema paru; bila dipakai dalam satu sirkuit, hindari tumpang tindih variasi "edema paru hipertensif".
-- Stasiun 07–10 belum diuji waktu (07 memuat 25 butir dalam 8 menit; 09 dan 10 memuat 20 dengan data yang diberikan bila diminta).
+- Stasiun 07–11 belum diuji waktu (11 memuat banyak manuver; pertimbangkan pangkas F1/E4 atau pecah dua) (07 memuat 25 butir dalam 8 menit; 09 dan 10 memuat 20 dengan data yang diberikan bila diminta).
 - 10 menyambung ke 03 (variasi sinkop dengan bising stenosis aorta) dan ke 08/09 sebagai stasiun "keputusan rawat"; hindari menaruh lebih dari satu stasiun "keputusan rawat" berurutan dalam sirkuit.
 - Beberapa butir memakai skor bertingkat: 4a di stasiun 02 (3 sadapan = 2; 2 sadapan = 1), butir 3 di stasiun 02 (1 poin per interval), dan B8 di stasiun 01 (≥ 3 dari 5 gejala = 2; 1–2 = 1). Pastikan penguji memahaminya.
 - Pemetaan ke SNPPDI/KKI belum diisi.

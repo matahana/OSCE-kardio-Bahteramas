@@ -10,7 +10,7 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 ## P0 — sebelum konten dipakai untuk ujian
 
 - [ ] **Review kardiolog** atas seluruh stasiun (pemilik repo adalah kardiolog; minta tinjauan substansi dan kesesuaian dengan praktik setempat).
-- [ ] **Verifikasi angka klinis ke teks lengkap** — daftar lengkap di [guidelines-status](guidelines-status.md). Prioritas: stasiun 02 (dosis aspirin, target waktu reperfusi), 10 (fitur sinkop berisiko tinggi, indikasi rawat), 09 (target penurunan TD bertahap dan pengecualian), 05 (parameter RJP), 06 (diuretik IV, kriteria NIV, nitrat), 08 (syarat kardioversi, kendali laju), 07 (lama antiplatelet ganda, target LDL), 04 (teknik dan klasifikasi TD). Gunakan `convert_article_ids` lalu `get_full_text_article` untuk artikel yang ada di PMC.
+- [ ] **Verifikasi angka klinis ke teks lengkap** — daftar lengkap di [guidelines-status](guidelines-status.md). Prioritas: stasiun 02 (dosis aspirin, target waktu reperfusi), 11 (antikoagulan pada AF dengan stenosis mitral), 10 (fitur sinkop berisiko tinggi, indikasi rawat), 09 (target penurunan TD bertahap dan pengecualian), 05 (parameter RJP), 06 (diuretik IV, kriteria NIV, nitrat), 08 (syarat kardioversi, kendali laju), 07 (lama antiplatelet ganda, target LDL), 04 (teknik dan klasifikasi TD). Gunakan `convert_article_ids` lalu `get_full_text_article` untuk artikel yang ada di PMC.
 - [ ] **Tambahkan rujukan PERKI/PERHI** (SKA, hipertensi, gagal jantung, fibrilasi atrium, pencegahan sekunder) dengan edisi yang berlaku; sesuaikan butir stasiun bila PERKI berbeda.
 - [ ] Tambahkan guideline aritmia ventrikel/pencegahan kematian jantung mendadak (dasar pertanyaan ICD di S10) dan sitasi ESC/EAS dislipidemia 2019 (dipakai di pertanyaan lanjutan S07, belum ada di `referensi/README.md`).
 
@@ -21,12 +21,12 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 - [ ] Uji coba waktu stasiun 06; putuskan tetap satu stasiun atau pecah menjadi S06a/S06b.
 - [ ] Isi pemetaan ke SNPPDI/KKI (kolom di blueprint belum diisi).
 - [ ] Tetapkan lisensi repositori dan visibilitas (publik/privat).
-- [ ] Tambahkan guideline katup jantung untuk stasiun 03 dan rujukannya.
+- [ ] Guideline katup (Otto 2020, Vahanian 2021) sudah ada di `referensi/README.md`; **hubungkan ke stasiun 03** (rujukan dan verifikasi isi) dan rujukan PJR/profilaksis sekunder demam rematik (WHO/PERKI) untuk S11.
 
 ## P2 — pengembangan
 
-- [ ] Stasiun dari bank di [blueprint](../docs/blueprint.md) yang tersisa: gagal jantung kronik (optimalisasi terapi), EKG lain (blok AV derajat tinggi, takikardia kompleks lebar), ACLS (irama tidak dapat disyok), pemeriksaan fisik kardiovaskular lengkap, foto toraks, varian auskultasi. (Selesai di sesi 2: edukasi pasca-IMA = S07, EKG fibrilasi atrium = S08, hipertensi emergensi = S09, sinkop = S10.)
-- [ ] Uji coba waktu S07 (25 butir), S09, dan S10; putuskan pangkas bila padat.
+- [ ] Stasiun dari bank di [blueprint](../docs/blueprint.md) yang tersisa: gagal jantung kronik (optimalisasi terapi), EKG lain (blok AV derajat tinggi, takikardia kompleks lebar), ACLS (irama tidak dapat disyok), foto toraks, varian auskultasi. (Selesai di sesi 2: edukasi pasca-IMA = S07, EKG fibrilasi atrium = S08, hipertensi emergensi = S09, sinkop = S10, pemeriksaan fisik kardiovaskular = S11.)
+- [ ] Uji coba waktu S07 (25 butir), S09, S10, dan S11 (banyak manuver); putuskan pangkas bila padat.
 - [ ] Ide dari sumber 5 dan 6: stasiun flutter atrium, infark inferior dengan angina pasca-infark, SKA dua tahap (depresi ST lalu elevasi ST).
 - [ ] Paket pelatihan SP dan penguji (rekaman contoh untuk kalibrasi).
 - [ ] Lembar penilaian siap cetak dan versi digital; opsi spreadsheet untuk analisis BRM dan Cronbach's α.
@@ -39,7 +39,7 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 ## Proses
 
 - [x] PR #1 sudah di-merge pengguna (13 Oktober 2026); basis PR #2 sudah dialihkan ke `main`.
-- [ ] PR #2 draft (S07–S10), basis `main`. Pengguna memutuskan kapan di-merge; setelah merge, mulai branch baru dari `main` untuk pekerjaan berikutnya. Sesi 2 berlangganan pemantauan PR #2 (review dan CI). Repo belum punya CI/workflow, jadi yang masuk hanya komentar review. Langganan berakhir bersama sesi; pasang ulang di sesi berikutnya bila diminta.
+- [ ] PR #2 draft (S07–S11), basis `main`. Pengguna memutuskan kapan di-merge; setelah merge, mulai branch baru dari `main` untuk pekerjaan berikutnya. Sesi 2 berlangganan pemantauan PR #2 (review dan CI). Repo belum punya CI/workflow, jadi yang masuk hanya komentar review. Langganan berakhir bersama sesi; pasang ulang di sesi berikutnya bila diminta.
 
 ## Pertanyaan terbuka untuk pengguna
 
