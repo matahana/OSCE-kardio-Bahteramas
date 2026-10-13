@@ -43,6 +43,7 @@ Anda dokter jaga di bangsal penyakit dalam. **Bapak Surya, 62 tahun**, pasien ga
 | EKG pagi tadi | Gelombang T runcing tinggi (bila ditanya atau diminta) |
 | Obat di troli | Epinefrin, kalsium klorida dan glukonat, natrium bikarbonat, dekstrosa, insulin reguler, atropin, amiodaron, lidokain |
 | Pasca-ROSC | TD 88/50 mmHg, nadi 90 x/menit, SpO₂ 93% dengan ventilasi bantuan; belum sadar |
+| EKG 12 sadapan pasca-ROSC | Irama sinus, gelombang T runcing, tanpa elevasi ST (bila diminta) |
 
 ## 4. Peralatan dan persiapan ruangan
 
