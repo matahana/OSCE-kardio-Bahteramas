@@ -5,7 +5,7 @@ Repositori materi OSCE kardiovaskular. Instruksi ini dimuat otomatis pada awal s
 ## Mulai sesi dengan ini (hemat waktu)
 
 1. Baca [`wiki/index.md`](wiki/index.md), lalu [`wiki/open-items.md`](wiki/open-items.md). Jangan menelusuri ulang repositori dari nol.
-2. Cek status PR dan branch yang tercatat di [`wiki/overview.md`](wiki/overview.md). PR bisa saja sudah di-merge sejak sesi terakhir; bila sudah, mulai branch baru dari `main`.
+2. Cek status PR dan branch yang tercatat di [`wiki/overview.md`](wiki/overview.md). PR bisa saja sudah di-merge sejak sesi terakhir; bila sudah, mulai branch baru dari `main`. **Selalu periksa daftar PR terbuka** (`list_pull_requests`, `state: all`): sesi paralel dapat membuka PR lain pada repo yang sama (terjadi pada 13 Oktober 2026: PR #2), dan wiki bisa tertinggal. Jangan menyunting atau merge PR dari sesi lain tanpa diminta pengguna.
 3. Kerjakan hanya yang diminta pengguna, dan catat hasilnya di wiki sebelum sesi berakhir (lihat "Akhir sesi").
 
 ## Konteks proyek

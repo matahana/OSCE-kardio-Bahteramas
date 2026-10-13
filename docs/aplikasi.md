@@ -8,7 +8,7 @@ Aplikasi web statis (HTML, CSS, JavaScript klasik; tanpa build dan tanpa server)
 |------|---------|
 | Lokal, tanpa server | Buka `app/index.html` di peramban (berfungsi dari `file://`) |
 | Server lokal | `python3 -m http.server` di akar repo, buka `http://localhost:8000/app/` |
-| GitHub Pages | Settings → Pages → Deploy from branch → `main` / `(root)`. Berkas `index.html` di akar mengalihkan ke `app/`; `.nojekyll` sudah ada. Pages pada repo privat butuh paket berbayar. |
+| GitHub Pages | Hanya pemilik repo yang dapat mengaktifkan: https://github.com/matahana/OSCE-kardio-Bahteramas/settings/pages → Source: *Deploy from a branch* → Branch `main`, folder `/ (root)` → Save. Situs: https://matahana.github.io/OSCE-kardio-Bahteramas/ (mengalihkan ke `app/`). `.nojekyll` sudah ada. Halaman memuat `<meta name="robots" content="noindex, nofollow">` agar tidak masuk mesin pencari sebelum konten direview; hapus meta itu di `app/index.html` dan `index.html` bila sudah siap. |
 
 Seluruh proses berjalan di peramban; tidak ada data yang dikirim ke server. Riwayat disimpan di penyimpanan lokal peramban.
 

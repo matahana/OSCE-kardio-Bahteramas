@@ -31,6 +31,7 @@ Format: keputusan, alasan, siapa yang memutuskan. "Usulan" berarti belum disetuj
 | D20 | Toleransi widget: tensimeter ±4 mmHg, laju deflasi 1,5–4 mmHg/dtk (target 2–3), inflasi 15–40 mmHg di atas estimasi palpatoir (target 20–30), ketukan 100–120/menit | Kontrol manual sulit; toleransi sedikit lebih longgar dari teks butir | Claude (usulan) |
 | D21 | Uji end-to-end Chromium dijalankan lokal dengan jam dibekukan; CI hanya tiga cek tanpa browser | Menjaga CI cepat; widget berbasis waktu deterministik | Claude |
 | D22 | Umpan balik langsung bersifat opsional (default mati) | OSCE sesungguhnya tidak memberi umpan balik; mode belajar tersedia bagi yang butuh | Claude |
+| D23 | Halaman aplikasi memuat `noindex, nofollow` sampai konten direview kardiolog; situs dipublikasikan lewat GitHub Pages dari `main` / root | Pengguna ingin aplikasi dapat dibuka online; konten masih DRAF sehingga tidak boleh muncul di mesin pencari. Tautan tetap dapat dibagikan | Pengguna (Pages), Claude (noindex; mudah dihapus) |
 
 ## Prinsip yang dipegang
 
