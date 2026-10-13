@@ -15,17 +15,18 @@ Menyusun repositori materi OSCE kardiovaskular yang dapat dipakai dan dikembangk
 |-----|-------|
 | Repo | https://github.com/matahana/OSCE-kardio-Bahteramas (nama kanonik; sesi mendaftarkannya sebagai `osce-kardio-bahteramas`, keduanya valid) |
 | `main` | Hanya commit awal `556c575` (stub README) |
-| Branch kerja | `claude/gallant-babbage-fb0o57` (nama ditentukan harness sesi pertama) |
-| PR | [#1](https://github.com/matahana/OSCE-kardio-Bahteramas/pull/1), **draft**, belum di-merge saat catatan ini ditulis |
-| Konten | 6 stasiun, blueprint, standar penilaian, panduan, rubrik komunikasi, template, rujukan, wiki, `CLAUDE.md`, `tools/cek_skor.py` |
-| Status mutu | **DRAF v0.1**, belum direview kardiolog, angka klinis belum diverifikasi ke teks lengkap |
+| Branch kerja | Sesi 1: `claude/gallant-babbage-fb0o57` · Sesi 2: `claude/happy-darwin-oxpyko` (nama ditentukan harness tiap sesi) |
+| PR | [#1](https://github.com/matahana/OSCE-kardio-Bahteramas/pull/1) (v0.1), **draft**, belum di-merge · [#2](https://github.com/matahana/OSCE-kardio-Bahteramas/pull/2) (v0.2: S07–S09), **draft**, **basisnya branch PR #1**, bukan `main`; sesi 2 berlangganan pemantauan PR #2 |
+| Konten | 9 stasiun, blueprint (bank + sirkuit), standar penilaian, panduan, rubrik komunikasi, template, rujukan, `assets/ekg/README.md`, wiki, `CLAUDE.md`, `tools/cek_skor.py` |
+| Status mutu | **DRAF v0.2**, belum direview kardiolog, angka klinis belum diverifikasi ke teks lengkap |
 
-Saat memulai sesi baru, cek dulu apakah PR #1 sudah di-merge atau ditutup, lalu perbarui tabel ini.
+Saat memulai sesi baru, cek dulu apakah PR #1 dan #2 sudah di-merge atau ditutup, lalu perbarui tabel ini. Urutan merge yang aman: #1 dulu, lalu arahkan basis #2 ke `main`. Branch basis dapat bergerak selama sesi (terjadi di sesi 2: `f69a580` → `90c689f`); `git fetch` sebelum membuat PR bertumpuk.
 
 ## Angka kunci
 
-- 6 stasiun, skor total 135 (25 + 20 + 20 + 20 + 25 + 25)
-- 8 menit per stasiun + 2 menit pindah; satu sirkuit 6 stasiun = 60 menit per kandidat
+- Bank 9 stasiun, skor total 200 (S01–S09: 25, 20, 20, 20, 25, 25, 25, 20, 20)
+- 8 menit per stasiun + 2 menit pindah; satu sirkuit 6 stasiun dari bank = 60 menit per kandidat
+- Contoh sirkuit di blueprint: A (S01, S02, S03, S05, S06, S07) = 140; B (S04–S09) = 135; keduanya memenuhi aturan "tiap domain punya minimal satu stasiun utama"
 - Penilaian: checklist + butir kritis ⚠ + penilaian global 1–4; batas lulus usulan dengan *borderline regression method*; syarat lulus usulan: skor total ≥ batas lulus, ≥ 4 dari 6 stasiun lulus, tanpa kegagalan butir kritis
 
 ## Hal yang tidak boleh diasumsikan

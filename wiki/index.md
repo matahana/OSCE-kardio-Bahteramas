@@ -15,7 +15,7 @@ Mulai dari sini. Satu baris per halaman; baca hanya yang relevan dengan tugas.
 
 ## Konten
 
-- [stations](stations.md): katalog 6 stasiun (skenario, skor, butir kritis, parameter klinis, varian, kelemahan)
+- [stations](stations.md): katalog 9 stasiun (skenario, skor, butir kritis, parameter klinis, varian, kelemahan)
 - [decisions](decisions.md): keputusan desain dan alasannya
 - [guidelines-status](guidelines-status.md): klaim klinis per stasiun dan status verifikasinya (apa yang sudah dan belum dicek)
 - [sources](sources.md): sumber contoh yang diminta pengguna, status akses, pelajaran yang diambil
@@ -28,6 +28,6 @@ Mulai dari sini. Satu baris per halaman; baca hanya yang relevan dengan tugas.
 
 - `../README.md`, `../CLAUDE.md`
 - `../docs/blueprint.md`, `../docs/standar-penilaian.md`, `../docs/panduan-penguji-dan-pasien-simulasi.md`, `../docs/rubrik-komunikasi.md`
-- `../stasiun/01…06-*.md`, `../templates/stasiun-template.md`
+- `../stasiun/01…09-*.md`, `../assets/ekg/README.md`, `../templates/stasiun-template.md`
 - `../referensi/README.md` (tabel sitasi lengkap dengan DOI/PMID)
 - `../tools/cek_skor.py`

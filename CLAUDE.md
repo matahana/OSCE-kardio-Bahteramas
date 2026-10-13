@@ -12,7 +12,7 @@ Repositori materi OSCE kardiovaskular. Instruksi ini dimuat otomatis pada awal s
 
 - Pemilik: dokter spesialis kardiologi dan peneliti epidemiologi. Bahasa: **Bahasa Indonesia**, profesional dan akurat, berbasis guideline terkini (ACC/AHA, ESC, WHO, dan PERKI untuk konteks Indonesia).
 - **Hanya repositori ini** yang dikerjakan. Repositori `panduan-ibadah` tidak terkait: jangan dibaca, diubah, atau di-push (permintaan eksplisit pengguna, 13 Oktober 2026).
-- Isi: 6 stasiun OSCE kardiovaskular (DRAF v0.1), blueprint, standar penilaian, panduan penguji/pasien simulasi, rujukan.
+- Isi: bank 9 stasiun OSCE kardiovaskular (DRAF v0.2; satu sirkuit memakai 6 stasiun), blueprint, standar penilaian, panduan penguji/pasien simulasi, rujukan.
 
 ## Struktur
 
@@ -22,6 +22,7 @@ README.md                 pintu masuk untuk manusia
 wiki/                     memori kerja lintas sesi (mulai dari wiki/index.md)
 docs/                     blueprint, standar penilaian, panduan penguji/SP, rubrik komunikasi
 stasiun/                  satu berkas per stasiun (sumber kebenaran isi stasiun)
+assets/ekg/               gambar EKG (belum ada; syaratnya di README folder itu)
 templates/                kerangka stasiun baru
 referensi/README.md       guideline dan pustaka (terverifikasi PubMed)
 tools/cek_skor.py         pemeriksa jumlah skor checklist

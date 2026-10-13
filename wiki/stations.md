@@ -15,6 +15,9 @@ Ringkasan untuk orientasi cepat. **Isi lengkap ada di `stasiun/NN-*.md`** (sumbe
 | 04 | `04-pengukuran-tekanan-darah.md` | 20 | Simulator lengan + SP | B1 (ukuran manset) |
 | 05 | `05-bls-henti-jantung.md` | 25 | Manikin RJP + AED | A3, A4, B2, B4, B5, C3, C4 |
 | 06 | `06-gagal-jantung-akut-dekompensasi.md` | 25 | SP + data | D1 (EKG), E1 (diuretik loop IV) |
+| 07 | `07-edukasi-pasca-infark.md` | 25 | SP + resume medis | C1 (antiplatelet ganda tidak dihentikan sendiri), D1 (berhenti merokok), E1 (tanda bahaya → ambulans/IGD) |
+| 08 | `08-ekg-fibrilasi-atrium.md` | 20 | Data EKG + data klinis | I8 (diagnosis AF-RVR), J1 (stabilitas), K1 (kendali laju), K3 (skor risiko stroke) |
+| 09 | `09-hipertensi-emergensi.md` | 20 | SP + data | A2, A3, E1, E2, E3 |
 
 ## Biji skenario per stasiun
 
@@ -30,11 +33,20 @@ Ringkasan untuk orientasi cepat. **Isi lengkap ada di `stasiun/NN-*.md`** (sumbe
 
 **06 Gagal jantung akut.** Ibu Hartini, 68 th, riwayat gagal jantung iskemik. 3 hari sesak, ortopnea, edema, +4 kg. Pencetus: furosemid habis 1 minggu, makan asin/santan, ibuprofen. TD 138/84, nadi 104, napas 28, SpO₂ 88%. Data bila diminta: JVP naik, ronki bibasal, S3, edema 2+, akral hangat (hangat–basah); EKG sinus takikardia dan Q V1–V3; foto toraks kongesti; NT-proBNP 6.200, kreatinin 1,5 (baseline 1,2), Na 133, troponin sedikit naik dan stabil. Pertanyaan lanjutan: profil klinis, dingin–basah, pencetus akut, morfin, terapi pulang.
 
+**07 Edukasi pasca-infark.** Bapak Arifin, 55 th, sopir angkot, hari ke-3 STEMI anterior, PCI primer 1 DES di LAD proksimal, LVEF 45%, LDL 142, perokok 20 batang/hari. Obat pulang: aspirin, ticagrelor, atorvastatin, bisoprolol, ramipril, ISDN SL. Kandidat mengedukasi (tanpa anamnesis ulang). SP bertanya: "sudah sembuh?", "boleh berhenti obat?", "boleh merokok sedikit?", kapan boleh narik angkot/aktivitas seksual; takut mati mendadak. Stasiun komunikasi; jangan menilai dosis.
+
+**08 EKG fibrilasi atrium.** Ibu Sumiati, 72 th, hipertensi + DM2, berdebar ± 10 jam. TD 124/78, nadi 130 ireguler, SpO₂ 97%. EKG: tanpa P, R–R ireguler, QRS sempit, ± 130/menit (hitung dari strip 6 detik × 10). Tugas: interpretasi, stabilitas, pencetus, kendali laju, CHA₂DS₂-VASc = 4 (CHA₂DS₂-VA = 3 diterima), antikoagulan (DOAC vs warfarin bila stenosis mitral/katup mekanik). **Gambar EKG belum ada.**
+
+**09 Hipertensi emergensi.** Bapak Slamet, 58 th, sakit kepala hebat, pandangan kabur, mual muntah, bingung ringan. TD 224/134 (kanan), 220/130 (kiri). Putus amlodipin 3 minggu, diklofenak harian. Funduskopi: perdarahan retina + edema papil; kreatinin 1,9 (baseline 1,3); proteinuria; CT kepala negatif perdarahan/infark. Tugas: stabilisasi, TD kedua lengan, cari kerusakan organ, obat IV titrasi, target penurunan bertahap, kenali pengecualian (diseksi, stroke, preeklamsia).
+
 ## Kelemahan yang diketahui (jangan diabaikan)
 
 - Semua stasiun belum direview kardiolog; angka klinis belum diverifikasi ke teks lengkap ([guidelines-status](guidelines-status.md)).
 - 06 padat untuk 8 menit; uji coba waktu atau pecah menjadi S06a dan S06b.
-- 02 tanpa gambar EKG; 03 tanpa audio/simulator yang ditentukan.
+- 02 dan 08 tanpa gambar EKG; 03 tanpa audio/simulator yang ditentukan.
+- 07–09 ditulis di sesi 2 dari pengetahuan klinis; angka-angkanya belum diverifikasi ([guidelines-status](guidelines-status.md)). Terutama target penurunan TD di 09, lama antiplatelet ganda dan target LDL di 07, syarat kardioversi di 08.
+- 09 dan 06 sama-sama menyentuh hipertensi/edema paru; bila dipakai dalam satu sirkuit, hindari tumpang tindih variasi "edema paru hipertensif".
+- Stasiun 07–09 belum diuji waktu (07 memuat 25 butir dalam 8 menit; 09 memuat 20).
 - Beberapa butir memakai skor bertingkat: 4a di stasiun 02 (3 sadapan = 2; 2 sadapan = 1), butir 3 di stasiun 02 (1 poin per interval), dan B8 di stasiun 01 (≥ 3 dari 5 gejala = 2; 1–2 = 1). Pastikan penguji memahaminya.
 - Pemetaan ke SNPPDI/KKI belum diisi.
 - Belum ada uji coba (pilot) dan data psikometrik.

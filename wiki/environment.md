@@ -23,6 +23,14 @@ Pelajaran teknis dari sesi pertama supaya tidak perlu ditemukan ulang.
 - PR dibuat **draft**. Trailer commit/PR (Co-Authored-By, Claude-Session, tautan sesi) diberikan harness lewat system-reminder tiap sesi; ikuti yang tertera saat itu.
 - Repo ini belum punya `.github/pull_request_template.md` (per 13 Oktober 2026).
 
+## Catatan sesi 2
+
+- Direktori kerja utama sesi 2 adalah repo OSCE sendiri: `/home/user/OSCE-kardio-Bahteramas` (huruf kapital sesuai nama kanonik). Branch kerja: `claude/happy-darwin-oxpyko`; saat sesi mulai, branch itu masih di `main` (stub README), jadi isi dibawa dengan `git fetch origin <branch PR #1>` lalu `git merge --ff-only`.
+- Branch PR #1 **bergerak selama sesi** (commit wiki/CLAUDE.md masuk saat sesi 2 berjalan). `git fetch` basis sebelum membuat PR bertumpuk dan sebelum push; gabungkan dengan merge biasa, bukan rebase.
+- Alat `gh` tidak ada; PR dibuat dengan `mcp__github__create_pull_request` (basis = branch PR #1 untuk PR bertumpuk), dipantau dengan `subscribe_pr_activity`. Event langganan pertama hanya mengonfirmasi langganan.
+- Repo belum punya CI/workflow dan belum punya `.claude/skills/steward` atau `babysit`.
+- PubMed sesi 2: `lookup_article_by_citation` kena *rate limit* bila dipanggil beruntun (tunggu beberapa detik); pada satu panggilan hasilnya menukar isi bidang `pmid` dan `key`, jadi **selalu konfirmasi dengan `get_article_metadata`**. `search_articles` untuk judul guideline mengembalikan juga *erratum* dan versi ganda (AF ACC/AHA terbit di *Circulation* dan *JACC*); pilih artikel asli. Metadata guideline ESC tidak menyertakan abstrak.
+
 ## Alur verifikasi PubMed
 
 Tool `mcp__PubMed__*` bersifat deferred; muat dengan ToolSearch (`select:mcp__PubMed__search_articles,...`).
