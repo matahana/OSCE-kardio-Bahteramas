@@ -7,6 +7,9 @@
 //   2. rencana ideal berjalan tanpa penolakan, bernilai 100%, tanpa tindakan tidak tepat/berisiko,
 //      dan selesai sebelum jam habis;
 //   3. strategi "klik semua aksi sesuai urutan daftar" tidak mencapai 100% tanpa catatan.
+// Stasiun yang belum punya berkas interaksi (app/data/interaksi/NN.js) dilaporkan sebagai "segera hadir"
+// (beranda aplikasi menandainya sama) dan TIDAK menggagalkan pemeriksaan; stasiun yang punya interaksi
+// tetap diperiksa sepenuhnya. Pakai --ketat untuk menggagalkan juga stasiun tanpa interaksi.
 // Keluar dengan kode 1 bila ada yang gagal.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -28,13 +31,21 @@ function muatKonteks() {
   return konteks;
 }
 
+const ketat = process.argv.includes('--ketat');
 const gagal = [];
+const segeraHadir = [];
 const catat = (id, pesan) => { gagal.push(`[${id}] ${pesan}`); };
 const konteks = muatKonteks();
 const OSCE = konteks.OSCE;
 
 for (const id of konteks.OSCE_DATA.urutan) {
   const st = OSCE.ambil(id);
+  if (!st.interaksi) {
+    segeraHadir.push(id);
+    console.log(`${id} ${st.judul}: belum punya interaksi (segera hadir)`);
+    if (ketat) catat(id, 'belum punya definisi interaksi (mode --ketat)');
+    continue;
+  }
   const masalah = OSCE.periksaInteraksi(id);
   masalah.forEach((m) => catat(id, m));
   if (masalah.length) { console.log(`${id} ${st.judul}: ${masalah.length} masalah konsistensi`); continue; }
@@ -67,4 +78,6 @@ if (gagal.length) {
   console.log('\nGAGAL:\n' + gagal.map((x) => ' - ' + x).join('\n'));
   process.exit(1);
 }
-console.log('\nSemua stasiun konsisten.');
+const diperiksa = konteks.OSCE_DATA.urutan.length - segeraHadir.length;
+console.log(`\nSemua ${diperiksa} stasiun berinteraksi konsisten.` +
+  (segeraHadir.length ? ` ${segeraHadir.length} stasiun segera hadir (belum diperiksa): ${segeraHadir.join(', ')}.` : ''));

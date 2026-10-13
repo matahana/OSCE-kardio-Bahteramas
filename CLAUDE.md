@@ -12,7 +12,7 @@ Repositori materi OSCE kardiovaskular. Instruksi ini dimuat otomatis pada awal s
 
 - Pemilik: dokter spesialis kardiologi dan peneliti epidemiologi. Bahasa: **Bahasa Indonesia**, profesional dan akurat, berbasis guideline terkini (ACC/AHA, ESC, WHO, dan PERKI untuk konteks Indonesia).
 - **Hanya repositori ini** yang dikerjakan. Repositori `panduan-ibadah` tidak terkait: jangan dibaca, diubah, atau di-push (permintaan eksplisit pengguna, 13 Oktober 2026).
-- Isi: 6 stasiun OSCE kardiovaskular (DRAF v0.1), blueprint, standar penilaian, panduan penguji/pasien simulasi, rujukan, dan **aplikasi web simulasi** (`app/`).
+- Isi: bank 14 stasiun OSCE kardiovaskular (DRAF v0.2; satu sirkuit memakai 6 stasiun), blueprint, standar penilaian, panduan penguji/pasien simulasi, rujukan, dan **aplikasi web simulasi** (`app/`; seluruh 14 stasiun punya interaksi, `cek_interaksi.mjs --ketat` lulus).
 
 ## Struktur
 
@@ -22,6 +22,7 @@ README.md                 pintu masuk untuk manusia
 wiki/                     memori kerja lintas sesi (mulai dari wiki/index.md)
 docs/                     aplikasi, blueprint, standar penilaian, panduan penguji/SP, rubrik komunikasi
 stasiun/                  satu berkas per stasiun (sumber kebenaran isi stasiun dan checklist)
+assets/ekg/               gambar EKG (belum ada; syaratnya di README folder itu)
 templates/                kerangka stasiun baru
 referensi/README.md       guideline dan pustaka (terverifikasi PubMed)
 app/                      aplikasi web statis; data/stasiun-data.js = HASIL GENERATOR (jangan disunting tangan)
@@ -49,7 +50,7 @@ tools/                    cek_skor.py, buat_data.py (generator), cek_interaksi.m
 
 - Checklist hanya ada di `stasiun/*.md`. Setelah mengubah markdown stasiun: `python3 -I tools/buat_data.py` dan commit hasilnya. Jangan menyunting `app/data/stasiun-data.js`.
 - Isi interaksi (pertanyaan, respons, form, widget, pemetaan skor) ada di `app/data/interaksi/NN.js`; panduan lengkap di [`docs/aplikasi.md`](docs/aplikasi.md). Respons pasien harus konsisten dengan skrip SP di markdown stasiun.
-- Stasiun baru = markdown + generator + `interaksi/NN.js` + `<script>` di `app/index.html` + pembaruan `wiki/stations.md`.
+- Stasiun baru = markdown + generator + `interaksi/NN.js` + `<script>` di `app/index.html` + pembaruan `wiki/stations.md`. Stasiun yang belum punya interaksi tetap boleh ada di bank (beranda: "Segera hadir"; `cek_interaksi.mjs` melaporkannya tanpa gagal, `--ketat` menggagalkannya).
 - Sebelum commit perubahan aplikasi, jalankan: `python3 -I tools/cek_skor.py`, `python3 -I tools/buat_data.py --cek`, `node tools/cek_interaksi.mjs`, dan `node tests/e2e.mjs` (Playwright; jalur dan trik jam di `wiki/environment.md`). Semua harus lulus.
 - Klaim klinis baru di aplikasi (alasan "tidak tepat/berisiko", dosis, ambang) dicatat di `wiki/guidelines-status.md` sebagai belum terverifikasi sampai dicek.
 - Aplikasi harus tetap jalan dari `file://` (skrip klasik, tanpa modul ES, tanpa CDN, tanpa fetch).

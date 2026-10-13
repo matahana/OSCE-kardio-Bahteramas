@@ -30,7 +30,7 @@ Anda dokter jaga IGD. Seorang laki-laki 58 tahun datang dengan nyeri dada tipika
 ## 3. Data stasiun
 
 - **EKG:** sinus ritme, laju ± 75 x/menit, interval PR/QRS/QT normal; **elevasi ST di II, III, aVF**, **depresi ST resiprokal di I dan aVL**.
-- Letakkan gambar di `assets/ekg/` (belum ada). Gunakan EKG anonim dengan izin atau lisensi yang jelas dan jangan memakai EKG pasien nyata yang dapat diidentifikasi.
+- Letakkan gambar di `assets/ekg/` (belum ada; lihat [assets/ekg/README.md](../assets/ekg/README.md)). Gunakan EKG anonim dengan izin atau lisensi yang jelas dan jangan memakai EKG pasien nyata yang dapat diidentifikasi.
 - Bila kandidat meminta sadapan tambahan (V4R/V7–V9) atau troponin: "Belum tersedia saat ini."
 
 ## 4. Peralatan dan persiapan ruangan

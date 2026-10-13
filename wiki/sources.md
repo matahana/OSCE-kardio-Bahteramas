@@ -5,7 +5,7 @@ updated: 2026-10-13
 
 # Sumber contoh dari pengguna
 
-Pengguna mengirim enam tautan sebagai contoh desain stasiun. Status akses per 13 Oktober 2026:
+Pengguna mengirim enam tautan sebagai contoh desain stasiun. Status akses per 13 Oktober 2026 (sesi 1; sesi 2 mencoba ulang `curl` ke keempat domain 1–4: tetap kode 000, tetap tidak terbaca):
 
 | # | Sumber | Status | Dipakai? |
 |---|--------|--------|----------|

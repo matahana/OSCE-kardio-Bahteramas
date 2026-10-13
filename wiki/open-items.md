@@ -10,29 +10,36 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 ## P0 — sebelum konten dipakai untuk ujian
 
 - [ ] **Review kardiolog** atas seluruh stasiun (pemilik repo adalah kardiolog; minta tinjauan substansi dan kesesuaian dengan praktik setempat). Pengguna menyatakan (13 Okt 2026) akan mereview sendiri setelah aplikasi selesai.
-- [ ] **Verifikasi angka klinis ke teks lengkap** — daftar lengkap di [guidelines-status](guidelines-status.md). Prioritas: stasiun 02 (dosis aspirin, target waktu reperfusi), 05 (parameter RJP), 06 (diuretik IV, kriteria NIV, nitrat), 04 (teknik dan klasifikasi TD). Gunakan `convert_article_ids` lalu `get_full_text_article` untuk artikel yang ada di PMC.
-- [ ] **Tambahkan rujukan PERKI** (SKA, hipertensi, gagal jantung) dengan edisi yang berlaku; sesuaikan butir stasiun bila PERKI berbeda.
+- [ ] **Verifikasi angka klinis ke teks lengkap** — daftar lengkap di [guidelines-status](guidelines-status.md). **AF (S08, sebagian S11) sudah dicocokkan ke teks lengkap Joglar 2023** (13 Oktober 2026); guideline lain tidak punya teks lengkap di PMC (lihat [environment](environment.md)), jadi sisanya perlu PDF dari pengguna atau review kardiolog. Prioritas: stasiun 02 (dosis aspirin, target waktu reperfusi), 12 (epinefrin, terapi hiperkalemia), 11 (antikoagulan pada AF dengan stenosis mitral), 10 (fitur sinkop berisiko tinggi, indikasi rawat), 09 (target penurunan TD bertahap dan pengecualian), 05 (parameter RJP), 06 (diuretik IV, kriteria NIV, nitrat), 08 (syarat kardioversi, kendali laju), 07 (lama antiplatelet ganda, target LDL), 04 (teknik dan klasifikasi TD). Gunakan `convert_article_ids` lalu `get_full_text_article` untuk artikel yang ada di PMC.
+- [ ] **Tambahkan rujukan PERKI/PERHI** (SKA, hipertensi, gagal jantung, fibrilasi atrium, pencegahan sekunder) dengan edisi yang berlaku; sesuaikan butir stasiun bila PERKI berbeda.
+- [x] Sitasi ditambahkan sesi 2 (metadata terverifikasi, isi belum dicocokkan): aritmia ventrikel/SCD (Al-Khatib 2018, Zeppenfeld 2022) untuk S10, dislipidemia ESC/EAS (Mach 2020) untuk S07, penyakit jantung rematik (Kumar 2020) untuk S11, ALS/keadaan khusus/pasca-henti jantung (AHA 2025 Part 9–11) untuk S12, dan guideline katup untuk S03.
+- [ ] Rujukan yang masih kurang: terapi hiperkalemia (di luar AHA Part 10, mis. pedoman nefrologi), WHO/PERKI untuk penyakit jantung rematik dan profilaksis sekunder (jadwal, lama), dan PERKI/PERHI secara umum.
+
+- [ ] **Minta pengguna membuka akses jaringan untuk sumber guideline** (atau mengunggah PDF): tanpa itu hanya AF yang dapat diverifikasi ke teks lengkap. Daftar domain dan langkahnya di [environment](environment.md#akses-jaringan-ke-sumber-guideline-diuji-sesi-2).
 
 ## P0 — aplikasi
 
 - [ ] Uji coba dengan pengguna nyata (kandidat dan penguji) lalu perbaiki alur, biaya waktu, dan teks respons berdasarkan umpan balik.
-- [ ] Review kardiolog juga atas teks respons pasien, pengecoh, dan alasan "tidak tepat/berisiko" di `app/data/interaksi/*.js`.
+- [ ] Review kardiolog juga atas teks respons pasien, pengecoh, dan alasan "tidak tepat/berisiko" di `app/data/interaksi/*.js` (07–14 baru ditulis tanpa uji pengguna; klaim yang belum terverifikasi ada di [guidelines-status](guidelines-status.md#klaim-tambahan-di-aplikasi-belum-diverifikasi)).
+- [ ] Uji coba waktu S12 di aplikasi: siklus RJP dipadatkan ≈ 45 dtk (D37); periksa apakah pemadatan itu wajar bagi kandidat atau sebaiknya jam S12 diubah.
+- [ ] Pertimbangkan pemeriksaan otomatis jumlah QRS pada EKG sintetis (08, 14) terhadap laju di `cek_interaksi.mjs`; saat ini laju diperiksa lewat tangkapan layar dan uji e2e.
 
 ## P1 — kelengkapan
 
-- [ ] Gambar EKG stasiun 02 (`assets/ekg/`): EKG anonim dengan lisensi jelas; tambah juga EKG untuk S06 (sinus takikardia, Q V1–V3) bila memakai gambar.
+- [ ] Gambar EKG stasiun 02, 08, dan 14 (`assets/ekg/`, syarat di README folder itu): EKG anonim dengan lisensi jelas; tambah juga EKG untuk S06 (sinus takikardia, Q V1–V3) bila memakai gambar.
 - [ ] Audio/simulator auskultasi stasiun 03 yang berlisensi, plus varian (MR, MS, AR, S3).
 - [ ] Uji coba waktu stasiun 06; putuskan tetap satu stasiun atau pecah menjadi S06a/S06b.
 - [ ] Isi pemetaan ke SNPPDI/KKI (kolom di blueprint belum diisi).
 - [ ] Tetapkan lisensi repositori dan visibilitas (publik/privat).
-- [ ] Tambahkan guideline katup jantung untuk stasiun 03 dan rujukannya.
+- [ ] Guideline katup (Otto 2020, Vahanian 2021) sudah dirujuk dari stasiun 03; **isinya belum dicocokkan** (butuh teks dari pengguna).
 - [ ] Aktifkan GitHub Pages bila ingin akses lewat tautan (perhatikan visibilitas repo).
 - [ ] Ganti EKG/bunyi sintetis dengan rekaman berlisensi atau perluas variasi (S03: MR/MS/AR/S3; S04: nilai TD lain; S02: EKG lain) lewat varian interaksi.
 - [ ] Audit aksesibilitas dengan pembaca layar (alur keyboard sudah ada, belum diuji menyeluruh).
 
 ## P2 — pengembangan
 
-- [ ] Stasiun dari bank di [blueprint](../docs/blueprint.md): gagal jantung kronik (optimalisasi terapi), edukasi pasca-IMA, EKG lain (FA, blok AV, takikardia kompleks lebar), ACLS (irama tidak dapat disyok), hipertensi emergensi, sinkop, pemeriksaan fisik kardiovaskular lengkap, foto toraks, varian auskultasi.
+- [ ] Stasiun dari bank di [blueprint](../docs/blueprint.md) yang tersisa: EKG lain (takikardia kompleks lebar), foto toraks, varian auskultasi. (Selesai di sesi 2: edukasi pasca-IMA = S07, EKG fibrilasi atrium = S08, hipertensi emergensi = S09, sinkop = S10, pemeriksaan fisik kardiovaskular = S11, ACLS irama tidak dapat disyok = S12, gagal jantung kronik = S13, EKG blok AV derajat tiga = S14.)
+- [ ] Uji coba waktu S07 (25 butir), S09, S10, S11 (banyak manuver), S12 (penguji mengendalikan irama), dan S13; putuskan pangkas bila padat.
 - [ ] Ide dari sumber 5 dan 6: stasiun flutter atrium, infark inferior dengan angina pasca-infark, SKA dua tahap (depresi ST lalu elevasi ST).
 - [ ] Paket pelatihan SP dan penguji (rekaman contoh untuk kalibrasi).
 - [ ] Lembar penilaian siap cetak dan versi digital; opsi spreadsheet untuk analisis BRM dan Cronbach's α.
@@ -48,10 +55,10 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 
 ## Proses
 
-- [ ] **Rekonsiliasi PR #2** (sesi paralel, draft, `dirty`): bentrok dengan `main` pada README, `CLAUDE.md`, `docs/`, `wiki/`; penomoran keputusan D14–D22 di PR itu bentrok dengan D14–D22 di `main`; generator akan memuat stasiun 07–13 sehingga `cek_interaksi.mjs` dan CI gagal sampai `app/data/interaksi/07–13.js` ditulis (beranda akan menampilkan "Segera hadir"). Keputusan penggabungan ada pada pengguna; jangan menyunting branch PR #2 tanpa diminta.
+- [x] PR #1, #3, dan #4 sudah di-merge pengguna ke `main` (13 Oktober 2026).
+- [x] **Penghambat CI PR #2 selesai (13 Oktober 2026, sesi 2 lanjutan 8):** pengguna memilih opsi 1, 2, dan 3 bertahap. Opsi 2: `cek_interaksi.mjs` mengenali stasiun tanpa interaksi sebagai "segera hadir" (`--ketat` menggagalkannya). Opsi 1: interaksi S07–S14 ditulis dan diuji satu per satu; widget EKG (AF, blok AV) dan steteskop (bising mitral bersyarat) diperluas. Opsi 3 tidak diperlukan (semua lolos). Hasil: `cek_skor.py`, `buat_data.py --cek`, `cek_interaksi.mjs --ketat` lulus untuk 14 stasiun; e2e Chromium 425 lulus, 0 gagal. **[PR #2](https://github.com/matahana/OSCE-kardio-Bahteramas/pull/2) masih draft: pengguna yang memutuskan merge.**
 - [ ] Pengguna mengaktifkan GitHub Pages (Settings → Pages → `main` / root); setelah itu verifikasi URL situs (jaringan sesi mungkin tidak menjangkau `github.io`).
 - [ ] Hapus `<meta name="robots" content="noindex, nofollow">` di `app/index.html` dan `index.html` setelah konten direview dan siap dipublikasikan.
-- [ ] Belum ada langganan pemantauan PR; tawarkan lagi bila pengguna ingin komentar review ditangani otomatis.
 
 ## Pertanyaan terbuka untuk pengguna
 
@@ -63,3 +70,4 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 6. Apakah ingin versi bahasa Inggris?
 7. ~~Aplikasi untuk siapa?~~ **Dijawab 13 Okt 2026:** latihan mahasiswa (simulasi) dan penguji untuk menguji hasil belajar mahasiswa; diakses online lewat GitHub Pages.
 8. Apakah perkiraan penilaian global otomatis (ambang 55/70/85) sesuai, atau ingin kebijakan lain?
+9. Prioritas stasiun berikutnya? S07–S14 dipilih Claude dari bank blueprint (D26, D28–D30, D32, D33); apakah urutan ini sesuai, apakah S06 sebaiknya dipecah, dan dan apakah interaksi 07–14 yang kini ada sudah sesuai harapan?

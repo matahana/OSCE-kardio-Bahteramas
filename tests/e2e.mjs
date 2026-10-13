@@ -120,7 +120,7 @@ async function lisSteteskop(page, panel, situs, mode) {
 
 const sudahFoto = new Set();
 const fotoSekali = async (page, nama) => { if (!sudahFoto.has(nama)) { sudahFoto.add(nama); await foto(page, nama); } };
-const NAMA_SITUS = { aorta: 'Aorta', pulmonal: 'Pulmonal', erb: 'Erb', trikuspid: 'Trikuspid', mitral: 'Mitral', karotis: 'Karotis' };
+const NAMA_SITUS = { aorta: 'Aorta', pulmonal: 'Pulmonal', erb: 'Erb', trikuspid: 'Trikuspid', mitral: 'Mitral', karotis: 'Karotis', aksila: 'Aksila' };
 
 async function jalankanIdeal(page, id) {
   const info = await infoStasiun(page, id);
@@ -161,14 +161,18 @@ try {
   // 1. beranda
   console.log('Beranda');
   let page = await halamanBaru();
-  cek((await page.locator('.kartu').count()) === 6, 'beranda menampilkan 6 stasiun');
-  cek((await page.locator('.kartu a:has-text("Mulai latihan")').count()) === 6, 'semua stasiun dapat dilatih');
+  const jumlahBank = await page.evaluate(() => window.OSCE_DATA.urutan.length);
+  cek((await page.locator('.kartu').count()) === jumlahBank, `beranda menampilkan seluruh stasiun di bank (${jumlahBank})`);
+  const idInteraksi = await page.evaluate(() => window.OSCE_DATA.urutan.filter((i) => OSCE.ambil(i).interaksi));
+  cek(idInteraksi.length >= 6, `sedikitnya 6 stasiun punya interaksi (ada ${idInteraksi.length} dari ${jumlahBank})`);
+  cek((await page.locator('.kartu a:has-text("Mulai latihan")').count()) === idInteraksi.length, 'setiap stasiun berinteraksi dapat dilatih');
+  cek((await page.locator('.kartu :text("Segera hadir")').count()) === jumlahBank - idInteraksi.length, 'stasiun tanpa interaksi berlabel "Segera hadir"');
   await foto(page, '01-beranda');
   cek(page.galat.length === 0, 'beranda tanpa galat: ' + page.galat.join(' | '));
   await page.context().close();
 
   // 2. rencana ideal per stasiun lewat antarmuka
-  for (const id of ['01', '02', '03', '04', '05', '06']) {
+  for (const id of idInteraksi) {
     console.log('Stasiun ' + id);
     page = await halamanBaru();
     await jalankanIdeal(page, id);

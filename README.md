@@ -2,19 +2,19 @@
 
 Repositori materi OSCE (*Objective Structured Clinical Examination*) kardiovaskular: blueprint, stasiun lengkap dengan lembar penilaian, panduan penguji dan pasien simulasi, rujukan guideline, serta **aplikasi web simulasi** untuk berlatih dan menilai.
 
-> **Status: DRAF v0.1.** Seluruh stasiun dan lembar penilaian harus direview dan disahkan oleh tim penguji/kardiolog institusi sebelum dipakai pada ujian sumatif. Lihat [Catatan penggunaan](#catatan-penggunaan).
+> **Status: DRAF v0.2.** Seluruh stasiun dan lembar penilaian harus direview dan disahkan oleh tim penguji/kardiolog institusi sebelum dipakai pada ujian sumatif. Lihat [Catatan penggunaan](#catatan-penggunaan).
 
 ## Aplikasi simulasi (web)
 
 Buka [`app/index.html`](app/index.html) di peramban (tanpa server, tanpa instalasi), atau lewat web setelah GitHub Pages diaktifkan (Settings → Pages → `main` / root): https://matahana.github.io/OSCE-kardio-Bahteramas/ (mengalihkan ke `app/`; belum masuk mesin pencari karena `noindex` sampai konten direview).
 
-- **Latihan mandiri** 6 stasiun: pasien simulasi, form jawaban, EKG sintetis, steteskop, tensimeter virtual, dan uji ritme kompresi. Jam simulasi memaksa prioritas; hasil menampilkan checklist, tindakan berisiko, pembahasan, dan contoh urutan ideal.
+- **Latihan mandiri** untuk seluruh 14 stasiun: pasien simulasi, form jawaban, EKG sintetis (STEMI inferior, fibrilasi atrium, blok AV derajat tiga), steteskop (bunyi jantung dan bising mitral bersyarat), tensimeter virtual, dan uji ritme kompresi. Jam simulasi memaksa prioritas; hasil menampilkan checklist, tindakan berisiko, pembahasan, dan contoh urutan ideal.
 - **Mode penguji**: lembar penilaian digital dengan penghitung waktu, skor langsung, penilaian global, dan ekspor.
 - Checklist dibaca dari dokumen stasiun lewat generator, sehingga aplikasi dan dokumen tidak menyimpang. Rincian arsitektur, cara menambah stasiun, dan pemeriksaan: [docs/aplikasi.md](docs/aplikasi.md).
 
-## Stasiun (v0.1)
+## Bank stasiun (v0.2)
 
-Semua stasiun berdurasi 8 menit (+ 2 menit pindah) dan menguji level Miller *Shows how*.
+Semua stasiun berdurasi 8 menit (+ 2 menit pindah) dan menguji level Miller *Shows how*. Satu sirkuit ujian memakai 6 dari 14 stasiun; lihat [cara menyusun sirkuit](docs/blueprint.md#menyusun-sirkuit-dari-bank-stasiun).
 
 | No | Stasiun | Jenis | Skor |
 |----|---------|-------|:----:|
@@ -24,6 +24,14 @@ Semua stasiun berdurasi 8 menit (+ 2 menit pindah) dan menguji level Miller *Sho
 | 04 | [Pengukuran tekanan darah](stasiun/04-pengukuran-tekanan-darah.md) | Simulator lengan | 20 |
 | 05 | [BLS henti jantung + AED](stasiun/05-bls-henti-jantung.md) | Manikin RJP | 25 |
 | 06 | [Gagal jantung akut dekompensasi](stasiun/06-gagal-jantung-akut-dekompensasi.md) | Pasien simulasi + data | 25 |
+| 07 | [Edukasi pasca-infark miokard](stasiun/07-edukasi-pasca-infark.md) | Pasien simulasi | 25 |
+| 08 | [Interpretasi EKG — fibrilasi atrium](stasiun/08-ekg-fibrilasi-atrium.md) | Data (EKG) | 20 |
+| 09 | [Hipertensi emergensi](stasiun/09-hipertensi-emergensi.md) | Pasien simulasi + data | 20 |
+| 10 | [Sinkop: anamnesis dan stratifikasi risiko](stasiun/10-sinkop.md) | Pasien simulasi + data | 20 |
+| 11 | [Pemeriksaan fisik kardiovaskular sistematis](stasiun/11-pemeriksaan-fisik-kardiovaskular.md) | Sukarelawan + penguji / simulator | 20 |
+| 12 | [ACLS: henti jantung irama tidak dapat disyok](stasiun/12-acls-irama-tidak-dapat-disyok.md) | Manikin RJP + monitor simulasi + penguji | 25 |
+| 13 | [Gagal jantung kronik HFrEF: optimalisasi terapi](stasiun/13-gagal-jantung-kronik-optimalisasi-terapi.md) | Pasien simulasi + data | 20 |
+| 14 | [Interpretasi EKG: blok AV derajat tiga](stasiun/14-ekg-blok-av-total.md) | Data (EKG) + penguji | 20 |
 
 ## Struktur repositori
 
@@ -38,13 +46,14 @@ tests/
   e2e.mjs                               uji end-to-end di Chromium (Playwright)
 docs/
   aplikasi.md                           arsitektur, cara menambah stasiun, pemeriksaan
-  blueprint.md                          matriks domain × stasiun, rencana stasiun lanjutan
+  blueprint.md                          matriks domain × stasiun, penyusunan sirkuit, rencana stasiun lanjutan
   standar-penilaian.md                  skor, butir kritis, penetapan batas lulus (BRM), analisis
   panduan-penguji-dan-pasien-simulasi.md
   rubrik-komunikasi.md                  rubrik komunikasi opsional (0–2 per domain)
 templates/
   stasiun-template.md                   kerangka stasiun baru
 stasiun/                                satu berkas per stasiun
+assets/ekg/                             gambar EKG (belum ada; lihat README di dalamnya)
 referensi/
   README.md                             guideline dan pustaka (terverifikasi PubMed) + sumber yang belum terbaca
 tools/
@@ -73,7 +82,7 @@ Setiap stasiun memuat: metadata, instruksi kandidat, instruksi penguji, skrip pa
 
 - **Bukan pengganti guideline.** Dosis, ambang, dan target waktu pada checklist mengikuti guideline yang dirujuk; verifikasi terhadap teks lengkap dan pedoman PERKI/institusi sebelum ujian.
 - **Sesuaikan dengan sumber daya setempat** (cathlab 24 jam, fibrinolitik, simulator, AED) dan kebijakan kelulusan institusi.
-- **Jangan memasukkan data pasien nyata.** Gunakan kasus fiktif dan gambar/audio dengan lisensi jelas. Gambar EKG stasiun 02 belum disertakan (`assets/ekg/` belum ada).
+- **Jangan memasukkan data pasien nyata.** Gunakan kasus fiktif dan gambar/audio dengan lisensi jelas. Gambar EKG stasiun 02 dan 08 belum disertakan; lihat [assets/ekg/README.md](assets/ekg/README.md) untuk syaratnya.
 - **Lisensi belum ditetapkan.** Tentukan lisensi sebelum repositori dibuka untuk umum.
 - Contoh desain dari artikel publik diparafrasekan dan tidak disalin; lihat [referensi](referensi/README.md).
 

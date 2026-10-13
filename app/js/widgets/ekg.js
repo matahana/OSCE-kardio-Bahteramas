@@ -48,13 +48,60 @@
     return 'M' + titik.join(' L');
   }
 
-  // Menghasilkan elemen <svg> EKG. opsi: {bpm, sadapan: {nama: {p,q,r,s,t,st}}}
+  /* ---------- irama berbasis kejadian: fibrilasi atrium dan blok AV total ---------- */
+
+  function gauss(x, pusat, lebar, amp) { return amp * Math.exp(-0.5 * Math.pow((x - pusat) / lebar, 2)); }
+
+  // Kompleks ventrikel pada tau detik dari puncak R. w = faktor pelebaran QRS (1 = sempit);
+  // diskordan = gelombang T berlawanan arah dengan defleksi utama QRS (khas pelarian QRS lebar).
+  function kompleksV(tau, p, w, diskordan) {
+    if (tau < -0.12 || tau > 0.8) return 0;
+    var v = gauss(tau, -0.015 * w, 0.008 * w, -p.q);
+    v += gauss(tau, 0, 0.011 * w, p.r);
+    v += gauss(tau, 0.018 * w, 0.010 * w, -p.s);
+    v += p.st * (sig((tau - 0.035 * w) / 0.012) - sig((tau - (0.30 + 0.05 * (w - 1))) / 0.03));
+    var utama = p.r - p.s;
+    var tAmp = diskordan ? -(utama >= 0 ? 1 : -1) * Math.max(0.12, 0.3 * Math.abs(utama)) : p.t;
+    v += gauss(tau, 0.17 + 0.07 * (w - 1), 0.055 * (1 + 0.3 * (w - 1)), tAmp);
+    return v;
+  }
+
+  // Gelombang fibrilasi (f) halus pada garis dasar; amp = amplitudo (mV).
+  function fibrilasi(t, amp) {
+    var mod = 0.7 + 0.3 * Math.sin(2 * Math.PI * 0.35 * t + 1);
+    return amp * (mod * Math.sin(2 * Math.PI * 6.3 * t + 0.4) + 0.6 * Math.sin(2 * Math.PI * 8.1 * t + 1.3) + 0.4 * Math.sin(2 * Math.PI * 5.2 * t + 2.2));
+  }
+  var AMP_FIB = { V1: 0.08, II: 0.05, III: 0.045, aVF: 0.045 };
+
+  function jalurIrama(p, kej, w, diskordan, fibAmp, mulai, durasi, x0, yDasar) {
+    var langkah = 0.004, titik = [];
+    for (var t = 0; t <= durasi + 1e-9; t += langkah) {
+      var T = mulai + t, v = 0, i;
+      for (i = 0; i < kej.qrs.length; i++) {
+        var tau = T - kej.qrs[i];
+        if (tau >= -0.12 && tau <= 0.8) v += kompleksV(tau, p, w, diskordan);
+      }
+      for (i = 0; i < kej.p.length; i++) v += gauss(T, kej.p[i], 0.022, p.p);
+      if (fibAmp) v += fibrilasi(T, fibAmp);
+      titik.push((x0 + t * 25).toFixed(2) + ',' + (yDasar - v * 10).toFixed(2));
+    }
+    return 'M' + titik.join(' L');
+  }
+
+  // Menghasilkan elemen <svg> EKG.
+  // opsi: {bpm, sadapan: {nama: {p,q,r,s,t,st}}, irama: 'sinus' (default) | 'fa' | 'blok_av3',
+  //        bpmAtrium, seed, lebarQRS} — irama 'fa' dan 'blok_av3' memakai OSCE.logika.irama.
+  // opsi.sadapan menimpa nilai dasar per sadapan.
   OSCE.ekg = {
     gambar: function (opsi) {
       opsi = opsi || {};
       var bpm = opsi.bpm || 75;
       var lead = {};
       Object.keys(DASAR).forEach(function (k) { lead[k] = Object.assign({}, DASAR[k], (opsi.sadapan || {})[k] || {}); });
+      var kej = (opsi.irama === 'fa' || opsi.irama === 'blok_av3') && OSCE.logika ? OSCE.logika.irama(opsi) : null;
+      var w = kej && opsi.irama === 'blok_av3' ? (opsi.lebarQRS || 1.9) : 1;
+      var diskordan = !!kej && opsi.irama === 'blok_av3' && w > 1.3;
+      var fibAmp = function (nama) { return kej && opsi.irama === 'fa' ? (AMP_FIB[nama] || 0.03) : 0; };
       var lebarTotal = MARGIN * 2 + LEBAR * 4, tinggiTotal = MARGIN * 2 + TINGGI * 4;
       var svg = U.svg('svg', {
         viewBox: '0 0 ' + lebarTotal + ' ' + tinggiTotal, class: 'ekg', role: 'img',
@@ -74,7 +121,8 @@
         baris.forEach(function (nama, c) {
           var x0 = MARGIN + c * LEBAR, y0 = MARGIN + r * TINGGI;
           svg.appendChild(U.svg('path', {
-            d: jalur(lead[nama], bpm, c * 2.5, 2.5, x0, y0 + TINGGI / 2),
+            d: kej ? jalurIrama(lead[nama], kej, w, diskordan, fibAmp(nama), c * 2.5, 2.5, x0, y0 + TINGGI / 2)
+                   : jalur(lead[nama], bpm, c * 2.5, 2.5, x0, y0 + TINGGI / 2),
             fill: 'none', stroke: '#1a1a1a', 'stroke-width': 0.28, 'stroke-linejoin': 'round'
           }));
           svg.appendChild(U.svg('text', { x: x0 + 1, y: y0 + 4, 'font-size': 3.6, 'font-weight': 700, fill: '#7a1f1f' }, nama));
@@ -82,7 +130,8 @@
       });
       var yr = MARGIN + 3 * TINGGI;
       svg.appendChild(U.svg('path', {
-        d: jalur(lead.II, bpm, 0, 10, MARGIN, yr + TINGGI / 2),
+        d: kej ? jalurIrama(lead.II, kej, w, diskordan, fibAmp('II'), 0, 10, MARGIN, yr + TINGGI / 2)
+               : jalur(lead.II, bpm, 0, 10, MARGIN, yr + TINGGI / 2),
         fill: 'none', stroke: '#1a1a1a', 'stroke-width': 0.28, 'stroke-linejoin': 'round'
       }));
       svg.appendChild(U.svg('text', { x: MARGIN + 1, y: yr + 4, 'font-size': 3.6, 'font-weight': 700, fill: '#7a1f1f' }, 'II (ritme)'));
