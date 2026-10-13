@@ -155,7 +155,10 @@
         ui.segarkan();
       }
       hentikan();
-      henti = putar(id, mode, opsi.profil, opsi.bpm, { diastolik: diastolikAktif(), tidakTeratur: !!opsi.tidakTeratur });
+      var dia = diastolikAktif();
+      // Peristiwa "bising diastolik terdengar": hanya bila syarat teknik terpenuhi pada saat mendengarkan apeks.
+      if (dia && id === 'mitral' && opsi.profil.diastolik.amp && opsi.profil.diastolik.amp.mitral) sesi.emit('bising_diastolik_terdengar', true, {});
+      henti = putar(id, mode, opsi.profil, opsi.bpm, { diastolik: dia, tidakTeratur: !!opsi.tidakTeratur });
       status.textContent = 'Mendengarkan: ' + nama[1] + ' (' + nama[2] + '), ' + (mode === 'd' ? 'diafragma' : 'bell') + '…';
       if (!henti) status.textContent += ' (audio tidak tersedia di peramban ini; gunakan bantuan teks)';
       if (sesi.sudah('palpasi')) {
