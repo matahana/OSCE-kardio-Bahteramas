@@ -5,14 +5,14 @@ Repositori materi OSCE kardiovaskular. Instruksi ini dimuat otomatis pada awal s
 ## Mulai sesi dengan ini (hemat waktu)
 
 1. Baca [`wiki/index.md`](wiki/index.md), lalu [`wiki/open-items.md`](wiki/open-items.md). Jangan menelusuri ulang repositori dari nol.
-2. Cek status PR dan branch yang tercatat di [`wiki/overview.md`](wiki/overview.md). PR bisa saja sudah di-merge sejak sesi terakhir; bila sudah, mulai branch baru dari `main`.
+2. Cek status PR dan branch yang tercatat di [`wiki/overview.md`](wiki/overview.md). PR bisa saja sudah di-merge sejak sesi terakhir; bila sudah, mulai branch baru dari `main`. **Selalu periksa daftar PR terbuka** (`list_pull_requests`, `state: all`): sesi paralel dapat membuka PR lain pada repo yang sama (terjadi pada 13 Oktober 2026: PR #2), dan wiki bisa tertinggal. Jangan menyunting atau merge PR dari sesi lain tanpa diminta pengguna.
 3. Kerjakan hanya yang diminta pengguna, dan catat hasilnya di wiki sebelum sesi berakhir (lihat "Akhir sesi").
 
 ## Konteks proyek
 
 - Pemilik: dokter spesialis kardiologi dan peneliti epidemiologi. Bahasa: **Bahasa Indonesia**, profesional dan akurat, berbasis guideline terkini (ACC/AHA, ESC, WHO, dan PERKI untuk konteks Indonesia).
 - **Hanya repositori ini** yang dikerjakan. Repositori `panduan-ibadah` tidak terkait: jangan dibaca, diubah, atau di-push (permintaan eksplisit pengguna, 13 Oktober 2026).
-- Isi: bank 14 stasiun OSCE kardiovaskular (DRAF v0.2; satu sirkuit memakai 6 stasiun), blueprint, standar penilaian, panduan penguji/pasien simulasi, rujukan.
+- Isi: bank 14 stasiun OSCE kardiovaskular (DRAF v0.2; satu sirkuit memakai 6 stasiun), blueprint, standar penilaian, panduan penguji/pasien simulasi, rujukan, dan **aplikasi web simulasi** (`app/`; saat ini hanya stasiun 01–06 yang punya interaksi, stasiun 07–14 belum).
 
 ## Struktur
 
@@ -20,12 +20,15 @@ Repositori materi OSCE kardiovaskular. Instruksi ini dimuat otomatis pada awal s
 CLAUDE.md                 instruksi ini
 README.md                 pintu masuk untuk manusia
 wiki/                     memori kerja lintas sesi (mulai dari wiki/index.md)
-docs/                     blueprint, standar penilaian, panduan penguji/SP, rubrik komunikasi
-stasiun/                  satu berkas per stasiun (sumber kebenaran isi stasiun)
+docs/                     aplikasi, blueprint, standar penilaian, panduan penguji/SP, rubrik komunikasi
+stasiun/                  satu berkas per stasiun (sumber kebenaran isi stasiun dan checklist)
 assets/ekg/               gambar EKG (belum ada; syaratnya di README folder itu)
 templates/                kerangka stasiun baru
 referensi/README.md       guideline dan pustaka (terverifikasi PubMed)
-tools/cek_skor.py         pemeriksa jumlah skor checklist
+app/                      aplikasi web statis; data/stasiun-data.js = HASIL GENERATOR (jangan disunting tangan)
+tests/e2e.mjs            uji end-to-end Chromium (Playwright)
+tools/                    cek_skor.py, buat_data.py (generator), cek_interaksi.mjs
+.github/workflows/cek.yml CI untuk tiga pemeriksaan tanpa browser
 ```
 
 ## Aturan konten klinis
@@ -42,6 +45,15 @@ tools/cek_skor.py         pemeriksa jumlah skor checklist
 - Jumlah skor checklist = "Skor maksimum" = angka pada "Skor checklist: ___ / N". Jalankan `python3 -I tools/cek_skor.py` sebelum commit; harus keluar dengan kode 0.
 - Butir kritis ditandai ⚠. Penilaian global memakai skala 1–4 (Tidak lulus, Borderline, Lulus, Sangat baik).
 - Durasi seragam 8 menit (+2 menit pindah). Bila menambah stasiun, perbarui blueprint, standar penilaian (skor maksimum dan *k* dari *N*), README, dan `wiki/stations.md`.
+
+## Aturan aplikasi (`app/`)
+
+- Checklist hanya ada di `stasiun/*.md`. Setelah mengubah markdown stasiun: `python3 -I tools/buat_data.py` dan commit hasilnya. Jangan menyunting `app/data/stasiun-data.js`.
+- Isi interaksi (pertanyaan, respons, form, widget, pemetaan skor) ada di `app/data/interaksi/NN.js`; panduan lengkap di [`docs/aplikasi.md`](docs/aplikasi.md). Respons pasien harus konsisten dengan skrip SP di markdown stasiun.
+- Stasiun baru = markdown + generator + `interaksi/NN.js` + `<script>` di `app/index.html` + pembaruan `wiki/stations.md`.
+- Sebelum commit perubahan aplikasi, jalankan: `python3 -I tools/cek_skor.py`, `python3 -I tools/buat_data.py --cek`, `node tools/cek_interaksi.mjs`, dan `node tests/e2e.mjs` (Playwright; jalur dan trik jam di `wiki/environment.md`). Semua harus lulus.
+- Klaim klinis baru di aplikasi (alasan "tidak tepat/berisiko", dosis, ambang) dicatat di `wiki/guidelines-status.md` sebagai belum terverifikasi sampai dicek.
+- Aplikasi harus tetap jalan dari `file://` (skrip klasik, tanpa modul ES, tanpa CDN, tanpa fetch).
 
 ## Operasi wiki
 

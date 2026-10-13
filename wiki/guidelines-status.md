@@ -66,6 +66,16 @@ Cara memverifikasi: lihat alur PubMed di [environment](environment.md). Teks len
 | 14 | Blok AV derajat tiga: disosiasi AV, ritme pelarian lebar lambat kurang andal; bradikardia tidak stabil → pacu transkutan; atropin dicoba tetapi sering tidak efektif pada blok infra-nodal; infus dopamin/epinefrin sebagai jembatan; pacu permanen bila bukan reversibel | Kusumoto 2018 (metadata terverifikasi; teks tidak tersedia di PMC); Wigginton 2025 Part 9 | **Belum diverifikasi** |
 | 14 | Penyebab yang dapat dikoreksi: obat penghambat nodus AV, hiperkalemia, iskemia/infark inferior, hipotiroid | Kusumoto 2018 | Belum diverifikasi |
 
+### Klaim tambahan di aplikasi (belum diverifikasi)
+
+| Stasiun | Klaim | Status |
+|---------|-------|--------|
+| 02 | Morfin IV rutin tidak dianjurkan pada STEMI; oksigen hanya bila SpO₂ < 90%; menunda reperfusi untuk menunggu troponin/CT koroner berisiko | Belum diverifikasi |
+| 03 | Uji treadmill tidak aman pada stenosis aorta berat bergejala; CT angiografi koroner bukan langkah awal menilai katup; gejala klasik (angina, sinkop, gagal jantung) | Belum diverifikasi; guideline katup belum dikutip |
+| 04 | Manset terlalu kecil membuat bacaan terlalu tinggi, terlalu besar terlalu rendah (di aplikasi: +10 / −8 mmHg, nilai ilustrasi); bicara saat pengukuran menaikkan TD; diagnosis hipertensi perlu dikonfirmasi sebelum obat | Arah efek standar; besaran ilustrasi; belum diverifikasi |
+| 05 | Pad AED di infraklavikula kanan dan apeks kiri; jangan cek nadi setelah syok, langsung RJP 2 menit; AED menganalisis ulang tiap ± 2 menit; ganti penolong tiap ± 2 menit | Belum diverifikasi ke bab BLS dewasa |
+| 06 | Furosemid 20 mg IV atau oral tidak memadai pada kongesti berat; inotrop tidak diindikasikan pada profil hangat–basah; penghambat beta IV pada dekompensasi akut dan bolus cairan berisiko; NSAID memperburuk retensi cairan | Belum diverifikasi |
+
 ## Yang sudah diverifikasi
 
 - Metadata 6 guideline (Gulati 2021, Rao 2025, Byrne 2023, McEvoy 2024, Jones 2025, Del Rios 2025 Part 1) lewat `get_article_metadata`.

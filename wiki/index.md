@@ -27,7 +27,8 @@ Mulai dari sini. Satu baris per halaman; baca hanya yang relevan dengan tugas.
 ## Di luar wiki (sumber kebenaran isi)
 
 - `../README.md`, `../CLAUDE.md`
+- `../docs/aplikasi.md` (arsitektur dan cara menambah stasiun di aplikasi), `../app/` (aplikasi web), `../tests/e2e.mjs`
 - `../docs/blueprint.md`, `../docs/standar-penilaian.md`, `../docs/panduan-penguji-dan-pasien-simulasi.md`, `../docs/rubrik-komunikasi.md`
 - `../stasiun/01…14-*.md`, `../assets/ekg/README.md`, `../templates/stasiun-template.md`
 - `../referensi/README.md` (tabel sitasi lengkap dengan DOI/PMID)
-- `../tools/cek_skor.py`
+- `../tools/cek_skor.py`, `../tools/buat_data.py`, `../tools/cek_interaksi.mjs`, `../.github/workflows/cek.yml`

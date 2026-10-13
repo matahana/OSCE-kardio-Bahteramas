@@ -7,20 +7,22 @@ updated: 2026-10-13
 
 ## Tujuan
 
-Menyusun repositori materi OSCE kardiovaskular yang dapat dipakai dan dikembangkan: stasiun lengkap dengan lembar penilaian, blueprint, standar penilaian, panduan penguji dan pasien simulasi, serta rujukan guideline. Dibuat atas permintaan pengguna (kardiolog), terpisah sepenuhnya dari repositori `panduan-ibadah`.
+Menyusun repositori materi OSCE kardiovaskular yang dapat dipakai dan dikembangkan: stasiun lengkap dengan lembar penilaian, blueprint, standar penilaian, panduan penguji dan pasien simulasi, rujukan guideline, dan **aplikasi web simulasi OSCE** (latihan mandiri + mode penguji). Dibuat atas permintaan pengguna (kardiolog), terpisah sepenuhnya dari repositori `panduan-ibadah`. Deskripsi repo yang ditulis pengguna: "aplikasi simulasi OSCE kardiologi untuk RS Bahteramas".
 
 ## Status per 13 Oktober 2026
 
 | Hal | Nilai |
 |-----|-------|
 | Repo | https://github.com/matahana/OSCE-kardio-Bahteramas (nama kanonik; sesi mendaftarkannya sebagai `osce-kardio-bahteramas`, keduanya valid) |
-| `main` | `b807f4f`: merge PR #1 (kerangka v0.1 + wiki + `CLAUDE.md` + `tools/cek_skor.py`), di-merge pengguna 13 Oktober 2026 16:31 UTC |
-| Branch kerja | Sesi 1: `claude/gallant-babbage-fb0o57` · Sesi 2: `claude/happy-darwin-oxpyko` (nama ditentukan harness tiap sesi) |
-| PR | [#1](https://github.com/matahana/OSCE-kardio-Bahteramas/pull/1) (v0.1) **sudah di-merge** · [#2](https://github.com/matahana/OSCE-kardio-Bahteramas/pull/2) (v0.2: S07–S14), **draft**, basis sudah dialihkan ke `main` (semula branch PR #1); sesi 2 berlangganan pemantauan PR #2 |
-| Konten | 14 stasiun, blueprint (bank + sirkuit), standar penilaian, panduan, rubrik komunikasi, template, rujukan, `assets/ekg/README.md`, wiki, `CLAUDE.md`, `tools/cek_skor.py` |
+| `main` | Berisi PR #1 (merge `b807f4f`), PR #3 (merge `024a359`: aplikasi simulasi web, tests, CI, dokumentasi), dan PR #4 (merge `5c52eb7`: persiapan GitHub Pages, `noindex`, koreksi wiki) |
+| Branch kerja | Sesi 1 (aplikasi): `claude/gallant-babbage-fb0o57` (di-reset ke `main` setelah tiap PR di-merge) · Sesi 2 (stasiun 07–14): `claude/happy-darwin-oxpyko` (nama ditentukan harness tiap sesi) |
+| PR | #1, [#3](https://github.com/matahana/OSCE-kardio-Bahteramas/pull/3), dan #4 sudah di-merge ke `main` (13 Oktober 2026). **[#2](https://github.com/matahana/OSCE-kardio-Bahteramas/pull/2) masih terbuka (draft)**: v0.2 dengan stasiun 07–14 dan penyusunan sirkuit, basis `main`; branch-nya sudah digabung dengan `main` (konflik dokumen diselesaikan), tetapi CI gagal pada `cek_interaksi.mjs` karena stasiun 07–14 belum punya `app/data/interaksi/NN.js` (lihat [open-items](open-items.md#proses)). Sesi 2 berlangganan pemantauan PR #2 |
+| Visibilitas | Publik. GitHub Pages **belum aktif** (`has_pages: false`) |
+| Situs web | Setelah Pages aktif: https://matahana.github.io/OSCE-kardio-Bahteramas/ (mengalihkan ke `app/`). Tidak dapat diaktifkan dari sesi (tidak ada tool, token `gh` tidak valid); pengguna mengaktifkan manual di Settings → Pages (`main` / root) |
+| Konten | Bank 14 stasiun (aplikasi baru memuat interaksi untuk 01–06), blueprint (bank + sirkuit), standar penilaian, panduan, rubrik komunikasi, template, rujukan, `assets/ekg/README.md`, wiki, `CLAUDE.md`; aplikasi web (`app/`), `tools/` (cek_skor, buat_data, cek_interaksi), `tests/e2e.mjs`, CI `.github/workflows/cek.yml` |
 | Status mutu | **DRAF v0.2**, belum direview kardiolog. Angka klinis belum diverifikasi ke teks lengkap kecuali klaim fibrilasi atrium (S08, sebagian S11) yang dicocokkan ke Joglar 2023 pada 13 Oktober 2026; guideline lain tidak punya teks lengkap di PMC |
 
-Saat memulai sesi baru, cek dulu apakah PR #2 sudah di-merge atau ditutup, lalu perbarui tabel ini. Branch basis dapat bergerak selama sesi (terjadi di sesi 2: `f69a580` → `90c689f`); `git fetch` sebelum membuat PR bertumpuk.
+Saat memulai sesi baru, cek PR terbuka dan riwayat `main`, lalu perbarui tabel ini. Branch basis dan `main` dapat bergerak selama sesi (terjadi di sesi 2: branch PR #1 `f69a580` → `90c689f`, lalu `main` bergerak dua kali oleh sesi paralel); `git fetch` sebelum membuat PR bertumpuk atau mendorong.
 
 ## Angka kunci
 
@@ -31,8 +33,8 @@ Saat memulai sesi baru, cek dulu apakah PR #2 sudah di-merge atau ditutup, lalu 
 
 ## Hal yang tidak boleh diasumsikan
 
-- Identitas institusi di balik nama "Bahteramas" tidak dikonfirmasi pengguna. Tanyakan bila relevan (mis. untuk sumber daya cathlab, kebijakan kelulusan, pemetaan kompetensi).
-- Level peserta target (dokter muda, dokter umum, atau PPDS) dan jenis ujian (formatif atau sumatif) belum ditetapkan pengguna; draf menargetkan dokter muda/dokter umum.
+- Bahteramas = RS Bahteramas (menurut deskripsi repo yang ditulis pengguna), tetapi detail institusi tidak dikonfirmasi: kebijakan kelulusan, sumber daya cathlab/simulator, pemetaan kompetensi. Tanyakan bila relevan.
+- Pengguna (kardiolog) menyatakan pada 13 Oktober 2026: aplikasi untuk **latihan mahasiswa (simulasi)** dan untuk **penguji menguji hasil belajar mahasiswa**, diakses online; pengguna akan mereview sendiri setelah aplikasi dinyatakan selesai. Level peserta (dokter muda, dokter umum, atau PPDS) dan formatif/sumatif belum dijawab; draf menargetkan dokter muda/dokter umum.
 
 ## Preferensi pengguna yang berlaku di proyek ini
 

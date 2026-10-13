@@ -54,6 +54,23 @@ Ringkasan untuk orientasi cepat. **Isi lengkap ada di `stasiun/NN-*.md`** (sumbe
 
 **14 EKG blok AV derajat tiga.** Ibu Marta, 74 th, lemas, pusing, hampir pingsan 3 jam; TD 78/48, nadi 34, akral dingin, GCS 14. Bisoprolol + amlodipin + ramipril. EKG: P teratur ± 90, QRS lebar ± 140 ms teratur ± 34, disosiasi AV; K 4,6, troponin negatif. Kandidat harus menilai bradikardia dengan hipoperfusi, menyiapkan pacu transkutan (atropin boleh dicoba, keterbatasannya disebut), infus jembatan, menahan penyekat beta, dan merencanakan pacu sementara/permanen. Dosis tidak dinilai. **Gambar EKG belum ada.**
 
+**Catatan:** stasiun 07–14 sudah ada di bank (markdown) dan masuk generator, tetapi **belum punya interaksi aplikasi**; beranda menampilkan "Segera hadir" dan `tools/cek_interaksi.mjs` melaporkannya sebagai gagal.
+
+## Aplikasi: interaksi per stasiun
+
+Berkas `app/data/interaksi/NN.js` (panduan: `docs/aplikasi.md`). Sisa waktu = sisa jam simulasi pada rencana ideal (dari `tools/cek_interaksi.mjs`).
+
+| No | Panel dan widget | Sisa waktu ideal | Catatan |
+|----|------------------|:----------------:|---------|
+| 01 | Satu panel anamnesis (48 aksi bergrup, dengan pencarian) | 137/480 | 12 pertanyaan wajar tak berskor (14 dtk) + 3 pengecoh (2 tidak tepat, 1 berisiko "masuk angin"); "klik semua" ≈ 88% |
+| 02 | EKG sintetis + 3 form (interpretasi, diagnosis, tatalaksana) | 200/480 | Opsi form berbendera (nitrat, morfin, oksigen rutin, menunggu troponin, CT dulu) |
+| 03 | Persiapan, widget steteskop (6 titik × diafragma/bell, bantuan teks), manuver, form, komunikasi | 239/480 | Bunyi sintetis Web Audio; palpasi nadi memunculkan penanda nadi |
+| 04 | Persiapan, manset, widget tensimeter, ulang/lengan, form catat, komunikasi | 144/480 | Nilai sebenarnya 152/94; manset kecil +10, besar −8 mmHg |
+| 05 | Penilaian, form teknik RJP, widget uji ritme, RJP dan AED (syarat bertahap), serah terima | 76/480 | AED tiba 45 dtk setelah diminta; tim ACLS tiba pada 360 dtk (jadwal) |
+| 06 | Penilaian awal, anamnesis, pemeriksaan, penunjang, tatalaksana (diuretik eksklusif), komunikasi | 120/480 | 10 tindakan tidak tepat dan 3 berisiko (bolus cairan, penghambat beta IV, ibuprofen) |
+
+Ambang uji: rencana ideal 100%, tanpa tindakan tidak tepat/berisiko, sisa waktu ≥ 10%; strategi "klik semua" tidak boleh 100% tanpa catatan.
+
 ## Kelemahan yang diketahui (jangan diabaikan)
 
 - Semua stasiun belum direview kardiolog; angka klinis belum diverifikasi ke teks lengkap ([guidelines-status](guidelines-status.md)).
@@ -67,6 +84,8 @@ Ringkasan untuk orientasi cepat. **Isi lengkap ada di `stasiun/NN-*.md`** (sumbe
 - 10 menyambung ke 03 (variasi sinkop dengan bising stenosis aorta) dan ke 08/09 sebagai stasiun "keputusan rawat"; hindari menaruh lebih dari satu stasiun "keputusan rawat" berurutan dalam sirkuit.
 - Beberapa butir memakai skor bertingkat: 4a di stasiun 02 (3 sadapan = 2; 2 sadapan = 1), butir 3 di stasiun 02 (1 poin per interval), dan B8 di stasiun 01 (≥ 3 dari 5 gejala = 2; 1–2 = 1). Pastikan penguji memahaminya.
 - Pemetaan ke SNPPDI/KKI belum diisi.
+- Respons pasien di aplikasi ditulis ulang dari skrip SP; bila skrip di markdown berubah, interaksi harus ikut diperbarui (tidak ada pemeriksa otomatis untuk teks respons).
+- Pengecoh dan alasan "tidak tepat/berisiko" di aplikasi adalah klaim klinis tambahan yang belum diverifikasi (lihat guidelines-status).
 - Belum ada uji coba (pilot) dan data psikometrik.
 
 ## Cara menambah atau mengubah stasiun

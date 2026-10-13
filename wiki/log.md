@@ -30,6 +30,41 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 
 **Belum selesai:** lihat [open-items](open-items.md); yang terpenting review kardiolog dan verifikasi angka klinis.
 
+## [2026-10-13] sesi 1 (lanjutan) | Merge PR #1 dan pembuatan aplikasi simulasi web
+
+**Permintaan pengguna:** (1) merge PR #1 ke main; (2) buat aplikasi simulasi web OSCE-nya.
+
+**Tindakan dan hasil**
+- PR #1 dilepas dari draft lalu di-merge (merge commit `b807f4f`); `main` memuat `CLAUDE.md`, wiki, `tools/`. Dari data PR terlihat deskripsi repo "aplikasi simulasi OSCE kardiologi untuk RS Bahteramas", yang menjadi dasar permintaan aplikasi.
+- Branch kerja di-reset ke `main` (`git checkout -B … FETCH_HEAD`), pekerjaan aplikasi di PR #3 (draft).
+- Dibangun aplikasi statis di `app/`: engine bebas DOM (jam simulasi berbasis biaya aksi, penilaian per butir), generator data dari markdown, interaksi 6 stasiun, 4 widget (EKG sintetis, steteskop Web Audio, tensimeter + Korotkoff, uji ritme kompresi), UI (beranda, briefing, ruang, hasil, mode penguji, riwayat, tentang), CSS responsif dengan mode gelap.
+- Verifikasi: `tools/cek_interaksi.mjs` (6 stasiun: rencana ideal 100%, "klik semua" tidak 100% tanpa catatan); `tests/e2e.mjs` di Chromium dari `file://`: 156 pemeriksaan lulus, termasuk kontrol negatif widget, tindakan berisiko, jalur waktu habis, mode penguji, riwayat; tangkapan layar ditinjau (menemukan dan memperbaiki tabrakan kelas CSS, EKG terlalu kecil, daftar aksi memanjangkan halaman, header ponsel).
+- Desain yang diubah karena uji: pertanyaan wajar tak berskor ditambah (biaya 14 dtk) agar "tanya semua" tidak muat dalam 480 dtk (sebelumnya batas waktu tidak memaksa prioritas).
+- Dokumentasi: `docs/aplikasi.md`, README, `CLAUDE.md`; CI `.github/workflows/cek.yml`.
+
+**Keputusan:** D14–D22 di [decisions](decisions.md).
+
+**Belum selesai:** lihat [open-items](open-items.md), terutama uji coba dengan pengguna nyata, review kardiolog atas teks respons, dan verifikasi angka klinis.
+
+## [2026-10-13] sesi 1 (akhir) | Merge PR #3
+
+**Permintaan pengguna:** merge PR #3 ke main.
+
+**Tindakan:** PR #3 dicek (tidak ada konflik; CI "Cek konsistensi" hijau pada kedua commit sebelumnya), wiki diperbarui agar mencerminkan keadaan pasca-merge, PR dilepas dari draft lalu di-merge dengan metode merge biasa (riwayat commit dipertahankan). Aplikasi kini ada di `main`; buka `app/index.html`.
+
+**Berikutnya:** lihat [open-items](open-items.md): review kardiolog, verifikasi angka klinis, uji coba dengan pengguna nyata, keputusan Pages/lisensi/visibilitas.
+
+## [2026-10-13] sesi 1 (akhir 2) | Permintaan mengaktifkan GitHub Pages
+
+**Permintaan pengguna:** aktifkan GitHub Pages agar aplikasi bisa diakses online. Jawaban pengguna: aplikasi untuk latihan mahasiswa (simulasi) dan untuk penguji menguji hasil belajar mahasiswa; pengguna (kardiolog) akan mereview setelah aplikasi selesai.
+
+**Temuan dan tindakan**
+- Pages tidak dapat diaktifkan dari sesi (tidak ada tool; `gh` token tidak valid; integrasi tanpa hak admin). Repo publik, `has_pages: false`. Situs diuji lewat HTTP lokal: lulus. Pengguna diberi langkah manual.
+- Ditemukan **PR #2 terbuka** dari sesi paralel (stasiun 07–13, penyusun sirkuit; `dirty`). Catatan wiki sebelumnya ("tidak ada PR terbuka") keliru dan dikoreksi. PR #2 tidak disentuh.
+- Ditambahkan `noindex, nofollow` pada halaman aplikasi sampai review selesai (D23), tautan Pages di README dan docs/aplikasi.md, aturan "periksa PR terbuka di awal sesi" di `CLAUDE.md`.
+
+**Berikutnya:** lihat [open-items](open-items.md): rekonsiliasi PR #2, aktivasi Pages oleh pengguna, review kardiolog.
+
 ## [2026-10-13] sesi 2 | Lanjutan: stasiun 07–09, sirkuit, dan pemantauan PR #2
 
 **Permintaan pengguna (berurutan)**
@@ -38,15 +73,15 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 
 **Tindakan dan hasil**
 - Penjelasan PR diberikan di chat. Branch sesi (`claude/happy-darwin-oxpyko`) masih di `main`; isi PR #1 dibawa dengan fast-forward.
-- Pengguna tidak menyebut stasiun tertentu; dipilih tiga dari bank blueprint (D16): S07 edukasi pasca-infark (25), S08 EKG fibrilasi atrium (20), S09 hipertensi emergensi (20).
+- Pengguna tidak menyebut stasiun tertentu; dipilih tiga dari bank blueprint (D26): S07 edukasi pasca-infark (25), S08 EKG fibrilasi atrium (20), S09 hipertensi emergensi (20).
 - Blueprint: matriks 9 stasiun, aturan menyusun sirkuit, dua contoh sirkuit (A = 140, B = 135). Standar penilaian: skor baru dan bagian 7 (lebih dari satu sirkuit). `assets/ekg/README.md` dibuat. README diperbarui.
 - Verifikasi PubMed (metadata): Joglar 2024, Van Gelder 2024, Virani 2023; judul dan DOI McDonagh 2021 dan Heidenreich 2022 dilengkapi di `referensi/README.md`.
 - Empat situs contoh (sumber 1–4) dicoba ulang: tetap tidak terjangkau; tidak ada isinya yang dipakai.
 - Skor sembilan stasiun dicek (skrip ad hoc lalu `tools/cek_skor.py` setelah merge): semuanya cocok, total 200. Total sirkuit B semula salah tulis 130, dikoreksi 135 setelah dihitung dari matriks.
 - PR [#2](https://github.com/matahana/OSCE-kardio-Bahteramas/pull/2) dibuat sebagai draft dengan basis branch PR #1. Pengguna meminta pemantauan; sesi berlangganan PR #2.
-- Event langganan pertama menunjukkan branch PR #1 bertambah satu commit (`90c689f`: wiki, `CLAUDE.md`, `tools/cek_skor.py`). Branch itu digabung ke branch sesi (merge biasa, tanpa konflik). Karena `CLAUDE.md` mewajibkan pencatatan angka klinis, wiki diperbarui di commit ini: `stations`, `guidelines-status` (klaim baru S07–S09, semuanya belum diverifikasi), `decisions` (D14–D17), `open-items`, `overview`, `index`, `sources`, `environment`; `CLAUDE.md` disesuaikan (9 stasiun, `assets/ekg/`).
+- Event langganan pertama menunjukkan branch PR #1 bertambah satu commit (`90c689f`: wiki, `CLAUDE.md`, `tools/cek_skor.py`). Branch itu digabung ke branch sesi (merge biasa, tanpa konflik). Karena `CLAUDE.md` mewajibkan pencatatan angka klinis, wiki diperbarui di commit ini: `stations`, `guidelines-status` (klaim baru S07–S09, semuanya belum diverifikasi), `decisions` (D24–D27), `open-items`, `overview`, `index`, `sources`, `environment`; `CLAUDE.md` disesuaikan (9 stasiun, `assets/ekg/`).
 
-**Keputusan:** D14–D17 di [decisions](decisions.md), semuanya usulan.
+**Keputusan:** D24–D27 di [decisions](decisions.md), semuanya usulan.
 
 **Belum selesai:** review kardiolog atas seluruh stasiun; verifikasi angka klinis (terutama target penurunan TD S09); gambar EKG S02 dan S08; rujukan PERKI/PERHI dan ESC/EAS dislipidemia 2019; uji coba waktu S06, S07, S09; keputusan memecah S06. Lihat [open-items](open-items.md).
 
@@ -56,11 +91,11 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 
 **Tindakan dan hasil**
 - Sebelum menulis: `git fetch` menunjukkan `main` bergerak ke `b807f4f` (merge PR #1 oleh pengguna). Uji merge ke `main` bersih; selisih branch sesi terhadap `main` tepat 19 berkas PR #2. Basis PR #2 dialihkan dari branch PR #1 ke `main` (mergeable_state tetap clean).
-- Stasiun dipilih dari bank blueprint: sinkop (D18). `stasiun/10-sinkop.md` ditulis: 20 butir, butir kritis A2, B4, E1, E2.
+- Stasiun dipilih dari bank blueprint: sinkop (D28). `stasiun/10-sinkop.md` ditulis: 20 butir, butir kritis A2, B4, E1, E2.
 - Verifikasi PubMed (metadata): Shen 2017 (PMID 28280231, DOI 10.1161/CIR.0000000000000499), Brignole 2018 (PMID 29562304, DOI 10.1093/eurheartj/ehy037). `lookup_article_by_citation` kembali menukar bidang `pmid`/`key`; dikonfirmasi lewat `get_article_metadata`.
-- Diperbarui: README, blueprint (baris 10, sinkop dicoret dari bank), standar penilaian (S10 = 20), referensi, `CLAUDE.md`, dan wiki (`stations`, `guidelines-status` dengan lima klaim S10 berstatus belum diverifikasi, `decisions` D18, `open-items`, `overview`, `index`).
+- Diperbarui: README, blueprint (baris 10, sinkop dicoret dari bank), standar penilaian (S10 = 20), referensi, `CLAUDE.md`, dan wiki (`stations`, `guidelines-status` dengan lima klaim S10 berstatus belum diverifikasi, `decisions` D28, `open-items`, `overview`, `index`).
 
-**Keputusan:** D18; D17 digantikan (basis PR #2 kini `main`).
+**Keputusan:** D28; D27 digantikan (basis PR #2 kini `main`).
 
 **Belum selesai:** sama seperti entri sesi 2 sebelumnya, ditambah guideline aritmia ventrikel/ICD untuk pertanyaan lanjutan S10 dan uji waktu S10.
 
@@ -70,11 +105,11 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 
 **Tindakan dan hasil**
 - Sebelum menulis: `git fetch` (tidak ada commit baru di `main` atau branch sesi), PR #2 `mergeable_state` clean, belum ada review atau komentar, tidak ada notifikasi.
-- Stasiun dipilih dari bank blueprint: pemeriksaan fisik kardiovaskular lengkap (D19). `stasiun/11-pemeriksaan-fisik-kardiovaskular.md`: 20 butir, butir kritis E2 dan G1. Kasus stenosis mitral rematik dengan AF, menyambung ke S08.
+- Stasiun dipilih dari bank blueprint: pemeriksaan fisik kardiovaskular lengkap (D29). `stasiun/11-pemeriksaan-fisik-kardiovaskular.md`: 20 butir, butir kritis E2 dan G1. Kasus stenosis mitral rematik dengan AF, menyambung ke S08.
 - Verifikasi PubMed (metadata): Otto 2020/2021 (PMID 33332150), Vahanian 2021/2022 (PMID 34453165). Tool lagi-lagi menukar bidang `pmid`/`key` pada `lookup_article_by_citation`; dikonfirmasi lewat `get_article_metadata`.
-- Diperbarui: README, blueprint (baris 11, butir bank dicentang), standar penilaian (S11 = 20), referensi (dua guideline katup), `CLAUDE.md`, wiki (`stations`, `guidelines-status` dengan empat klaim S11 dan catatan bahwa S03 belum merujuk guideline katup, `decisions` D19, `open-items`, `overview`, `index`). `tools/cek_skor.py` keluar kode 0, total 240.
+- Diperbarui: README, blueprint (baris 11, butir bank dicentang), standar penilaian (S11 = 20), referensi (dua guideline katup), `CLAUDE.md`, wiki (`stations`, `guidelines-status` dengan empat klaim S11 dan catatan bahwa S03 belum merujuk guideline katup, `decisions` D29, `open-items`, `overview`, `index`). `tools/cek_skor.py` keluar kode 0, total 240.
 
-**Keputusan:** D19.
+**Keputusan:** D29.
 
 **Belum selesai:** sama seperti entri sebelumnya, ditambah rujukan PJR/profilaksis sekunder, hubungan S03 ke guideline katup, dan uji waktu S11.
 
@@ -85,10 +120,10 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 **Tindakan dan hasil**
 - Sebelum menulis: `git fetch` (tidak ada commit baru), tidak ada notifikasi atau review.
 - Dicoba memverifikasi klaim klinis ke teks lengkap: `convert_article_ids` pada 15 guideline menunjukkan **hanya Joglar 2023 (AF) yang ada di PMC** (PMC11095842). Dicatat di [environment](environment.md); `open-items` diperbarui agar verifikasi AF (S08, sebagian S11) dikerjakan lebih dulu.
-- Stasiun dipilih dari bank blueprint: ACLS irama tidak dapat disyok (D20), karena domain keselamatan dan kerja tim hanya punya satu stasiun utama (S05). `stasiun/12-acls-irama-tidak-dapat-disyok.md`: 25 butir, butir kritis A1, A2, B2, B3, C1. Dosis obat tidak dinilai.
-- Diperbarui: README, blueprint (baris 12, aturan S05/S12 tidak satu sirkuit), standar penilaian (S12 = 25), `CLAUDE.md`, wiki (`stations`, `guidelines-status` dengan empat klaim S12 belum diverifikasi, `decisions` D20, `open-items`, `overview`, `index`, `environment`). `tools/cek_skor.py` keluar kode 0, total 265.
+- Stasiun dipilih dari bank blueprint: ACLS irama tidak dapat disyok (D30), karena domain keselamatan dan kerja tim hanya punya satu stasiun utama (S05). `stasiun/12-acls-irama-tidak-dapat-disyok.md`: 25 butir, butir kritis A1, A2, B2, B3, C1. Dosis obat tidak dinilai.
+- Diperbarui: README, blueprint (baris 12, aturan S05/S12 tidak satu sirkuit), standar penilaian (S12 = 25), `CLAUDE.md`, wiki (`stations`, `guidelines-status` dengan empat klaim S12 belum diverifikasi, `decisions` D30, `open-items`, `overview`, `index`, `environment`). `tools/cek_skor.py` keluar kode 0, total 265.
 
-**Keputusan:** D20.
+**Keputusan:** D30.
 
 **Belum selesai:** sama seperti entri sebelumnya, ditambah rujukan hiperkalemia, verifikasi AF ke teks lengkap, dan uji waktu S12.
 
@@ -100,9 +135,9 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 - Akses: semua domain luar (PMC web, Europe PMC, OUP, AHA Journals, doi.org, eutils) tidak terjangkau; hanya tool PubMed. `convert_article_ids` pada 22 artikel (15 guideline yang sudah dirujuk, Part 9, 10, 11, Kumar 2020, Mach 2019/2020, Al-Khatib 2018, Zeppenfeld 2022): hanya Joglar 2023 (PMC11095842) yang punya teks lengkap. (Part 3 Etika AHA 2025 punya PMCID, tetapi tidak dipakai.)
 - Rujukan yang ditambahkan (metadata terverifikasi lewat PubMed; isi belum dicocokkan, kecuali Joglar): Mach 2019/2020 (dislipidemia, S07), Al-Khatib 2018 dan Zeppenfeld 2022 (aritmia ventrikel/ICD, S10), Kumar 2020 (penyakit jantung rematik, S11), Wigginton 2025 Part 9, Cao 2025 Part 10 (memuat hiperkalemia), Hirsch 2025 Part 11 (S12), serta Otto 2020 dan Vahanian 2021 sekarang dirujuk dari S03. Rujukan dicantumkan di bagian 9 stasiun terkait dan `referensi/README.md`.
 - Verifikasi teks lengkap Joglar 2023 (`full_text` ± 397 ribu karakter, diekstrak ke scratchpad, di-grep): delapan baris klaim AF (sekitar 20 rekomendasi) untuk S08 dan S11 dicocokkan dengan COR/LOE dari teks. Hasil: klaim pokok sesuai (antikoagulasi ≥ 2/≥ 3, DOAC vs warfarin, warfarin pada stenosis mitral tanpa memandang skor, kendali laju, kardioversi listrik, pre-eksitasi). **Koreksi:** jawaban lanjutan S08 tentang kardioversi < 48 jam menyiratkan kardioversi "aman" yang tidak ada di guideline; ditulis ulang (antikoagulasi terapeutik sebelum dan ≥ 4 minggu sesudah kardioversi; pencitraan dapat dipertimbangkan pada risiko tinggi). **Diperketat:** S08 J2 dan J3 (troponin dan pemeriksaan iskemia/emboli paru hanya bila ada gejala atau tanda; Class 3: No benefit untuk pemeriksaan rutin), K1 (EF > 40%), K2 (CCB non-DHP IV tidak diberikan pada disfungsi sistolik LV sedang–berat). Tidak dapat dicocokkan: bobot komponen CHA₂DS₂-VASc (tabel tidak ikut dalam teks).
-- Diperbarui: `guidelines-status` (tiga tingkat verifikasi; delapan baris "Terverifikasi (teks lengkap)"), `open-items`, `decisions` (D21), `environment` (cara verifikasi ke teks lengkap), `overview`. `tools/cek_skor.py` tetap kode 0 (total 265).
+- Diperbarui: `guidelines-status` (tiga tingkat verifikasi; delapan baris "Terverifikasi (teks lengkap)"), `open-items`, `decisions` (D31), `environment` (cara verifikasi ke teks lengkap), `overview`. `tools/cek_skor.py` tetap kode 0 (total 265).
 
-**Keputusan:** D21.
+**Keputusan:** D31.
 
 **Belum selesai:** semua klaim non-AF tetap belum diverifikasi (butuh PDF/teks dari pengguna atau review kardiolog); rujukan terapi hiperkalemia di luar AHA Part 10, WHO/PERKI untuk penyakit jantung rematik, dan PERKI/PERHI secara umum.
 
@@ -112,10 +147,10 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 
 **Tindakan dan hasil**
 - Akses: diuji `curl` ke WHO, IRIS WHO, ESC, ACC, AHA Journals, professional.heart.org, JACC, PERKI, PERHI, NCBI: semua kode 000 (ditolak kebijakan jaringan); hanya pypi.org dan git ke GitHub terbuka. Dicatat di [environment](environment.md); langkah yang harus dilakukan pengguna (Network access → Allowed domains) dan daftar domain ditulis di sana dan di [open-items](open-items.md).
-- Stasiun dari bank blueprint: gagal jantung kronik (D22). `stasiun/13-gagal-jantung-kronik-optimalisasi-terapi.md`: 20 butir, butir kritis C1 dan C3. Dosis dan ambang angka tidak dinilai; klaim terapi dicatat belum diverifikasi di `guidelines-status`.
-- Diperbarui: README, blueprint (baris 13, bank dicentang), standar penilaian (S13 = 20), `CLAUDE.md`, wiki (`stations`, `guidelines-status`, `decisions` D22, `open-items`, `overview`, `index`, `environment`). `tools/cek_skor.py` kode 0, total 285.
+- Stasiun dari bank blueprint: gagal jantung kronik (D32). `stasiun/13-gagal-jantung-kronik-optimalisasi-terapi.md`: 20 butir, butir kritis C1 dan C3. Dosis dan ambang angka tidak dinilai; klaim terapi dicatat belum diverifikasi di `guidelines-status`.
+- Diperbarui: README, blueprint (baris 13, bank dicentang), standar penilaian (S13 = 20), `CLAUDE.md`, wiki (`stations`, `guidelines-status`, `decisions` D32, `open-items`, `overview`, `index`, `environment`). `tools/cek_skor.py` kode 0, total 285.
 
-**Keputusan:** D22.
+**Keputusan:** D32.
 
 **Belum selesai:** verifikasi klaim non-AF menunggu akses jaringan atau PDF dari pengguna; selain itu sama seperti entri sebelumnya.
 
@@ -126,9 +161,27 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 **Tindakan dan hasil**
 - Scholar Gateway: `ACCESS_DENIED`. Consensus (`search`, `medical_mode`): hanya abstrak; paket gratis. Yang berguna: sumber sekunder untuk S09 (abstrak studi observasional yang mendefinisikan target "guideline-directed" sebagai penurunan sistolik ≤ 25% jam pertama lalu 160/100–110 dalam 2–6 jam, abstrak lain yang menyebut MAP 25%, tinjauan sistematis pedoman Ann Intern Med 2024 yang menyatakan pedoman konsisten merekomendasikan obat IV di ICU, abstrak studi intermediate care 2026). Disesuaikan: S09 E3 (sistolik atau MAP sesuai pedoman) dan catatan E1/E3.
 - PubMed: dokumen posisi ESC Council (PMID 30165588), pernyataan ilmiah AHA 2024 (PMID 38804130), dan Kusumoto 2018 (PMID 30586772) diverifikasi metadatanya dan ditambahkan ke rujukan. PMC: dokumen ESC Council punya PMCID tetapi `full_text` kosong; AHA 2024, Kusumoto 2018, dan AHA 2020 Part 3 tidak punya PMCID. Tidak ada tambahan klaim yang dapat dicocokkan ke teks lengkap.
-- Stasiun dari bank blueprint: EKG blok AV derajat tiga (D23). `stasiun/14-ekg-blok-av-total.md`: 20 butir, butir kritis I5, J1, K1. Dosis dan pengaturan pacu tidak dinilai; klaim dicatat belum diverifikasi.
-- Diperbarui: README, blueprint, standar penilaian (S14 = 20), `assets/ekg/README.md`, `referensi/README.md`, `CLAUDE.md`, wiki (`stations`, `guidelines-status`, `decisions` D23, `open-items`, `overview`, `index`, `environment`). `tools/cek_skor.py` kode 0, total 305.
+- Stasiun dari bank blueprint: EKG blok AV derajat tiga (D33). `stasiun/14-ekg-blok-av-total.md`: 20 butir, butir kritis I5, J1, K1. Dosis dan pengaturan pacu tidak dinilai; klaim dicatat belum diverifikasi.
+- Diperbarui: README, blueprint, standar penilaian (S14 = 20), `assets/ekg/README.md`, `referensi/README.md`, `CLAUDE.md`, wiki (`stations`, `guidelines-status`, `decisions` D33, `open-items`, `overview`, `index`, `environment`). `tools/cek_skor.py` kode 0, total 305.
 
-**Keputusan:** D23.
+**Keputusan:** D33.
 
 **Belum selesai:** klaim non-AF tetap belum diverifikasi ke teks guideline; menunggu akses jaringan atau PDF dari pengguna (lihat [environment](environment.md)).
+
+## [2026-10-13] sesi 2 (lanjutan 7) | Check-in pengaman PR #2: `main` bergerak, konflik, penggabungan
+
+**Pemicu:** pengingat terjadwal yang saya pasang sendiri (cek PR #2).
+
+**Temuan**
+- `main` bergerak oleh sesi paralel: PR #3 (aplikasi simulasi web untuk stasiun 01–06, tests, CI `cek.yml`, `docs/aplikasi.md`) dan PR #4 (persiapan GitHub Pages, `noindex`, koreksi wiki, jawaban pengguna). PR #2 menjadi `dirty`. Belum ada review atau komentar pada PR #2.
+- Konflik di `CLAUDE.md`, `README.md`, dan lima halaman wiki. Penomoran keputusan bentrok: D14–D23 dipakai `main` untuk aplikasi.
+
+**Tindakan**
+- `git merge origin/main` (merge biasa, tanpa rebase). Konflik dokumen diselesaikan dengan mempertahankan kedua sisi. Keputusan milik sesi ini dinomori ulang **D14–D23 → D24–D33** (di `decisions` dan entri log sesi 2); acuan lain sudah diperiksa dengan grep.
+- Hasil pemeriksaan pada pohon hasil merge: `cek_skor.py` lulus (14 stasiun, total 305); generator membaca keempat belas stasiun, `app/data/stasiun-data.js` diregenerasi dan `buat_data.py --cek` sinkron; `cek_interaksi.mjs`: stasiun 01–06 identik dengan `main`, **stasiun 07–14 gagal hanya karena belum punya `app/data/interaksi/NN.js`**; uji e2e Chromium: satu asersi usang (beranda harus 6 kartu) diperbarui menjadi "seluruh stasiun di bank, tepat 6 yang dapat dilatih, sisanya berlabel Segera hadir"; hasil 157 lulus, 0 gagal.
+- Pilihan untuk menyelesaikan kegagalan `cek_interaksi.mjs` dicatat di [open-items](open-items.md#proses) dan diajukan kepada pengguna; pemeriksa tidak dilonggarkan dan interaksi tidak ditulis tanpa persetujuan.
+
+**Keputusan:** penomoran D24–D33; pilihan (a)/(b)/(c) untuk stasiun 07–14 menunggu pengguna.
+
+**Belum selesai:** keputusan pengguna soal interaksi aplikasi stasiun 07–14; sisanya seperti entri sebelumnya.
+
