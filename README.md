@@ -6,7 +6,7 @@ Repositori materi OSCE (*Objective Structured Clinical Examination*) kardiovasku
 
 ## Bank stasiun (v0.2)
 
-Semua stasiun berdurasi 8 menit (+ 2 menit pindah) dan menguji level Miller *Shows how*. Satu sirkuit ujian memakai 6 dari 12 stasiun; lihat [cara menyusun sirkuit](docs/blueprint.md#menyusun-sirkuit-dari-bank-stasiun).
+Semua stasiun berdurasi 8 menit (+ 2 menit pindah) dan menguji level Miller *Shows how*. Satu sirkuit ujian memakai 6 dari 13 stasiun; lihat [cara menyusun sirkuit](docs/blueprint.md#menyusun-sirkuit-dari-bank-stasiun).
 
 | No | Stasiun | Jenis | Skor |
 |----|---------|-------|:----:|
@@ -22,6 +22,7 @@ Semua stasiun berdurasi 8 menit (+ 2 menit pindah) dan menguji level Miller *Sho
 | 10 | [Sinkop: anamnesis dan stratifikasi risiko](stasiun/10-sinkop.md) | Pasien simulasi + data | 20 |
 | 11 | [Pemeriksaan fisik kardiovaskular sistematis](stasiun/11-pemeriksaan-fisik-kardiovaskular.md) | Sukarelawan + penguji / simulator | 20 |
 | 12 | [ACLS: henti jantung irama tidak dapat disyok](stasiun/12-acls-irama-tidak-dapat-disyok.md) | Manikin RJP + monitor simulasi + penguji | 25 |
+| 13 | [Gagal jantung kronik HFrEF: optimalisasi terapi](stasiun/13-gagal-jantung-kronik-optimalisasi-terapi.md) | Pasien simulasi + data | 20 |
 
 ## Struktur repositori
 

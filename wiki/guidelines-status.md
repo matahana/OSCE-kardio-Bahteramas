@@ -58,6 +58,11 @@ Cara memverifikasi: lihat alur PubMed di [environment](environment.md). Teks len
 | 12 | Penyebab reversibel H dan T (hipoksia, hipovolemia, hiperkalemia/elektrolit, hipotermia, ion hidrogen; tension pneumotoraks, tamponade, toksin, trombosis) | Wigginton 2025 Part 9 | Belum diverifikasi |
 | 12 | Hiperkalemia pada henti jantung: kalsium IV segera, insulin + dekstrosa, pertimbangan natrium bikarbonat; kalsium menstabilkan membran, tidak menurunkan kalium | Cao 2025 Part 10 (memuat bagian hiperkalemia; teks tidak tersedia di PMC) | **Belum diverifikasi** |
 | 12 | Pasca-ROSC: hindari hipoksia, hiperventilasi, dan hipotensi; EKG 12 sadapan; manajemen suhu terarah; glukosa | Hirsch 2025 Part 11 (abstrak: sasaran tekanan darah, oksigen, ventilasi, glukosa, suhu) | Belum diverifikasi (abstrak sejalan; angka target tidak dibaca) |
+| 13 | HFrEF (LVEF ≤ 40%): empat golongan dasar (ARNI atau ACEi/ARB, penyekat beta, MRA, SGLT2i) | McDonagh 2021; Heidenreich 2022 (teks tidak tersedia di PMC) | **Belum diverifikasi** |
+| 13 | Syarat MRA: kalium dan eGFR yang memenuhi syarat, pemantauan K dan kreatinin dalam 1–2 minggu; hentikan/kurangi bila K tinggi | McDonagh 2021; Heidenreich 2022 | **Belum diverifikasi** (ambang angka sengaja tidak ditulis di stasiun) |
+| 13 | Beralih ACEi → ARNI: jeda 36 jam, tanpa riwayat angioedema, TD sistolik cukup | McDonagh 2021; Heidenreich 2022 | **Belum diverifikasi** |
+| 13 | SGLT2i pada HFrEF (dan DM): efek samping (infeksi genital, penurunan volume, ketoasidosis euglikemik), nasihat hari sakit | McDonagh 2021; Heidenreich 2022 | Belum diverifikasi |
+| 13 | ICD pencegahan primer bila LVEF rendah setelah ≥ 3 bulan terapi optimal; CRT untuk QRS lebar morfologi tertentu (pertanyaan lanjutan); evaluasi status besi | McDonagh 2021; Heidenreich 2022; Al-Khatib 2018 / Zeppenfeld 2022 (ICD) | Belum diverifikasi |
 
 ## Yang sudah diverifikasi
 

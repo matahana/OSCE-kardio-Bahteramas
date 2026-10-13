@@ -105,3 +105,16 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 **Keputusan:** D21.
 
 **Belum selesai:** semua klaim non-AF tetap belum diverifikasi (butuh PDF/teks dari pengguna atau review kardiolog); rujukan terapi hiperkalemia di luar AHA Part 10, WHO/PERKI untuk penyakit jantung rematik, dan PERKI/PERHI secara umum.
+
+## [2026-10-13] sesi 2 (lanjutan 5) | Stasiun 13 gagal jantung kronik; uji akses langsung ke sumber guideline
+
+**Permintaan pengguna:** (1) "lanjut stasiun berikutnya"; (2) apakah bisa mengakses langsung guideline PERKI, PERHI, AHA, WHO, ESC, ACC.
+
+**Tindakan dan hasil**
+- Akses: diuji `curl` ke WHO, IRIS WHO, ESC, ACC, AHA Journals, professional.heart.org, JACC, PERKI, PERHI, NCBI: semua kode 000 (ditolak kebijakan jaringan); hanya pypi.org dan git ke GitHub terbuka. Dicatat di [environment](environment.md); langkah yang harus dilakukan pengguna (Network access → Allowed domains) dan daftar domain ditulis di sana dan di [open-items](open-items.md).
+- Stasiun dari bank blueprint: gagal jantung kronik (D22). `stasiun/13-gagal-jantung-kronik-optimalisasi-terapi.md`: 20 butir, butir kritis C1 dan C3. Dosis dan ambang angka tidak dinilai; klaim terapi dicatat belum diverifikasi di `guidelines-status`.
+- Diperbarui: README, blueprint (baris 13, bank dicentang), standar penilaian (S13 = 20), `CLAUDE.md`, wiki (`stations`, `guidelines-status`, `decisions` D22, `open-items`, `overview`, `index`, `environment`). `tools/cek_skor.py` kode 0, total 285.
+
+**Keputusan:** D22.
+
+**Belum selesai:** verifikasi klaim non-AF menunggu akses jaringan atau PDF dari pengguna; selain itu sama seperti entri sebelumnya.

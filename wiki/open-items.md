@@ -15,6 +15,8 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 - [x] Sitasi ditambahkan sesi 2 (metadata terverifikasi, isi belum dicocokkan): aritmia ventrikel/SCD (Al-Khatib 2018, Zeppenfeld 2022) untuk S10, dislipidemia ESC/EAS (Mach 2020) untuk S07, penyakit jantung rematik (Kumar 2020) untuk S11, ALS/keadaan khusus/pasca-henti jantung (AHA 2025 Part 9–11) untuk S12, dan guideline katup untuk S03.
 - [ ] Rujukan yang masih kurang: terapi hiperkalemia (di luar AHA Part 10, mis. pedoman nefrologi), WHO/PERKI untuk penyakit jantung rematik dan profilaksis sekunder (jadwal, lama), dan PERKI/PERHI secara umum.
 
+- [ ] **Minta pengguna membuka akses jaringan untuk sumber guideline** (atau mengunggah PDF): tanpa itu hanya AF yang dapat diverifikasi ke teks lengkap. Daftar domain dan langkahnya di [environment](environment.md#akses-jaringan-ke-sumber-guideline-diuji-sesi-2).
+
 ## P1 — kelengkapan
 
 - [ ] Gambar EKG stasiun 02 dan 08 (`assets/ekg/`, syarat di README folder itu): EKG anonim dengan lisensi jelas; tambah juga EKG untuk S06 (sinus takikardia, Q V1–V3) bila memakai gambar.
@@ -26,8 +28,8 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 
 ## P2 — pengembangan
 
-- [ ] Stasiun dari bank di [blueprint](../docs/blueprint.md) yang tersisa: gagal jantung kronik (optimalisasi terapi), EKG lain (blok AV derajat tinggi, takikardia kompleks lebar), foto toraks, varian auskultasi. (Selesai di sesi 2: edukasi pasca-IMA = S07, EKG fibrilasi atrium = S08, hipertensi emergensi = S09, sinkop = S10, pemeriksaan fisik kardiovaskular = S11, ACLS irama tidak dapat disyok = S12.)
-- [ ] Uji coba waktu S07 (25 butir), S09, S10, S11 (banyak manuver), dan S12 (penguji mengendalikan irama); putuskan pangkas bila padat.
+- [ ] Stasiun dari bank di [blueprint](../docs/blueprint.md) yang tersisa: EKG lain (blok AV derajat tinggi, takikardia kompleks lebar), foto toraks, varian auskultasi. (Selesai di sesi 2: edukasi pasca-IMA = S07, EKG fibrilasi atrium = S08, hipertensi emergensi = S09, sinkop = S10, pemeriksaan fisik kardiovaskular = S11, ACLS irama tidak dapat disyok = S12, gagal jantung kronik = S13.)
+- [ ] Uji coba waktu S07 (25 butir), S09, S10, S11 (banyak manuver), S12 (penguji mengendalikan irama), dan S13; putuskan pangkas bila padat.
 - [ ] Ide dari sumber 5 dan 6: stasiun flutter atrium, infark inferior dengan angina pasca-infark, SKA dua tahap (depresi ST lalu elevasi ST).
 - [ ] Paket pelatihan SP dan penguji (rekaman contoh untuk kalibrasi).
 - [ ] Lembar penilaian siap cetak dan versi digital; opsi spreadsheet untuk analisis BRM dan Cronbach's α.
@@ -40,7 +42,7 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 ## Proses
 
 - [x] PR #1 sudah di-merge pengguna (13 Oktober 2026); basis PR #2 sudah dialihkan ke `main`.
-- [ ] PR #2 draft (S07–S12), basis `main`. Pengguna memutuskan kapan di-merge; setelah merge, mulai branch baru dari `main` untuk pekerjaan berikutnya. Sesi 2 berlangganan pemantauan PR #2 (review dan CI). Repo belum punya CI/workflow, jadi yang masuk hanya komentar review. Langganan berakhir bersama sesi; pasang ulang di sesi berikutnya bila diminta.
+- [ ] PR #2 draft (S07–S13), basis `main`. Pengguna memutuskan kapan di-merge; setelah merge, mulai branch baru dari `main` untuk pekerjaan berikutnya. Sesi 2 berlangganan pemantauan PR #2 (review dan CI). Repo belum punya CI/workflow, jadi yang masuk hanya komentar review. Langganan berakhir bersama sesi; pasang ulang di sesi berikutnya bila diminta.
 
 ## Pertanyaan terbuka untuk pengguna
 
