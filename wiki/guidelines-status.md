@@ -40,11 +40,16 @@ Cara memverifikasi: lihat alur PubMed di [environment](environment.md). Teks len
 | 09 | Hipertensi emergensi = TD sangat tinggi + kerusakan organ target akut; obat IV titrasi (nikardipin, labetalol, nitrogliserin); hindari nifedipin sublingual | Jones 2025; McEvoy 2024 | Belum diverifikasi (bagian krisis hipertensi tidak dibaca) |
 | 09 | **Target penurunan TD:** MAP turun ≤ 25% dalam jam pertama, lalu ± 160/100 dalam 2–6 jam, normal bertahap 24–48 jam | Jones 2025; McEvoy 2024 | **Belum diverifikasi; prioritas tinggi** (angka klasik dari ingatan model) |
 | 09 | Pengecualian: diseksi aorta (TD sistolik < 120 dalam jam pertama, penyekat beta dulu), stroke akut, preeklamsia memakai target berbeda | Jones 2025; McEvoy 2024 | Belum diverifikasi |
+| 10 | Kriteria hipotensi ortostatik: penurunan sistolik ≥ 20 atau diastolik ≥ 10 mmHg dalam 3 menit berdiri (atau sistolik < 90) | Shen 2017; Brignole 2018 | Belum diverifikasi |
+| 10 | Fitur sinkop berisiko tinggi/sebab jantung: penyakit jantung struktural atau LVEF rendah, sinkop saat aktivitas atau berbaring, palpitasi sebelum pingsan, EKG abnormal, riwayat keluarga kematian mendadak | Shen 2017; Brignole 2018 | Belum diverifikasi |
+| 10 | Sinkop berisiko tinggi dengan dugaan aritmia: rawat dengan pemantauan telemetri, ekokardiografi, konsul kardiologi/EP | Shen 2017; Brignole 2018 | Belum diverifikasi; kriteria rawat tepat perlu dicek |
+| 10 | LVEF ≤ 35% setelah terapi optimal: evaluasi ICD pencegahan primer (pertanyaan lanjutan) | Heidenreich 2022 (tidak dibaca); guideline ICD/VT tidak dikutip | Belum diverifikasi; guideline aritmia ventrikel belum ditambahkan |
+| 10 | Sinkop refleks: edukasi, hindari pemicu, hidrasi, manuver kontra-tekanan (pertanyaan lanjutan); nasihat mengemudi setelah sinkop | Shen 2017; Brignole 2018 | Belum diverifikasi |
 
 ## Yang sudah diverifikasi
 
 - Metadata 6 guideline (Gulati 2021, Rao 2025, Byrne 2023, McEvoy 2024, Jones 2025, Del Rios 2025 Part 1) lewat `get_article_metadata`.
-- Sesi 2 (13 Oktober 2026), metadata lengkap lewat `get_article_metadata`: Joglar 2023/2024 AF ACC/AHA (PMID 38033089, DOI 10.1161/CIR.0000000000001193; versi JACC PMID 38043043 tidak dirujuk), Van Gelder 2024 AF ESC (PMID 39210723), Virani 2023 penyakit koroner kronik (PMID 37471501; PMID 37747957 adalah *erratum*, bukan artikel asli), serta judul dan DOI McDonagh 2021 (PMID 34447992) dan Heidenreich 2022 (PMID 35363499).
+- Sesi 2 (13 Oktober 2026), metadata lengkap lewat `get_article_metadata`: Joglar 2023/2024 AF ACC/AHA (PMID 38033089, DOI 10.1161/CIR.0000000000001193; versi JACC PMID 38043043 tidak dirujuk), Van Gelder 2024 AF ESC (PMID 39210723), Shen 2017 sinkop ACC/AHA/HRS (PMID 28280231), Brignole 2018 sinkop ESC (PMID 29562304), Virani 2023 penyakit koroner kronik (PMID 37471501; PMID 37747957 adalah *erratum*, bukan artikel asli), serta judul dan DOI McDonagh 2021 (PMID 34447992) dan Heidenreich 2022 (PMID 35363499).
 - Harden 1975 (PMID 1115966), Miller 1990 (PMID 2400509), Kurtz 1996 (PMID 8736242): dicocokkan lewat `lookup_article_by_citation` (jurnal, tahun, volume, halaman awal, penulis pertama); judul dan DOI belum diambil.
 - PERKI/PERHI: tidak ada sitasi sama sekali.
 

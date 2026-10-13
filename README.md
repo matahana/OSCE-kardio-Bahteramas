@@ -6,7 +6,7 @@ Repositori materi OSCE (*Objective Structured Clinical Examination*) kardiovasku
 
 ## Bank stasiun (v0.2)
 
-Semua stasiun berdurasi 8 menit (+ 2 menit pindah) dan menguji level Miller *Shows how*. Satu sirkuit ujian memakai 6 dari 9 stasiun; lihat [cara menyusun sirkuit](docs/blueprint.md#menyusun-sirkuit-dari-bank-stasiun).
+Semua stasiun berdurasi 8 menit (+ 2 menit pindah) dan menguji level Miller *Shows how*. Satu sirkuit ujian memakai 6 dari 10 stasiun; lihat [cara menyusun sirkuit](docs/blueprint.md#menyusun-sirkuit-dari-bank-stasiun).
 
 | No | Stasiun | Jenis | Skor |
 |----|---------|-------|:----:|
@@ -19,6 +19,7 @@ Semua stasiun berdurasi 8 menit (+ 2 menit pindah) dan menguji level Miller *Sho
 | 07 | [Edukasi pasca-infark miokard](stasiun/07-edukasi-pasca-infark.md) | Pasien simulasi | 25 |
 | 08 | [Interpretasi EKG — fibrilasi atrium](stasiun/08-ekg-fibrilasi-atrium.md) | Data (EKG) | 20 |
 | 09 | [Hipertensi emergensi](stasiun/09-hipertensi-emergensi.md) | Pasien simulasi + data | 20 |
+| 10 | [Sinkop: anamnesis dan stratifikasi risiko](stasiun/10-sinkop.md) | Pasien simulasi + data | 20 |
 
 ## Struktur repositori
 

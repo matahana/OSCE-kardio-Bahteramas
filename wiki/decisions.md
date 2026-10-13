@@ -25,7 +25,8 @@ Format: keputusan, alasan, siapa yang memutuskan. "Usulan" berarti belum disetuj
 | D14 | Bank stasiun dipisah dari sirkuit: 9 stasiun di bank, 1 sirkuit = 6 stasiun yang dipilih dengan aturan "tiap domain minimal satu stasiun utama (●)" | Kebutuhan variasi antar angkatan/sirkuit tanpa mengubah durasi ujian 60 menit | Claude (usulan, sesi 2) |
 | D15 | Bila lebih dari satu sirkuit dipakai: batas lulus per stasiun (BRM lintas sirkuit), batas lulus kandidat = jumlah batas stasiun sirkuitnya; α/SEM dilaporkan per sirkuit | Kesulitan antar sirkuit tidak otomatis setara | Claude (usulan, sesi 2) |
 | D16 | S07–S09 dipilih dari bank blueprint (edukasi pasca-IMA, EKG fibrilasi atrium, hipertensi emergensi) | Pengguna hanya meminta "lanjutkan sesi OSCE"; dipilih yang menambah cakupan domain (komunikasi sebelumnya hanya sekunder) dan topik tinggi-yield | Claude (usulan, sesi 2; pengguna belum memilih prioritas) |
-| D17 | PR #2 dibuat bertumpuk di atas branch PR #1 (basis = branch PR #1, bukan `main`) | Diff hanya memuat perubahan baru karena PR #1 belum di-merge | Claude (usulan, sesi 2) |
+| D17 | PR #2 dibuat bertumpuk di atas branch PR #1 (basis = branch PR #1, bukan `main`) | Diff hanya memuat perubahan baru karena PR #1 belum di-merge | Claude (usulan, sesi 2); **diganti**: setelah PR #1 di-merge, basis dialihkan ke `main` |
+| D18 | S10 sinkop dipilih sebagai stasiun berikutnya atas permintaan "lanjut stasiun berikutnya"; kasus dibuat berisiko tinggi dengan pengecoh (tamsulosin) | Menguji stratifikasi risiko dan keputusan rawat, bukan sekadar menyalahkan hipotensi ortostatik; anamnesis sebelumnya hanya nyeri dada (S01) dan GJ/hipertensi | Claude (usulan, sesi 2) |
 
 ## Prinsip yang dipegang
 

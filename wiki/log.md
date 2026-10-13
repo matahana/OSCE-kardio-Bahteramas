@@ -49,3 +49,17 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 **Keputusan:** D14–D17 di [decisions](decisions.md), semuanya usulan.
 
 **Belum selesai:** review kardiolog atas seluruh stasiun; verifikasi angka klinis (terutama target penurunan TD S09); gambar EKG S02 dan S08; rujukan PERKI/PERHI dan ESC/EAS dislipidemia 2019; uji coba waktu S06, S07, S09; keputusan memecah S06. Lihat [open-items](open-items.md).
+
+## [2026-10-13] sesi 2 (lanjutan) | Stasiun 10 sinkop; PR #1 sudah di-merge
+
+**Permintaan pengguna:** "lanjut stasiun berikutnya."
+
+**Tindakan dan hasil**
+- Sebelum menulis: `git fetch` menunjukkan `main` bergerak ke `b807f4f` (merge PR #1 oleh pengguna). Uji merge ke `main` bersih; selisih branch sesi terhadap `main` tepat 19 berkas PR #2. Basis PR #2 dialihkan dari branch PR #1 ke `main` (mergeable_state tetap clean).
+- Stasiun dipilih dari bank blueprint: sinkop (D18). `stasiun/10-sinkop.md` ditulis: 20 butir, butir kritis A2, B4, E1, E2.
+- Verifikasi PubMed (metadata): Shen 2017 (PMID 28280231, DOI 10.1161/CIR.0000000000000499), Brignole 2018 (PMID 29562304, DOI 10.1093/eurheartj/ehy037). `lookup_article_by_citation` kembali menukar bidang `pmid`/`key`; dikonfirmasi lewat `get_article_metadata`.
+- Diperbarui: README, blueprint (baris 10, sinkop dicoret dari bank), standar penilaian (S10 = 20), referensi, `CLAUDE.md`, dan wiki (`stations`, `guidelines-status` dengan lima klaim S10 berstatus belum diverifikasi, `decisions` D18, `open-items`, `overview`, `index`).
+
+**Keputusan:** D18; D17 digantikan (basis PR #2 kini `main`).
+
+**Belum selesai:** sama seperti entri sesi 2 sebelumnya, ditambah guideline aritmia ventrikel/ICD untuk pertanyaan lanjutan S10 dan uji waktu S10.

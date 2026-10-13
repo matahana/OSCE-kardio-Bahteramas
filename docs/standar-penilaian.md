@@ -21,7 +21,7 @@ Dokumen ini menetapkan cara menilai, menetapkan batas lulus, dan menganalisis ha
 Skor stasiun (%) = skor checklist / skor maksimum stasiun × 100
 ```
 
-Skor maksimum tiap stasiun tercantum pada lembar penilaiannya (S01 = 25, S02 = 20, S03 = 20, S04 = 20, S05 = 25, S06 = 25, S07 = 25, S08 = 20, S09 = 20). Skor maksimum sirkuit adalah jumlah skor 6 stasiun yang dipilih (lihat [blueprint](blueprint.md#menyusun-sirkuit-dari-bank-stasiun)).
+Skor maksimum tiap stasiun tercantum pada lembar penilaiannya (S01 = 25, S02 = 20, S03 = 20, S04 = 20, S05 = 25, S06 = 25, S07 = 25, S08 = 20, S09 = 20, S10 = 20). Skor maksimum sirkuit adalah jumlah skor 6 stasiun yang dipilih (lihat [blueprint](blueprint.md#menyusun-sirkuit-dari-bank-stasiun)).
 
 ## 3. Penetapan batas lulus (*standard setting*)
 
