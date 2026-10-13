@@ -9,7 +9,7 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 
 ## P0 — sebelum konten dipakai untuk ujian
 
-- [ ] **Review kardiolog** atas seluruh stasiun (pemilik repo adalah kardiolog; minta tinjauan substansi dan kesesuaian dengan praktik setempat).
+- [ ] **Review kardiolog** atas seluruh stasiun (pemilik repo adalah kardiolog; minta tinjauan substansi dan kesesuaian dengan praktik setempat). Pengguna menyatakan (13 Okt 2026) akan mereview sendiri setelah aplikasi selesai.
 - [ ] **Verifikasi angka klinis ke teks lengkap** — daftar lengkap di [guidelines-status](guidelines-status.md). Prioritas: stasiun 02 (dosis aspirin, target waktu reperfusi), 05 (parameter RJP), 06 (diuretik IV, kriteria NIV, nitrat), 04 (teknik dan klasifikasi TD). Gunakan `convert_article_ids` lalu `get_full_text_article` untuk artikel yang ada di PMC.
 - [ ] **Tambahkan rujukan PERKI** (SKA, hipertensi, gagal jantung) dengan edisi yang berlaku; sesuaikan butir stasiun bila PERKI berbeda.
 
@@ -48,7 +48,9 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 
 ## Proses
 
-- [ ] Tidak ada PR terbuka (PR #1 dan #3 sudah di-merge). Pekerjaan berikutnya: reset branch kerja ke `main` (`git fetch origin main && git checkout -B <branch> FETCH_HEAD`), lalu buka draft PR baru.
+- [ ] **Rekonsiliasi PR #2** (sesi paralel, draft, `dirty`): bentrok dengan `main` pada README, `CLAUDE.md`, `docs/`, `wiki/`; penomoran keputusan D14–D22 di PR itu bentrok dengan D14–D22 di `main`; generator akan memuat stasiun 07–13 sehingga `cek_interaksi.mjs` dan CI gagal sampai `app/data/interaksi/07–13.js` ditulis (beranda akan menampilkan "Segera hadir"). Keputusan penggabungan ada pada pengguna; jangan menyunting branch PR #2 tanpa diminta.
+- [ ] Pengguna mengaktifkan GitHub Pages (Settings → Pages → `main` / root); setelah itu verifikasi URL situs (jaringan sesi mungkin tidak menjangkau `github.io`).
+- [ ] Hapus `<meta name="robots" content="noindex, nofollow">` di `app/index.html` dan `index.html` setelah konten direview dan siap dipublikasikan.
 - [ ] Belum ada langganan pemantauan PR; tawarkan lagi bila pengguna ingin komentar review ditangani otomatis.
 
 ## Pertanyaan terbuka untuk pengguna
@@ -59,5 +61,5 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 4. Institusi di balik nama "Bahteramas" dan bentuk pemetaan kompetensi yang dipakai.
 5. Apakah repo akan publik? (memengaruhi lisensi, kehati-hatian konten, dan hak cipta gambar/audio)
 6. Apakah ingin versi bahasa Inggris?
-7. Aplikasi untuk siapa: latihan mandiri mahasiswa, penguji, atau keduanya? Dipakai offline di rumah sakit atau lewat tautan (Pages)?
+7. ~~Aplikasi untuk siapa?~~ **Dijawab 13 Okt 2026:** latihan mahasiswa (simulasi) dan penguji untuk menguji hasil belajar mahasiswa; diakses online lewat GitHub Pages.
 8. Apakah perkiraan penilaian global otomatis (ambang 55/70/85) sesuai, atau ingin kebijakan lain?

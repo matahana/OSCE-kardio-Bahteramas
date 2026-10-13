@@ -53,3 +53,14 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 **Tindakan:** PR #3 dicek (tidak ada konflik; CI "Cek konsistensi" hijau pada kedua commit sebelumnya), wiki diperbarui agar mencerminkan keadaan pasca-merge, PR dilepas dari draft lalu di-merge dengan metode merge biasa (riwayat commit dipertahankan). Aplikasi kini ada di `main`; buka `app/index.html`.
 
 **Berikutnya:** lihat [open-items](open-items.md): review kardiolog, verifikasi angka klinis, uji coba dengan pengguna nyata, keputusan Pages/lisensi/visibilitas.
+
+## [2026-10-13] sesi 1 (akhir 2) | Permintaan mengaktifkan GitHub Pages
+
+**Permintaan pengguna:** aktifkan GitHub Pages agar aplikasi bisa diakses online. Jawaban pengguna: aplikasi untuk latihan mahasiswa (simulasi) dan untuk penguji menguji hasil belajar mahasiswa; pengguna (kardiolog) akan mereview setelah aplikasi selesai.
+
+**Temuan dan tindakan**
+- Pages tidak dapat diaktifkan dari sesi (tidak ada tool; `gh` token tidak valid; integrasi tanpa hak admin). Repo publik, `has_pages: false`. Situs diuji lewat HTTP lokal: lulus. Pengguna diberi langkah manual.
+- Ditemukan **PR #2 terbuka** dari sesi paralel (stasiun 07–13, penyusun sirkuit; `dirty`). Catatan wiki sebelumnya ("tidak ada PR terbuka") keliru dan dikoreksi. PR #2 tidak disentuh.
+- Ditambahkan `noindex, nofollow` pada halaman aplikasi sampai review selesai (D23), tautan Pages di README dan docs/aplikasi.md, aturan "periksa PR terbuka di awal sesi" di `CLAUDE.md`.
+
+**Berikutnya:** lihat [open-items](open-items.md): rekonsiliasi PR #2, aktivasi Pages oleh pengguna, review kardiolog.
