@@ -21,7 +21,7 @@ Dokumen ini menetapkan cara menilai, menetapkan batas lulus, dan menganalisis ha
 Skor stasiun (%) = skor checklist / skor maksimum stasiun × 100
 ```
 
-Skor maksimum tiap stasiun tercantum pada lembar penilaiannya (S01 = 25, S02 = 20, S03 = 20, S04 = 20, S05 = 25, S06 = 25).
+Skor maksimum tiap stasiun tercantum pada lembar penilaiannya (S01 = 25, S02 = 20, S03 = 20, S04 = 20, S05 = 25, S06 = 25, S07 = 25, S08 = 20, S09 = 20). Skor maksimum sirkuit adalah jumlah skor 6 stasiun yang dipilih (lihat [blueprint](blueprint.md#menyusun-sirkuit-dari-bank-stasiun)).
 
 ## 3. Penetapan batas lulus (*standard setting*)
 
@@ -39,7 +39,7 @@ Catatan: BRM lebih stabil bila pengamatan per stasiun banyak. Pada kohort kecil,
 Kandidat lulus bila **semua** syarat berikut terpenuhi:
 
 - skor total ≥ batas lulus ujian;
-- lulus minimal *k* dari *N* stasiun (usulan: 4 dari 6);
+- lulus minimal *k* dari *N* stasiun dalam sirkuit yang dijalani (usulan: 4 dari 6);
 - tidak ada kegagalan pada butir kritis. Usulan default: kegagalan butir kritis menjadikan stasiun itu tidak lulus terlepas dari skor total, dan ditinjau panitia.
 
 Nilai *k* dan kebijakan butir kritis ditetapkan tim ujian dan diumumkan sebelum ujian.
@@ -57,3 +57,12 @@ Nilai *k* dan kebijakan butir kritis ditetapkan tim ujian dan diumumkan sebelum 
 ## 6. Umpan balik untuk kandidat
 
 Berikan umpan balik per domain (anamnesis, pemeriksaan, interpretasi, tatalaksana, komunikasi, keselamatan), bukan hanya angka. Pada OSCE formatif, perlihatkan checklist stasiun setelah ujian.
+
+## 7. Lebih dari satu sirkuit
+
+Bila kandidat menjalani sirkuit dengan susunan stasiun berbeda (mis. sirkuit A dan B pada [blueprint](blueprint.md#menyusun-sirkuit-dari-bank-stasiun)), tingkat kesulitan antar sirkuit tidak otomatis setara. Usulan:
+
+1. Hitung batas lulus **per stasiun** dengan BRM memakai data seluruh kandidat yang menjalani stasiun itu, lintas sirkuit.
+2. Batas lulus ujian tiap kandidat = jumlah batas lulus stasiun pada sirkuit yang ia jalani. Bandingkan skor kandidat dengan batas itu (atau dalam persen terhadap skor maksimum sirkuit), bukan dengan angka tetap yang sama untuk semua sirkuit.
+3. Laporkan Cronbach's α, SEM, dan korelasi stasiun–total **per sirkuit**. Bila jumlah kandidat per sirkuit kecil, tafsirkan dengan hati-hati dan pertimbangkan satu sirkuit saja.
+4. Tetapkan kebijakan ini sebelum ujian, bersama nilai *k* dan kebijakan butir kritis.

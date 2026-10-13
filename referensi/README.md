@@ -12,11 +12,14 @@ Metadata guideline di bawah (judul, jurnal, volume/halaman, DOI) diverifikasi le
 | Hipertensi (Eropa) | McEvoy JW, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. *Eur Heart J*. 2024;45:3912–4018. | [10.1093/eurheartj/ehae178](https://doi.org/10.1093/eurheartj/ehae178) · PMID 39210715 |
 | Hipertensi (AS) | Jones DW, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation and Management of High Blood Pressure in Adults. *Circulation*. 2025;152:e114–e218. | [10.1161/CIR.0000000000001356](https://doi.org/10.1161/CIR.0000000000001356) · PMID 40811497 |
 | Henti jantung / RJP | Del Rios M, et al. Part 1: Executive Summary: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. *Circulation*. 2025;152(16 suppl 2):S284–S312. | [10.1161/CIR.0000000000001372](https://doi.org/10.1161/CIR.0000000000001372) · PMID 41122893 |
-| Gagal jantung (Eropa) | McDonagh TA, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. *Eur Heart J*. 2021;42:3599–3726. | PMID 34447992 |
-| Gagal jantung (AS) | Heidenreich PA, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. *Circulation*. 2022;145:e895–e1032. | PMID 35363499 |
-| Pedoman nasional | Pedoman PERKI (SKA, hipertensi, gagal jantung) | **Belum ditambahkan** — isi dengan edisi yang berlaku |
+| Gagal jantung (Eropa) | McDonagh TA, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. *Eur Heart J*. 2021;42:3599–3726. | [10.1093/eurheartj/ehab368](https://doi.org/10.1093/eurheartj/ehab368) · PMID 34447992 |
+| Gagal jantung (AS) | Heidenreich PA, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. *Circulation*. 2022;145:e895–e1032. | [10.1161/CIR.0000000000001063](https://doi.org/10.1161/CIR.0000000000001063) · PMID 35363499 |
+| Fibrilasi atrium (AS) | Joglar JA, et al. 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation. *Circulation*. 2024;149:e1–e156. | [10.1161/CIR.0000000000001193](https://doi.org/10.1161/CIR.0000000000001193) · PMID 38033089 |
+| Fibrilasi atrium (Eropa) | Van Gelder IC, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). *Eur Heart J*. 2024;45:3314–3414. | [10.1093/eurheartj/ehae176](https://doi.org/10.1093/eurheartj/ehae176) · PMID 39210723 |
+| Penyakit koroner kronik / pencegahan sekunder | Virani SS, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. *Circulation*. 2023;148:e9–e119. | [10.1161/CIR.0000000000001168](https://doi.org/10.1161/CIR.0000000000001168) · PMID 37471501 |
+| Pedoman nasional | Pedoman PERKI (SKA, hipertensi, gagal jantung, fibrilasi atrium, pencegahan sekunder) | **Belum ditambahkan** — isi dengan edisi yang berlaku |
 
-Catatan: dua guideline gagal jantung di atas dicocokkan dengan PubMed berdasarkan jurnal, tahun, volume, halaman awal, dan nama penulis pertama; judul dan DOI belum diambil.
+Catatan: judul, volume/halaman, dan DOI guideline gagal jantung, fibrilasi atrium, dan penyakit koroner kronik juga diverifikasi lewat PubMed pada 13 Oktober 2026. Guideline AF ACC/AHA terbit ganda (*Circulation* dan *J Am Coll Cardiol* 2023;83:109–279); repositori ini merujuk versi *Circulation*. Pencarian untuk guideline penyakit koroner kronik juga menampilkan *erratum* (PMID 37747957); yang dirujuk adalah artikel aslinya.
 
 ## Pendidikan dan asesmen
 
@@ -43,5 +46,7 @@ Halaman berikut tidak dapat dijangkau dari sesi pembuatan repositori ini (kegaga
 - oscefinals.com — gagal jantung akut
 - osce.ai — daftar stasiun, bagian kardio
 - mbchb.dundee.ac.uk — contoh uji komunikasi
+
+Dicoba ulang pada 13 Oktober 2026 (sesi lanjutan): keempatnya masih tidak dapat dijangkau.
 
 Stasiun 06 (gagal jantung akut) dan rubrik komunikasi disusun dari pengetahuan klinis dan guideline di atas, bukan dari halaman-halaman itu. Bila isinya ditempelkan atau jaringan sesi dibuka untuk domain tersebut, stasiun dapat dibandingkan dan disempurnakan.

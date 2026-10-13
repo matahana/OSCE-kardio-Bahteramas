@@ -2,11 +2,11 @@
 
 Repositori materi OSCE (*Objective Structured Clinical Examination*) kardiovaskular: blueprint, stasiun lengkap dengan lembar penilaian, panduan penguji dan pasien simulasi, serta rujukan guideline.
 
-> **Status: DRAF v0.1.** Seluruh stasiun dan lembar penilaian harus direview dan disahkan oleh tim penguji/kardiolog institusi sebelum dipakai pada ujian sumatif. Lihat [Catatan penggunaan](#catatan-penggunaan).
+> **Status: DRAF v0.2.** Seluruh stasiun dan lembar penilaian harus direview dan disahkan oleh tim penguji/kardiolog institusi sebelum dipakai pada ujian sumatif. Lihat [Catatan penggunaan](#catatan-penggunaan).
 
-## Stasiun (v0.1)
+## Bank stasiun (v0.2)
 
-Semua stasiun berdurasi 8 menit (+ 2 menit pindah) dan menguji level Miller *Shows how*.
+Semua stasiun berdurasi 8 menit (+ 2 menit pindah) dan menguji level Miller *Shows how*. Satu sirkuit ujian memakai 6 dari 9 stasiun; lihat [cara menyusun sirkuit](docs/blueprint.md#menyusun-sirkuit-dari-bank-stasiun).
 
 | No | Stasiun | Jenis | Skor |
 |----|---------|-------|:----:|
@@ -16,19 +16,23 @@ Semua stasiun berdurasi 8 menit (+ 2 menit pindah) dan menguji level Miller *Sho
 | 04 | [Pengukuran tekanan darah](stasiun/04-pengukuran-tekanan-darah.md) | Simulator lengan | 20 |
 | 05 | [BLS henti jantung + AED](stasiun/05-bls-henti-jantung.md) | Manikin RJP | 25 |
 | 06 | [Gagal jantung akut dekompensasi](stasiun/06-gagal-jantung-akut-dekompensasi.md) | Pasien simulasi + data | 25 |
+| 07 | [Edukasi pasca-infark miokard](stasiun/07-edukasi-pasca-infark.md) | Pasien simulasi | 25 |
+| 08 | [Interpretasi EKG — fibrilasi atrium](stasiun/08-ekg-fibrilasi-atrium.md) | Data (EKG) | 20 |
+| 09 | [Hipertensi emergensi](stasiun/09-hipertensi-emergensi.md) | Pasien simulasi + data | 20 |
 
 ## Struktur repositori
 
 ```
 README.md
 docs/
-  blueprint.md                          matriks domain × stasiun, rencana stasiun lanjutan
+  blueprint.md                          matriks domain × stasiun, penyusunan sirkuit, rencana stasiun lanjutan
   standar-penilaian.md                  skor, butir kritis, penetapan batas lulus (BRM), analisis
   panduan-penguji-dan-pasien-simulasi.md
   rubrik-komunikasi.md                  rubrik komunikasi opsional (0–2 per domain)
 templates/
   stasiun-template.md                   kerangka stasiun baru
 stasiun/                                satu berkas per stasiun
+assets/ekg/                             gambar EKG (belum ada; lihat README di dalamnya)
 referensi/
   README.md                             guideline dan pustaka (terverifikasi PubMed) + sumber yang belum terbaca
 ```
@@ -48,7 +52,7 @@ Setiap stasiun memuat: metadata, instruksi kandidat, instruksi penguji, skrip pa
 
 - **Bukan pengganti guideline.** Dosis, ambang, dan target waktu pada checklist mengikuti guideline yang dirujuk; verifikasi terhadap teks lengkap dan pedoman PERKI/institusi sebelum ujian.
 - **Sesuaikan dengan sumber daya setempat** (cathlab 24 jam, fibrinolitik, simulator, AED) dan kebijakan kelulusan institusi.
-- **Jangan memasukkan data pasien nyata.** Gunakan kasus fiktif dan gambar/audio dengan lisensi jelas. Gambar EKG stasiun 02 belum disertakan (`assets/ekg/` belum ada).
+- **Jangan memasukkan data pasien nyata.** Gunakan kasus fiktif dan gambar/audio dengan lisensi jelas. Gambar EKG stasiun 02 dan 08 belum disertakan; lihat [assets/ekg/README.md](assets/ekg/README.md) untuk syaratnya.
 - **Lisensi belum ditetapkan.** Tentukan lisensi sebelum repositori dibuka untuk umum.
 - Contoh desain dari artikel publik diparafrasekan dan tidak disalin; lihat [referensi](referensi/README.md).
 
