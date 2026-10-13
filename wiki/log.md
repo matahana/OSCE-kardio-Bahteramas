@@ -118,3 +118,17 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 **Keputusan:** D22.
 
 **Belum selesai:** verifikasi klaim non-AF menunggu akses jaringan atau PDF dari pengguna; selain itu sama seperti entri sebelumnya.
+
+## [2026-10-13] sesi 2 (lanjutan 6) | Uji konektor Consensus dan Scholar Gateway; Stasiun 14 blok AV total
+
+**Permintaan pengguna:** "lanjut stasiun berikutnya"; untuk akses guideline gunakan konektor PubMed dan Consensus.
+
+**Tindakan dan hasil**
+- Scholar Gateway: `ACCESS_DENIED`. Consensus (`search`, `medical_mode`): hanya abstrak; paket gratis. Yang berguna: sumber sekunder untuk S09 (abstrak studi observasional yang mendefinisikan target "guideline-directed" sebagai penurunan sistolik ≤ 25% jam pertama lalu 160/100–110 dalam 2–6 jam, abstrak lain yang menyebut MAP 25%, tinjauan sistematis pedoman Ann Intern Med 2024 yang menyatakan pedoman konsisten merekomendasikan obat IV di ICU, abstrak studi intermediate care 2026). Disesuaikan: S09 E3 (sistolik atau MAP sesuai pedoman) dan catatan E1/E3.
+- PubMed: dokumen posisi ESC Council (PMID 30165588), pernyataan ilmiah AHA 2024 (PMID 38804130), dan Kusumoto 2018 (PMID 30586772) diverifikasi metadatanya dan ditambahkan ke rujukan. PMC: dokumen ESC Council punya PMCID tetapi `full_text` kosong; AHA 2024, Kusumoto 2018, dan AHA 2020 Part 3 tidak punya PMCID. Tidak ada tambahan klaim yang dapat dicocokkan ke teks lengkap.
+- Stasiun dari bank blueprint: EKG blok AV derajat tiga (D23). `stasiun/14-ekg-blok-av-total.md`: 20 butir, butir kritis I5, J1, K1. Dosis dan pengaturan pacu tidak dinilai; klaim dicatat belum diverifikasi.
+- Diperbarui: README, blueprint, standar penilaian (S14 = 20), `assets/ekg/README.md`, `referensi/README.md`, `CLAUDE.md`, wiki (`stations`, `guidelines-status`, `decisions` D23, `open-items`, `overview`, `index`, `environment`). `tools/cek_skor.py` kode 0, total 305.
+
+**Keputusan:** D23.
+
+**Belum selesai:** klaim non-AF tetap belum diverifikasi ke teks guideline; menunggu akses jaringan atau PDF dari pengguna (lihat [environment](environment.md)).

@@ -31,6 +31,7 @@ Format: keputusan, alasan, siapa yang memutuskan. "Usulan" berarti belum disetuj
 | D20 | S12 ACLS irama tidak dapat disyok dengan penyebab hiperkalemia (pasien dialisis); alur waktu dikendalikan penguji; dosis obat tidak dinilai | Domain keselamatan dan kerja tim hanya punya satu stasiun utama (S05); menguji kepemimpinan tim, penyebab reversibel, dan serah terima. Dosis tidak dinilai karena belum terverifikasi dan bervariasi antar protokol | Claude (usulan, sesi 2) |
 | D21 | Klaim hanya berstatus "Terverifikasi (teks lengkap)" bila dicocokkan ke teks guideline dan dicatat dengan COR/LOE dari teksnya; bila teks bertentangan atau lebih sempit dari stasiun, stasiun diperbaiki dan koreksi dicatat di `guidelines-status` | Menjaga kejujuran status verifikasi; pemeriksaan AF menemukan satu jawaban yang menyiratkan hal yang tidak ada di guideline | Claude (usulan, sesi 2) |
 | D22 | S13 gagal jantung kronik HFrEF: menilai pilihan golongan, syarat keamanan, dan titrasi bertahap; **dosis dan ambang angka tidak dinilai** (K, eGFR, TD tidak ditulis sebagai angka di checklist) | Teks guideline tidak tersedia di sesi; menghindari angka yang belum diverifikasi sebagai butir skor | Claude (usulan, sesi 2) |
+| D23 | S14 EKG blok AV derajat tiga dengan bradikardia tidak stabil; dosis dan pengaturan pacu tidak dinilai; atropin boleh dicoba atau dilewati dengan alasan benar | Melengkapi bank EKG (S02 STEMI, S08 AF) dan tatalaksana bradikardia; sedikit angka; guideline tidak tersedia di PMC | Claude (usulan, sesi 2) |
 
 ## Prinsip yang dipegang
 

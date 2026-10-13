@@ -22,6 +22,7 @@ Ringkasan untuk orientasi cepat. **Isi lengkap ada di `stasiun/NN-*.md`** (sumbe
 | 11 | `11-pemeriksaan-fisik-kardiovaskular.md` | 20 | Sukarelawan + penguji/simulator | E2 (bell, miring kiri, akhir ekspirasi), G1 (kesimpulan stenosis mitral + AF) |
 | 12 | `12-acls-irama-tidak-dapat-disyok.md` | 25 | Manikin + monitor simulasi + penguji | A1, A2, B2 (tidak disyok), B3 (epinefrin), C1 (penyebab reversibel) |
 | 13 | `13-gagal-jantung-kronik-optimalisasi-terapi.md` | 20 | SP + data | C1 (empat golongan dasar), C3 (periksa K dan eGFR sebelum MRA) |
+| 14 | `14-ekg-blok-av-total.md` | 20 | Data EKG + penguji | I5 (diagnosis blok AV derajat tiga), J1 (bradikardia dengan hipoperfusi), K1 (pacu transkutan) |
 
 ## Biji skenario per stasiun
 
@@ -51,12 +52,14 @@ Ringkasan untuk orientasi cepat. **Isi lengkap ada di `stasiun/NN-*.md`** (sumbe
 
 **13 Gagal jantung kronik.** Bapak Darmin, 58 th, pedagang, kardiomiopati iskemik, LVEF 30% (4 bulan lalu), NYHA II, euvolemik; ramipril 2,5 dan bisoprolol 2,5 tidak berubah 8 bulan; DM2; sesekali ibuprofen dan jamu. TD 118/72, nadi 72, K 4,5, kreatinin 1,1 (eGFR ± 75), QRS 108 ms. Kandidat mengoptimalkan terapi (empat golongan dasar, titrasi bertahap, syarat keamanan) dan mengedukasi. SP khawatir ginjal dan biaya. Dosis tidak dinilai.
 
+**14 EKG blok AV derajat tiga.** Ibu Marta, 74 th, lemas, pusing, hampir pingsan 3 jam; TD 78/48, nadi 34, akral dingin, GCS 14. Bisoprolol + amlodipin + ramipril. EKG: P teratur ± 90, QRS lebar ± 140 ms teratur ± 34, disosiasi AV; K 4,6, troponin negatif. Kandidat harus menilai bradikardia dengan hipoperfusi, menyiapkan pacu transkutan (atropin boleh dicoba, keterbatasannya disebut), infus jembatan, menahan penyekat beta, dan merencanakan pacu sementara/permanen. Dosis tidak dinilai. **Gambar EKG belum ada.**
+
 ## Kelemahan yang diketahui (jangan diabaikan)
 
 - Semua stasiun belum direview kardiolog; angka klinis belum diverifikasi ke teks lengkap ([guidelines-status](guidelines-status.md)).
 - 06 padat untuk 8 menit; uji coba waktu atau pecah menjadi S06a dan S06b.
-- 02 dan 08 tanpa gambar EKG; 03 tanpa audio/simulator yang ditentukan.
-- 07–13 ditulis di sesi 2 dari pengetahuan klinis; angka-angkanya belum diverifikasi ([guidelines-status](guidelines-status.md)). Terutama target penurunan TD di 09, lama antiplatelet ganda dan target LDL di 07, syarat kardioversi di 08.
+- 02, 08, dan 14 tanpa gambar EKG; 03 tanpa audio/simulator yang ditentukan.
+- 07–14 ditulis di sesi 2 dari pengetahuan klinis; angka-angkanya belum diverifikasi ([guidelines-status](guidelines-status.md)). Terutama target penurunan TD di 09, lama antiplatelet ganda dan target LDL di 07, syarat kardioversi di 08.
 - 09 dan 06 sama-sama menyentuh hipertensi/edema paru; bila dipakai dalam satu sirkuit, hindari tumpang tindih variasi "edema paru hipertensif".
 - 13 dan 06 sama-sama bertema gagal jantung; pilih salah satu bila ingin menguji domain itu sekali per sirkuit.
 - Stasiun 12 butuh penguji yang mengendalikan irama dan waktu secara konsisten; S05 dan S12 jangan satu sirkuit.

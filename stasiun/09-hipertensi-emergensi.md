@@ -91,7 +91,7 @@ Brankar dengan sandaran, monitor, tensimeter, oftalmoskop (atau foto funduskopi)
 | **E** | **Tatalaksana (5)** | | |
 | E1 | ⚠ Menegakkan diagnosis **hipertensi emergensi** (TD sangat tinggi disertai kerusakan organ target akut: ensefalopati, retinopati, cedera ginjal) dan merawat di ICU/HCU dengan pemantauan kontinu | 1 | ☐ |
 | E2 | ⚠ Obat antihipertensi **IV dengan titrasi** (mis. nikardipin, labetalol, nitrogliserin sesuai organ target); tidak memberi obat oral atau sublingual kerja cepat yang menurunkan TD tak terkendali | 1 | ☐ |
-| E3 | ⚠ Target terukur dan bertahap: penurunan tidak lebih dari ± 25% (TD arteri rerata) dalam jam pertama, lalu menuju sekitar 160/100 mmHg dalam 2–6 jam, kemudian normalisasi bertahap dalam 24–48 jam; hindari penurunan terlalu cepat | 1 | ☐ |
+| E3 | ⚠ Target terukur dan bertahap: penurunan tidak lebih dari ± 25% (TD sistolik atau TD arteri rerata, sesuai pedoman yang dirujuk) dalam jam pertama, lalu menuju sekitar 160/100–110 mmHg dalam 2–6 jam, kemudian normalisasi bertahap dalam 24–48 jam; hindari penurunan terlalu cepat | 1 | ☐ |
 | E4 | Pemantauan: TD sering saat titrasi, status neurologis, produksi urin, kreatinin dan elektrolit | 1 | ☐ |
 | E5 | Mengenali pengecualian yang target dan obatnya berbeda: diseksi aorta, stroke akut, preeklamsia/eklamsia | 1 | ☐ |
 | **F** | **Komunikasi dan edukasi (2)** | | |
@@ -102,7 +102,8 @@ Brankar dengan sandaran, monitor, tensimeter, oftalmoskop (atau foto funduskopi)
 
 Catatan penerimaan jawaban (sesuaikan dengan protokol lokal):
 - E2: penguji menerima agen IV titrasi yang tersedia di rumah sakit setempat. Dosis tidak dinilai.
-- E3: angka target mengikuti pendekatan klasik krisis hipertensi; verifikasi terhadap teks lengkap guideline AHA/ACC 2025 dan ESC 2024 serta protokol institusi sebelum ujian.
+- E3: angka target mengikuti pendekatan klasik krisis hipertensi; verifikasi terhadap teks lengkap guideline AHA/ACC 2025 dan ESC 2024 serta protokol institusi sebelum ujian. Sumber sekunder yang dibaca (hanya abstrak) menggambarkan batas 25% sebagai penurunan sistolik pada satu pedoman dan sebagai penurunan TD arteri rerata pada yang lain, dan menyebut target bergantung pada jenis kerusakan organ (dokumen posisi Dewan Hipertensi ESC); bukti untuk laju penurunan ini terbatas dan kepatuhan di praktik rendah.
+- E1: perawatan ICU/HCU dengan pemantauan kontinu adalah rekomendasi pedoman; satu studi observasional (abstrak) menunjukkan perawatan intermediate care mungkin setara pada pasien terpilih. Sesuaikan dengan fasilitas rumah sakit.
 
 ## 6. Penilaian global
 
@@ -126,6 +127,8 @@ Catatan penerimaan jawaban (sesuaikan dengan protokol lokal):
 
 - Jones DW, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation and Management of High Blood Pressure in Adults. *Circulation*. 2025;152:e114–e218.
 - McEvoy JW, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. *Eur Heart J*. 2024;45:3912–4018.
+- van den Born BH, et al. ESC Council on hypertension position document on the management of hypertensive emergencies. *Eur Heart J Cardiovasc Pharmacother*. 2019;5:37–46. (Hanya abstrak yang terbaca.)
+- Bress AP, et al. The Management of Elevated Blood Pressure in the Acute Care Setting: A Scientific Statement From the American Heart Association. *Hypertension*. 2024;81:e94–e106. (Hanya abstrak yang terbaca.)
 - Pedoman PERKI/PERHI untuk hipertensi — verifikasi edisi yang berlaku.
 
 Daftar lengkap: [referensi/README.md](../referensi/README.md).

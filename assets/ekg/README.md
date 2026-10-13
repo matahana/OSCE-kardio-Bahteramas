@@ -6,6 +6,7 @@ Belum ada gambar di folder ini. Stasiun berikut membutuhkannya:
 |---------|------------------------|------------------------|
 | [02](../../stasiun/02-ekg-stemi-inferior.md) | EKG 12 sadapan: STEMI inferior, sinus ± 75 x/menit, elevasi ST II/III/aVF, depresi ST resiprokal I/aVL | `02-stemi-inferior.png` |
 | [08](../../stasiun/08-ekg-fibrilasi-atrium.md) | EKG 12 sadapan + strip ritme: fibrilasi atrium, laju ventrikel ± 130 x/menit, QRS sempit | `08-fibrilasi-atrium.png` |
+| [14](../../stasiun/14-ekg-blok-av-total.md) | EKG 12 sadapan + strip ritme: blok AV derajat tiga, P teratur ± 90 x/menit, QRS lebar ± 140 ms teratur ± 34 x/menit, disosiasi AV | `14-blok-av-total.png` |
 
 Syarat setiap gambar:
 

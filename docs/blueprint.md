@@ -1,6 +1,6 @@
 # Blueprint OSCE Kardiovaskular
 
-> **DRAF v0.2** — bank berisi 13 stasiun; satu sirkuit ujian terdiri dari 6 stasiun yang dipilih dari bank (lihat [Menyusun sirkuit](#menyusun-sirkuit-dari-bank-stasiun)).
+> **DRAF v0.2** — bank berisi 14 stasiun; satu sirkuit ujian terdiri dari 6 stasiun yang dipilih dari bank (lihat [Menyusun sirkuit](#menyusun-sirkuit-dari-bank-stasiun)).
 
 Blueprint memastikan ujian mencakup kompetensi yang direncanakan secara proporsional, bukan sekadar kumpulan stasiun yang kebetulan tersedia.
 
@@ -31,6 +31,7 @@ Blueprint memastikan ujian mencakup kompetensi yang direncanakan secara proporsi
 | 11 | [Pemeriksaan fisik kardiovaskular sistematis](../stasiun/11-pemeriksaan-fisik-kardiovaskular.md) |   | ● | ○ | ○ | ○ | ○ |
 | 12 | [ACLS: irama tidak dapat disyok](../stasiun/12-acls-irama-tidak-dapat-disyok.md) |   | ○ | ○ | ● | ○ | ● |
 | 13 | [Gagal jantung kronik: optimalisasi terapi](../stasiun/13-gagal-jantung-kronik-optimalisasi-terapi.md) | ○ | ○ | ○ | ● | ● | ○ |
+| 14 | [Interpretasi EKG: blok AV derajat tiga](../stasiun/14-ekg-blok-av-total.md) |   |   | ● | ● | ○ | ○ |
 
 ## Menyusun sirkuit dari bank stasiun
 
@@ -58,7 +59,8 @@ Petakan tiap stasiun ke area kompetensi dan tingkat kemampuan yang berlaku di in
 - [x] Gagal jantung kronik: optimalisasi terapi medis dan edukasi (S13; melengkapi S06 yang berfokus akut)
 - [x] Edukasi pasca-infark miokard dan pencegahan sekunder (S07)
 - [x] Interpretasi EKG: fibrilasi atrium (S08)
-- [ ] Interpretasi EKG lain: blok AV derajat tinggi, takikardia kompleks lebar
+- [x] Interpretasi EKG: blok AV derajat tiga (S14)
+- [ ] Interpretasi EKG lain: takikardia kompleks lebar
 - [x] ACLS: irama tidak dapat diberi syok dan penggunaan obat (S12)
 - [x] Hipertensi emergensi: penilaian kerusakan organ target dan tatalaksana awal (S09)
 - [x] Sinkop: anamnesis, pemeriksaan ortostatik, dan stratifikasi risiko (S10)
