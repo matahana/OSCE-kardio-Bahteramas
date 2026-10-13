@@ -76,10 +76,13 @@ Opsi form dapat membawa bendera pada elemen ketiga: `['nitrat', 'Nitrat …', {t
 
 ## Pemeriksaan
 
+Stasiun yang belum punya `app/data/interaksi/NN.js` dilaporkan **"segera hadir"** (sama seperti beranda) dan tidak menggagalkan pemeriksaan; stasiun yang punya interaksi diperiksa penuh.
+
 ```bash
 python3 -I tools/cek_skor.py              # jumlah skor checklist tiap stasiun
 python3 -I tools/buat_data.py --cek       # berkas hasil generator sinkron dengan markdown
 node tools/cek_interaksi.mjs              # interaksi konsisten dengan checklist; rencana ideal 100%; "klik semua" tidak 100% tanpa catatan
+node tools/cek_interaksi.mjs --ketat      # sama, tetapi stasiun tanpa interaksi juga dianggap gagal (pakai bila semua stasiun harus lengkap)
 PLAYWRIGHT_DIR=/jalur/node_modules/playwright node tests/e2e.mjs [--shots=folder]   # uji di Chromium dari file://
 ```
 
