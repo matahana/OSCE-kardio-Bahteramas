@@ -48,7 +48,7 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 
 ## Proses
 
-- [ ] PR #1 sudah di-merge. PR #2 (aplikasi) draft: pengguna memutuskan kapan di-merge. Setelah merge: perbarui `overview.md`, mulai branch baru untuk pekerjaan berikutnya.
+- [ ] PR #1 sudah di-merge. PR #3 (aplikasi) draft: pengguna memutuskan kapan di-merge. Setelah merge: perbarui `overview.md`, mulai branch baru untuk pekerjaan berikutnya.
 - [ ] Belum ada langganan pemantauan PR; tawarkan lagi bila pengguna ingin komentar review ditangani otomatis.
 
 ## Pertanyaan terbuka untuk pengguna

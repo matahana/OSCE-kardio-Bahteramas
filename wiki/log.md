@@ -36,7 +36,7 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 
 **Tindakan dan hasil**
 - PR #1 dilepas dari draft lalu di-merge (merge commit `b807f4f`); `main` memuat `CLAUDE.md`, wiki, `tools/`. Dari data PR terlihat deskripsi repo "aplikasi simulasi OSCE kardiologi untuk RS Bahteramas", yang menjadi dasar permintaan aplikasi.
-- Branch kerja di-reset ke `main` (`git checkout -B … FETCH_HEAD`), pekerjaan aplikasi di PR #2 (draft).
+- Branch kerja di-reset ke `main` (`git checkout -B … FETCH_HEAD`), pekerjaan aplikasi di PR #3 (draft).
 - Dibangun aplikasi statis di `app/`: engine bebas DOM (jam simulasi berbasis biaya aksi, penilaian per butir), generator data dari markdown, interaksi 6 stasiun, 4 widget (EKG sintetis, steteskop Web Audio, tensimeter + Korotkoff, uji ritme kompresi), UI (beranda, briefing, ruang, hasil, mode penguji, riwayat, tentang), CSS responsif dengan mode gelap.
 - Verifikasi: `tools/cek_interaksi.mjs` (6 stasiun: rencana ideal 100%, "klik semua" tidak 100% tanpa catatan); `tests/e2e.mjs` di Chromium dari `file://`: 156 pemeriksaan lulus, termasuk kontrol negatif widget, tindakan berisiko, jalur waktu habis, mode penguji, riwayat; tangkapan layar ditinjau (menemukan dan memperbaiki tabrakan kelas CSS, EKG terlalu kecil, daftar aksi memanjangkan halaman, header ponsel).
 - Desain yang diubah karena uji: pertanyaan wajar tak berskor ditambah (biaya 14 dtk) agar "tanya semua" tidak muat dalam 480 dtk (sebelumnya batas waktu tidak memaksa prioritas).

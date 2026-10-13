@@ -14,13 +14,13 @@ Menyusun repositori materi OSCE kardiovaskular yang dapat dipakai dan dikembangk
 | Hal | Nilai |
 |-----|-------|
 | Repo | https://github.com/matahana/OSCE-kardio-Bahteramas (nama kanonik; sesi mendaftarkannya sebagai `osce-kardio-bahteramas`, keduanya valid) |
-| `main` | Berisi PR #1 (merge `b807f4f`): 6 stasiun, dokumen, wiki, `CLAUDE.md`. Aplikasi masuk lewat PR #2 |
+| `main` | Berisi PR #1 (merge `b807f4f`): 6 stasiun, dokumen, wiki, `CLAUDE.md`. Aplikasi masuk lewat PR #3 |
 | Branch kerja | `claude/gallant-babbage-fb0o57` (nama ditentukan harness sesi pertama; di-reset ke `main` setelah PR #1 merge) |
-| PR | #1 sudah di-merge. [#2](https://github.com/matahana/OSCE-kardio-Bahteramas/pull/2) **draft**: aplikasi simulasi web, tests, CI, dokumentasi |
+| PR | #1 sudah di-merge. [#3](https://github.com/matahana/OSCE-kardio-Bahteramas/pull/3) **draft**: aplikasi simulasi web, tests, CI, dokumentasi |
 | Konten | 6 stasiun, blueprint, standar penilaian, panduan, rubrik komunikasi, template, rujukan, wiki, `CLAUDE.md`; aplikasi web (`app/`), `tools/` (cek_skor, buat_data, cek_interaksi), `tests/e2e.mjs`, CI `.github/workflows/cek.yml` |
 | Status mutu | **DRAF v0.1**, belum direview kardiolog, angka klinis belum diverifikasi ke teks lengkap |
 
-Saat memulai sesi baru, cek dulu apakah PR #2 sudah di-merge atau ditutup, lalu perbarui tabel ini.
+Saat memulai sesi baru, cek dulu apakah PR #3 sudah di-merge atau ditutup, lalu perbarui tabel ini.
 
 ## Angka kunci
 
