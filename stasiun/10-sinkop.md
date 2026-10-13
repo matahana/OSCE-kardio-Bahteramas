@@ -129,6 +129,8 @@ Catatan penerimaan jawaban (sesuaikan dengan protokol lokal):
 
 - Shen WK, et al. 2017 ACC/AHA/HRS Guideline for the Evaluation and Management of Patients With Syncope. *Circulation*. 2017;136:e60–e122.
 - Brignole M, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. *Eur Heart J*. 2018;39:1883–1948.
+- Al-Khatib SM, et al. 2017 AHA/ACC/HRS Guideline for Management of Patients With Ventricular Arrhythmias and the Prevention of Sudden Cardiac Death. *Circulation*. 2018;138:e272–e391. (Dasar pertanyaan lanjutan tentang ICD; isi belum dicocokkan.)
+- Zeppenfeld K, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. *Eur Heart J*. 2022;43:3997–4126. (Idem.)
 - Pedoman PERKI untuk sinkop dan aritmia — verifikasi edisi yang berlaku.
 
 Daftar lengkap: [referensi/README.md](../referensi/README.md).

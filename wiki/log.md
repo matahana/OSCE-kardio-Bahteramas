@@ -91,3 +91,17 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 **Keputusan:** D20.
 
 **Belum selesai:** sama seperti entri sebelumnya, ditambah rujukan hiperkalemia, verifikasi AF ke teks lengkap, dan uji waktu S12.
+
+## [2026-10-13] sesi 2 (lanjutan 4) | Rujukan yang kurang dan verifikasi klaim AF ke teks lengkap
+
+**Permintaan pengguna:** mengerjakan pekerjaan yang lebih menentukan kualitas: menambah rujukan yang kurang dan mulai memverifikasi angka klinis ke teks guideline di PMC.
+
+**Tindakan dan hasil**
+- Akses: semua domain luar (PMC web, Europe PMC, OUP, AHA Journals, doi.org, eutils) tidak terjangkau; hanya tool PubMed. `convert_article_ids` pada 22 artikel (15 guideline yang sudah dirujuk, Part 9, 10, 11, Kumar 2020, Mach 2019/2020, Al-Khatib 2018, Zeppenfeld 2022): hanya Joglar 2023 (PMC11095842) yang punya teks lengkap. (Part 3 Etika AHA 2025 punya PMCID, tetapi tidak dipakai.)
+- Rujukan yang ditambahkan (metadata terverifikasi lewat PubMed; isi belum dicocokkan, kecuali Joglar): Mach 2019/2020 (dislipidemia, S07), Al-Khatib 2018 dan Zeppenfeld 2022 (aritmia ventrikel/ICD, S10), Kumar 2020 (penyakit jantung rematik, S11), Wigginton 2025 Part 9, Cao 2025 Part 10 (memuat hiperkalemia), Hirsch 2025 Part 11 (S12), serta Otto 2020 dan Vahanian 2021 sekarang dirujuk dari S03. Rujukan dicantumkan di bagian 9 stasiun terkait dan `referensi/README.md`.
+- Verifikasi teks lengkap Joglar 2023 (`full_text` ± 397 ribu karakter, diekstrak ke scratchpad, di-grep): delapan baris klaim AF (sekitar 20 rekomendasi) untuk S08 dan S11 dicocokkan dengan COR/LOE dari teks. Hasil: klaim pokok sesuai (antikoagulasi ≥ 2/≥ 3, DOAC vs warfarin, warfarin pada stenosis mitral tanpa memandang skor, kendali laju, kardioversi listrik, pre-eksitasi). **Koreksi:** jawaban lanjutan S08 tentang kardioversi < 48 jam menyiratkan kardioversi "aman" yang tidak ada di guideline; ditulis ulang (antikoagulasi terapeutik sebelum dan ≥ 4 minggu sesudah kardioversi; pencitraan dapat dipertimbangkan pada risiko tinggi). **Diperketat:** S08 J2 dan J3 (troponin dan pemeriksaan iskemia/emboli paru hanya bila ada gejala atau tanda; Class 3: No benefit untuk pemeriksaan rutin), K1 (EF > 40%), K2 (CCB non-DHP IV tidak diberikan pada disfungsi sistolik LV sedang–berat). Tidak dapat dicocokkan: bobot komponen CHA₂DS₂-VASc (tabel tidak ikut dalam teks).
+- Diperbarui: `guidelines-status` (tiga tingkat verifikasi; delapan baris "Terverifikasi (teks lengkap)"), `open-items`, `decisions` (D21), `environment` (cara verifikasi ke teks lengkap), `overview`. `tools/cek_skor.py` tetap kode 0 (total 265).
+
+**Keputusan:** D21.
+
+**Belum selesai:** semua klaim non-AF tetap belum diverifikasi (butuh PDF/teks dari pengguna atau review kardiolog); rujukan terapi hiperkalemia di luar AHA Part 10, WHO/PERKI untuk penyakit jantung rematik, dan PERKI/PERHI secara umum.

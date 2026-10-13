@@ -10,9 +10,10 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 ## P0 — sebelum konten dipakai untuk ujian
 
 - [ ] **Review kardiolog** atas seluruh stasiun (pemilik repo adalah kardiolog; minta tinjauan substansi dan kesesuaian dengan praktik setempat).
-- [ ] **Verifikasi angka klinis ke teks lengkap** — daftar lengkap di [guidelines-status](guidelines-status.md). **Hanya AF dapat diverifikasi ke teks lengkap lewat PMC** (PMC11095842; lihat [environment](environment.md)): kerjakan lebih dulu untuk S08 dan sebagian S11. Prioritas: stasiun 02 (dosis aspirin, target waktu reperfusi), 12 (epinefrin, terapi hiperkalemia), 11 (antikoagulan pada AF dengan stenosis mitral), 10 (fitur sinkop berisiko tinggi, indikasi rawat), 09 (target penurunan TD bertahap dan pengecualian), 05 (parameter RJP), 06 (diuretik IV, kriteria NIV, nitrat), 08 (syarat kardioversi, kendali laju), 07 (lama antiplatelet ganda, target LDL), 04 (teknik dan klasifikasi TD). Gunakan `convert_article_ids` lalu `get_full_text_article` untuk artikel yang ada di PMC.
+- [ ] **Verifikasi angka klinis ke teks lengkap** — daftar lengkap di [guidelines-status](guidelines-status.md). **AF (S08, sebagian S11) sudah dicocokkan ke teks lengkap Joglar 2023** (13 Oktober 2026); guideline lain tidak punya teks lengkap di PMC (lihat [environment](environment.md)), jadi sisanya perlu PDF dari pengguna atau review kardiolog. Prioritas: stasiun 02 (dosis aspirin, target waktu reperfusi), 12 (epinefrin, terapi hiperkalemia), 11 (antikoagulan pada AF dengan stenosis mitral), 10 (fitur sinkop berisiko tinggi, indikasi rawat), 09 (target penurunan TD bertahap dan pengecualian), 05 (parameter RJP), 06 (diuretik IV, kriteria NIV, nitrat), 08 (syarat kardioversi, kendali laju), 07 (lama antiplatelet ganda, target LDL), 04 (teknik dan klasifikasi TD). Gunakan `convert_article_ids` lalu `get_full_text_article` untuk artikel yang ada di PMC.
 - [ ] **Tambahkan rujukan PERKI/PERHI** (SKA, hipertensi, gagal jantung, fibrilasi atrium, pencegahan sekunder) dengan edisi yang berlaku; sesuaikan butir stasiun bila PERKI berbeda.
-- [ ] Tambahkan guideline aritmia ventrikel/pencegahan kematian jantung mendadak (dasar pertanyaan ICD di S10) dan sitasi ESC/EAS dislipidemia 2019 (dipakai di pertanyaan lanjutan S07, belum ada di `referensi/README.md`).
+- [x] Sitasi ditambahkan sesi 2 (metadata terverifikasi, isi belum dicocokkan): aritmia ventrikel/SCD (Al-Khatib 2018, Zeppenfeld 2022) untuk S10, dislipidemia ESC/EAS (Mach 2020) untuk S07, penyakit jantung rematik (Kumar 2020) untuk S11, ALS/keadaan khusus/pasca-henti jantung (AHA 2025 Part 9–11) untuk S12, dan guideline katup untuk S03.
+- [ ] Rujukan yang masih kurang: terapi hiperkalemia (di luar AHA Part 10, mis. pedoman nefrologi), WHO/PERKI untuk penyakit jantung rematik dan profilaksis sekunder (jadwal, lama), dan PERKI/PERHI secara umum.
 
 ## P1 — kelengkapan
 
@@ -21,7 +22,7 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 - [ ] Uji coba waktu stasiun 06; putuskan tetap satu stasiun atau pecah menjadi S06a/S06b.
 - [ ] Isi pemetaan ke SNPPDI/KKI (kolom di blueprint belum diisi).
 - [ ] Tetapkan lisensi repositori dan visibilitas (publik/privat).
-- [ ] Guideline katup (Otto 2020, Vahanian 2021) sudah ada di `referensi/README.md`; **hubungkan ke stasiun 03** (rujukan dan verifikasi isi) dan rujukan PJR/profilaksis sekunder demam rematik (WHO/PERKI) untuk S11.
+- [ ] Guideline katup (Otto 2020, Vahanian 2021) sudah dirujuk dari stasiun 03; **isinya belum dicocokkan** (butuh teks dari pengguna).
 
 ## P2 — pengembangan
 

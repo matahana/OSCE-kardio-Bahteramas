@@ -9,7 +9,7 @@
 | Domain | Pemeriksaan fisik (teknik dan urutan), sintesis temuan, langkah lanjut |
 | Jenis | Sukarelawan sehat sebagai pasien simulasi + penguji membacakan temuan (atau audio/simulator bunyi jantung bila tersedia) |
 | Level peserta | Dokter muda klinik / dokter umum |
-| Status | DRAF — belum direview kardiolog; **tugas padat, uji coba waktu dulu**; audio/simulator belum ditentukan |
+| Status | DRAF — belum direview kardiolog; **tugas padat, uji coba waktu dulu**; audio/simulator belum ditentukan. Klaim antikoagulan pada AF dengan stenosis mitral dicocokkan dengan teks lengkap ACC/AHA 2023 (13 Oktober 2026); temuan auskultasi mengikuti buku ajar |
 
 ## 1. Instruksi untuk kandidat (dipasang di pintu)
 
@@ -95,7 +95,7 @@ Brankar dengan sandaran yang dapat diatur 45°, stetoskop dengan diafragma dan b
 Catatan penerimaan jawaban (sesuaikan dengan protokol lokal):
 - Urutan A → G adalah urutan yang diusulkan; kandidat yang memakai urutan lain tetapi tetap sistematis tidak dikurangi, selama semua manuver pada butir yang bersangkutan terlihat.
 - E2: kandidat yang hanya memakai diafragma dengan pasien telentang tidak memperoleh bising diastolik (lihat bagian 3) dan kehilangan butir E2 dan E5.
-- G2: obat dan dosis tidak dinilai; yang dinilai adalah pilihan golongan dan alasannya.
+- G2: obat dan dosis tidak dinilai; yang dinilai adalah pilihan golongan dan alasannya. Dicocokkan dengan teks lengkap ACC/AHA 2023: pada stenosis mitral reumatik, atau stenosis mitral sedang atau lebih berat, dengan riwayat AF, warfarin dianjurkan daripada DOAC **tanpa memandang skor CHA₂DS₂-VASc** (Class 1, B-R). Pernyataan AHA 2020 tentang penyakit jantung rematik (hanya abstrak dibaca) menyebut benzatin penisilin sebagai dasar pencegahan sekunder.
 
 ## 6. Penilaian global
 
@@ -106,7 +106,7 @@ Catatan penerimaan jawaban (sesuaikan dengan protokol lokal):
 1. "Mengapa bising diastolik ini hanya terdengar pada posisi tertentu?" *(Berfrekuensi rendah dan terlokalisir di apeks; miring kiri mendekatkan apeks ke dinding dada, bell menangkap frekuensi rendah, akhir ekspirasi meningkatkan aliran dan kedekatan jantung.)*
 2. "Mengapa tidak ada aksentuasi presistolik dan gelombang a pada JVP?" *(Fibrilasi atrium: tidak ada kontraksi atrium efektif.)*
 3. "Sebutkan komplikasi stenosis mitral." *(Fibrilasi atrium, tromboemboli/stroke, hipertensi pulmonal dan gagal jantung kanan, edema paru, endokarditis.)*
-4. "Mengapa antikoagulan yang dipilih adalah antagonis vitamin K dan bukan DOAC?" *(Pada fibrilasi atrium dengan stenosis mitral sedang–berat, guideline merekomendasikan antagonis vitamin K; bukti DOAC pada kelompok ini terbatas. Pantau INR.)*
+4. "Mengapa antikoagulan yang dipilih adalah antagonis vitamin K dan bukan DOAC?" *(ACC/AHA 2023: pada stenosis mitral reumatik atau sedang–berat dengan AF, warfarin dianjurkan daripada DOAC, tanpa memandang skor CHA₂DS₂-VASc (Class 1, B-R); pasien dengan stenosis mitral sedang–berat dan katup mekanik dikeluarkan dari uji DOAC. Target INR 2–3; pantau INR.)*
 5. "Apa yang berubah pada pemeriksaan bila regurgitasi mitral?" *(Apeks bergeser ke lateral dan inferior, heaving; bising pansistolik di apeks menjalar ke aksila; S3 mungkin ada.)*
 
 ## 8. Catatan pembuat soal
@@ -121,7 +121,8 @@ Catatan penerimaan jawaban (sesuaikan dengan protokol lokal):
 
 - Otto CM, et al. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. *Circulation*. 2021;143:e72–e227.
 - Vahanian A, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. *Eur Heart J*. 2022;43:561–632.
-- Joglar JA, et al. 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation. *Circulation*. 2024;149:e1–e156 (antikoagulan pada AF dengan stenosis mitral).
+- Joglar JA, et al. 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation. *Circulation*. 2024;149:e1–e156 (antikoagulan pada AF dengan stenosis mitral; teks lengkap dicocokkan lewat PMC11095842).
+- Kumar RK, et al. Contemporary Diagnosis and Management of Rheumatic Heart Disease: Implications for Closing the Gap: A Scientific Statement From the American Heart Association. *Circulation*. 2020;142:e337–e357. (Hanya abstrak dibaca.)
 - Teknik pemeriksaan fisik: buku ajar pemeriksaan fisik institusi (tidak dikutip spesifik).
 - Pedoman PERKI untuk penyakit jantung rematik dan katup — verifikasi edisi yang berlaku.
 

@@ -89,6 +89,8 @@ Tidak ada butir kritis keselamatan pada stasiun ini.
 ## 9. Rujukan
 
 - Pedoman pemeriksaan fisik jantung di buku ajar institusi.
-- Guideline katup jantung ACC/AHA dan ESC/EACTS terbaru — **verifikasi versi** sebelum menaikkan butir pertanyaan lanjutan menjadi butir skor.
+- Otto CM, et al. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. *Circulation*. 2021;143:e72–e227.
+- Vahanian A, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. *Eur Heart J*. 2022;43:561–632.
+- Kedua guideline katup di atas: metadata terverifikasi, **isi belum dicocokkan** (teks tidak tersedia di PMC); verifikasi sebelum menaikkan butir pertanyaan lanjutan menjadi butir skor.
 
 Daftar lengkap: [referensi/README.md](../referensi/README.md).

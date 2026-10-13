@@ -9,7 +9,7 @@
 | Domain | Resusitasi lanjut, kepemimpinan tim, penyebab reversibel, tatalaksana pasca-ROSC |
 | Jenis | Manikin RJP dengan monitor/defibrilator simulasi + penguji yang berperan sebagai anggota tim |
 | Level peserta | Dokter umum / PPDS tahun awal; bersertifikat BLS |
-| Status | DRAF — belum direview kardiolog; dosis dan algoritme perlu dicek terhadap pedoman resusitasi yang berlaku di institusi |
+| Status | DRAF — belum direview kardiolog; algoritme dan terapi hiperkalemia perlu dicek terhadap Part 9–11 pedoman AHA 2025 (teks tidak dapat diambil dari sesi) dan pedoman institusi |
 
 ## 1. Instruksi untuk kandidat (dipasang di pintu)
 
@@ -108,7 +108,10 @@ Manikin RJP dengan umpan balik (bila ada), defibrilator/monitor simulasi dengan 
 
 ## 9. Rujukan
 
-- Del Rios M, et al. Part 1: Executive Summary: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. *Circulation*. 2025;152(16 suppl 2):S284–S312. (Ringkasan eksekutif; bab ALS dewasa dan hiperkalemia tidak dibaca.)
-- Pedoman resusitasi institusi/PERKI dan pedoman tatalaksana hiperkalemia — verifikasi edisi yang berlaku.
+- Wigginton JG, et al. Part 9: Adult Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. *Circulation*. 2025;152(16 suppl 2):S538–S577. (Dasar algoritme asistol/PEA; teks tidak tersedia di PMC dan belum dicocokkan.)
+- Cao D, et al. Part 10: Adult and Pediatric Special Circumstances of Resuscitation: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. *Circulation*. 2025;152(16 suppl 2):S578–S672. (Memuat bagian hiperkalemia; belum dicocokkan.)
+- Hirsch KG, et al. Part 11: Post-Cardiac Arrest Care: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. *Circulation*. 2025;152(16 suppl 2):S673–S718. (Dasar butir pasca-ROSC; belum dicocokkan.)
+- Del Rios M, et al. Part 1: Executive Summary: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. *Circulation*. 2025;152(16 suppl 2):S284–S312.
+- Pedoman resusitasi institusi/PERKI — verifikasi edisi yang berlaku.
 
 Daftar lengkap: [referensi/README.md](../referensi/README.md).

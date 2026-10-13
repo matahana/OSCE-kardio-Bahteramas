@@ -129,6 +129,7 @@ Catatan penerimaan jawaban (sesuaikan dengan protokol lokal):
 - Rao SV, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. *Circulation*. 2025;151:e771–e862.
 - Byrne RA, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. *Eur Heart J*. 2023;44:3720–3826.
 - Virani SS, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. *Circulation*. 2023;148:e9–e119.
+- Mach F, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. *Eur Heart J*. 2020;41:111–188. (Dasar pertanyaan lanjutan tentang target LDL; isi belum dicocokkan.)
 - Kurtz SM, Silverman JD. The Calgary-Cambridge Referenced Observation Guides. *Med Educ*. 1996;30:83–89.
 - Pedoman PERKI untuk SKA dan pencegahan sekunder — verifikasi edisi yang berlaku.
 

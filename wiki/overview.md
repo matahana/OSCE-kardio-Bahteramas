@@ -18,7 +18,7 @@ Menyusun repositori materi OSCE kardiovaskular yang dapat dipakai dan dikembangk
 | Branch kerja | Sesi 1: `claude/gallant-babbage-fb0o57` · Sesi 2: `claude/happy-darwin-oxpyko` (nama ditentukan harness tiap sesi) |
 | PR | [#1](https://github.com/matahana/OSCE-kardio-Bahteramas/pull/1) (v0.1) **sudah di-merge** · [#2](https://github.com/matahana/OSCE-kardio-Bahteramas/pull/2) (v0.2: S07–S12), **draft**, basis sudah dialihkan ke `main` (semula branch PR #1); sesi 2 berlangganan pemantauan PR #2 |
 | Konten | 12 stasiun, blueprint (bank + sirkuit), standar penilaian, panduan, rubrik komunikasi, template, rujukan, `assets/ekg/README.md`, wiki, `CLAUDE.md`, `tools/cek_skor.py` |
-| Status mutu | **DRAF v0.2**, belum direview kardiolog, angka klinis belum diverifikasi ke teks lengkap |
+| Status mutu | **DRAF v0.2**, belum direview kardiolog. Angka klinis belum diverifikasi ke teks lengkap kecuali klaim fibrilasi atrium (S08, sebagian S11) yang dicocokkan ke Joglar 2023 pada 13 Oktober 2026; guideline lain tidak punya teks lengkap di PMC |
 
 Saat memulai sesi baru, cek dulu apakah PR #2 sudah di-merge atau ditutup, lalu perbarui tabel ini. Branch basis dapat bergerak selama sesi (terjadi di sesi 2: `f69a580` → `90c689f`); `git fetch` sebelum membuat PR bertumpuk.
 

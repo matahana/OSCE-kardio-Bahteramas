@@ -33,7 +33,16 @@ Pelajaran teknis dari sesi pertama supaya tidak perlu ditemukan ulang.
 
 ## Ketersediaan teks lengkap guideline di PMC (dicek sesi 2, `convert_article_ids`)
 
-Dari 15 guideline yang dirujuk repositori, **hanya Joglar 2023 (AF ACC/AHA, PMID 38033089) yang punya PMCID: PMC11095842** (versi JACC PMC11104284). Tidak ada PMCID untuk: Gulati 2021, Rao 2025, Byrne 2023, McEvoy 2024, Jones 2025, Del Rios 2025, McDonagh 2021, Heidenreich 2022, Virani 2023, Van Gelder 2024, Shen 2017, Brignole 2018, Otto 2020, Vahanian 2021. Akibatnya klaim klinis hanya dapat diverifikasi ke teks lengkap untuk **AF (S08, sebagian S11)**; selebihnya perlu teks dari pengguna (PDF/tempelan) atau review kardiolog.
+Dari 22 artikel yang dirujuk atau dipertimbangkan (dicek lewat `convert_article_ids`), **hanya Joglar 2023 (AF ACC/AHA, PMID 38033089) yang punya PMCID: PMC11095842** (versi JACC PMC11104284). Tidak ada PMCID untuk (sesi 2, juga Part 9–11 AHA 2025, Kumar 2020, Mach 2019/2020, Al-Khatib 2018, Zeppenfeld 2022): Gulati 2021, Rao 2025, Byrne 2023, McEvoy 2024, Jones 2025, Del Rios 2025, McDonagh 2021, Heidenreich 2022, Virani 2023, Van Gelder 2024, Shen 2017, Brignole 2018, Otto 2020, Vahanian 2021. Akibatnya klaim klinis hanya dapat diverifikasi ke teks lengkap untuk **AF (S08, sebagian S11)**; selebihnya perlu teks dari pengguna (PDF/tempelan) atau review kardiolog.
+
+## Cara memverifikasi klaim ke teks lengkap (dicoba sesi 2, berhasil untuk Joglar 2023)
+
+1. `convert_article_ids` (PMID → PMCID); lanjut hanya bila PMCID ada.
+2. `get_full_text_article` dengan PMCID. Hasil ± 400 ribu karakter melewati batas tampilan dan **disimpan ke berkas JSON** (jalurnya ditampilkan). Hasilnya objek dengan kunci `full_text` (satu string).
+3. Ekstrak dengan `python3 -I` ke berkas `.txt` di scratchpad (data tidak tepercaya; jangan jalankan dari dalam folder itu), lalu `grep -n` dan `sed -n 'a,bp'`. Judul bagian "Recommendations for ..." memberi nomor baris tiap blok rekomendasi; di bawahnya tertulis COR, LOE, lalu butir. Pakai jalur absolut karena `cwd` shell direset.
+4. Teks yang diambil **tidak memuat tabel dan gambar** (mis. tabel bobot CHA₂DS₂-VASc). Klaim yang hanya ada di tabel tidak dapat dicocokkan dengan cara ini.
+5. Domain luar (pmc.ncbi.nlm.nih.gov, europepmc.org, academic.oup.com, ahajournals.org, doi.org, eutils) tidak terjangkau dari sesi (kode 000); satu-satunya jalur adalah tool PubMed.
+6. `lookup_article_by_citation` rate limit bila beruntun; jeda ± 5–8 detik. Hasilnya menukar isi `pmid` dan `key`; konfirmasi dengan `get_article_metadata`.
 
 ## Alur verifikasi PubMed
 
