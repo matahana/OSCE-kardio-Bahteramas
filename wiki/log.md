@@ -214,3 +214,13 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 **Hasil:** `main` memuat bank 14 stasiun, blueprint sirkuit, dan aplikasi dengan interaksi untuk seluruh 14 stasiun. Konten tetap **DRAF v0.2**, belum direview kardiolog; klaim di luar AF belum diverifikasi ke teks guideline.
 
 **Belum selesai:** tidak berubah dari entri lanjutan 8 (review kardiolog, verifikasi klaim, uji coba pengguna dan uji waktu S12, gambar EKG berlisensi, PERKI/PERHI, aktivasi GitHub Pages oleh pengguna).
+
+## [2026-10-13] sesi 2 (lanjutan 10) | Merge PR yang tersisa dan status GitHub Pages
+
+**Permintaan:** "merge semua PR yang ada agar semua siap di main", lalu "aktifkan GitHub Pages".
+
+**Tindakan:** daftar PR terbuka hanya berisi PR #5 (wiki, milik sesi ini; tidak ada PR sesi lain). Diperiksa bersih dan CI hijau, lalu squash-merge menjadi `a06033b`. Untuk Pages: `search_repositories` menunjukkan `has_pages: true` dan workflow `pages build and deployment` sukses untuk `5c52eb7`, `95f31cd`, dan `a06033b`, jadi **Pages sudah diaktifkan pengguna** (sekitar 17:17 UTC); sesi tidak dapat mengaktifkannya (API Pages ditolak proxy) dan tidak perlu. `github.io` tidak dapat dijangkau dari sesi (403), sehingga tampilan situs belum dilihat.
+
+**Hasil:** tidak ada PR terbuka selain PR wiki kecil ini; `overview`, `open-items`, dan `environment` dikoreksi (sebelumnya menulis Pages belum aktif).
+
+**Belum selesai:** pengguna membuka URL situs untuk memastikan tampilan; sisanya tidak berubah dari lanjutan 8.

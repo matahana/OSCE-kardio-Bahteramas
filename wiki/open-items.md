@@ -32,7 +32,7 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 - [ ] Isi pemetaan ke SNPPDI/KKI (kolom di blueprint belum diisi).
 - [ ] Tetapkan lisensi repositori dan visibilitas (publik/privat).
 - [ ] Guideline katup (Otto 2020, Vahanian 2021) sudah dirujuk dari stasiun 03; **isinya belum dicocokkan** (butuh teks dari pengguna).
-- [ ] Aktifkan GitHub Pages bila ingin akses lewat tautan (perhatikan visibilitas repo).
+- [x] GitHub Pages aktif (pengguna, 13 Oktober 2026; deploy sukses untuk `main` terbaru). Tersisa: pengguna membuka URL situs di peramban untuk memastikan tampilan benar (sesi tidak dapat menjangkau `github.io`).
 - [ ] Ganti EKG/bunyi sintetis dengan rekaman berlisensi atau perluas variasi (S03: MR/MS/AR/S3; S04: nilai TD lain; S02: EKG lain) lewat varian interaksi.
 - [ ] Audit aksesibilitas dengan pembaca layar (alur keyboard sudah ada, belum diuji menyeluruh).
 
@@ -57,7 +57,7 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 
 - [x] PR #1, #3, dan #4 sudah di-merge pengguna ke `main` (13 Oktober 2026).
 - [x] **Penghambat CI PR #2 selesai (13 Oktober 2026, sesi 2 lanjutan 8):** pengguna memilih opsi 1, 2, dan 3 bertahap. Opsi 2: `cek_interaksi.mjs` mengenali stasiun tanpa interaksi sebagai "segera hadir" (`--ketat` menggagalkannya). Opsi 1: interaksi S07–S14 ditulis dan diuji satu per satu; widget EKG (AF, blok AV) dan steteskop (bising mitral bersyarat) diperluas. Opsi 3 tidak diperlukan (semua lolos). Hasil: `cek_skor.py`, `buat_data.py --cek`, `cek_interaksi.mjs --ketat` lulus untuk 14 stasiun; e2e Chromium 425 lulus, 0 gagal. **[PR #2](https://github.com/matahana/OSCE-kardio-Bahteramas/pull/2) di-merge atas perintah pengguna (squash `95f31cd`, 13 Oktober 2026).**
-- [ ] Pengguna mengaktifkan GitHub Pages (Settings → Pages → `main` / root); setelah itu verifikasi URL situs (jaringan sesi mungkin tidak menjangkau `github.io`).
+- [x] Pengguna mengaktifkan GitHub Pages (Settings → Pages → `main` / root). Verifikasi tampilan situs di peramban masih oleh pengguna (lihat P2 di atas).
 - [ ] Hapus `<meta name="robots" content="noindex, nofollow">` di `app/index.html` dan `index.html` setelah konten direview dan siap dipublikasikan.
 
 ## Pertanyaan terbuka untuk pengguna
