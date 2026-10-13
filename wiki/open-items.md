@@ -48,7 +48,7 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 
 ## Proses
 
-- [ ] PR #1 sudah di-merge. PR #3 (aplikasi) draft: pengguna memutuskan kapan di-merge. Setelah merge: perbarui `overview.md`, mulai branch baru untuk pekerjaan berikutnya.
+- [ ] Tidak ada PR terbuka (PR #1 dan #3 sudah di-merge). Pekerjaan berikutnya: reset branch kerja ke `main` (`git fetch origin main && git checkout -B <branch> FETCH_HEAD`), lalu buka draft PR baru.
 - [ ] Belum ada langganan pemantauan PR; tawarkan lagi bila pengguna ingin komentar review ditangani otomatis.
 
 ## Pertanyaan terbuka untuk pengguna

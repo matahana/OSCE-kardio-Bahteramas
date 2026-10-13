@@ -45,3 +45,11 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 **Keputusan:** D14–D22 di [decisions](decisions.md).
 
 **Belum selesai:** lihat [open-items](open-items.md), terutama uji coba dengan pengguna nyata, review kardiolog atas teks respons, dan verifikasi angka klinis.
+
+## [2026-10-13] sesi 1 (akhir) | Merge PR #3
+
+**Permintaan pengguna:** merge PR #3 ke main.
+
+**Tindakan:** PR #3 dicek (tidak ada konflik; CI "Cek konsistensi" hijau pada kedua commit sebelumnya), wiki diperbarui agar mencerminkan keadaan pasca-merge, PR dilepas dari draft lalu di-merge dengan metode merge biasa (riwayat commit dipertahankan). Aplikasi kini ada di `main`; buka `app/index.html`.
+
+**Berikutnya:** lihat [open-items](open-items.md): review kardiolog, verifikasi angka klinis, uji coba dengan pengguna nyata, keputusan Pages/lisensi/visibilitas.
