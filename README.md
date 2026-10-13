@@ -1,8 +1,16 @@
 # OSCE-kardio-Bahteramas
 
-Repositori materi OSCE (*Objective Structured Clinical Examination*) kardiovaskular: blueprint, stasiun lengkap dengan lembar penilaian, panduan penguji dan pasien simulasi, serta rujukan guideline.
+Repositori materi OSCE (*Objective Structured Clinical Examination*) kardiovaskular: blueprint, stasiun lengkap dengan lembar penilaian, panduan penguji dan pasien simulasi, rujukan guideline, serta **aplikasi web simulasi** untuk berlatih dan menilai.
 
 > **Status: DRAF v0.1.** Seluruh stasiun dan lembar penilaian harus direview dan disahkan oleh tim penguji/kardiolog institusi sebelum dipakai pada ujian sumatif. Lihat [Catatan penggunaan](#catatan-penggunaan).
+
+## Aplikasi simulasi (web)
+
+Buka [`app/index.html`](app/index.html) di peramban (tanpa server, tanpa instalasi), atau aktifkan GitHub Pages (Settings → Pages → `main` / root; `index.html` di akar mengalihkan ke `app/`).
+
+- **Latihan mandiri** 6 stasiun: pasien simulasi, form jawaban, EKG sintetis, steteskop, tensimeter virtual, dan uji ritme kompresi. Jam simulasi memaksa prioritas; hasil menampilkan checklist, tindakan berisiko, pembahasan, dan contoh urutan ideal.
+- **Mode penguji**: lembar penilaian digital dengan penghitung waktu, skor langsung, penilaian global, dan ekspor.
+- Checklist dibaca dari dokumen stasiun lewat generator, sehingga aplikasi dan dokumen tidak menyimpang. Rincian arsitektur, cara menambah stasiun, dan pemeriksaan: [docs/aplikasi.md](docs/aplikasi.md).
 
 ## Stasiun (v0.1)
 
@@ -23,7 +31,13 @@ Semua stasiun berdurasi 8 menit (+ 2 menit pindah) dan menguji level Miller *Sho
 README.md
 CLAUDE.md                               instruksi untuk sesi Claude (dimuat otomatis)
 wiki/                                   memori kerja lintas sesi; mulai dari wiki/index.md
+index.html                              mengalihkan ke app/ (GitHub Pages)
+app/                                    aplikasi web simulasi (HTML/CSS/JS statis)
+  index.html, css/, js/, data/          data/stasiun-data.js = hasil generator; data/interaksi/ = bank aksi per stasiun
+tests/
+  e2e.mjs                               uji end-to-end di Chromium (Playwright)
 docs/
+  aplikasi.md                           arsitektur, cara menambah stasiun, pemeriksaan
   blueprint.md                          matriks domain × stasiun, rencana stasiun lanjutan
   standar-penilaian.md                  skor, butir kritis, penetapan batas lulus (BRM), analisis
   panduan-penguji-dan-pasien-simulasi.md
@@ -35,6 +49,9 @@ referensi/
   README.md                             guideline dan pustaka (terverifikasi PubMed) + sumber yang belum terbaca
 tools/
   cek_skor.py                           pemeriksa jumlah skor checklist (python3 -I tools/cek_skor.py)
+  buat_data.py                          generator app/data/stasiun-data.js dari stasiun/*.md
+  cek_interaksi.mjs                     uji konsistensi interaksi aplikasi (node tools/cek_interaksi.mjs)
+.github/workflows/cek.yml               CI: tiga pemeriksaan di atas pada PR dan push ke main
 ```
 
 ## Melanjutkan di sesi berikutnya

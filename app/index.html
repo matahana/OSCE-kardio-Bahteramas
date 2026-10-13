@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulator OSCE Kardiovaskular</title>
+  <meta name="description" content="Simulator OSCE kardiovaskular: latihan stasiun dengan pasien dan data simulasi, serta lembar penilaian digital untuk penguji. DRAF v0.1.">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <a class="lewati" href="#app">Lewati ke konten</a>
+  <header class="kepala">
+    <a class="merek" href="#/"><span class="merek-tanda" aria-hidden="true">♥</span> <span class="merek-lengkap">Simulator </span>OSCE Kardio</a>
+    <nav aria-label="Navigasi utama">
+      <a href="#/">Stasiun</a>
+      <a href="#/riwayat">Riwayat</a>
+      <a href="#/tentang">Tentang</a>
+    </nav>
+  </header>
+  <main id="app" tabindex="-1">
+    <noscript>Aplikasi ini membutuhkan JavaScript.</noscript>
+  </main>
+  <footer class="kaki">
+    <p>DRAF v0.1 · alat belajar, bukan penilaian resmi · berjalan di peramban Anda, tanpa server.</p>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script defer src="data/stasiun-data.js"></script>
+  <script defer src="js/engine.js"></script>
+  <script defer src="js/logika.js"></script>
+  <script defer src="data/interaksi/01.js"></script>
+  <script defer src="data/interaksi/02.js"></script>
+  <script defer src="data/interaksi/03.js"></script>
+  <script defer src="data/interaksi/04.js"></script>
+  <script defer src="data/interaksi/05.js"></script>
+  <script defer src="data/interaksi/06.js"></script>
+  <script defer src="js/util.js"></script>
+  <script defer src="js/widgets/ekg.js"></script>
+  <script defer src="js/widgets/steteskop.js"></script>
+  <script defer src="js/widgets/tensimeter.js"></script>
+  <script defer src="js/widgets/ketuk.js"></script>
+  <script defer src="js/ui.js"></script>
+  <script defer src="js/main.js"></script>
+</body>
+</html>

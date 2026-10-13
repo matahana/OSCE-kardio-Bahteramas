@@ -22,6 +22,15 @@ Format: keputusan, alasan, siapa yang memutuskan. "Usulan" berarti belum disetuj
 | D11 | Rubrik komunikasi memakai kerangka Calgary–Cambridge | Halaman Dundee tidak terbaca; kerangka ini terverifikasi di PubMed (PMID 8736242) | Claude |
 | D12 | Sumber eksternal diparafrasekan, tidak disalin; tidak ada data pasien nyata | Hak cipta dan privasi | Claude |
 | D13 | Wiki + `CLAUDE.md` + `tools/cek_skor.py` disimpan di repo OSCE | Permintaan pengguna agar sesi berikutnya efisien | Pengguna |
+| D14 | Aplikasi web statis: HTML/CSS/JS klasik, tanpa build, tanpa CDN, tanpa fetch; berjalan dari `file://` dan GitHub Pages | Dapat dipakai offline di rumah sakit; mudah dirawat; tanpa data keluar dari peramban | Claude (usulan) |
+| D15 | Checklist hanya di markdown stasiun; generator `tools/buat_data.py` menghasilkan `app/data/stasiun-data.js`; interaksi ditulis tangan; CI memeriksa sinkron | Dokumen dan aplikasi tidak boleh menyimpang | Claude (usulan) |
+| D16 | Jam simulasi berbasis biaya aksi (bukan waktu nyata); pertanyaan wajar tetapi tidak menentukan skor diberi biaya 14 dtk | Hasil deterministik; "tanya semua" tidak muat dalam 480 dtk sehingga prioritas teruji | Claude (usulan) |
+| D17 | Penilaian otomatis: skor sebagian lewat `h.count`; tindakan tidak tepat tidak mengurangi skor tetapi ≥ 3 membatasi perkiraan ke Borderline; tindakan berisiko atau butir kritis gagal → Tidak lulus; waktu habis membatasi ke Lulus; ambang 55/70/85 | Meniru logika standar penilaian (D7) untuk umpan balik belajar; ambang bersifat usulan | Claude (usulan) |
+| D18 | EKG dan bunyi jantung disintesis di peramban dan diberi label sintetis | Menghindari masalah lisensi dan data pasien nyata; gambar/audio berlisensi dapat menggantikan kelak | Claude (usulan) |
+| D19 | Aplikasi tidak menilai teknik fisik; stasiun 05 menilai parameter lewat form dan ritme lewat uji ketukan; keterbatasan dinyatakan di UI | Jujur soal batas alat; manikin tetap diperlukan | Claude |
+| D20 | Toleransi widget: tensimeter ±4 mmHg, laju deflasi 1,5–4 mmHg/dtk (target 2–3), inflasi 15–40 mmHg di atas estimasi palpatoir (target 20–30), ketukan 100–120/menit | Kontrol manual sulit; toleransi sedikit lebih longgar dari teks butir | Claude (usulan) |
+| D21 | Uji end-to-end Chromium dijalankan lokal dengan jam dibekukan; CI hanya tiga cek tanpa browser | Menjaga CI cepat; widget berbasis waktu deterministik | Claude |
+| D22 | Umpan balik langsung bersifat opsional (default mati) | OSCE sesungguhnya tidak memberi umpan balik; mode belajar tersedia bagi yang butuh | Claude |
 
 ## Prinsip yang dipegang
 
