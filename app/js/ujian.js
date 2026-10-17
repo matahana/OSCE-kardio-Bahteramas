@@ -174,7 +174,7 @@
         var aktif = p.id === tes.tab;
         tabBar.appendChild(el('button', {
           type: 'button', role: 'tab', class: 'tab' + (aktif ? ' aktif' : ''), 'aria-selected': aktif ? 'true' : 'false', data: { panel: p.id },
-          onclick: function () { tes.tab = p.id; renderTab(); renderAlat(); }, teks: p.tipe === 'form' ? 'Jawaban terstruktur' : p.label
+          onclick: function () { tes.tab = p.id; renderTab(); renderAlat(); }, teks: p.label
         }));
       });
     }

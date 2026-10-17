@@ -319,3 +319,6 @@ summary { cursor: pointer; font-weight: 600; }
 .ruang-tes .kolom-log .percakapan { max-height: 56vh; }
 @media (min-width: 1101px) { .ruang-tes .kolom-log .percakapan { max-height: calc(100vh - 240px); } .ruang-tes .ada-widget .kolom-log .percakapan { max-height: 40vh; } }
 @media (prefers-reduced-motion: reduce) { .tombol.mic.aktif { animation: none; } }
+/* mode tes: di layar sempit percakapan di atas, kotak ketik di bawah; jawaban terbaru hanya untuk pembaca layar */
+.ruang-tes .respons-terbaru { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; padding: 0; margin: 0; }
+@media (max-width: 1100px) { .ruang-tes .kolom-log { order: 2; } .ruang-tes .kolom-aksi { order: 3; } .ruang-tes .percakapan { max-height: 48vh; } }
