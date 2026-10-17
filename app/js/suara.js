@@ -13,8 +13,9 @@
 
   var BAHASA = 'id-ID';
   var pengaturan = { bahasa: BAHASA, laju: 1, bicara: true };
-  var pengenalAktif = null;
+  var pengenalAktif = null; // pegangan {berhenti, batal} dari dengar() yang sedang berjalan
   var sedangBicara = false;
+  var nomorBicara = 0; // naik tiap bicara() atau hentiBicara(); suara yang kalah tidak dihitung selesai
 
   function kelasKenali() { return g.SpeechRecognition || g.webkitSpeechRecognition || null; }
   function sintesis() { return g.speechSynthesis || null; }
@@ -46,13 +47,15 @@
     return persis || daftar.filter(function (v) { return v.lang && v.lang.slice(0, 2).toLowerCase() === awal; })[0] || null;
   }
 
-  // Membacakan teks. Mengembalikan Promise yang selesai (tidak pernah ditolak) saat suara berhenti atau tak didukung.
+  // Membacakan teks. Mengembalikan Promise (tidak pernah ditolak) yang bernilai true bila suara selesai dibacakan,
+  // dan false bila terpotong (bicara() lain, hentiBicara()), tak didukung, atau teksnya kosong.
   function bicara(teks, opsi) {
     opsi = opsi || {};
     return new Promise(function (selesai) {
       var s = sintesis(), K = kelasUcapan();
       var isi = untukUcapan(teks);
       if (!s || !K || !isi) { selesai(false); return; }
+      var nomor = ++nomorBicara;
       try { s.cancel(); } catch (e) { /* abaikan */ }
       var u = new K(isi);
       u.lang = opsi.bahasa || pengaturan.bahasa;
@@ -60,9 +63,9 @@
       var v = pilihSuara(u.lang);
       if (v) u.voice = v;
       var tuntas = false;
-      function akhir(ok) { if (tuntas) return; tuntas = true; sedangBicara = false; selesai(ok); }
+      function akhir(ok) { if (tuntas) return; tuntas = true; if (nomor === nomorBicara) sedangBicara = false; selesai(ok && nomor === nomorBicara); }
       u.onend = function () { akhir(true); };
-      u.onerror = function () { akhir(false); };
+      u.onerror = function (e) { akhir(!(e && (e.error === 'canceled' || e.error === 'interrupted'))); };
       sedangBicara = true;
       try { s.speak(u); } catch (e) { akhir(false); }
     });
@@ -70,23 +73,33 @@
 
   function hentiBicara() {
     var s = sintesis();
+    nomorBicara++;
     sedangBicara = false;
     if (s) { try { s.cancel(); } catch (e) { /* abaikan */ } }
   }
 
-  // Mulai mendengarkan satu ucapan. opsi: {saatSementara(teks), saatAkhir(teks), saatGalat(kode), saatBerhenti()}.
-  // Mengembalikan {berhenti()} atau null bila tidak didukung.
+  // Mulai mendengarkan satu ucapan. opsi: {saatSementara(teks), saatAkhir(teks), saatKosong(kode), saatGalat(kode),
+  // saatBerhenti()}. saatBerhenti() selalu dipanggil tepat sekali saat sesi mendengar berakhir, termasuk bila dibatalkan.
+  // Mengembalikan {berhenti(), batal()} atau null bila tidak didukung. berhenti() meminta hasil akhir dulu (stop);
+  // batal() membuang hasil dan tidak memanggil saatAkhir/saatGalat/saatKosong.
   function dengar(opsi) {
     opsi = opsi || {};
     var K = kelasKenali();
     if (!K) { if (opsi.saatGalat) opsi.saatGalat('tidak-didukung'); return null; }
-    if (pengenalAktif) { try { pengenalAktif.abort(); } catch (e) { /* abaikan */ } pengenalAktif = null; }
+    if (pengenalAktif) pengenalAktif.batal();
     var r = new K();
     r.lang = opsi.bahasa || pengaturan.bahasa;
     r.continuous = false;
     r.interimResults = true;
     r.maxAlternatives = 1;
-    var hasilAkhir = '', selesaiDipanggil = false, galatKode = null;
+    var hasilAkhir = '', tuntas = false, dibatalkan = false, galatKode = null;
+    var pegangan = null;
+    function akhiri() {
+      if (tuntas) return;
+      tuntas = true;
+      if (pengenalAktif === pegangan) pengenalAktif = null;
+      if (opsi.saatBerhenti) opsi.saatBerhenti();
+    }
     r.onresult = function (e) {
       var sementara = '';
       for (var i = e.resultIndex; i < e.results.length; i++) {
@@ -97,18 +110,22 @@
     };
     r.onerror = function (e) { galatKode = e && e.error ? e.error : 'galat'; };
     r.onend = function () {
-      if (pengenalAktif === r) pengenalAktif = null;
-      if (selesaiDipanggil) return;
-      selesaiDipanggil = true;
-      var teks = hasilAkhir.trim();
-      if (teks && opsi.saatAkhir) opsi.saatAkhir(teks);
-      else if (galatKode && galatKode !== 'no-speech' && galatKode !== 'aborted' && opsi.saatGalat) opsi.saatGalat(galatKode);
-      else if (!teks && opsi.saatKosong) opsi.saatKosong(galatKode);
-      if (opsi.saatBerhenti) opsi.saatBerhenti();
+      if (tuntas) return;
+      if (!dibatalkan) {
+        var teks = hasilAkhir.trim();
+        if (teks && opsi.saatAkhir) opsi.saatAkhir(teks);
+        else if (galatKode && galatKode !== 'no-speech' && galatKode !== 'aborted' && opsi.saatGalat) opsi.saatGalat(galatKode);
+        else if (!teks && opsi.saatKosong) opsi.saatKosong(galatKode);
+      }
+      akhiri();
+    };
+    pegangan = {
+      berhenti: function () { try { r.stop(); } catch (e) { /* abaikan */ } },
+      batal: function () { dibatalkan = true; try { r.abort(); } catch (e) { /* abaikan */ } akhiri(); }
     };
     try { r.start(); } catch (e) { if (opsi.saatGalat) opsi.saatGalat('gagal-mulai'); return null; }
-    pengenalAktif = r;
-    return { berhenti: function () { try { r.stop(); } catch (e) { /* abaikan */ } }, batal: function () { selesaiDipanggil = true; try { r.abort(); } catch (e) { /* abaikan */ } if (pengenalAktif === r) pengenalAktif = null; } };
+    pengenalAktif = pegangan;
+    return pegangan;
   }
 
   var PESAN_GALAT = {
@@ -132,6 +149,6 @@
     atur: function (p) { Object.assign(pengaturan, p || {}); },
     pengaturan: function () { return Object.assign({}, pengaturan); },
     get sedangBicara() { return sedangBicara; },
-    hentiMendengar: function () { if (pengenalAktif) { try { pengenalAktif.abort(); } catch (e) { /* abaikan */ } pengenalAktif = null; } }
+    hentiMendengar: function () { if (pengenalAktif) pengenalAktif.batal(); }
   };
 })(typeof window !== 'undefined' ? window : globalThis);

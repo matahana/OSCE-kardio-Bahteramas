@@ -30,6 +30,12 @@
 
   function pengaturanSuara() { return Object.assign({ balas: true, otomatisKirim: true, percakapan: false, laju: 1 }, U.simpan.baca(KUNCI_SUARA, {})); }
   function acak(a) { return a[Math.floor(Math.random() * a.length)]; }
+  // Mode tes: tanda vital hanya yang nilainya tertulis di instruksi pintu; sisanya baru diperoleh bila diminta.
+  function normVital(t) { return String(t).toLowerCase().replace(/\([^)]*\)/g, ' ').replace(/[^a-z0-9à-ÿ./\s]/g, ' ').replace(/\s+/g, ' ').trim(); }
+  function vitalPintu(st) {
+    var ins = normVital(String(st.instruksiKandidat || '').replace(/\*\*/g, ''));
+    return (st.interaksi.tandaVital || []).filter(function (v) { var n = normVital(v[1]); return n && ins.indexOf(n) >= 0; });
+  }
   function idSudah(sesi) { return OSCE.semuaAksi(sesi.def).filter(function (a) { return sesi.sudah(a.id); }).map(function (a) { return a.id; }); }
 
   /* ---------- briefing tes ---------- */
@@ -75,7 +81,7 @@
       el('h1', { teks: st.judul }),
       el('p', { class: 'chip-baris' }, A.chip(st.durasiMenit + ' menit'), A.chip(st.skorMaks + ' poin'), A.chip('Tes tanpa menu', 'vital')),
       el('section', { class: 'kotak' }, el('h2', { teks: 'Instruksi untuk kandidat' }), el('div', { class: 'md', html: U.md(st.instruksiKandidat) })),
-      def.tandaVital && def.tandaVital.length ? el('section', {}, el('h2', { teks: 'Tanda vital awal' }), A.vitalChips(def.tandaVital)) : null,
+      vitalPintu(st).length ? el('section', {}, el('h2', { teks: 'Tanda vital awal' }), A.vitalChips(vitalPintu(st))) : null,
       el('section', { class: 'kotak' },
         el('h2', { teks: 'Cara kerja tes' }),
         el('ul', {},
@@ -101,7 +107,7 @@
       penanda: [], transkrip: [], riwayat: [], tab: null,
       sibuk: false, mendengar: false, kosongBerturut: 0, jalur: jalur,
       modeIsian: !punyaForm ? 'tidak ada' : jalur.llm ? 'bebas' : 'terstruktur',
-      galatDiberitahu: false,
+      galatDiberitahu: false, percakapanBerhenti: false, segarkan: null,
       bersihkan: function () { OSCE.suara.hentiBicara(); OSCE.suara.hentiMendengar(); }
     };
   }
@@ -114,6 +120,10 @@
     var st = sesi.stasiun, def = sesi.def;
     var ps = pengaturanSuara();
     var dk = OSCE.suara.dukungan();
+    // Token ruang: kelanjutan asinkron (jawaban LLM, suara, mikrofon) dari ruang yang sudah ditinggalkan,
+    // atau dari sesi lain, tidak boleh menyalakan suara atau mikrofon.
+    var tokenRuang = {};
+    function aktif() { return UI.tokenRuang === tokenRuang && UI.tes === tes && UI.sesi === sesi; }
     var jam = el('output', { class: 'jam', 'aria-label': 'Sisa waktu simulasi' });
     var daftar = el('ol', { class: 'percakapan', 'aria-label': 'Percakapan' });
     var terbaru = el('div', { class: 'respons-terbaru', 'aria-live': 'polite' });
@@ -195,8 +205,12 @@
       }
     }
 
+    function renderStatus() {
+      status.textContent = tes.sibuk ? (tes.jalur.llm ? 'Memahami ucapan (LLM)…' : 'Memahami ucapan…') : tes.mendengar ? 'Mendengarkan… silakan bicara.' : '';
+    }
+
     function segarkan() {
-      renderJam(); renderPercakapan(); renderTerbaru(); renderTab();
+      renderJam(); renderPercakapan(); renderTerbaru(); renderTab(); renderStatus();
       if (panelAktif() && panelAktif().tipe !== 'widget') renderAlat();
       var habis = sesi.selesai;
       input.disabled = habis || tes.sibuk; tombolKirim.disabled = habis || tes.sibuk; tombolMic.disabled = habis;
@@ -216,16 +230,19 @@
         var isian = tes.modeIsian === 'bebas' ? OSCE.resolver.ekstrak(tes.indeks, teks) : {};
         return { aksi: r.aksi.map(function (a) { return a.id; }), isian: isian, sumber: 'offline' };
       }
-      if (tes.jalur.llm && OSCE.llm.siap()) {
-        return OSCE.llm.pahami(st, teks, { sudah: idSudah(sesi), riwayat: tes.riwayat, indeks: tes.indeks }).catch(function (e) {
-          var h = offline();
-          h.sumber = 'offline (cadangan)';
-          h.galatLlm = (GALAT_LLM[e.kode] || 'Galat LLM') + (e.rinci && e.rinci.status ? ' (HTTP ' + e.rinci.status + ')' : '');
-          if (!tes.galatDiberitahu) { tes.galatDiberitahu = true; U.toast(h.galatLlm + '. Memakai pencocokan offline untuk ucapan berikutnya yang gagal.', 'peringatan'); }
-          return h;
-        });
-      }
-      return Promise.resolve(offline());
+      // Dibungkus Promise: galat sinkron (mis. dari resolver) menjadi penolakan yang ditangani kirim(), bukan input terkunci.
+      return Promise.resolve().then(function () {
+        if (tes.jalur.llm && OSCE.llm.siap()) {
+          return OSCE.llm.pahami(st, teks, { sudah: idSudah(sesi), riwayat: tes.riwayat, indeks: tes.indeks }).catch(function (e) {
+            var h = offline();
+            h.sumber = 'offline (cadangan)';
+            h.galatLlm = (GALAT_LLM[e.kode] || 'Galat LLM') + (e.rinci && e.rinci.status ? ' (HTTP ' + e.rinci.status + ')' : '');
+            if (!tes.galatDiberitahu) { tes.galatDiberitahu = true; U.toast(h.galatLlm + '. Memakai pencocokan offline untuk ucapan berikutnya yang gagal.', 'peringatan'); }
+            return h;
+          });
+        }
+        return offline();
+      });
     }
 
     function terapkan(teks, h) {
@@ -259,25 +276,29 @@
       var awalLog = sesi.log.length;
       tes.penanda.push({ indeks: awalLog, teks: teks, lisan: !!lisan });
       input.value = '';
-      status.textContent = tes.jalur.llm ? 'Memahami ucapan (LLM)…' : 'Memahami ucapan…';
       segarkan();
+      // Kelanjutan menyegarkan ruang yang SEDANG tampil (tes.segarkan), bukan DOM ruang lama bila pengguna
+      // sempat keluar-masuk (Back/Forward) selagi menunggu.
+      function segarLagi() { if (tes.segarkan) tes.segarkan(); }
       return pahami(teks).then(function (h) {
         terapkan(teks, h);
         tes.sibuk = false;
-        status.textContent = '';
-        segarkan();
-        if (!sesi.selesai && !tes.mendengar) input.focus();
+        segarLagi();
+        if (aktif() && !sesi.selesai && !tes.mendengar) input.focus();
         var baru = sesi.log.slice(awalLog).filter(function (e) { return (e.tipe === 'aksi' || e.tipe === 'ucapan') && e.respons; }).map(function (e) { return e.respons; });
         return ucapkan(baru.join(' '));
-      }).then(function () { lanjutPercakapan(); }, function (e) {
-        tes.sibuk = false; status.textContent = ''; segarkan();
+      }).then(function (selesaiDibacakan) { if (selesaiDibacakan !== false) lanjutPercakapan(); }, function (e) {
+        tes.sibuk = false; segarLagi();
         U.toast('Terjadi kesalahan memproses ucapan: ' + (e && e.message || e), 'peringatan');
       });
     }
 
+    // Mengembalikan true bila jawaban selesai dibacakan (atau tak perlu dibacakan), false bila terpotong atau tak jadi.
     function ucapkan(teks) {
-      if (!tes.jalur.suara || !teks || sesi.selesai) return Promise.resolve();
-      return OSCE.suara.bicara(teks, { laju: pengaturanSuara().laju });
+      if (!teks) return Promise.resolve(true);
+      if (!tes.jalur.suara || sesi.selesai) return Promise.resolve(true);
+      if (!aktif()) return Promise.resolve(false);
+      return OSCE.suara.bicara(teks, { laju: pengaturanSuara().laju }).then(function (ok) { return ok && aktif(); });
     }
 
     /* --- mikrofon --- */
@@ -288,8 +309,9 @@
       tombolMic.setAttribute('aria-pressed', tes.mendengar ? 'true' : 'false');
     }
     function mulaiDengar() {
-      if (tes.mendengar || tes.sibuk || sesi.selesai) return;
+      if (!aktif() || tes.mendengar || tes.sibuk || sesi.selesai) return;
       OSCE.suara.hentiBicara();
+      var senyap = false;
       pegangan = OSCE.suara.dengar({
         bahasa: pengaturanSuara().bahasa || OSCE.suara.BAHASA,
         saatSementara: function (t) { input.value = t; },
@@ -297,33 +319,36 @@
           tes.kosongBerturut = 0; input.value = t;
           if (pengaturanSuara().otomatisKirim) kirim(t, true);
         },
-        saatKosong: function () { tes.kosongBerturut++; },
+        saatKosong: function () { tes.kosongBerturut++; senyap = true; },
         saatGalat: function (kode) { tes.percakapanBerhenti = true; U.toast(OSCE.suara.pesanGalat(kode), 'peringatan'); },
-        saatBerhenti: function () { tes.mendengar = false; renderMic(); status.textContent = tes.sibuk ? status.textContent : ''; }
+        saatBerhenti: function () {
+          tes.mendengar = false; renderMic(); renderStatus();
+          // Senyap: percakapan suara mencoba lagi sampai dua kali berturut-turut, lalu dijeda dengan pemberitahuan.
+          if (senyap) lanjutPercakapan();
+        }
       });
       tes.mendengar = !!pegangan;
-      status.textContent = tes.mendengar ? 'Mendengarkan… silakan bicara.' : '';
+      renderStatus();
       renderMic();
     }
     function aturMic() {
-      if (tes.mendengar) { if (pegangan) pegangan.berhenti(); return; }
+      if (tes.mendengar) { tes.percakapanBerhenti = true; if (pegangan) pegangan.berhenti(); return; }
       tes.kosongBerturut = 0; tes.percakapanBerhenti = false;
       mulaiDengar();
     }
     function lanjutPercakapan() {
-      if (!pengaturanSuara().percakapan || !tes.jalur.mikrofon || sesi.selesai || tes.percakapanBerhenti) return;
-      if (tes.kosongBerturut >= 2) { U.toast('Percakapan suara dijeda karena tidak ada suara terdengar. Tekan Bicara untuk melanjutkan.'); return; }
-      if (UI.ruangAktif !== id) return;
-      setTimeout(function () { if (UI.ruangAktif === id && !tes.mendengar && !tes.sibuk && !sesi.selesai) mulaiDengar(); }, 250);
+      if (!aktif() || !pengaturanSuara().percakapan || !tes.jalur.mikrofon || sesi.selesai || tes.percakapanBerhenti) return;
+      if (tes.kosongBerturut >= 2) { tes.percakapanBerhenti = true; U.toast('Percakapan suara dijeda karena tidak ada suara terdengar. Tekan Bicara untuk melanjutkan.'); return; }
+      setTimeout(function () { if (aktif() && !tes.mendengar && !tes.sibuk && !sesi.selesai && !tes.percakapanBerhenti) mulaiDengar(); }, 250);
     }
 
     /* --- rangka halaman --- */
     var kolomPasien = el('aside', { class: 'kolom-pasien' },
       el('div', { class: 'kartu-pasien' },
         el('div', { class: 'avatar', 'aria-hidden': 'true', teks: (def.pasien.nama || '?').replace(/^(Tn\.|Ny\.|Ibu|Bapak)\s*/, '').charAt(0).toUpperCase() }),
-        el('div', {}, el('h3', { teks: def.pasien.nama }), el('p', { class: 'redup', teks: def.pasien.ringkas }))),
+        el('div', {}, el('h3', { teks: def.pasien.nama }), el('p', { class: 'redup', teks: def.pasien.ringkasTes || def.pasien.ringkas }))),
       el('p', { class: 'keadaan', teks: def.pasien.keadaan || '' }),
-      def.tandaVital && def.tandaVital.length ? A.vitalChips(def.tandaVital) : el('p', { class: 'redup', teks: 'Tanda vital diperoleh bila Anda memintanya.' }),
+      vitalPintu(st).length ? A.vitalChips(vitalPintu(st)) : el('p', { class: 'redup', teks: 'Tanda vital diperoleh bila Anda memintanya.' }),
       el('p', { class: 'petunjuk', teks: 'Mode tes: tanyakan atau lakukan sendiri. Jawaban hanya muncul bila diminta.' }));
 
     var widgetUtama = def.widgetUtama ? OSCE.widget[def.widgetUtama.nama](utama, sesi, def.widgetUtama.opsi || {}, ui) : null;
@@ -355,8 +380,10 @@
         el('section', { class: 'kolom-log' }, utama.childNodes.length ? utama : null, el('h3', { teks: 'Percakapan' }), daftar),
         kolomInput)));
     UI.widgetUtama = widgetUtama;
-    UI.pembersih = function () { UI.ruangAktif = null; tes.bersihkan(); };
+    UI.pembersih = function () { UI.tokenRuang = null; UI.ruangAktif = null; tes.segarkan = null; tes.bersihkan(); };
+    UI.tokenRuang = tokenRuang;
     UI.ruangAktif = id;
+    tes.segarkan = segarkan;
     segarkan();
     renderAlat();
     renderMic();
@@ -398,9 +425,9 @@
       return el('label', { class: 'pil' }, el('input', { type: 'radio', name: 'mode-llm', value: nilai, checked: mode === nilai, onchange: function () { mode = nilai; tampil(); } }),
         el('span', {}, el('strong', { teks: teks }), el('span', { class: 'redup', teks: ' — ' + ket })));
     };
-    var kunci = el('input', { type: 'password', id: 'kunci-api', autocomplete: 'off', spellcheck: 'false', placeholder: c.adaKunci ? '(tersimpan di tab ini; kosongkan untuk menghapus)' : 'sk-ant-…', 'aria-label': 'Kunci API Anthropic' });
+    var kunci = el('input', { type: 'password', id: 'kunci-api', autocomplete: 'off', spellcheck: 'false', placeholder: c.adaKunci ? '(tersimpan di tab ini; ketik kunci baru untuk mengganti)' : 'sk-ant-…', 'aria-label': 'Kunci API Anthropic' });
     var proxy = el('input', { type: 'url', id: 'proxy-url', value: c.proxyUrl, placeholder: 'https://nama-proxy.workers.dev', 'aria-label': 'URL proxy' });
-    var akses = el('input', { type: 'password', id: 'kode-akses', autocomplete: 'off', spellcheck: 'false', placeholder: c.adaAkses ? '(tersimpan di tab ini)' : 'kode akses ujian', 'aria-label': 'Kode akses proxy' });
+    var akses = el('input', { type: 'password', id: 'kode-akses', autocomplete: 'off', spellcheck: 'false', placeholder: c.adaAkses ? '(tersimpan di tab ini; ketik kode baru untuk mengganti)' : 'kode akses ujian', 'aria-label': 'Kode akses proxy' });
     var wadahKunci = el('div', { class: 'bidang-pengaturan' }, el('label', { class: 'bidang' }, el('span', { teks: 'Kunci API Anthropic' }), kunci),
       el('p', { class: 'redup kecil', teks: 'Disimpan hanya di tab ini (sessionStorage) dan hilang saat tab ditutup; dikirim hanya ke api.anthropic.com. Siapa pun yang memakai perangkat ini selama tab terbuka dapat memakainya, jadi jangan dipakai pada perangkat bersama. Untuk peserta ujian, gunakan proxy lembaga.' }));
     var wadahProxy = el('div', { class: 'bidang-pengaturan' }, el('label', { class: 'bidang' }, el('span', { teks: 'URL proxy lembaga' }), proxy), el('label', { class: 'bidang' }, el('span', { teks: 'Kode akses' }), akses),

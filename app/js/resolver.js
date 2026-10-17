@@ -12,6 +12,10 @@
   'use strict';
   var OSCE = (g.OSCE = g.OSCE || {});
 
+  // Peta berkunci kata dari ucapan harus tanpa prototipe: kata seperti "constructor" atau "__proto__" tidak boleh
+  // terbaca sebagai properti bawaan objek.
+  function petaKosong() { return Object.create(null); }
+
   var SINGKATAN = {
     yg: 'yang', dgn: 'dengan', dg: 'dengan', tdk: 'tidak', gak: 'tidak', ga: 'tidak', gk: 'tidak', nggak: 'tidak',
     ngga: 'tidak', enggak: 'tidak', ndak: 'tidak', nda: 'tidak', udah: 'sudah', sdh: 'sudah', blm: 'belum',
@@ -166,10 +170,10 @@
     ['dada', 'prekordium', 'torak', 'toraks'],
     ['darah', 'hematologi']
   ];
-  var KANON = {};
+  var KANON = petaKosong();
   KELAS.forEach(function (k) { k.forEach(function (w) { KANON[w] = k[0]; }); });
 
-  var STOP = {};
+  var STOP = petaKosong();
   ('yang di ke dari dan atau dengan untuk pada itu ini saya anda kamu aku kami kita bapak pak ibu bu dok dokter ' +
     'mas mbak ya kah lah tah pun boleh bisa dapat tolong mohon silakan silahkan coba apakah apa adakah ada akan sedang ' +
     'sudah telah mau ingin hendak saja sih dong deh nih kok kan lagi juga masih cuma hanya sangat sekali agak ' +
@@ -188,7 +192,7 @@
 
   // Stemming ringan bahasa Indonesia. Tidak sempurna, tetapi konsisten untuk indeks dan kueri.
   var AWALAN = ['meng', 'meny', 'men', 'mem', 'peng', 'peny', 'pen', 'pem', 'ber', 'ter', 'me', 'pe', 'di', 'se'];
-  var cacheStem = {};
+  var cacheStem = petaKosong();
   function stem(w) {
     if (cacheStem[w] !== undefined) return cacheStem[w];
     var s = w;
@@ -210,18 +214,18 @@
     return cacheStem[w];
   }
 
-  var cacheTok = {}, ukuranCache = 0;
+  var cacheTok = petaKosong(), ukuranCache = 0;
   function tokenisasi(teks) {
     var kunci = String(teks);
     if (cacheTok[kunci]) return cacheTok[kunci].slice();
     var hasil = tokenisasiBaru(teks);
-    if (ukuranCache > 20000) { cacheTok = {}; ukuranCache = 0; }
+    if (ukuranCache > 20000) { cacheTok = petaKosong(); ukuranCache = 0; }
     cacheTok[kunci] = hasil; ukuranCache++;
     return hasil.slice();
   }
 
   function tokenisasiBaru(teks) {
-    var kata = norm(teks).split(' '), hasil = [], lihat = {};
+    var kata = norm(teks).split(' '), hasil = [], lihat = petaKosong();
     kata.forEach(function (k) {
       if (!k || STOP[k]) return;
       var s = stem(k);
@@ -232,7 +236,7 @@
     return hasil;
   }
 
-  var NEGASI = { tidak: 1, bukan: 1, tanpa: 1, belum: 1, jangan: 1 };
+  var NEGASI = Object.assign(petaKosong(), { tidak: 1, bukan: 1, tanpa: 1, belum: 1, jangan: 1 });
 
   function samaLemah(a, b) {
     if (a === b) return 1;
@@ -257,11 +261,11 @@
     });
     var peta = {};
     (ucapan.keluarga || []).forEach(function (kel, n) { kel.ids.forEach(function (id) { peta[id] = 'k' + n; }); });
-    var df = {}, docs = [];
+    var df = petaKosong(), docs = [];
     aksiList.forEach(function (a, urutan) {
       var ex = [tokenisasi(a.label)];
       (contoh[a.id] || []).forEach(function (u) { var t = tokenisasi(u); if (t.length) ex.push(t); });
-      var semua = {};
+      var semua = petaKosong();
       ex.forEach(function (t) { t.forEach(function (w) { semua[w] = 1; }); });
       Object.keys(semua).forEach(function (w) { df[w] = (df[w] || 0) + 1; });
       docs.push({ id: a.id, urutan: urutan, contoh: ex });
@@ -279,7 +283,7 @@
       var exSet = ex, okQ = 0, docTot = 0, docOk = 0;
       cocokQ = [];
       ex.forEach(function (e) { docTot += ix.idf(e); });
-      var terpakaiDoc = {};
+      var terpakaiDoc = petaKosong();
       q.forEach(function (t) {
         var terbaik = 0, pasangan = null;
         for (var i = 0; i < exSet.length; i++) {
@@ -329,10 +333,10 @@
     var q = tokenisasi(ucapan);
     var hasil = { aksi: [], token: q, skorTertinggi: 0, sisa: [] };
     if (!q.length) return hasil;
-    var bobot = {};
+    var bobot = petaKosong();
     q.forEach(function (t) { bobot[t] = ix.df[t] ? ix.idf(t) : ix.unk; });
     var aktif = q.slice();
-    var terpilih = {};
+    var terpilih = petaKosong();
     for (var putaran = 0; putaran < (opsi.maks || amb.maks); putaran++) {
       var skorFn = skorContoh(ix, aktif, bobot);
       var kandidat = [];
@@ -365,7 +369,7 @@
       }
       terpilih[pilih.doc.id] = 1;
       hasil.aksi.push({ id: pilih.doc.id, skor: Math.round(pilih.r.skor * 1000) / 1000, alternatif: dekat.length > 1 ? dekat.map(function (k) { return k.doc.id; }) : undefined });
-      var pakai = {};
+      var pakai = petaKosong();
       pilih.r.cocok.forEach(function (t) { pakai[t] = 1; });
       var sisaTok = aktif.filter(function (t) { return !pakai[t]; });
       var bobotSisa = 0, bobotAwal = 0;
@@ -382,7 +386,7 @@
 
   function indeksForm(st) {
     var panel = st.interaksi.panel.filter(function (p) { return p.tipe === 'form'; });
-    var df = {}, opsiList = [];
+    var df = petaKosong(), opsiList = [];
     panel.forEach(function (p) {
       p.bidang.forEach(function (b) {
         if (b.tipe === 'select' || b.tipe === 'multi') {

@@ -22,6 +22,7 @@
   var KUNCI_AKSES = 'osce.kode.akses';
   var MAKS_AKSI = 4;
   var BATAS_WAKTU = 15000;
+  var BATAS_UCAPAN = 600;
 
   var cfg = { mode: 'mati', proxyUrl: '', model: MODEL };
   var memori = { kunci: '', akses: '' }; // cadangan bila sessionStorage tidak tersedia (mis. uji Node)
@@ -201,9 +202,9 @@
   }
 
   function validasi(st, data, ucapan, opsiPeta) {
-    var idAksi = {};
+    var idAksi = Object.create(null); // kunci berasal dari keluaran model: tanpa prototipe
     OSCE.semuaAksi(st.interaksi).forEach(function (a) { idAksi[a.id] = 1; });
-    var aksi = [], lihat = {};
+    var aksi = [], lihat = Object.create(null);
     (Array.isArray(data.aksi) ? data.aksi : []).forEach(function (id) {
       if (typeof id === 'string' && idAksi[id] && !lihat[id] && aksi.length < MAKS_AKSI) { lihat[id] = 1; aksi.push(id); }
     });
@@ -220,7 +221,7 @@
       });
     }
     var isian = {};
-    var peta = {};
+    var peta = Object.create(null);
     st.interaksi.panel.forEach(function (p) { if (p.tipe === 'form') p.bidang.forEach(function (b) { peta[b.id] = { panel: p.id, b: b }; }); });
     (Array.isArray(data.pilihan) ? data.pilihan : []).forEach(function (x) {
       var e = x && peta[x.bidang];
@@ -252,7 +253,9 @@
   function pahami(st, ucapan, konteks) {
     konteks = konteks || {};
     if (!siapSambung()) return Promise.reject(galat('nonaktif', 'LLM belum dikonfigurasi'));
-    var pesan = { ucapan: String(ucapan || '').slice(0, 600), sudah_dilakukan: konteks.sudah || [], percakapan_sebelumnya: (konteks.riwayat || []).slice(-4) };
+    var pesan = { ucapan: String(ucapan || '').slice(0, BATAS_UCAPAN), sudah_dilakukan: konteks.sudah || [], percakapan_sebelumnya: (konteks.riwayat || []).slice(-4).map(function (r) {
+      return { kandidat: String(r && r.kandidat || '').slice(0, BATAS_UCAPAN), aksi: (r && Array.isArray(r.aksi) ? r.aksi : []).slice(0, MAKS_AKSI) };
+    }) };
     var mulai = Date.now();
     return kirimUlang(badanPermintaan(sistemUntuk(st), pesan), konteks).then(function (res) {
       var data = bacaJawaban(res);

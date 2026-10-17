@@ -45,6 +45,10 @@ Permintaan: `claude-haiku-5-5`, `output_config.effort: "low"`, keluaran JSON ter
 (kamus aksi + bidang form) dengan `cache_control`. Keluaran divalidasi: id harus ada di stasiun, maksimum 4 aksi,
 opsi form harus salah satu opsi, angka dalam rentang; ucapan yang berusaha mengarahkan model dikosongkan. Kegagalan
 (jaringan, kuota, format, penolakan) memakai resolver offline dan dicatat di transkrip.
+Proxy mengunci bentuk permintaan (satu pesan JSON kecil, skema keluaran tetap, `max_tokens` ≤ 600) dan dapat mengunci
+prompt sistem lewat hash (`tools/proxy-llm/hash_prompt.mjs`); `Origin` dan kode akses bukan identitas, jadi pasang pembatasan laju (rincian di README proxy).
+Peta berkunci kata dari ucapan atau keluaran model memakai objek tanpa prototipe, sehingga ucapan seperti
+"constructor" hanya dianggap kata biasa.
 
 **Suara:** pengenalan ucapan memakai `SpeechRecognition` peramban (`id-ID`); di Chrome/Edge audio diproses server
 Google/Microsoft dan butuh internet, Firefox tidak mendukung. Mikrofon paling andal lewat `https` (GitHub Pages) atau

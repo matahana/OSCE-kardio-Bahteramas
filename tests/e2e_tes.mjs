@@ -39,18 +39,21 @@ function pasangSuara(page) {
   return page.addInitScript(() => {
     window.__suara = { diucapkan: [], antrean: [], mulai: 0 };
     class Pengenal {
+      _selesai() {
+        const teks = window.__suara.antrean.shift();
+        if (teks) {
+          const alt = [{ transcript: teks }];
+          this.onresult && this.onresult({ resultIndex: 0, results: [Object.assign([alt[0]], { isFinal: true })] });
+        } else this.onerror && this.onerror({ error: 'no-speech' });
+        this.onend && this.onend();
+      }
       start() {
         window.__suara.mulai++;
-        const teks = window.__suara.antrean.shift();
-        setTimeout(() => {
-          if (teks) {
-            const alt = [{ transcript: teks }];
-            this.onresult && this.onresult({ resultIndex: 0, results: [Object.assign([alt[0]], { isFinal: true })] });
-          } else this.onerror && this.onerror({ error: 'no-speech' });
-          this.onend && this.onend();
-        }, 25);
+        if (window.__suara.tahan) { this._menunggu = true; return; } // mode tahan: hasil baru keluar saat stop()
+        setTimeout(() => this._selesai(), 25);
       }
-      stop() {} abort() {}
+      stop() { if (this._menunggu) { this._menunggu = false; setTimeout(() => this._selesai(), 5); } }
+      abort() { if (this._menunggu) { this._menunggu = false; window.__suara.dibatalkan = (window.__suara.dibatalkan || 0) + 1; setTimeout(() => this.onend && this.onend(), 5); } }
     }
     // Chromium punya SpeechRecognition bawaan yang dipilih lebih dulu: timpa kedua nama.
     Object.defineProperty(window, 'SpeechRecognition', { value: Pengenal, configurable: true, writable: true });
@@ -77,6 +80,7 @@ function pasangLlm(page, state) {
     state.permintaan.push({ kepala: req.headers(), badan, pesan });
     if (state.status !== 200) return route.fulfill({ status: state.status, headers: { ...CORS, 'content-type': 'application/json' }, body: JSON.stringify({ type: 'error', error: { type: 'api_error', message: 'rusak' } }) });
     const keluaran = state.pemetaan(pesan.ucapan, badan);
+    if (state.tunda) await new Promise((r) => setTimeout(r, state.tunda));
     return route.fulfill({ status: 200, headers: { ...CORS, 'content-type': 'application/json' }, body: JSON.stringify({
       id: 'msg_uji', type: 'message', role: 'assistant', model: 'claude-haiku-5-5', stop_reason: 'end_turn',
       content: [{ type: 'text', text: JSON.stringify(keluaran) }], usage: { input_tokens: 2500, output_tokens: 25, cache_read_input_tokens: 2400 }
@@ -242,6 +246,9 @@ try {
   await page.waitForTimeout(1200);
   const mulai1 = await page.evaluate(() => window.__suara.mulai);
   cek(mulai1 - mulai0 >= 3 && mulai1 - mulai0 <= 6, 'percakapan suara berhenti setelah senyap berturut-turut (mikrofon dinyalakan ' + (mulai1 - mulai0) + ' kali)');
+  cek((await page.locator('#toast').innerText()).includes('Percakapan suara dijeda'), 'percakapan suara yang dijeda karena senyap memberi pemberitahuan');
+  await page.waitForTimeout(500);
+  cek((await page.evaluate(() => window.__suara.mulai)) === mulai1, 'setelah dijeda, mikrofon tidak menyala lagi sendiri');
   cek(page.galat.length === 0, 'suara tanpa galat: ' + page.galat.join(' | '));
   await page.context().close();
 
@@ -325,6 +332,63 @@ try {
   await page.context().close();
 
   /* ---------- pipeline lengkap lewat label (offline) ---------- */
+  /* ---------- ketahanan (temuan tinjauan) ---------- */
+  console.log('Ketahanan');
+  page = await halamanBaru();
+  await mulaiTes(page, '01');
+  for (const aneh of ['constructor', '__proto__', 'toString', 'nyeri dada, constructor hasOwnProperty']) {
+    await ucap(page, aneh);
+    cek(await page.locator('#ucapan').isEnabled(), 'ucapan "' + aneh + '" tidak mengunci input');
+  }
+  await ucap(page, 'sejak kapan nyerinya dirasakan');
+  cek((await teksPercakapan(page)).includes((await dataAksi(page, '01', 'onset')).respons.slice(0, 20)), 'setelah ucapan aneh, ucapan biasa tetap dijawab');
+  cek(page.galat.length === 0, 'ucapan aneh tanpa galat halaman: ' + page.galat.join(' | '));
+  await page.context().close();
+
+  // Keluar saat permintaan LLM masih berjalan: jawaban tidak boleh dibacakan di beranda
+  page = await halamanBaru();
+  await page.evaluate(() => OSCE.llm.atur({ mode: 'langsung', kunci: 'sk-ant-uji-e2e' }));
+  page.llm.tunda = 700;
+  page.llm.pemetaan = () => ({ aksi: ['onset'], pilihan: [], angka: [], tidak_dipahami: false });
+  await mulaiTes(page, '01');
+  await page.fill('#ucapan', 'sejak kapan nyerinya');
+  await page.press('#ucapan', 'Enter');
+  await page.click('button:has-text("Keluar")');
+  await page.waitForSelector('.beranda');
+  await page.waitForTimeout(1300);
+  cek((await page.evaluate(() => window.__suara.diucapkan.length)) === 0, 'jawaban LLM yang datang setelah Keluar tidak dibacakan');
+  cek(page.galat.length === 0, 'Keluar saat LLM berjalan tanpa galat halaman: ' + page.galat.join(' | '));
+  await page.context().close();
+
+  // Back lalu Forward saat LLM berjalan: input ruang baru tidak terkunci selamanya
+  page = await halamanBaru();
+  await page.evaluate(() => OSCE.llm.atur({ mode: 'langsung', kunci: 'sk-ant-uji-e2e' }));
+  page.llm.tunda = 700;
+  page.llm.pemetaan = () => ({ aksi: ['onset'], pilihan: [], angka: [], tidak_dipahami: false });
+  await mulaiTes(page, '01');
+  await page.fill('#ucapan', 'sejak kapan nyerinya');
+  await page.press('#ucapan', 'Enter');
+  await page.goBack();
+  await page.goForward();
+  await page.waitForSelector('.ruang-tes');
+  await page.waitForFunction(() => !document.querySelector('#ucapan').disabled, null, { timeout: 8000 });
+  cek(await page.locator('#ucapan').isEnabled(), 'Back/Forward saat LLM berjalan: input terbuka lagi setelah jawaban tiba');
+  await page.context().close();
+
+  // Tombol Berhenti menghentikan percakapan suara
+  page = await halamanBaru();
+  await mulaiTes(page, '01', { mic: true });
+  await page.check('.opsi-suara label:has-text("Percakapan suara") input');
+  await page.evaluate(() => { window.__suara.tahan = true; window.__suara.antrean.push('bapak merokok tidak'); window.__suara.antrean.push('apakah punya darah tinggi'); });
+  await page.click('.mic');
+  await page.waitForFunction(() => window.__suara.mulai >= 1);
+  await page.click('.mic'); // Berhenti
+  await page.waitForFunction(() => document.querySelectorAll('.percakapan .gelembung.anda').length >= 1 && !document.querySelector('#ucapan').disabled, null, { timeout: 8000 });
+  await page.waitForTimeout(900);
+  cek((await page.evaluate(() => window.__suara.mulai)) === 1, 'Berhenti: mikrofon tidak menyala lagi setelah ucapan terakhir diproses');
+  cek((await page.locator('.percakapan .gelembung.anda').count()) === 1, 'Berhenti: tidak ada ucapan kedua yang diproses');
+  await page.context().close();
+
   console.log('Pipeline: urutan ideal diucapkan lewat label');
   for (const id of ['01', '07', '06']) {
     page = await halamanBaru();

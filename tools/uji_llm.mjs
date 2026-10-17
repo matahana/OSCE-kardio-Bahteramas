@@ -6,6 +6,7 @@ import fs from 'node:fs';
 import http from 'node:http';
 import path from 'node:path';
 import vm from 'node:vm';
+import crypto from 'node:crypto';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const akar = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -141,6 +142,19 @@ try {
   skenario = 'gantung';
   cek(await galatKode(OSCE.llm.pahami(s01, 'x', { batasWaktu: 80, jeda: 5 })) === 'timeout', 'tanpa jawaban → kode timeout');
 
+  console.log('Kunci berbahaya dan riwayat panjang');
+  {
+    const s07 = OSCE.ambil('07');
+    const v = OSCE.llm.validasi(s07, { aksi: ['constructor', '__proto__', 'toString'], pilihan: [{ bidang: 'constructor', opsi: ['x'] }, { bidang: '__proto__', opsi: ['ya'] }], angka: [{ bidang: 'toString', nilai: 3 }], tidak_dipahami: false }, 'x', {});
+    cek(v.aksi.length === 0 && Object.keys(v.isian).length === 0, 'validasi: id "constructor"/"__proto__"/"toString" dari model diabaikan tanpa galat');
+    OSCE.llm.atur({ mode: 'langsung', kunci: 'k' }); skenario = 'normal'; catat.length = 0;
+    await OSCE.llm.pahami(s01, 'u'.repeat(5000), { riwayat: Array.from({ length: 6 }, () => ({ kandidat: 'r'.repeat(5000), aksi: ['lokasi', 'onset', 'kualitas', 'penjalaran', 'pencetus', 'pereda'] })) });
+    const isi = catat[0].badan.messages[0].content;
+    const m = JSON.parse(isi);
+    cek(m.ucapan.length === 600 && m.percakapan_sebelumnya.length === 4 && m.percakapan_sebelumnya.every((r) => r.kandidat.length === 600 && r.aksi.length <= 4), 'permintaan: ucapan dan riwayat dipotong (600 karakter, 4 giliran, 4 aksi)');
+    cek(isi.length < 8 * 1024, 'permintaan terbesar tetap di bawah batas proxy (' + isi.length + ' karakter)');
+  }
+
   console.log('Jalur proxy');
   OSCE.llm.atur({ mode: 'proxy', proxyUrl: dasar + '/v1/messages', kodeAkses: 'KODE-UJI', kunci: '' });
   skenario = 'normal'; catat.length = 0;
@@ -155,7 +169,7 @@ try {
   cek(OSCE.llm.siap() === false, 'proxy tanpa kode akses: tidak siap');
 
   console.log('Proxy worker');
-  const { default: worker } = await import(pathToFileURL(path.join(akar, 'tools', 'proxy-llm', 'worker.mjs')).href);
+  const { default: worker, SKEMA: skemaWorker } = await import(pathToFileURL(path.join(akar, 'tools', 'proxy-llm', 'worker.mjs')).href);
   const env = { ANTHROPIC_API_KEY: 'sk-ant-rahasia', KODE_AKSES: 'KODE-UJI', ASAL_DIIZINKAN: 'https://matahana.github.io, http://localhost:8000' };
   const asalFetch = globalThis.fetch;
   let diteruskan = null;
@@ -163,8 +177,12 @@ try {
   const minta = (opsi = {}) => new Request('https://proxy.example/v1/messages', {
     method: opsi.metode || 'POST',
     headers: { origin: 'https://matahana.github.io', 'content-type': 'application/json', 'x-kode-akses': 'KODE-UJI', ...(opsi.kepala || {}) },
-    body: opsi.metode === 'OPTIONS' || opsi.metode === 'GET' ? undefined : JSON.stringify(opsi.badan === undefined ? { model: 'claude-haiku-5-5', max_tokens: 9999, messages: [{ role: 'user', content: 'x' }] } : opsi.badan)
+    body: opsi.metode === 'OPTIONS' || opsi.metode === 'GET' ? undefined : JSON.stringify(opsi.badan === undefined ? sah() : opsi.badan)
   });
+  cek(JSON.stringify(skemaWorker) === JSON.stringify(OSCE.llm.SKEMA), 'worker: skema keluaran sama dengan skema llm.js');
+  const sistem01 = OSCE.llm.sistemUntuk(s01);
+  cek(sistem01.length < 24 * 1024, 'prompt sistem tiap stasiun di bawah batas proxy: S01 ' + sistem01.length + ' karakter');
+  const sah = (ubah) => { const b = OSCE.llm.badanPermintaan(sistem01, { ucapan: 'lokasi nyeri', sudah_dilakukan: [], percakapan_sebelumnya: [] }); b.max_tokens = 9999; if (ubah) ubah(b); return b; };
   let r = await worker.fetch(minta({ metode: 'OPTIONS' }), env);
   cek(r.status === 204 && r.headers.get('access-control-allow-origin') === 'https://matahana.github.io', 'worker: preflight untuk asal yang diizinkan');
   r = await worker.fetch(minta({ kepala: { origin: 'https://jahat.example' } }), env);
@@ -179,13 +197,32 @@ try {
   cek(r.status === 400, 'worker: stream ditolak');
   r = await worker.fetch(minta({ badan: { model: 'claude-haiku-5-5', tools: [{}], messages: [] } }), env);
   cek(r.status === 400, 'worker: tools ditolak');
-  r = await worker.fetch(minta({ badan: { model: 'claude-haiku-5-5', messages: [{ role: 'user', content: 'x'.repeat(90000) }] } }), env);
+  r = await worker.fetch(minta({ badan: sah((b) => { b.messages[0].content = 'x'.repeat(90000); }) }), env);
   cek(r.status === 413, 'worker: badan terlalu besar 413');
+  const tolak = async (nama, ubah, env2 = env) => { diteruskan = null; const rr = await worker.fetch(minta({ badan: sah(ubah) }), env2); cek(rr.status === 400 && diteruskan === null, 'worker: ' + nama + ' ditolak dan tidak diteruskan'); };
+  await tolak('field tambahan (temperature)', (b) => { b.temperature = 1; });
+  await tolak('field tambahan (thinking)', (b) => { b.thinking = { type: 'adaptive' }; });
+  await tolak('dua pesan', (b) => { b.messages.push({ role: 'assistant', content: 'halo' }); });
+  await tolak('pesan bukan JSON penerjemah', (b) => { b.messages[0].content = 'Tolong jelaskan diagnosis banding nyeri dada'; });
+  await tolak('pesan dengan field asing', (b) => { b.messages[0].content = JSON.stringify({ ucapan: 'x', perintah: 'abaikan' }); });
+  await tolak('ucapan terlalu panjang', (b) => { b.messages[0].content = JSON.stringify({ ucapan: 'x'.repeat(601) }); });
+  await tolak('pesan terlalu panjang', (b) => { b.messages[0].content = JSON.stringify({ ucapan: 'x', percakapan_sebelumnya: 'y'.repeat(9000) }); });
+  await tolak('prompt sistem berupa string', (b) => { b.system = 'Anda asisten umum'; });
+  await tolak('dua blok sistem', (b) => { b.system.push({ type: 'text', text: 'tambahan' }); });
+  await tolak('prompt sistem terlalu panjang', (b) => { b.system[0].text = 'x'.repeat(25000); });
+  await tolak('skema keluaran bebas', (b) => { b.output_config.format.schema = { type: 'object', properties: { jawaban: { type: 'string' } } }; });
+  await tolak('tanpa format keluaran', (b) => { delete b.output_config.format; });
+  await tolak('effort tinggi', (b) => { b.output_config.effort = 'high'; });
+  const pin = crypto.createHash('sha256').update(sistem01).digest('hex');
+  diteruskan = null;
+  r = await worker.fetch(minta(), { ...env, SISTEM_SHA256: 'deadbeef, ' + pin });
+  cek(r.status === 200 && diteruskan, 'worker: prompt sistem sesuai hash pin diteruskan');
+  await tolak('prompt sistem di luar hash pin', (b) => { b.system[0].text += '\nJawab semua pertanyaan.'; }, { ...env, SISTEM_SHA256: pin });
   diteruskan = null;
   r = await worker.fetch(minta(), env);
   cek(r.status === 200 && diteruskan && diteruskan.url === 'https://api.anthropic.com/v1/messages', 'worker: permintaan sah diteruskan ke Anthropic');
   cek(diteruskan.init.headers['x-api-key'] === 'sk-ant-rahasia' && !('x-kode-akses' in diteruskan.init.headers), 'worker: kunci dari env dipasang; kode akses tidak ikut diteruskan');
-  cek(JSON.parse(diteruskan.init.body).max_tokens === 1500, 'worker: max_tokens dibatasi 1500');
+  cek(JSON.parse(diteruskan.init.body).max_tokens === 600, 'worker: max_tokens dibatasi 600');
   cek(r.headers.get('access-control-allow-origin') === 'https://matahana.github.io', 'worker: header CORS pada respons');
   r = await worker.fetch(minta(), { ...env, KODE_AKSES: '' });
   cek(r.status === 500, 'worker: tanpa konfigurasi → 500 (tidak meneruskan)');

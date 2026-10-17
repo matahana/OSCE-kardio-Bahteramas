@@ -12,11 +12,22 @@ permintaan nyata sebelum dipakai ujian.
 
 - Hanya menerima `POST` dari `Origin` yang terdaftar dan dengan header `x-kode-akses` yang benar.
 - Hanya meneruskan model `claude-haiku-5-5`; menolak `stream`, `tools`, `mcp_servers`, `container`.
-- Membatasi `max_tokens` (1500) dan ukuran badan (80 KB); memasang kunci API dari variabel lingkungan.
+- **Mengunci bentuk permintaan** ke persis yang dibuat `app/js/llm.js`: satu blok `system` (≤ 24 KB), **satu** pesan
+  `user` berupa JSON kecil (`ucapan` ≤ 600 karakter, ≤ 8 KB total), `output_config` dengan skema keluaran yang sama
+  dengan `OSCE.llm.SKEMA` dan `effort: low`; field lain ditolak. Dengan begitu proxy tidak dapat dipakai sebagai
+  asisten umum: keluaran hanya JSON bentuk tetap.
+- **Opsional, disarankan:** variabel `SISTEM_SHA256` (daftar hash dipisah koma dari
+  `node tools/proxy-llm/hash_prompt.mjs`) mengunci prompt sistem ke prompt stasiun yang dikenal. Jalankan ulang dan
+  perbarui variabel itu setiap isi stasiun, aksi, atau bidang formulir berubah; tanpa variabel ini prompt sistem
+  bebas (asal bentuknya sah).
+- Membatasi `max_tokens` (600) dan ukuran badan (80 KB); memasang kunci API dari variabel lingkungan.
 - Menambahkan header CORS hanya untuk `Origin` yang diizinkan.
 
-Yang **tidak** dilakukan: pembatasan laju. Pasang *Rate limiting rules* Cloudflare (mis. per IP) dan pantau pemakaian
-di Console Anthropic; kode akses yang bocor dapat dipakai siapa pun sampai Anda menggantinya.
+**Batas perlindungan (jujur):** `Origin` hanya diperiksa peramban; di luar peramban (mis. `curl`) dapat dipalsukan. Kode
+akses dipegang semua peserta dan terlihat di devtools mereka. Jadi pemeriksaan bentuk di atas **membatasi apa yang
+dapat dilakukan klien palsu dan biaya per permintaan, bukan siapa pelakunya**. Pembatasan laju tidak ada di berkas ini:
+pasang *Rate limiting rules* Cloudflare (mis. per IP), pantau pemakaian di Console Anthropic, dan ganti kode akses
+setelah ujian; kode yang bocor dapat dipakai siapa pun sampai diganti.
 
 ## Memasang di Cloudflare Workers
 
@@ -32,6 +43,7 @@ ASAL_DIIZINKAN = "https://matahana.github.io"
 T
 npx wrangler secret put ANTHROPIC_API_KEY   # tempel kunci API lembaga
 npx wrangler secret put KODE_AKSES          # kode untuk hari ujian; ganti setelah ujian
+npx wrangler secret put SISTEM_SHA256       # opsional: keluaran `node hash_prompt.mjs` (kunci prompt sistem)
 npx wrangler deploy
 ```
 

@@ -27,7 +27,7 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 - [ ] **Mode tes (17 Okt 2026): ukur LLM sungguhan.** Jalankan `ANTHROPIC_API_KEY=... node tools/cek_llm.mjs --n=120` dan putuskan model/prompt; sesi pengembangan tidak punya kunci sehingga jalur LLM hanya diuji dengan server tiruan (`tools/uji_llm.mjs`).
 - [ ] **Pilot mode tes dengan mahasiswa**: ketepatan pemetaan ucapan, kelayakan biaya 3 dtk untuk ucapan tak dipahami, kenyamanan suara; data parafrase ditulis LLM dan belum mewakili kandidat. Ekspor transkrip membantu memperkaya `tests/ucapan`.
 - [ ] **Uji suara nyata** di Chrome/Edge desktop dan Android (uji otomatis hanya memakai tiruan Web Speech API); periksa akurasi pengenalan istilah medis berbahasa Indonesia.
-- [ ] **Pasang dan uji proxy** (`tools/proxy-llm/README.md`) di Cloudflare bila peserta tidak boleh memegang kunci; pasang rate limiting; ganti kode akses tiap ujian.
+- [ ] **Pasang dan uji proxy** (`tools/proxy-llm/README.md`) di Cloudflare bila peserta tidak boleh memegang kunci; pasang rate limiting; ganti kode akses tiap ujian. Proxy kini mengunci bentuk permintaan dan dapat mengunci prompt sistem lewat hash (`SISTEM_SHA256`, `tools/proxy-llm/hash_prompt.mjs`); `Origin` dan kode akses tetap bukan identitas (D46), jadi rate limiting wajib.
 - [ ] Penguji dapat **mengoreksi skor dari transkrip** (saat ini transkrip hanya dibaca); pertimbangkan ekspor transkrip ke lembar penguji.
 - [ ] Ujian berisiko tinggi tanpa pengawasan memerlukan resolver dan skor di sisi server (skrip stasiun terunduh di peramban).
 - [ ] Opsi lanjutan: LLM lokal di peramban (tanpa internet) sebagai pengganti resolver offline yang terbatas (48% benar pada uji internal).
