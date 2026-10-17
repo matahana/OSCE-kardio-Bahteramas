@@ -1,0 +1,415 @@
+{
+ "stasiun": "10",
+ "aksi": {
+  "salam": [
+   "Selamat siang Pak Hendra, saya dokter jaga IGD. Boleh saya tanya-tanya dan periksa Bapak?",
+   "Halo Pak Hendra, kenalkan saya yang bertugas di ruang gawat darurat. Kita ngobrol sebentar lalu saya cek kondisi Bapak, boleh?",
+   "permisi pak saya dokternya ya mau tanya tanya dulu sama periksa bapak",
+   "Bapak Hendra ya? Mohon izin, mulai sekarang saya yang menangani Bapak. Ceritakan dulu pelan-pelan, nanti saya lihat keadaannya. Bagaimana, setuju?",
+   "Siang Pak, saya yang jaga di sini hari ini. Saya mau mengenal keluhan Bapak dulu dan memeriksa, apakah Bapak berkenan?"
+  ],
+  "monitor_iv": [
+   "Tolong pasang monitor jantung dan buka akses IV, Sus.",
+   "Sus, pasien ini ditempel kabel monitor dan dipasang infus sekarang ya.",
+   "Sambungkan ke monitor dan siapkan jalur infus.",
+   "pasang monitor sama infus dulu ya suster",
+   "Saya minta sadapan monitor ditempel di dada dan dipasang kateter vena di lengan, siapkan untuk obat atau cairan bila perlu."
+  ],
+  "glukosa": [
+   "Tolong periksa gula darah sewaktu sekarang.",
+   "Cek GDS ya, Sus.",
+   "Coba ditusuk jari, berapa kadar gula darahnya sekarang?",
+   "Saya ingin tahu kadar gula Bapak saat ini; tolong diukur dengan glukometer.",
+   "gds dulu sus"
+  ],
+  "pantau_sadar": [
+   "Pak, walaupun sekarang Bapak sudah sadar dan merasa sehat, jantung Bapak tetap perlu kami awasi terus-menerus dengan alat.",
+   "Meski Bapak merasa baik-baik saja, kami tetap harus memantau jantungnya terus ya.",
+   "Sudah merasa enakan itu bagus Pak, tapi jantungnya masih harus diawasi terus, jadi jangan dilepas alatnya.",
+   "Saya paham Bapak merasa tidak ada apa-apa sekarang, tetapi pingsan tadi bisa saja pertanda masalah irama yang datang dan pergi, jadi kami perlu mengawasi jantung Bapak secara terus-menerus.",
+   "Biarpun Bapak sudah segar dan sadar penuh, pengawasan irama jantung tidak boleh putus, ini demi keamanan Bapak."
+  ],
+  "aktivitas_saat": [
+   "Waktu pingsan tadi Bapak sedang apa? Berdiri lama, duduk, baru bangun tidur, atau sedang bergerak?",
+   "Kejadiannya pas lagi ngapain Pak?",
+   "Sebelum jatuh Bapak sedang melakukan apa saat itu?",
+   "pas pingsan itu bapak lagi jalan atau lagi duduk pak",
+   "Coba ceritakan situasi persisnya ketika Bapak kehilangan kesadaran tadi, Bapak sedang melakukan apa dan posisi tubuhnya bagaimana?"
+  ],
+  "prodromal": [
+   "Sebelum pingsan, apa yang Bapak rasakan? Ada berdebar, nyeri dada, sesak, pusing, keringat dingin, atau mual?",
+   "Ada firasat atau keluhan dulu nggak sebelum semuanya gelap?",
+   "Bapak sempat merasa apa sebelum tidak sadar?",
+   "sebelum jatuh kerasa apa pak jantungnya deg-degan gitu atau kepala muter",
+   "Saya ingin tahu gejala peringatan yang mendahului pingsan itu, apakah dada terasa tidak enak, napas pendek, jantung terasa cepat, atau badan dingin berkeringat?"
+  ],
+  "pemicu": [
+   "Apakah ada yang mencetuskan pingsan itu, misalnya nyeri, ketakutan, melihat darah, batuk, buang air kecil, atau menoleh?",
+   "Sebelumnya ada kejadian yang bikin kaget atau sakit nggak, Pak?",
+   "Habis batuk-batuk, habis kencing, atau noleh cepat gitu nggak Pak, waktu pingsan?",
+   "Apa ada sesuatu yang memancing kejadian ini, seperti panik, lihat darah, atau mengejan?",
+   "ada faktor pencetusnya gak pak"
+  ],
+  "saksi": [
+   "Pak, boleh saya tanya anak Bapak yang menyaksikan? Berapa lama Bapak tidak sadar, bagaimana warna kulitnya, apakah kejang, mengompol, dan bagaimana Bapak sadar kembali?",
+   "Mbak, tadi Anda yang melihat ayah Anda jatuh ya? Ceritakan apa yang terlihat.",
+   "Tolong kalau anaknya yang melihat, ceritakan berapa menit ayahnya tidak sadar dan mukanya tampak bagaimana.",
+   "tanya anaknya dong, bapaknya sempat kejang nggak waktu jatuh, ngompol, mukanya pucat atau biru",
+   "Saya ingin keterangan dari orang yang melihat langsung kejadiannya, termasuk lamanya, warna wajah, gerakan kaku atau kelojotan, dan seberapa cepat Bapak kembali sadar."
+  ],
+  "cedera_sebelum": [
+   "Apakah ada luka akibat terjatuh tadi, dan sebelumnya pernah pingsan seperti ini?",
+   "Ada yang sakit atau lecet karena jatuh? Dulu pernah kejadian serupa nggak?",
+   "Jatuhnya bikin luka di mana saja Pak? Sebelum hari ini pernah pingsan juga?",
+   "pernah pingsan sebelumnya gak pak, terus ada yang luka gara gara jatuh",
+   "Saya mau periksa apakah ada goresan atau lebam di badan akibat jatuh, dan juga tanya apakah ini episode pertama atau sudah pernah terjadi sebelumnya."
+  ],
+  "riwayat_jantung": [
+   "Apakah Bapak punya riwayat penyakit jantung, seperti serangan jantung, gagal jantung, atau gangguan irama?",
+   "Pernah dikateterisasi atau dibilang dokter jantungnya lemah, Pak?",
+   "Jantung Bapak ada masalah sebelumnya?",
+   "bapak ada sakit jantung nggak sebelumnya, pernah kena serangan atau gampang capek sampai bengkak gitu",
+   "Saya perlu tahu riwayat kardiologi Bapak, termasuk apakah pernah dirawat karena nyeri dada berat, pernah dioperasi jantung, dan apakah mudah lelah saat berjalan."
+  ],
+  "keluarga": [
+   "Apakah di keluarga ada yang meninggal mendadak atau sering pingsan?",
+   "Ada saudara atau orang tua Bapak yang wafat tiba-tiba di usia muda?",
+   "Keluarga ada yang punya penyakit jantung turunan atau pingsan-pingsan juga nggak?",
+   "ada kerabat yang meninggal tiba tiba tanpa sakit pak",
+   "Saya ingin menggali riwayat keluarga: adakah kerabat sedarah yang tiba-tiba meninggal tanpa sebab jelas, terutama sebelum usia 50 tahun, atau yang sering jatuh pingsan?"
+  ],
+  "obat": [
+   "Obat apa saja yang sedang Bapak konsumsi saat ini?",
+   "Bapak minum obat rutin apa, Pak? Boleh sebutkan satu per satu.",
+   "Ada obat tensi, pengencer darah, atau obat tidur yang rutin diminum?",
+   "obat obatan yang bapak minum tiap hari apa aja pak",
+   "Coba lihat daftar obat Bapak, termasuk obat warung atau jamu, mana saja yang diminum dan sejak kapan, apakah ada yang baru ditambah atau dosisnya dinaikkan?"
+  ],
+  "terima_prostat": [
+   "Mungkin betul Pak, obat prostatnya yang bikin pingsan, nanti kita ganti dan Bapak banyak minum ya.",
+   "Iya Pak, bisa jadi karena obat prostat itu, kita ganti saja obatnya.",
+   "Saya setuju dengan dugaan Bapak, penyebabnya kemungkinan besar obat itu dan kurang cairan, jadi kita ubah obatnya dan perbanyak minum air.",
+   "ya pak kemungkinan gara-gara obat prostat, tinggal ganti obat dan minum air yang banyak",
+   "Sepertinya benar yang Bapak duga, jadi penyebabnya sudah ketemu: obatnya dan kurang minum; cukup disesuaikan dan Bapak tidak perlu khawatir."
+  ],
+  "epilepsi": [
+   "Apakah Bapak punya riwayat epilepsi atau pernah kejang?",
+   "Pernah kejang-kejang sebelumnya nggak, Pak?",
+   "Ada diagnosis ayan, atau minum obat anti kejang?",
+   "bapak punya riwayat sawan atau ayan gak",
+   "Saya ingin menyingkirkan kemungkinan kejang sebagai penyebab; apakah Bapak pernah didiagnosis epilepsi atau punya episode kejang tanpa demam sebelumnya?"
+  ],
+  "dm_hipoglikemia": [
+   "Apakah Bapak menderita kencing manis atau pernah merasa gula darahnya turun?",
+   "Punya diabetes nggak Pak? Pernah lemas dan gemetar karena gula rendah?",
+   "Ada penyakit gula? Minum obat gula atau suntik insulin?",
+   "bapak ada diabetes atau sakit gula gak pak",
+   "Saya ingin tahu apakah ada riwayat DM, dan apakah belakangan sering terasa lemas, gemetar, atau lapar mendadak seperti tanda gula darah rendah."
+  ],
+  "stroke_tia": [
+   "Apakah Bapak pernah stroke atau TIA, atau pernah lemah separuh badan?",
+   "Pernah mendadak mulut mencong, bicara pelo, atau tangan kaki sebelah lemas?",
+   "Ada riwayat stroke ringan atau serangan otak sesaat sebelumnya?",
+   "pernah kena stroke gak pak atau badan sebelah lemes",
+   "Saya perlu memastikan tidak ada riwayat gangguan peredaran darah otak: pernah ada kelumpuhan sementara, penglihatan gelap sebelah, atau sulit bicara mendadak?"
+  ],
+  "perdarahan": [
+   "Adakah perdarahan, buang air besar hitam, atau muntah darah belakangan ini?",
+   "Pernah keluar darah dari mana pun akhir-akhir ini, Pak?",
+   "Tinja Bapak berwarna hitam seperti aspal, atau ada muntahan bercampur darah?",
+   "ada berak hitam atau muntah darah gak pak",
+   "Saya ingin menyingkirkan kehilangan darah sebagai penyebab, apakah ada darah di kotoran, muntahan, urine, atau luka yang susah berhenti berdarah?"
+  ],
+  "trauma_kepala": [
+   "Apakah kepala Bapak terbentur waktu jatuh tadi?",
+   "Jatuhnya kena kepala nggak, Pak?",
+   "Ada benjol atau nyeri di kepala setelah jatuh?",
+   "kepalanya kejedot gak pak pas jatuh",
+   "Saya ingin memastikan tidak ada cedera di bagian kepala saat Bapak rebah, apakah ada yang membentur lantai atau benda keras?"
+  ],
+  "alkohol_rokok": [
+   "Apakah Bapak minum minuman keras atau merokok?",
+   "Bapak perokok? Suka minum bir atau tuak?",
+   "Kebiasaan merokok dan konsumsi alkohol bagaimana, Pak?",
+   "ngerokok gak pak, minum minuman beralkohol juga?",
+   "Saya perlu tahu gaya hidup Bapak, termasuk apakah Bapak pernah atau masih menghisap tembakau dan seberapa sering mengonsumsi minuman beralkohol, termasuk semalam."
+  ],
+  "ortostatik_langsung": [
+   "Pak, tolong berdiri sekarang, saya ukur tensinya sekali saja.",
+   "Langsung bangun dan berdiri ya Pak, nanti tekanan darahnya diukur satu kali.",
+   "Sus, suruh pasien langsung berdiri lalu tensinya diambil satu kali, tidak usah diulang.",
+   "berdiri aja pak langsung saya tensi sekali",
+   "Untuk menilai tekanan darah saat berdiri cukup satu kali pengukuran sesaat setelah pasien berdiri, tanpa perlu berbaring dulu atau mengulang."
+  ],
+  "simpul_ortostatik": [
+   "Selisih sistolik hanya sepuluh dan diastolik empat mmHg, tidak memenuhi kriteria hipotensi ortostatik, jadi itu belum bisa menerangkan pingsannya.",
+   "Kesimpulan: tidak ada hipotensi ortostatik, turun tensinya kecil sekali.",
+   "Penurunan tensi saat berdiri tidak bermakna, jadi pingsan Bapak bukan karena tekanan darah anjlok waktu berdiri.",
+   "tensi turunnya cuma dikit jadi bukan ortostatik ya",
+   "Dari pengukuran berbaring ke berdiri, penurunannya tidak mencapai 20 sistolik atau 10 diastolik, sehingga hipotensi ortostatik dapat disingkirkan sebagai penyebab utama."
+  ],
+  "jantung": [
+   "Saya dengarkan bunyi jantung Bapak dengan stetoskop ya.",
+   "Auskultasi jantung: apakah ada bising atau bunyi ekstra?",
+   "dengar jantungnya dulu pak",
+   "Sekarang saya periksa suara detak jantung; saya cari bising atau irama yang tidak teratur.",
+   "Tolong buka kancing bajunya Pak, saya letakkan stetoskop di dada kiri untuk mendengarkan bunyi katup dan iramanya."
+  ],
+  "paru_jvp": [
+   "Saya lihat vena leher, dengarkan paru-paru, dan periksa apakah ada pembengkakan di kaki.",
+   "Cek tekanan vena jugularis, suara napas, sama bengkak kaki.",
+   "Tarik napas dalam Pak, saya dengar paru-parunya. Lalu saya lihat urat leher dan tekan tulang kering untuk melihat ada sembab.",
+   "ada tanda kelebihan cairan gak, leher, paru, kaki",
+   "Saya ingin menilai tanda bendungan: tinggi vena di leher, suara ronki di paru, dan edema pada tungkai."
+  ],
+  "neuro_singkat": [
+   "Saya periksa saraf Bapak sebentar: kesadaran, kekuatan tangan dan kaki, bicara, dan wajah.",
+   "Coba angkat kedua tangan, senyum, dan sebutkan nama Bapak; saya cek sarafnya.",
+   "neuro cepat aja ya, ada kelemahan sebelah atau tidak",
+   "Tolong ikuti jari saya dengan mata, genggam tangan saya kuat-kuat, dan julurkan lidah.",
+   "Dilakukan pemeriksaan neurologis ringkas untuk mencari defisit fokal."
+  ],
+  "abdomen_rektal": [
+   "Sekarang perut Bapak saya periksa, termasuk raba dan dengar, lalu saya masukkan jari lewat dubur untuk melihat ada darah atau tidak.",
+   "Berbaring miring ya Pak, saya periksa perut dan colok dubur.",
+   "Periksa perut dan rectal toucher lengkap.",
+   "rt sama periksa perut sekalian ya",
+   "Saya akan menilai nyeri tekan di perut serta pemeriksaan rektal dengan sarung tangan, untuk mencari perdarahan saluran cerna."
+  ],
+  "ekg": [
+   "Tolong rekam EKG dua belas sadapan sekarang juga.",
+   "Sus, minta EKG ya, cepat.",
+   "Kita rekam jantungnya dengan elektrokardiograf lengkap di dada dan tungkai.",
+   "ekg dulu sus",
+   "Saya mau lihat gambaran listrik jantung Bapak segera, tolong direkam lengkap sebelum kita lanjut ke pemeriksaan lainnya."
+  ],
+  "lab_hb": [
+   "Tolong periksa Hb.",
+   "Kirim darah untuk cek kadar hemoglobin.",
+   "Saya ingin tahu apakah Bapak kurang darah, tolong cek darah rutin bagian Hb.",
+   "hb nya berapa sus, cek ya",
+   "Mohon diperiksa kadar zat pembawa oksigen dalam sel darah merah untuk menilai ada anemia atau tidak."
+  ],
+  "lab_elektrolit": [
+   "Tolong periksa natrium, kalium, dan magnesium.",
+   "Kirim elektrolit lengkap termasuk Mg ya.",
+   "Cek kadar garam-garam darah, K, Na, dan magnesiumnya.",
+   "elektrolit sama mg nya dicek sus",
+   "Saya ingin menyingkirkan gangguan mineral darah yang bisa memicu aritmia, jadi tolong diperiksa kalium, natrium, dan magnesium."
+  ],
+  "lab_kreatinin": [
+   "Periksa kreatinin serum.",
+   "Tolong cek fungsi ginjalnya lewat kreatinin.",
+   "Saya mau lihat fungsi ginjal Bapak lewat darah.",
+   "creatinin juga sus",
+   "Mohon dicek fungsi ginjal Bapak karena banyak obat jantung yang dikeluarkan lewat ginjal, kreatinin saja sudah cukup."
+  ],
+  "troponin": [
+   "Tolong periksa troponin.",
+   "Cek enzim jantung ya Sus, troponin.",
+   "Saya ingin menyingkirkan kerusakan otot jantung, kirim penanda nekrosis miokard.",
+   "tropnya sekalian sus",
+   "Untuk memastikan tidak ada infark yang sedang berlangsung, tolong diambil darah untuk penanda cedera otot jantung seperti troponin I atau T, ulangi bila perlu."
+  ],
+  "echo": [
+   "Saya minta ekokardiografi untuk menilai fungsi pompa jantung.",
+   "Tolong jadwalkan USG jantung.",
+   "Kita perlu lihat fraksi ejeksinya, jadi dilakukan echo.",
+   "echo jantung ya sus, kalau bisa hari ini",
+   "Mohon dilakukan pencitraan gelombang suara pada jantung untuk melihat ukuran ruang, katup, dan seberapa kuat otot jantungnya memompa."
+  ],
+  "telemetri": [
+   "Tolong pasang telemetri supaya irama jantung terpantau terus.",
+   "Pasien kita rawat di ruang yang punya pantauan ritme jantung dua puluh empat jam.",
+   "Sambungkan ke monitor irama jantung jarak jauh di ruang observasi.",
+   "telemetri ya sus, dipantau terus",
+   "Saya minta rekaman irama jantung berkelanjutan selama dirawat supaya kalau ada aritmia langsung terdeteksi dan alarm berbunyi."
+  ],
+  "ct_kepala": [
+   "Kita lakukan CT scan kepala sekarang.",
+   "Tolong jadwalkan pemindaian otak dengan CT.",
+   "Saya minta foto CT otak untuk menyingkirkan penyebab dari kepala.",
+   "ct scan kepala dulu ya sus",
+   "Sebagai bagian dari pemeriksaan pingsan, mohon dibuat pencitraan otak dengan tomografi komputer tanpa kontras sebelum Bapak dipindahkan."
+  ],
+  "eeg": [
+   "Kita rekam gelombang otak Bapak dengan EEG.",
+   "Tolong jadwalkan elektroensefalografi.",
+   "Saya minta pemeriksaan rekam otak untuk melihat aktivitas listrik otak.",
+   "eeg juga ya sus",
+   "Untuk menyingkirkan kemungkinan kejang sebagai penyebab pingsan, mohon dibuat rekaman aktivitas listrik otak sebelum pulang."
+  ],
+  "jelaskan_rawat": [
+   "Pak, saya paham Bapak merasa sehat. Tapi pingsan saat beraktivitas dengan jantung berdebar, ditambah riwayat serangan jantung dan adik yang meninggal mendadak, membuat kami khawatir ada gangguan irama jantung, jadi sebaiknya Bapak dirawat.",
+   "Kami sarankan Bapak menginap di rumah sakit dulu supaya jantungnya diawasi, karena kami curiga ada masalah irama.",
+   "Pak, kami minta Bapak opname ya. Alasannya bukan obat prostat saja, tapi kemungkinan ada gangguan irama jantung yang berbahaya.",
+   "bapak sebaiknya dirawat dulu ya pak buat dipantau, soalnya riwayat keluarga sama jantung bapak bikin kami khawatir",
+   "Saya jelaskan hasil penilaian kami: risiko Bapak tergolong tinggi karena pola kejadian dan latar belakang jantung, sehingga kami menganjurkan Bapak tinggal di rumah sakit untuk observasi dan pemeriksaan lanjutan. Bagaimana, Bapak bersedia?"
+  ],
+  "edukasi_keselamatan": [
+   "Sementara pemeriksaan belum selesai, Bapak tidak boleh menyetir, jangan naik tempat tinggi atau mengoperasikan mesin, dan harus ada yang menemani.",
+   "Pak, selama kita belum tahu sebabnya, jangan bawa kendaraan dulu dan jangan sendirian ya.",
+   "jangan nyetir dulu pak, jangan manjat, dan harus ada yang nemenin",
+   "Demi keamanan, hindari berkendara, memanjat, dan pekerjaan berbahaya sampai ada kepastian penyebab pingsannya, dan ajak keluarga mendampingi.",
+   "Ingat ya Pak, untuk sementara jangan pergi sendirian dan jangan memegang kendali kendaraan atau alat berat."
+  ],
+  "remehkan": [
+   "Tidak mungkin itu gara-gara obat prostat, Pak. Bapak kan bukan dokter, jadi serahkan saja ke kami.",
+   "Aduh Pak, dugaan Bapak itu keliru, Bapak tidak paham soal ini.",
+   "Sudahlah Pak, jangan sok tahu, mana mungkin obat prostat bisa bikin pingsan.",
+   "itu gak mungkin pak, bapak gak ngerti",
+   "Dugaan Bapak itu tidak masuk akal secara medis dan sebaiknya tidak usah dibahas lagi, biar kami yang menentukan."
+  ],
+  "setuju_pulang": [
+   "Baik Pak, kalau Bapak merasa sehat, silakan pulang saja dan kontrol ke poliklinik minggu depan.",
+   "Oke, Bapak boleh pulang sekarang, nanti datang lagi ke poli.",
+   "ya sudah pak pulang saja nanti kontrol aja ke poli ya",
+   "Saya setuju dengan keinginan Bapak untuk pulang; jadwal kontrol rawat jalan akan kami atur.",
+   "Tidak perlu dirawat, Bapak saya pulangkan hari ini dan diminta kembali kontrol di poli jantung."
+  ],
+  "jargon": [
+   "Bapak mengalami sinkop aritmogenik pada kardiomiopati iskemik dengan fraksi ejeksi rendah.",
+   "Diagnosis kerja saya adalah sinkop kardiak akibat aritmia ventrikel dengan disfungsi LV pasca infark.",
+   "Jadi Pak, ini sinkop yang kemungkinan besar bersumber dari takiaritmia pada substrat skar miokard, LVEF-nya turun.",
+   "pak ini sinkop aritmogenik kardiomiopati iskemik lvef rendah gitu",
+   "Kesan saya VT pada kardiomiopati iskemik, sehingga risiko kematian jantung mendadak tinggi dan perlu dipertimbangkan ICD."
+  ]
+ },
+ "keluarga": [
+  {
+   "ids": ["ortostatik_baring", "ortostatik_m1", "ortostatik_m3"],
+   "ucapan": [
+    "Tolong ukur tekanan darah dan nadi Bapak dalam posisi berbaring, lalu saat berdiri menit pertama dan menit ketiga.",
+    "Kita lakukan tes ortostatik: baring istirahat dulu, lalu berdiri dan diukur berulang.",
+    "tensi berbaring dulu terus berdiri satu menit lalu tiga menit",
+    "Sus, tolong pasien ditidurkan tenang beberapa menit, ukur tensi dan nadinya, kemudian suruh berdiri dan ukur lagi pada menit pertama dan ketiga.",
+    "Saya ingin tahu apakah tekanan darah Bapak anjlok ketika berdiri, jadi kita bandingkan angka saat telentang dengan angka setelah berdiri.",
+    "ukur lagi tensi dan nadinya setelah tiga menit berdiri"
+   ]
+  }
+ ],
+ "negatif": [
+  "Cuaca hari ini panas sekali ya, Pak, silakan duduk yang nyaman.",
+  "Tolong buatkan foto toraks sekarang juga.",
+  "Berapa berat dan tinggi badan Bapak?",
+  "Bapak tinggal di mana dan dengan siapa di rumah?",
+  "Apakah Bapak sempat demam, batuk, atau pilek minggu ini?",
+  "Tolong lakukan angiografi koroner sekarang juga.",
+  "eh anu itu tadi apa ya dok hmm lanjut aja",
+  "Siapa yang menang pertandingan bola semalam?"
+ ],
+ "ganda": [
+  {
+   "ucapan": "Selamat siang Pak, saya dokter jaga. Sus, tolong pasang monitor dan infus, sambil saya tanya Bapak tadi sedang apa waktu pingsan.",
+   "aksi": ["salam", "monitor_iv", "aktivitas_saat"]
+  },
+  {
+   "ucapan": "Tolong cek gula darah dan rekam EKG sekarang ya Sus.",
+   "aksi": ["glukosa", "ekg"]
+  },
+  {
+   "ucapan": "Sebelum pingsan ada berdebar atau nyeri dada, dan ada pencetusnya nggak, Pak?",
+   "aksi": ["prodromal", "pemicu"]
+  },
+  {
+   "ucapan": "Bapak pernah kena serangan jantung atau gagal jantung, dan ada keluarga yang meninggal mendadak?",
+   "aksi": ["riwayat_jantung", "keluarga"]
+  },
+  {
+   "ucapan": "Kirim Hb, elektrolit sama magnesium, dan troponin ya.",
+   "aksi": ["lab_hb", "lab_elektrolit", "troponin"]
+  },
+  {
+   "ucapan": "Saya dengar jantungnya dulu, terus lihat vena leher, paru, dan kaki, lalu cek sarafnya sebentar.",
+   "aksi": ["jantung", "paru_jvp", "neuro_singkat"]
+  }
+ ],
+ "isian": [
+  {
+   "ucapan": "EKG sinus 62 per menit, ada Q patologis V1 sampai V4 kesan infark anterior lama, dan PVC unifokal yang sering. Tidak ada blok AV, QTc normal, tidak ada pola Brugada, dan tidak ada gelombang delta.",
+   "bidang": {
+    "temuan": ["q_anterior", "pvc"],
+    "dicari": ["tanpa_blok_av", "qt_normal", "tanpa_brugada", "tanpa_preeksitasi"]
+   }
+  },
+  {
+   "ucapan": "Irama sinus dengan Q patologis anterior bekas infark dan VES sering. PR normal tanpa blok AV, interval QT normal, Brugada negatif, WPW negatif.",
+   "bidang": {
+    "temuan": ["q_anterior", "pvc"],
+    "dicari": ["tanpa_blok_av", "qt_normal", "tanpa_brugada", "tanpa_preeksitasi"]
+   }
+  },
+  {
+   "ucapan": "Ada Q patologis di V1 sampai V4, bekas infark anterior.",
+   "bidang": {
+    "temuan": ["q_anterior"]
+   }
+  },
+  {
+   "ucapan": "Banyak ekstrasistol ventrikel, QTc-nya masih normal.",
+   "bidang": {
+    "temuan": ["pvc"],
+    "dicari": ["qt_normal"]
+   }
+  },
+  {
+   "ucapan": "Saya lihat elevasi ST akut di anterior dan irama fibrilasi atrium.",
+   "bidang": {
+    "temuan": ["elevasi_st", "af"]
+   }
+  },
+  {
+   "ucapan": "Tidak ada elevasi ST dan tidak ada blok AV derajat tinggi; yang tampak hanya VES sering.",
+   "bidang": {
+    "temuan": ["pvc"],
+    "dicari": ["tanpa_blok_av"]
+   }
+  },
+  {
+   "ucapan": "Risiko tinggi, kemungkinan sinkop aritmia. Dasarnya penyakit jantung struktural dengan EF rendah, sinkop saat aktivitas dengan palpitasi, EKG abnormal, dan adik meninggal mendadak. Saya rawat dengan telemetri dan konsul kardiologi atau EP. Rencana echo ulang, evaluasi iskemia, optimalisasi GDMT, dan nilai indikasi ICD.",
+   "bidang": {
+    "risiko": "tinggi",
+    "alasan": ["jantung_struktural", "saat_aktivitas", "ekg_abnormal", "keluarga"],
+    "dispo": "rawat_tele",
+    "rencana": ["echo", "iskemia", "gdmt", "icd"]
+   }
+  },
+  {
+   "ucapan": "High risk, curiga aritmia ventrikel. Alasannya LVEF rendah pasca infark, onset saat exertion dengan palpitasi, EKG ada Q dan PVC sering, serta riwayat keluarga SCD. Admit telemetri, konsul kardio EP. Lanjut echo, cek iskemia, GDMT, dan pertimbangkan ICD.",
+   "bidang": {
+    "risiko": "tinggi",
+    "alasan": ["jantung_struktural", "saat_aktivitas", "ekg_abnormal", "keluarga"],
+    "dispo": "rawat_tele",
+    "rencana": ["echo", "iskemia", "gdmt", "icd"]
+   }
+  },
+  {
+   "ucapan": "Menurut saya risiko tinggi, harus dirawat dengan telemetri.",
+   "bidang": {
+    "risiko": "tinggi",
+    "dispo": "rawat_tele"
+   }
+  },
+  {
+   "ucapan": "Dasarnya EF rendah dan sinkop terjadi saat beraktivitas. Rencana echo ulang dan pertimbangan ICD.",
+   "bidang": {
+    "alasan": ["jantung_struktural", "saat_aktivitas"],
+    "rencana": ["echo", "icd"]
+   }
+  },
+  {
+   "ucapan": "Saya nilai risiko rendah, sinkop refleks dengan prodromal khas. Observasi beberapa jam di IGD, kalau stabil pulang.",
+   "bidang": {
+    "risiko": "rendah",
+    "alasan": ["prodromal_refleks"],
+    "dispo": "observasi"
+   }
+  },
+  {
+   "ucapan": "Ini bukan hipotensi ortostatik dan tidak ada prodromal khas refleks, jadi pasien tidak boleh pulang; rawat dengan telemetri.",
+   "bidang": {
+    "dispo": "rawat_tele"
+   }
+  }
+ ]
+}

@@ -15,6 +15,7 @@
     <nav aria-label="Navigasi utama">
       <a href="#/">Stasiun</a>
       <a href="#/riwayat">Riwayat</a>
+      <a href="#/pengaturan">Pengaturan</a>
       <a href="#/tentang">Tentang</a>
     </nav>
   </header>
@@ -22,13 +23,17 @@
     <noscript>Aplikasi ini membutuhkan JavaScript.</noscript>
   </main>
   <footer class="kaki">
-    <p>DRAF v0.1 · alat belajar, bukan penilaian resmi · berjalan di peramban Anda, tanpa server.</p>
+    <p>DRAF v0.1 · alat belajar, bukan penilaian resmi · berjalan di peramban Anda; LLM dan suara pada mode tes bersifat opsional dan memakai internet.</p>
   </footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
   <script defer src="data/stasiun-data.js"></script>
+  <script defer src="data/ucapan.js"></script>
   <script defer src="js/engine.js"></script>
   <script defer src="js/logika.js"></script>
+  <script defer src="js/resolver.js"></script>
+  <script defer src="js/llm.js"></script>
+  <script defer src="js/suara.js"></script>
   <script defer src="data/interaksi/01.js"></script>
   <script defer src="data/interaksi/02.js"></script>
   <script defer src="data/interaksi/03.js"></script>
@@ -49,6 +54,7 @@
   <script defer src="js/widgets/tensimeter.js"></script>
   <script defer src="js/widgets/ketuk.js"></script>
   <script defer src="js/ui.js"></script>
+  <script defer src="js/ujian.js"></script>
   <script defer src="js/main.js"></script>
 </body>
 </html>

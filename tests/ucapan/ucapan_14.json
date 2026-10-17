@@ -1,0 +1,342 @@
+{
+ "stasiun": "14",
+ "aksi": {
+  "periksa_fisik": [
+   "Saya periksa perfusinya: akral, capillary refill, GCS, JVP, dan auskultasi paru",
+   "Bu Marta, saya pegang tangan dan kakinya ya, dingin atau tidak, lalu saya lihat kesadaran dan vena di leher",
+   "Cek kesadaran sama perfusi perifer",
+   "Bu, tolong buka mata dan ikuti jari saya. Saya nilai juga denyut vena leher dan suara napasnya",
+   "Saya mau menilai tanda-tanda syok pada pasien: ujung jari, kulit, tingkat kesadaran, dan suara paru"
+  ],
+  "nyatakan_tidak_stabil": [
+   "Pasien ini tidak stabil: bradikardia dengan hipotensi, akral dingin, dan penurunan kesadaran, harus ditangani sekarang",
+   "Ini bradikardia simtomatik dengan tanda syok, jadi kondisinya tidak stabil dan butuh intervensi segera",
+   "Pasien unstable, bradikardia dengan hipoperfusi",
+   "Ya, ibu ini kondisinya gawat. Denyutnya lambat dan tekanannya jatuh, organ tidak kebagian darah, tidak bisa menunggu",
+   "Saya simpulkan hemodinamik terganggu karena nadi lambat, perlu terapi cepat, tidak boleh ditunda"
+  ],
+  "tunggu_lab": [
+   "Pasien relatif stabil, kita tunggu hasil lab dan echo dulu sebelum menyiapkan pacu",
+   "Tidak usah buru-buru, hasil darah dan USG jantung kita nantikan dulu baru putuskan alat pacu",
+   "Kondisinya masih bisa ditunggu, saya observasi saja sambil menunggu laboratorium",
+   "Nunggu lab sama echo dulu ya baru pasang alat pacu",
+   "Saya rasa belum perlu tindakan segera. Mari kita lengkapi pemeriksaan penunjang lebih dulu, termasuk ekokardiografi, sebelum memutuskan memasang pacu"
+  ],
+  "monitor_iv": [
+   "Pasang monitor EKG dan buka jalur infus",
+   "Sus, tolong dipasang sadapan monitor dan bikin akses vena ya",
+   "Pasien dihubungkan ke monitor jantung, lalu pasang IV line",
+   "Monitor dan abocath sekarang",
+   "Saya minta pasien segera dipasang kabel monitor jantung dan dibuatkan jalur infus untuk obat dan cairan"
+  ],
+  "siapkan_pacu_alat": [
+   "Tolong bawa defibrilator dengan fitur pacu ke samping tempat tidur",
+   "Siapkan mesin pacu transkutan di dekat pasien sekarang",
+   "Sus, ambilkan alat pacu sama defib, taruh di sebelah pasien",
+   "Pacemaker eksternal disiapkan",
+   "Kemungkinan pasien akan butuh pacu, jadi saya minta peralatan pacu dan pad ditaruh siap pakai di sisi tempat tidur"
+  ],
+  "anamnesis_obat": [
+   "Bu, resep dari dokter yang diminum tiap hari apa saja? Jantung atau kelenjar gondoknya pernah bermasalah?",
+   "Boleh tanya riwayat sebelumnya Bu: tablet yang rutin diminum, dada sakit atau tidak, penyakit jantung atau kelenjar gondok sebelumnya?",
+   "Gali anamnesis: pengobatan rutin, keluhan di dada, dan kelainan jantung atau gondok terdahulu",
+   "Bu, sebelum hampir pingsan ini, ada tablet baru atau dosis ditambah? Pernah ada sakit jantung sebelumnya?",
+   "Saya perlu riwayat singkat: obat yang dikonsumsi, terutama digoksin dan antiaritmia, apakah ada nyeri dada, dan riwayat penyakit jantung atau tiroid"
+  ],
+  "sebut_penyebab": [
+   "Penyebab yang bisa dikoreksi: efek obat penyekat beta, kalium tinggi, serangan jantung dinding bawah, dan hipotiroid",
+   "Saya cari etiologi reversibel, yaitu obat yang menekan nodus AV, gangguan elektrolit seperti hiperkalemia, iskemia inferior, dan kelainan tiroid",
+   "Ddx blok AV yang reversibel: efek BB, hiperK, MI dinding bawah, hipotiroid",
+   "Kemungkinan pemicunya adalah pengaruh obat tekanan darah golongan beta blocker, kadar kalium yang tinggi, sumbatan pembuluh jantung bagian bawah, atau kekurangan hormon tiroid",
+   "Yang perlu saya singkirkan adalah faktor-faktor yang masih bisa diperbaiki, seperti obat yang memperlambat konduksi, kelainan elektrolit, infark, dan masalah tiroid"
+  ],
+  "lab_elektrolit": [
+   "Minta cek elektrolit, kreatinin, gula darah, dan Hb",
+   "Tolong ambil darah untuk kalium, natrium, fungsi ginjal, glukosa, dan hemoglobin",
+   "Lab darah rutin IGD: elektrolit, ureum kreatinin, GDS, Hb",
+   "Saya perlu data kimia darah dasar, terutama kadar kalium dan fungsi ginjal, plus gula sewaktu dan kadar hemoglobin",
+   "Sambil menunggu, kirim sampel darah untuk panel dasar ya, termasuk elektrolit dan GDS"
+  ],
+  "troponin": [
+   "Cek troponin",
+   "Minta enzim jantung diperiksa, untuk lihat ada kerusakan otot jantung atau tidak",
+   "Saya mau pastikan tidak ada infark, tolong periksa penanda nekrosis miokard",
+   "Trop-nya sekalian ya",
+   "Kirim darah untuk hs-troponin, untuk menyingkirkan cedera miokard"
+  ],
+  "tsh": [
+   "Periksa TSH",
+   "Tolong cek fungsi tiroid",
+   "Minta pemeriksaan hormon kelenjar gondok juga ya",
+   "Ambil darah untuk melihat hormon pengatur metabolisme, yaitu thyroid stimulating hormone",
+   "Tes tiroid"
+  ],
+  "echo": [
+   "Minta echo jantung",
+   "Tolong dikerjakan ekokardiografi",
+   "Saya mau USG jantung untuk melihat fungsi pompa dan katupnya",
+   "Bedside echo kalau memungkinkan",
+   "Kita butuh pencitraan jantung dengan gelombang suara untuk menilai ukuran bilik dan kontraksi, tolong diatur"
+  ],
+  "foto_toraks": [
+   "Minta foto toraks",
+   "Tolong rontgen dada",
+   "Saya ingin lihat ukuran jantung dan paru lewat rontgen thorax PA",
+   "CXR portable ya",
+   "Kirim ke radiologi untuk foto dada, mau nilai ada tidaknya bendungan paru dan pembesaran jantung"
+  ],
+  "atropin": [
+   "Beri atropin IV sekarang sambil kita siapkan pacu",
+   "Berikan sulfas atropin intravena dulu sambil menyiapkan alat pacu",
+   "Atropin IV, siapkan pacu",
+   "Sus, tolong suntikkan atropin lewat infus, secepatnya, sementara pad disiapkan",
+   "Kita coba antikolinergik intravena dulu, selagi alat pacu belum siap"
+  ],
+  "sebut_batas_atropin": [
+   "Atropin kemungkinan tidak akan efektif karena blok-nya di bawah nodus AV dengan QRS lebar, jadi pacu jangan ditunda",
+   "Perlu diingat, pada blok infranodal dengan kompleks lebar atropin sering gagal, tidak boleh menunda pacu",
+   "Atropin tak mempan di sini, langsung pacu saja",
+   "Kerja atropin cuma sampai nodus, sedangkan gangguan ibu ini lebih rendah, jadi hasilnya diragukan dan memacu tidak usah ditunda",
+   "Saya sadar efek atropin terbatas pada kasus seperti ini, makanya tidak saya jadikan penentu untuk memulai pacu"
+  ],
+  "atropin_berulang": [
+   "Atropinnya diulang lagi, kita lihat dulu responsnya baru putuskan perlu pacu atau tidak",
+   "Kasih atropin tambahan, tunggu nadinya naik dulu sebelum pasang pacu",
+   "Ulang atropin dan observasi respons dulu",
+   "Belum perlu pacu, coba dulu atropin berikutnya dan kita nilai apakah laju membaik",
+   "Kita beri atropin lanjutan sampai maksimal, dan pacu baru dipertimbangkan kalau atropin benar-benar gagal"
+  ],
+  "pacu_transkutan": [
+   "Tempel pad, aktifkan pacing transkutan sekarang",
+   "Kita mulai pacing eksternal, tempel pad di dada dan punggung, beri analgesik atau obat penenang",
+   "Pacu jantung dari luar, mulai",
+   "Hidupkan mode pacu pada mesin dan beri obat penenang ringan karena tindakan ini nyeri",
+   "Tempelkan elektroda pacu di dada kiri dan punggung, lalu aktifkan pacemaker eksternal"
+  ],
+  "pastikan_tangkap": [
+   "Raba pulsasi femoralis tiap ada spike pacu, cek ada tangkapan mekanik",
+   "Apakah setiap spike pacu menimbulkan kontraksi? Cek denyut dan tensinya",
+   "Cek capture, pulsasi teraba tiap spike",
+   "Saya periksa langsung denyut di pangkal paha, dan lihat apakah kurva arteri mengikuti pacu",
+   "Saya konfirmasi pacu menangkap: kompleks lebar muncul setelah spike, dan nadi perifer sinkron dengan monitor"
+  ],
+  "andalkan_monitor": [
+   "Pacunya sudah berhasil, di monitor kelihatan ada kompleks pacu",
+   "Layar menampilkan spike lalu QRS lebar, berarti sudah menangkap, saya lanjut ke langkah berikutnya",
+   "Monitor bagus, pacu jalan, tidak perlu cek nadi",
+   "Ada gambar spike pacu di layar, jadi saya simpulkan jantungnya sudah berdenyut mengikuti pacu",
+   "Pacu sudah capture, jelas terlihat di layar, jadi saya tidak perlu meraba apa-apa lagi"
+  ],
+  "infus_jembatan": [
+   "Siapkan drip dopamin atau adrenalin sebagai jembatan kalau atropin gagal atau pacu belum siap",
+   "Kalau alat pacu belum siap, kita mulai drip adrenalin dulu untuk menaikkan laju dan tekanan",
+   "Mulai drip adrenalin atau dopamin sambil nunggu pacu",
+   "Sebagai penahan sementara, tolong disiapkan vasopresor drip lewat syringe pump bila obat pertama tidak mempan",
+   "Supaya tekanan dan laju terjaga selama menunggu alat pacu, kita pakai infus katekolamin dulu"
+  ],
+  "tahan_obat": [
+   "Bisoprolol dan obat tekanan darah lain dihentikan dulu, penyebab yang ketemu dikoreksi",
+   "Stop beta blocker, amlodipin, dan ramipril sementara",
+   "Obat darah tinggi di rumah jangan dikasih dulu, terutama bisoprolol",
+   "Sus, mohon obat-obat rutin ibu seperti bisoprolol dan antihipertensi lainnya ditahan, jangan diberikan di bangsal",
+   "Karena obat penurun tekanan dan penurun laju bisa memperparah kondisinya, kita jeda semuanya dan perbaiki faktor pemicu yang kita temukan"
+  ],
+  "lanjut_obat_lama": [
+   "Obat rumahnya tetap dilanjutkan saja, bisoprolol, amlodipin, dan ramipril, karena ibu hipertensi",
+   "Ibu kan darah tingginya lama, jadi semua obat hariannya jalan terus",
+   "Lanjut obat rutin",
+   "Tidak perlu diubah apa-apa dengan obat di rumah, teruskan sebagaimana biasa",
+   "Karena riwayat tekanan darah tinggi, obat penyekat beta dan penurun tekanan lainnya kita pertahankan tanpa perubahan"
+  ],
+  "pantau_respons": [
+   "Saya monitor terus laju nadi, tekanan darah, dan perfusi, lalu evaluasi ulang tiap beberapa menit",
+   "Observasi ketat ya Sus, nadi, tensi, kesadaran, nanti kita nilai lagi",
+   "Re-evaluasi hemodinamik berkala",
+   "Kita lihat bagaimana perkembangannya, apakah denyutnya naik, tekanannya membaik, dan kulitnya sudah hangat",
+   "Setelah tindakan tadi, pasien tetap dipantau, parameter vital dicek ulang secara teratur, dan responsnya dicatat"
+  ],
+  "rencana_icu": [
+   "Rencananya kita pasang pacemaker temporer lewat vena, pasien masuk ICCU, dan saya konsulkan ke kardiolog atau ahli aritmia",
+   "Pasien harus dirawat di ruang intensif jantung dengan temporary pacemaker, saya hubungi dokter jantung",
+   "Masuk ICCU, pacemaker temporer, konsul kardio",
+   "Setelah stabil dengan pacu dari luar, kita pindahkan ke ruang perawatan intensif untuk dipasang kabel pacu lewat pembuluh darah, dan saya minta tim jantung menilai",
+   "Saya akan minta bantuan spesialis jantung untuk pemasangan pacu sementara di vena dan pasien dirawat intensif"
+  ],
+  "rencana_permanen": [
+   "Kalau tidak ditemukan penyebab yang bisa diperbaiki, ibu ini hampir pasti butuh pacemaker permanen",
+   "AV block total yang bukan karena obat atau gangguan yang bisa pulih biasanya akhirnya butuh alat pacu menetap",
+   "Nanti kemungkinan besar PPM",
+   "Jangka panjangnya, bila gangguan hantaran AV menetap setelah semua faktor pemicu dikoreksi, solusinya adalah memasang alat pacu yang ditanam",
+   "Perlu saya sampaikan bahwa blok AV derajat tiga tanpa sebab yang bisa dibalikkan umumnya diatasi dengan pacu permanen"
+  ],
+  "presentasi": [
+   "Saya presentasikan secara sistematis: laju, irama, gelombang P, interval PR, kompleks QRS, segmen ST, lalu diagnosis, stabilitas, dan tatalaksana",
+   "Izinkan saya sampaikan temuan berurutan, mulai dari laju dan irama, hubungan P dengan QRS, lebar QRS, ST-T, kemudian kesimpulan dan rencana",
+   "Presentasi kasus urut: rate rhythm axis P PR QRS ST, lalu dx dan manajemen",
+   "Baik Dok, saya mulai dari EKG-nya dulu secara runtut, lalu kesimpulan diagnosisnya, apakah pasien stabil, dan apa yang saya kerjakan",
+   "Saya sampaikan ya secara terstruktur supaya mudah diikuti: pertama pembacaan EKG, kedua diagnosis, ketiga penilaian stabilitas dan tindakan"
+  ],
+  "presentasi_acak": [
+   "Saya cerita yang teringat dulu ya, EKG-nya, terus obatnya, oh iya tadi labnya juga",
+   "Maaf agak melompat-lompat, saya sampaikan sesuai yang terlintas saja",
+   "Ehm jadi... obatnya bisoprolol, terus di EKG ada P, oh iya tekanan darahnya rendah, terus hasil lab",
+   "Tidak usah berurutan, yang penting semua tersampaikan",
+   "Saya sebut saja temuannya acak-acakan dulu: nadi lambat, obat ibu, QRS lebar, tensi, lalu EKG lagi"
+  ],
+  "lapor_senior": [
+   "Dok, saya lapor kasus: ibu 74 tahun, bradikardia dengan syok, kesan blok AV total, tindakan sudah berjalan, mohon arahan eskalasi",
+   "Saya telepon kardiolog jaga ya, saya laporkan kondisi pasien dan apa yang sudah kita lakukan, serta minta bantuan",
+   "SBAR ke DPJP: situasi, latar belakang, penilaian, rekomendasi",
+   "Konsul ke senior, ada pasien gawat di IGD, sudah saya tangani, kemungkinan perlu tindakan lanjutan",
+   "Dok, boleh minta waktu sebentar? Saya update kondisi ibu ini, langkah yang sudah dikerjakan sampai sekarang, dan rencana kalau memburuk"
+  ],
+  "jelaskan_pasien": [
+   "Bu, detak ibu sekarang pelan sekali, makanya kita bantu dengan mesin kecil supaya detaknya cukup cepat",
+   "Begini Bu, detak jantung ibu sekarang lambat sekali, makanya ibu lemas dan pusing. Kita akan pasang pemacu detak",
+   "Pak, Bu, jantungnya lagi kelewat lambat, nanti kita bantu pakai alat ya",
+   "Beritahu keluarga: detak ibu terlalu lemah, butuh pemacu",
+   "Saya jelaskan pelan-pelan agar mudah dimengerti: sinyal listrik dari bilik atas ke bawah jantung tersendat, jadi jantung berdenyut terlalu lambat dan memerlukan alat penolong untuk menjaganya tetap berdetak"
+  ],
+  "minta_persetujuan": [
+   "Kami minta persetujuan keluarga untuk pemasangan alat pacu, apakah Bapak Ibu setuju?",
+   "Boleh tanda tangan persetujuan tindakannya? Kami akan memasang pacu sekarang",
+   "Izin ya Bu, kami lakukan tindakan pasang pacemaker, mohon tanda tangan informed consent",
+   "Apakah keluarga menyetujui prosedur ini? Mohon ditandatangani formulir izinnya",
+   "Sebelum tindakan dimulai, saya perlu mendapat izin resmi dari ibu atau keluarga untuk memasang alat bantu denyut jantung ini"
+  ],
+  "jargon_pasien": [
+   "Ibu mengalami complete heart block dengan ventricular escape rhythm",
+   "Bu, diagnosisnya total AV block, ada disosiasi AV dengan ritme pelarian ventrikel",
+   "Keluarga, ibu ini blok AV derajat tiga, QRS lebar, escape idioventrikular, harus di-pacing transkutan",
+   "Ini CHB, Bu, ritme pelarian dari ventrikel, makanya hipotensi",
+   "Bu, secara EKG ibu mengalami gangguan konduksi total di nodus AV dengan irama idioventrikular yang lambat, dan hemodinamiknya tidak stabil"
+  ]
+ },
+ "keluarga": [],
+ "negatif": [
+  "Selamat sore, panas sekali ya cuaca hari ini",
+  "Tolong pasang kateter urin dan catat produksi urin per jam",
+  "Kita minta CT scan kepala dulu untuk menyingkirkan stroke",
+  "Ibu tinggal sama siapa di rumah, dan apakah masih bekerja?",
+  "Berapa menit lagi sisa waktu saya?",
+  "eh anu itu yang tadi namanya apa ya",
+  "Berikan amiodaron intravena untuk mengontrol iramanya",
+  "Dok, nama atropin itu asalnya dari tanaman apa ya?"
+ ],
+ "ganda": [
+  {
+   "ucapan": "Pasang monitor sama IV line, terus siapkan alat pacu di samping pasien",
+   "aksi": [
+    "monitor_iv",
+    "siapkan_pacu_alat"
+   ]
+  },
+  {
+   "ucapan": "Minta cek elektrolit, troponin, dan foto toraks",
+   "aksi": [
+    "lab_elektrolit",
+    "troponin",
+    "foto_toraks"
+   ]
+  },
+  {
+   "ucapan": "Stop bisoprolol dan obat tensi lainnya, lalu rencanakan rawat ICCU dengan pacu transvena",
+   "aksi": [
+    "tahan_obat",
+    "rencana_icu"
+   ]
+  },
+  {
+   "ucapan": "Beri atropin IV dulu, dan kalau tidak mempan siapkan drip dopamin sebagai jembatan",
+   "aksi": [
+    "atropin",
+    "infus_jembatan"
+   ]
+  },
+  {
+   "ucapan": "Mulai pacu transkutan, lalu cek apakah tiap spike diikuti nadi teraba, dan pantau tekanan darahnya terus",
+   "aksi": [
+    "pacu_transkutan",
+    "pastikan_tangkap",
+    "pantau_respons"
+   ]
+  },
+  {
+   "ucapan": "Saya jelaskan ke keluarga bahwa jantung ibu terlalu lambat, lalu minta persetujuan memasang alat pacu",
+   "aksi": [
+    "jelaskan_pasien",
+    "minta_persetujuan"
+   ]
+  }
+ ],
+ "isian": [
+  {
+   "ucapan": "Laju atrium sekitar 90, laju ventrikel 34, dihitung dari jarak R-R sekitar sembilan kotak besar, jadi 300 dibagi sembilan. P dan QRS tidak berhubungan, ada disosiasi AV, QRS lebar, ritme pelarian dari ventrikel. Tidak ada elevasi ST, tapi tetap cari infark inferior sebagai penyebab. Diagnosisnya blok AV total dengan ritme pelarian, dan pelarian ini lambat dan lebar sehingga kurang andal, bisa berhenti jadi asistol.",
+   "bidang": {
+    "laju_atrium": 90,
+    "laju_ventrikel": 34,
+    "cara_hitung": "kotak",
+    "hubungan": "disosiasi",
+    "qrs": "lebar",
+    "asal_qrs": "ventrikel",
+    "st": [
+     "tanpa_elevasi",
+     "cari_inferior"
+    ],
+    "dx": "blok_av3",
+    "pelarian_nilai": "kurang_andal"
+   }
+  },
+  {
+   "ucapan": "Rate P 85, rate QRS 34 reguler, hitung 300 per kotak. Disosiasi AV, wide QRS sekitar 140 ms, escape ventrikuler. ST tidak elevasi, cari penyebab infark inferior. CHB, escape lambat dan lebar jadi tidak reliable, risiko asistol.",
+   "bidang": {
+    "laju_atrium": 85,
+    "laju_ventrikel": 34,
+    "cara_hitung": "kotak",
+    "hubungan": "disosiasi",
+    "qrs": "lebar",
+    "asal_qrs": "ventrikel",
+    "st": [
+     "tanpa_elevasi",
+     "cari_inferior"
+    ],
+    "dx": "blok_av3",
+    "pelarian_nilai": "kurang_andal"
+   }
+  },
+  {
+   "ucapan": "Kompleks QRS-nya lebar dan irama pelariannya dari ventrikel.",
+   "bidang": {
+    "qrs": "lebar",
+    "asal_qrs": "ventrikel"
+   }
+  },
+  {
+   "ucapan": "Di strip enam detik cuma ada tiga QRS, jadi laju ventrikelnya kira-kira 30 per menit, hitungnya kasar begitu saja.",
+   "bidang": {
+    "laju_ventrikel": 30,
+    "cara_hitung": "qrs6"
+   }
+  },
+  {
+   "ucapan": "Laju atrium 90, laju ventrikel 34. PR memanjang tetap, tiap P dihantar, QRS lebar. Ini blok AV derajat dua, irama pelarian cukup andal dan tidak berbahaya.",
+   "bidang": {
+    "laju_atrium": 90,
+    "laju_ventrikel": 34,
+    "hubungan": "pr_panjang",
+    "qrs": "lebar",
+    "dx": "blok_av2",
+    "pelarian_nilai": "stabil"
+   }
+  },
+  {
+   "ucapan": "Tidak ada elevasi ST dan gelombang T tidak runcing. Ini bukan bradikardia sinus, bukan juga AF lambat; tidak ada hubungan tetap antara P dan QRS.",
+   "bidang": {
+    "st": [
+     "tanpa_elevasi"
+    ],
+    "hubungan": "disosiasi"
+   }
+  }
+ ]
+}

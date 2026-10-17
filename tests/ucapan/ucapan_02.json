@@ -1,0 +1,38 @@
+{
+ "stasiun": "02",
+ "aksi": {},
+ "keluarga": [],
+ "negatif": [
+  "Bisa saya minta waktu tambahan sebentar untuk berpikir?",
+  "Tolong tanyakan ke pasien apakah ada alergi obat.",
+  "Saya ingin memeriksa tekanan darah di kedua lengan.",
+  "Tolong cetak hasil EKG ini dua rangkap untuk berkas pasien.",
+  "Hari ini cuacanya cerah sekali ya.",
+  "Hmm... apa ya... sebentar, saya lupa tadi mau bilang apa.",
+  "Berikan atorvastatin dosis tinggi dan beta blocker oral.",
+  "Boleh saya minta kertas kosong untuk mencatat?"
+ ],
+ "ganda": [],
+ "isian": [
+  {"ucapan": "Laju 75 per menit, irama sinus reguler, PR dan QRS normal, QT normal. Elevasi ST di II, III, aVF, jadi lebih dari satu sadapan yang berdekatan, ada ST konveks dan T hiperakut. Depresi ST di I dan aVL, itu resiprokal.", "bidang": {"laju": 75, "irama": "sinus", "pr": "normal", "qrs": "normal", "qt": "normal", "st_naik": ["II", "III", "aVF"], "kriteria": "dua", "morfologi": ["konveks", "hiperakut"], "st_turun": ["I", "aVL"], "resiprokal": "ya"}},
+  {"ucapan": "HR 75, sinus rhythm, PR interval normal, QRS sempit, QT normal. ST elevasi lead II III aVF, berarti dua lead berdekatan terpenuhi, dan ada ST depresi reciprocal di aVL sama lead I.", "bidang": {"laju": 75, "irama": "sinus", "pr": "normal", "qrs": "normal", "qt": "normal", "st_naik": ["II", "III", "aVF"], "kriteria": "dua", "st_turun": ["I", "aVL"], "resiprokal": "ya"}},
+  {"ucapan": "Iramanya sinus, lajunya tujuh puluh lima per menit.", "bidang": {"laju": 75, "irama": "sinus"}},
+  {"ucapan": "Ada elevasi ST di sadapan inferior, yaitu II, III, dan aVF, dengan gelombang T yang hiperakut.", "bidang": {"st_naik": ["II", "III", "aVF"], "morfologi": ["hiperakut"]}},
+  {"ucapan": "Ini AF dengan RVR, laju sekitar 130, QRS lebar, dan ada elevasi ST di V1 sampai V4.", "bidang": {"laju": 130, "irama": "fa", "qrs": "lebar", "st_naik": ["V1", "V2", "V3", "V4"]}},
+  {"ucapan": "Tidak ada elevasi ST yang bermakna di sadapan mana pun, interval PR normal, dan QRS tidak melebar.", "bidang": {"kriteria": "tidak", "pr": "normal", "qrs": "normal"}},
+
+  {"ucapan": "Diagnosisnya STEMI inferior, ini kasus darurat yang butuh reperfusi segera.", "bidang": {"dx_jenis": "stemi", "dx_lokasi": "inferior", "dx_darurat": true}},
+  {"ucapan": "Ini infark miokard akut dengan elevasi ST di dinding bawah, gawat darurat, waktu door to balloon harus dikejar.", "bidang": {"dx_jenis": "stemi", "dx_lokasi": "inferior", "dx_darurat": true}},
+  {"ucapan": "Kemungkinan STEMI.", "bidang": {"dx_jenis": "stemi"}},
+  {"ucapan": "Lokasinya di dinding inferior ya, kemungkinan arteri koroner kanan yang terlibat.", "bidang": {"dx_lokasi": "inferior"}},
+  {"ucapan": "Kesan saya NSTEMI di dinding anterior.", "bidang": {"dx_jenis": "nstemi", "dx_lokasi": "anterior"}},
+  {"ucapan": "Bukan perikarditis dan bukan repolarisasi dini, ini STEMI dinding inferior, kondisi gawat darurat.", "bidang": {"dx_jenis": "stemi", "dx_lokasi": "inferior", "dx_darurat": true}},
+
+  {"ucapan": "Saya berikan aspirin kunyah dosis muat, ticagrelor, dan heparin. Segera aktivasi PCI primer, kalau tidak bisa tepat waktu fibrinolisis. Saya konsulkan ke kardiolog intervensi dan aktifkan tim cath lab.", "bidang": {"tx_obat": ["aspirin", "p2y12", "ufh"], "tx_reperfusi": "tepat", "tx_eskalasi": true}},
+  {"ucapan": "Pertama aspirin dikunyah, lalu loading klopidogrel, UFH lewat infus. Rencananya primary PCI, atau streptokinase kalau cath lab terlalu jauh. Langsung hubungi DPJP kardiologi.", "bidang": {"tx_obat": ["aspirin", "p2y12", "ufh"], "tx_reperfusi": "tepat", "tx_eskalasi": true}},
+  {"ucapan": "Berikan aspirin dan antiplatelet kedua, penghambat P2Y12.", "bidang": {"tx_obat": ["aspirin", "p2y12"]}},
+  {"ucapan": "Tujuannya reperfusi secepatnya, kita lakukan PCI primer.", "bidang": {"tx_reperfusi": "tepat"}},
+  {"ucapan": "Saya pasang nitrat sublingual dulu, kasih morfin untuk nyerinya, oksigen untuk semua pasien, dan tunggu hasil troponin dulu baru putuskan tindakan.", "bidang": {"tx_obat": ["nitrat", "morfin", "o2_rutin"], "tx_reperfusi": "tunggu_troponin"}},
+  {"ucapan": "Tidak perlu oksigen karena saturasinya 95 persen, morfin juga tidak diberikan rutin, aspirin dan heparin tetap diberikan.", "bidang": {"tx_obat": ["aspirin", "ufh"]}}
+ ]
+}

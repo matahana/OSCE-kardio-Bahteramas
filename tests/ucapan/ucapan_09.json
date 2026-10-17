@@ -1,0 +1,421 @@
+{
+ "stasiun": "09",
+ "aksi": {
+  "salam": [
+   "Selamat siang Pak Slamet, saya dokter yang bertugas di IGD hari ini. Saya mulai pemeriksaan sekarang ya, Pak?",
+   "siang pak, saya dokter jaga, saya periksa sebentar ya",
+   "Halo Pak, saya yang akan menangani Bapak di sini. Izin diperiksa dulu ya.",
+   "Perkenalkan saya dokter IGD. Bapak dan keluarga tenang ya, kami langsung tangani.",
+   "Selamat datang di IGD, Pak. Saya yang bertanggung jawab merawat Bapak sekarang, dan akan segera mulai."
+  ],
+  "abc_monitor_iv": [
+   "Saya nilai dulu jalan napas, pernapasan, sirkulasi, dan kesadaran Bapak, lalu pasang monitor serta jalur infus.",
+   "Sus, pasang monitor dan IV line, saya cek ABC dulu",
+   "Amankan dulu kondisi dasarnya: napasnya lancar? nadinya? sadarnya bagaimana? Sambungkan ke alat pantau dan pasang infus.",
+   "Tolong pasang bed side monitor, saturasi, dan akses vena. Primary survey sekarang.",
+   "Pak Slamet kami sambungkan ke monitor dan kami pasang selang infus di tangan, sambil saya pastikan napas dan sadarnya baik."
+  ],
+  "td_dua_lengan": [
+   "Sus, tolong ukur ulang tensinya di lengan kiri dan kanan, pakai manset yang ukurannya pas.",
+   "tensi diulang ya di dua tangan",
+   "Saya mau memastikan angka tensi ini benar, jadi ukur lagi di kedua lengan dengan ukuran manset yang sesuai.",
+   "Bandingkan angka tensi tangan kanan dan tangan kiri, jangan lupa manset yang sesuai ukuran lengan Bapak.",
+   "Coba cek ulang TD bilateral, pastikan manset tidak kekecilan."
+  ],
+  "nadi_perifer": [
+   "Saya raba nadi di pergelangan tangan dan pangkal paha kiri dan kanan, sama kuat atau tidak, untuk memastikan tidak ada robekan pembuluh besar.",
+   "cek denyut radialis sama femoralis dua-duanya, simetris nggak",
+   "Periksa pulsasi arteri perifer bilateral, saya curiga kemungkinan diseksi aorta.",
+   "Tolong raba denyut nadi di tangan dan di lipat paha kedua sisi, bandingkan kekuatannya.",
+   "Saya bandingkan denyut sisi kanan dan kiri untuk menyingkirkan pembuluh aorta yang sobek."
+  ],
+  "sakit_kepala": [
+   "Bapak, sakit kepalanya di sebelah mana? Mulainya kapan dan seberapa parah?",
+   "kepalanya sakit dari kapan pak, parah banget nggak",
+   "Tolong ceritakan nyeri kepalanya: lokasi, onset, dan skala nyerinya kalau satu sampai sepuluh.",
+   "Kepala Bapak sakitnya seperti apa, berdenyut atau menusuk? Dan dari kemarin makin memberat?",
+   "Keluhan utamanya sakit kepala ya, sejak kapan, terus apakah makin lama makin berat?"
+  ],
+  "penglihatan": [
+   "Apakah mata Bapak melihat buram atau kabur?",
+   "pandangannya gimana pak, ada bayangan ganda atau berkunang-kunang",
+   "Apakah penglihatan Bapak terganggu sejak sakit kepala ini muncul?",
+   "Bapak sulit melihat jelas nggak? Mata rasanya redup?",
+   "Ada gangguan pada penglihatan, misalnya kabur, ganda, atau seperti ada tirai?"
+  ],
+  "mual_muntah": [
+   "Apakah Bapak merasa mual atau sampai muntah?",
+   "perutnya eneg nggak pak, sampai ada yang keluar?",
+   "Sejak sakit kepala ini, apakah Bapak merasa ingin mengeluarkan isi perut, atau memang sudah ada yang keluar? Berapa kali?",
+   "Bapak sempat muntah-muntah atau terasa ingin muntah?",
+   "Apakah ada rasa eneg di ulu hati dan makanan jadi keluar lagi?"
+  ],
+  "kesadaran_kejang": [
+   "Apakah ada rasa bingung, kejang, kelemahan di separuh badan, atau bicara pelo?",
+   "pak ada tangan atau kaki yang lemas sebelah? bicaranya cadel? pernah kejang?",
+   "Saya perlu tahu gejala saraf: apakah Bapak sempat linglung, mengantuk berat, atau mendadak lumpuh sebelah?",
+   "Pernah hilang kesadaran atau kejang-kejang hari ini? Mulutnya mencong atau bicara tidak jelas?",
+   "Tolong tanyakan ke keluarga apakah Bapak tampak tidak nyambung, kaku-kaku, atau lemah satu sisi tubuh sejak pagi."
+  ],
+  "nyeri_dada": [
+   "Apakah Bapak merasa nyeri di dada atau jantung berdebar?",
+   "dadanya sakit nggak pak? atau deg-degan",
+   "Ada rasa tertekan atau tertindih di dada, atau jantung terasa berdetak kencang?",
+   "Keluhan jantungnya ada? Misalnya dada sakit menjalar ke lengan atau palpitasi.",
+   "Selain kepala, apakah dada terasa sakit atau berdegup keras?"
+  ],
+  "sesak": [
+   "Apakah Bapak sesak napas?",
+   "napasnya berat nggak pak? susah narik napas?",
+   "Apakah ada kesulitan bernapas, terutama saat berbaring atau beraktivitas?",
+   "Bapak merasa megap-megap atau napas pendek-pendek?",
+   "Ada keluhan pernapasan? Rasanya kekurangan udara?"
+  ],
+  "nyeri_punggung": [
+   "Apakah ada nyeri punggung yang seperti disobek atau dirobek?",
+   "punggung atau perut bagian belakangnya sakit seperti ditarik atau disayat nggak pak?",
+   "Saya curiga robekan pembuluh darah besar, jadi tanya: apakah ada rasa sakit hebat tiba-tiba di bagian belakang badan yang menjalar ke perut?",
+   "Ada rasa sobek di bagian belakang badan atau di antara dua tulang belikat?",
+   "Pernah ada nyeri hebat mendadak seperti tersayat di sela tulang belikat?"
+  ],
+  "urin": [
+   "Bagaimana buang air kecilnya belakangan ini, dan apakah kakinya membengkak?",
+   "kencingnya lancar nggak pak, warnanya gimana? kaki bengkak?",
+   "Apakah produksi urin berkurang atau berubah warna, dan ada pembengkakan di tungkai?",
+   "Saya tanyakan fungsi ginjal secara klinis: pipisnya sedikit atau keruh, dan kaki terasa sembab?",
+   "ada gangguan BAK? Mata atau kaki sembab?"
+  ],
+  "ht_riwayat": [
+   "Sudah berapa lama Bapak menderita tekanan darah tinggi, dan obat apa yang biasanya diminum?",
+   "darah tingginya udah lama ya pak? biasa minum obat apa?",
+   "Sejak kapan didiagnosis hipertensi, dan terapinya selama ini apa saja?",
+   "Tensi Bapak sudah tinggi dari berapa tahun lalu, dan pengobatan apa yang dijalani?",
+   "Bapak kenal darah tingginya dari kapan? Obat dari dokter apa yang selama ini dipegang?"
+  ],
+  "kepatuhan": [
+   "Obat tensinya diminum teratur tidak, Pak?",
+   "pak obatnya rutin diminum atau sering bolong?",
+   "Apakah ada saat obatnya terlewat atau Bapak berhenti sendiri?",
+   "Seberapa disiplin Bapak minum obat darah tinggi? Pernah putus obat?",
+   "Terakhir kali minum obat itu kapan, apakah selalu sesuai anjuran?"
+  ],
+  "pencetus": [
+   "Apakah Bapak minum obat pereda nyeri, jamu, atau obat batuk-pilek yang mengandung dekongestan? Makannya terlalu asin tidak?",
+   "ada minum obat pegal linu, jamu, atau suplemen penambah stamina pak? makan asin nggak?",
+   "Saya mencari pemicu tekanan darah naik: pemakaian obat antinyeri, ramuan herbal, stimulan, dan banyaknya garam di makanan.",
+   "Belakangan konsumsi apa saja selain obat tensi? Misalnya obat sakit sendi, jamu kuat, atau kopi energi, dan masakannya asin?",
+   "Ada zat yang mungkin menaikkan tensi, seperti obat pegal, ramuan, penambah stamina, atau pil flu, dan seberapa asin makanan Bapak?"
+  ],
+  "komorbid": [
+   "Apakah Bapak punya diabetes, sakit ginjal, pernah stroke, atau penyakit jantung?",
+   "ada penyakit gula, ginjal, stroke, atau jantung sebelumnya pak?",
+   "Riwayat penyakit lain bagaimana? Kencing manis, gangguan ginjal, serangan stroke, atau sakit jantung?",
+   "Selain darah tinggi, adakah penyakit penyerta yang pernah dikatakan dokter?",
+   "Pernah dirawat karena stroke atau jantung, atau dibilang gula tinggi atau ginjal bermasalah?"
+  ],
+  "alergi": [
+   "Apakah Bapak punya alergi obat?",
+   "pak ada obat yang bikin badan bentol atau gatal-gatal setelah dipakai?",
+   "Pernah muncul ruam atau bengkak bibir setelah minum obat atau disuntik?",
+   "Sebelum saya beri obat lewat infus, ada reaksi alergi terhadap obat atau bahan tertentu?",
+   "Riwayat hipersensitivitas terhadap obat atau suntikan apa pun?"
+  ],
+  "pekerjaan": [
+   "Dagangan Bapak apa, dan sudah berapa lama berjualan?",
+   "dagang apa pak? udah lama jualan?",
+   "Pekerjaan Bapak apa sehari-hari, sudah berapa tahun?",
+   "Boleh saya tahu usaha Bapak apa dan dari kapan Bapak membukanya?",
+   "Bapak ini pedagang ya, jual apa dan sudah berapa lama menekuni usaha itu?"
+  ],
+  "neuro": [
+   "Saya periksa saraf Bapak: skor GCS, apakah ada kelumpuhan, dan tanda iritasi selaput otak seperti kaku kuduk.",
+   "cek GCS, pupil, kekuatan anggota gerak, kaku kuduk",
+   "Tolong nilai tingkat kesadaran dan pemeriksaan neurologis lengkap, termasuk kelemahan sebelah dan leher kaku.",
+   "Coba angkat kedua tangan dan kaki, Pak. Saya juga lihat mata dan leher Bapak.",
+   "Periksa status neurologis sekarang: kesadaran, pupil, motorik, dan rangsang meningeal."
+  ],
+  "funduskopi": [
+   "Saya lihat dasar mata Bapak dengan oftalmoskop untuk mengecek retina dan saraf mata.",
+   "funduskopi dulu ya, cek retina pakai senter mata",
+   "Tolong lihat retina dan papil mata kanan dan kiri, apakah ada perdarahan atau bengkak.",
+   "Coba lihat ke depan Pak, dokter periksa bagian belakang bola mata dengan alat khusus.",
+   "Periksa fundus mata untuk mencari kerusakan akibat tekanan tinggi."
+  ],
+  "jantung": [
+   "Saya dengarkan bunyi jantung Bapak dengan stetoskop.",
+   "auskultasi jantung, ada bising nggak, ritmenya reguler?",
+   "Coba saya periksa dada sebelah kiri pakai stetoskop, dengar bunyi S1 S2.",
+   "Dengarkan bunyi katup dan irama jantung.",
+   "tolong saya dengarkan detak jantungnya ya pak"
+  ],
+  "paru": [
+   "Saya dengarkan paru Bapak, tarik napas dalam ya.",
+   "auskultasi paru, ada ronki atau mengi?",
+   "Coba tarik napas yang dalam, saya dengar suara napas di kedua sisi dada dan punggung.",
+   "Periksa bunyi napas, apakah ada cairan di paru.",
+   "dengar paru-parunya dulu ya pak, tarik buang napas"
+  ],
+  "edema": [
+   "Saya lihat dan tekan kaki Bapak, apakah ada bengkak.",
+   "cek pitting edema di tungkai bawah",
+   "Coba singkap celana Bapak, saya periksa apakah punggung kaki dan tulang kering sembab.",
+   "Saya tekan tulang kering Bapak dengan jempol, kita lihat bekas tekanannya.",
+   "Periksa pembengkakan di kedua kaki."
+  ],
+  "abdomen_lengkap": [
+   "Saya periksa perut dan alat kelamin Bapak secara lengkap.",
+   "sekalian cek abdomen sama genital dari atas sampai bawah",
+   "Baring ya Pak, saya raba seluruh perut dan periksa area kemaluan juga.",
+   "Lakukan head-to-toe termasuk pemeriksaan perut dan genitalia menyeluruh.",
+   "Saya mau periksa perutnya dengan teliti, nyeri tekan, hati, limpa, serta organ genital."
+  ],
+  "ekg": [
+   "Tolong rekam jantung 12 sadapan sekarang.",
+   "Sus, EKG ya, 12 lead",
+   "Saya minta rekaman listrik jantung untuk melihat hipertrofi dan iskemia.",
+   "Pasang elektroda di dada dan anggota gerak, kita rekam irama jantung lengkap.",
+   "Kita lakukan elektrokardiografi untuk mengecek tanda strain atau iskemia."
+  ],
+  "lab_kreatinin": [
+   "Kirim darah untuk ureum dan kreatinin.",
+   "cek fungsi ginjal ya Sus",
+   "Saya minta pemeriksaan laboratorium untuk menilai ginjal, apakah ada cedera ginjal akut.",
+   "Tolong periksa BUN dan kadar kreatinin serum, bandingkan dengan nilai dasar.",
+   "Ginjalnya kita nilai lewat tes darah: ureum dan kreatinin."
+  ],
+  "lab_elektrolit": [
+   "Minta cek elektrolit, natrium dan kalium.",
+   "kirim Na K ya",
+   "Periksa kadar garam-garam darah Bapak, terutama natrium dan kalium.",
+   "Saya mau tahu apakah kalium atau natrium Bapak terganggu, tolong dikirim.",
+   "Tolong elektrolit serum sekarang."
+  ],
+  "lab_glukosa": [
+   "Tolong cek gula darah sewaktu.",
+   "Sus, GDS ya",
+   "Saya ingin tahu kadar glukosa Bapak sekarang, coba tusuk jari dengan glukometer.",
+   "Cek kadar gula, jangan-jangan ada hipoglikemia atau diabetes yang belum diketahui.",
+   "Periksa gula darah Bapak dengan alat tes cepat."
+  ],
+  "urinalisis": [
+   "Tolong kirim urin untuk urinalisis.",
+   "periksa air kencingnya ya, ada protein atau darah nggak",
+   "Saya minta tes urin lengkap untuk mencari protein dan sel darah merah.",
+   "Tampung air seni Bapak, kita periksa di laboratorium.",
+   "Dipstik urin dulu ya, lihat ada kebocoran protein dan darah di kemih."
+  ],
+  "troponin": [
+   "Periksa troponin.",
+   "sekalian ambil darah untuk enzim jantung ya Sus",
+   "Kita singkirkan kerusakan otot jantung akibat tensi tinggi dengan tes darah penanda jantung.",
+   "Saya minta troponin untuk memastikan tidak ada infark.",
+   "Kirim marker nekrosis miokard sekarang."
+  ],
+  "hb": [
+   "Cek hemoglobin.",
+   "Hb berapa pak? tolong periksa kadar Hb",
+   "Saya minta kadar sel darah merah dan hemoglobin untuk mencari anemia.",
+   "Lihat apakah Bapak kurang darah lewat tes darah, hemoglobinnya berapa.",
+   "Ambil sampel untuk Hb sekarang."
+  ],
+  "ct_kepala": [
+   "Tolong jadwalkan CT scan kepala tanpa kontras, urgent.",
+   "foto CT otak sekarang ya, tanpa suntik kontras",
+   "Saya ingin menyingkirkan perdarahan atau stroke di otak, kirim ke radiologi untuk CT scan non-kontras.",
+   "Kita scan kepalanya dengan CT, cepat, untuk melihat adanya darah di otak.",
+   "Pindai kepala dengan tomografi komputer tanpa zat kontras segera."
+  ],
+  "foto_toraks": [
+   "Minta foto rontgen dada.",
+   "rontgen thorax portable ya Sus",
+   "Foto polos dada untuk melihat ukuran jantung, cairan di paru, dan lebar mediastinum.",
+   "Tolong ambil gambar sinar-X dada Bapak sekarang.",
+   "Kita cek CXR untuk melihat jantung dan paru."
+  ],
+  "mri_otak": [
+   "Langsung MRI otak saja dulu sebagai pemeriksaan pertama.",
+   "kita MRI kepala dulu ya, nanti baru yang lain",
+   "Saya pilih pencitraan resonansi magnetik otak lebih dulu, daripada CT.",
+   "Pertama-tama jadwalkan magnetic resonance imaging kepala meskipun antreannya lama, resolusinya lebih bagus.",
+   "Utamakan MRI untuk kepala Bapak, belum perlu CT."
+  ],
+  "dx_emergensi": [
+   "Diagnosis saya hipertensi emergensi: tekanan darah sangat tinggi dan sudah merusak organ, yaitu otak, mata, dan ginjal.",
+   "diagnosisnya krisis hipertensi tipe emergensi, ada kerusakan organ target akut",
+   "Tekanan darah setinggi ini disertai kerusakan otak, mata, dan ginjal yang akut, jadi kategorinya emergensi.",
+   "Kesimpulan saya: gawat darurat hipertensi dengan kerusakan organ yang sedang berlangsung.",
+   "Saya tegakkan diagnosis hipertensi darurat karena sudah ada tanda organ target terkena."
+  ],
+  "rawat_icu": [
+   "Pasien dirawat di ICU atau HCU dengan monitoring terus-menerus.",
+   "masukkan ke ruang intensif ya Sus, pantau 24 jam",
+   "Bapak harus dirawat intensif, tidak boleh pulang atau di bangsal biasa.",
+   "Saya konsulkan untuk rawat di high care unit supaya tekanan darahnya terus dipantau.",
+   "Tolong siapkan tempat tidur di unit perawatan intensif."
+  ],
+  "dx_urgensi": [
+   "Ini hanya hipertensi urgensi, cukup diberi obat minum lalu Bapak boleh pulang.",
+   "urgensi aja kok, tidak ada kerusakan organ, pulang pakai obat oral",
+   "Saya nilai tidak ada kerusakan organ target, jadi tidak perlu diinfus atau dirawat, resepkan obat oral dan pulangkan.",
+   "Tekanan darahnya memang tinggi tetapi tergolong urgensi, dan rawat jalan sudah memadai.",
+   "Diagnosisnya hipertensi tanpa kerusakan organ, jadi cukup minum obat di rumah."
+  ],
+  "nikardipin_iv": [
+   "Mulai nikardipin lewat infus dengan titrasi, pantau tensinya sering.",
+   "Sus siapkan nicardipine drip, naikkan pelan-pelan sesuai tensi",
+   "Saya pilih penyekat kanal kalsium intravena yang bisa disesuaikan dosisnya tiap beberapa menit.",
+   "Kita turunkan tensi dengan obat jenis CCB lewat pompa infus, dosisnya dinaikkan bertahap.",
+   "Berikan nikardipin per syringe pump dengan dosis awal rendah lalu atur sesuai respons."
+  ],
+  "labetalol_iv": [
+   "Berikan labetalol intravena, dosis disesuaikan dengan tekanan darah dan nadi.",
+   "labetalol drip ya Sus, pantau nadi",
+   "Saya mau pakai penyekat alfa dan beta lewat infus, sambil nadi dan tensi dipantau.",
+   "Mulai obat kombinasi penyekat beta-alfa intravena, titrasi pelan.",
+   "Kita turunkan tensi dengan beta-blocker IV yang juga melebarkan pembuluh, perhatikan denyut nadi."
+  ],
+  "nitrogliserin_iv": [
+   "Mulai nitrogliserin drip, dititrasi.",
+   "NTG IV ya Sus, naikkan pelan-pelan",
+   "Saya pakai nitrat intravena yang melebarkan pembuluh, titrasi sesuai tensi.",
+   "Pasang GTN lewat syringe pump dengan dosis awal kecil.",
+   "Kita beri obat golongan nitrat lewat infus untuk menurunkan tensi."
+  ],
+  "nifedipin_sl": [
+   "Berikan nifedipin di bawah lidah supaya tensinya cepat turun.",
+   "kasih nifedipin sublingual aja biar langsung turun",
+   "Kunyah atau selipkan satu tablet nifedipin ke bawah lidah untuk menurunkan tensi dengan cepat.",
+   "Obat penyekat kalsium kerja cepat yang diselipkan di bawah lidah, saya pilih supaya cepat efeknya.",
+   "Cepat turunkan tensinya, pakai tablet nifedipin sublingual."
+  ],
+  "captopril_sl": [
+   "Berikan kaptopril sublingual.",
+   "captopril taruh di bawah lidah ya",
+   "Selipkan tablet penghambat ACE di bawah lidah supaya tensi turun.",
+   "Kita beri kaptopril tablet di bawah lidah dulu.",
+   "Pakai ACE inhibitor kerja cepat yang dilarutkan di bawah lidah untuk menurunkan tensi."
+  ],
+  "amlodipin_oral": [
+   "Lanjutkan amlodipin yang biasa, dosisnya dinaikkan, diminum saja.",
+   "tambah dosis amlodipin tablet ya",
+   "Obat tekanan darah dari rumah kita naikkan dosisnya dan diminum seperti biasa.",
+   "Cukup tingkatkan takaran amlodipin yang diminum, tidak perlu infus.",
+   "Berikan obat minum golongan penyekat kalsium yang biasa Bapak pakai dengan dosis lebih besar."
+  ],
+  "target_bertahap": [
+   "Targetnya penurunan maksimal 25 persen di jam pertama, lalu sekitar 160/100 dalam beberapa jam, dan normal bertahap dalam satu sampai dua hari.",
+   "turunnya pelan-pelan ya, jangan lebih dari seperempat di jam pertama",
+   "Kita turunkan tensinya bertahap, tidak mendadak normal: dalam beberapa jam menuju 160/100, lalu normal dalam 24 sampai 48 jam.",
+   "Sasaran terapi: turun sekitar seperempat dari angka awal pada satu jam pertama, selanjutnya lanjut turun perlahan.",
+   "Penurunan tekanan darahnya bertahap selama satu sampai dua hari, bukan langsung dikembalikan normal."
+  ],
+  "target_normal_cepat": [
+   "Saya mau tensinya langsung 130/80 dalam satu jam.",
+   "turunkan sampai normal secepatnya, sejam harus sudah 130/80",
+   "Targetnya tekanan darah normal 130 per 80 dalam waktu satu jam saja.",
+   "Segera normalkan tekanan darahnya sekarang juga, jangan lama-lama.",
+   "Bawa tensinya ke angka ideal dalam sejam, semakin cepat semakin baik."
+  ],
+  "pantau_td": [
+   "Tekanan darah dipantau ketat selama titrasi, bila perlu pasang arteri line, atau cek tiap beberapa menit.",
+   "tensi dicek terus ya Sus, jangan ditinggal selama obatnya diatur dosisnya",
+   "Selama dosis obat disesuaikan, saya minta ukuran tensi sering, idealnya pakai kateter arteri.",
+   "Awasi tekanan darah terus-menerus waktu obatnya dinaikkan atau diturunkan.",
+   "Awasi angka tekanan darah Bapak dari menit ke menit sampai stabil."
+  ],
+  "pantau_neuro": [
+   "Nilai kesadaran dan fungsi saraf Bapak secara berkala, ulangi GCS berulang kali selama terapi.",
+   "tolong dicek GCS-nya berkala ya Sus, kalau makin ngantuk lapor",
+   "Awasi tingkat kesadaran dan tanda saraf fokal secara serial selama penurunan tensi.",
+   "Periksa ulang kondisi neurologis pasien secara berkala, terutama jika tambah mengantuk atau bingung.",
+   "Pantau terus apakah Bapak tetap sadar, tidak lemah sebelah, dan tidak kejang selama terapi."
+  ],
+  "pantau_urin": [
+   "Pasang kateter urin dan ukur urin yang keluar tiap jam.",
+   "Sus pasang selang kencing, tampung urinnya, catat per jam",
+   "Saya mau pantau produksi air seni, jadi tolong pasang DC dan hitung balans cairan.",
+   "Pantau output urin Bapak lewat kateter karena ginjalnya sedang terganggu.",
+   "Catat jumlah kencing per jam dengan memasang kateter."
+  ],
+  "pantau_lab": [
+   "Ulangi pemeriksaan kreatinin dan elektrolit secara berkala.",
+   "kreatinin sama elektrolit dicek lagi nanti ya Sus",
+   "Jadwalkan lab ulang untuk ginjal dan natrium kalium beberapa jam lagi.",
+   "Fungsi ginjal dan kadar mineral darah kita nilai serial supaya tahu apakah membaik.",
+   "Tolong ambil darah lagi nanti untuk kontrol ureum kreatinin dan kalium."
+  ],
+  "kenali_pengecualian": [
+   "Perlu diingat ada kondisi khusus seperti diseksi aorta, stroke akut, dan preeklamsia yang target tekanan darah dan obatnya berbeda; pada pasien ini tidak ada tanda-tandanya.",
+   "catatan buat penguji: kasus ini bukan diseksi, bukan stroke akut, dan bukan eklamsia, jadi pakai target standar",
+   "Saya sudah menyingkirkan situasi yang aturan terapinya lain, yakni robekan aorta, stroke, dan kehamilan dengan kejang.",
+   "Saya sadar ada pengecualian untuk diseksi aorta, stroke akut, dan eklamsia, tetapi tidak ditemukan pada Bapak ini.",
+   "Target standar ini tidak berlaku bila ada diseksi aorta atau stroke akut, dan pada pasien ini kondisi itu tidak ada."
+  ],
+  "jelaskan": [
+   "Pak, Bu, tekanan darah Bapak sangat tinggi dan sudah mengganggu otak, mata, dan ginjal. Karena itu Bapak kami pasang infus obat di ruang pantau, tekanannya diturunkan pelan-pelan. Kalau diminum atau di bawah lidah malah bisa turun terlalu cepat dan berbahaya.",
+   "ke keluarga ya, jadi gini, darah tingginya sudah parah dan kena organ, jadi harus lewat infus di ruang intensif, tidak bisa obat minum",
+   "Saya mengerti keluarga ingin cepat turun, tetapi penurunan mendadak justru membahayakan otak dan jantung. Maka kami turunkan secara terkontrol lewat infus.",
+   "Izinkan saya menjelaskan kondisi Bapak dengan bahasa sederhana: tensinya sudah merusak organ penting, perlu dirawat dan diinfus agar turunnya aman dan bertahap.",
+   "Bapak dan keluarga perlu tahu mengapa tidak cukup obat minum: kalau tensi dijatuhkan terlalu cepat, aliran darah ke otak dan ginjal bisa kurang."
+  ],
+  "edukasi": [
+   "Ke depan, obat darah tinggi harus diminum teratur walau Bapak merasa sehat, hindari obat pegal seperti diklofenak dan makanan asin, kita cari juga penyebab lain dan cek ginjal, dan kontrol rutin ya.",
+   "pak jangan berhenti minum obat lagi ya, jamu dan obat pegal dihentikan, garam dikurangi, rajin kontrol",
+   "Setelah pulih nanti, Bapak perlu disiplin berobat, menjauhi obat antinyeri golongan NSAID, mengurangi garam, dan datang kontrol untuk periksa ginjal.",
+   "Supaya tidak terulang, tolong ingat tiga hal: minum obat tiap hari, stop obat pegal, dan jangan makan terlalu asin.",
+   "Saya pesan untuk pencegahan: patuh berobat, hindari analgetik tertentu dan garam banyak, dan kita lanjutkan evaluasi penyebab sekunder dan fungsi ginjal."
+  ],
+  "turuti_keluarga": [
+   "Baik, kalau keluarga minta obat minum biar cepat turun, kami beri saja.",
+   "oke deh Bu, kita kasih obat tensi yang diminum aja biar langsung turun sesuai maunya keluarga",
+   "Permintaan keluarga bisa kami penuhi, Bapak diberi obat oral supaya tensinya segera turun.",
+   "Kami ikuti saran keluarga saja, berikan tablet penurun tensi yang cepat kerjanya.",
+   "Karena keluarga maunya diminum saja, ya sudah kami turuti, tidak usah diinfus."
+  ],
+  "jargon": [
+   "Bapak mengalami krisis hipertensi dengan ensefalopati hipertensif dan retinopati hipertensif grade IV.",
+   "pak ini hypertensive emergency, ada ensefalopati, retinopati grade 4, dan AKI",
+   "Keluarga, pasien ini mengalami krisis hipertensi disertai kerusakan organ target berupa ensefalopati hipertensif, papiledema, dan cedera ginjal akut.",
+   "Singkatnya Bapak punya hipertensi maligna dengan edema papil bilateral, dan kreatinin naik.",
+   "Diagnosis Bapak adalah emergensi hipertensi dengan ensefalopati hipertensif, retinopati Keith-Wagener-Barker IV, serta AKI."
+  ]
+ },
+ "keluarga": [],
+ "negatif": [
+  "Apakah Bapak merokok, dan berapa batang sehari?",
+  "Apakah ada riwayat kanker di keluarga Bapak?",
+  "Tolong minta USG ginjal dan saluran kemih untuk Bapak.",
+  "Tolong minta ekokardiografi untuk menilai fungsi pompa jantung.",
+  "Berikan furosemid intravena supaya cairan di tubuh berkurang.",
+  "Apakah Bapak punya BPJS atau asuransi lain, Bu?",
+  "Wah ramai sekali IGD hari ini ya, Sus.",
+  "eh anu itu tadi apa ya namanya, saya lupa"
+ ],
+ "ganda": [
+  {
+   "ucapan": "Selamat siang Pak, saya dokter jaga. Sakit kepalanya sejak kapan dan pandangannya kabur tidak?",
+   "aksi": ["salam", "sakit_kepala", "penglihatan"]
+  },
+  {
+   "ucapan": "Tolong pasang monitor dan infus, lalu ukur ulang tensi di kedua tangan.",
+   "aksi": ["abc_monitor_iv", "td_dua_lengan"]
+  },
+  {
+   "ucapan": "Ada nyeri dada, sesak, atau nyeri punggung seperti dirobek?",
+   "aksi": ["nyeri_dada", "sesak", "nyeri_punggung"]
+  },
+  {
+   "ucapan": "Sus tolong rekam EKG, cek ureum kreatinin, dan troponin sekarang.",
+   "aksi": ["ekg", "lab_kreatinin", "troponin"]
+  },
+  {
+   "ucapan": "Saya dengar jantung dan paru Bapak dulu, lalu periksa kaki apakah bengkak.",
+   "aksi": ["jantung", "paru", "edema"]
+  },
+  {
+   "ucapan": "Kita mulai nikardipin drip, tensi dipantau sering, dan Bapak masuk ICU.",
+   "aksi": ["nikardipin_iv", "pantau_td", "rawat_icu"]
+  }
+ ],
+ "isian": []
+}

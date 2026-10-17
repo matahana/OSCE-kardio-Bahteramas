@@ -43,6 +43,99 @@
     ['terima kasih', 'terimakasih']
   ];
 
+
+  // Leksikon domain (istilah awam, singkatan, dan sinonim klinis → satu token baku). Disusun dari pengetahuan umum
+  // kardiologi dan resusitasi, bukan dari kalimat uji. Frasa yang lebih panjang diproses lebih dulu.
+  var LEKSIKON = [
+    ['kompresi', ['pijat jantung', 'pijatan', 'pijat', 'tekan dada', 'menekan dada', 'penekanan dada', 'tekanan dada', 'kompresi dada', 'rjp', 'cpr', 'resusitasi jantung paru']],
+    ['defibrilator', ['alat kejut jantung', 'alat kejut', 'defibrilasi', 'defibrilator', 'defib', 'aed', 'kejut listrik', 'kejutan listrik', 'cardioversi']],
+    ['syok', ['kejut', 'syok', 'shock']],
+    ['epinefrin', ['adrenalin', 'adrenaline', 'epinefrin', 'epi']],
+    ['ventilasi', ['napas buatan', 'bantuan napas', 'tiupan', 'tiupkan', 'ventilasi', 'bvm', 'ambu', 'balon sungkup', 'kantong ventilasi', 'sungkup', 'masker oksigen', 'beri napas']],
+    ['akses', ['akses iv', 'akses io', 'jalur vena', 'jalur pembuluh darah', 'jalur infus', 'pasang infus', 'iv line', 'infus', 'akses vena', 'intraoseus', 'tulang']],
+    ['jalannapas', ['jalan napas lanjut', 'jalan napas', 'pipa endotrakeal', 'endotrakeal', 'intubasi', 'ett', 'lma', 'igel', 'airway']],
+    ['kapnografi', ['kapnografi', 'kapnometri', 'co2 napas', 'karbon dioksida napas', 'end tidal', 'etco2']],
+    ['irama', ['irama jantung', 'ritme jantung', 'ritme', 'irama', 'gambaran listrik jantung']],
+    ['asistol', ['asistol', 'garis datar', 'tidak ada aktivitas listrik']],
+    ['pea', ['pea', 'aktivitas listrik tanpa nadi', 'aktivitas listrik tanpa denyut']],
+    ['takdisyok', ['tidak dapat disyok', 'tidak bisa disyok', 'non shockable', 'nonshockable', 'bukan irama kejut', 'tidak perlu kejut']],
+    ['hiperkalemia', ['hiperkalemia', 'kalium tinggi', 'kalium naik', 'kalium berlebih']],
+    ['kalsium', ['kalsium', 'calcium', 'kalsium klorida', 'kalsium glukonat', 'garam kalsium']],
+    ['bikarbonat', ['bikarbonat', 'natrium bikarbonat', 'nabic', 'larutan basa']],
+    ['dialisis', ['dialisis', 'hemodialisis', 'cuci darah', 'hd', 'nefrologi', 'ginjal darurat']],
+    ['icu', ['icu', 'iccu', 'perawatan intensif', 'ruang intensif', 'rawat intensif']],
+    ['ttm', ['ttm', 'suhu terarah', 'pengendalian suhu', 'manajemen suhu', 'hipotermia terapeutik', 'pendinginan terarah']],
+    ['rosc', ['rosc', 'sirkulasi spontan', 'nadi kembali', 'denyut kembali', 'jantung berdetak kembali']],
+    ['catat', ['pencatat', 'notulen', 'mencatat', 'catat', 'dokumentasi', 'recorder', 'catatan']],
+    ['kodebiru', ['tim henti jantung', 'kode biru', 'code blue', 'tim resusitasi', 'tim darurat', 'tim emergensi', 'bantuan tim']],
+    ['troli', ['troli darurat', 'troli emergensi', 'kereta obat', 'kereta darurat', 'crash cart', 'emergency cart', 'peralatan resusitasi']],
+    ['ganti', ['bergantian', 'berganti', 'gantikan', 'ganti', 'rotasi', 'tukar posisi']],
+    ['closedloop', ['closed loop', 'ulangi perintah', 'ulangi instruksi', 'konfirmasi perintah', 'umpan balik perintah']],
+    ['antiplatelet', ['antiplatelet', 'pengencer darah', 'aspirin', 'ticagrelor', 'klopidogrel', 'clopidogrel', 'dapt']],
+    ['penyekatbeta', ['penyekat beta', 'beta blocker', 'betablocker', 'bisoprolol', 'metoprolol', 'karvedilol']],
+    ['acei', ['ace inhibitor', 'acei', 'penghambat ace', 'ramipril', 'arb', 'arni', 'sacubitril', 'valsartan']],
+    ['statin', ['statin', 'atorvastatin', 'rosuvastatin', 'obat kolesterol']],
+    ['nitrat', ['nitrat', 'isdn', 'isosorbid', 'nitrogliserin', 'ntg', 'obat bawah lidah', 'tablet bawah lidah', 'sublingual']],
+    ['rehab', ['rehabilitasi jantung', 'rehab kardiak', 'rehab', 'latihan terawasi', 'program latihan']],
+    ['kontrol', ['kontrol', 'kunjungan ulang', 'datang lagi', 'kembali ke poli', 'jadwal kontrol', 'poli jantung', 'tindak lanjut', 'follow up']],
+    ['igd', ['igd', 'ugd', 'gawat darurat', 'ambulans', 'unit darurat', 'instalasi gawat darurat']],
+    ['menyetir', ['mengemudi', 'menyetir', 'nyetir', 'narik', 'bawa kendaraan', 'berkendara', 'kendaraan']],
+    ['seks', ['hubungan intim', 'berhubungan intim', 'aktivitas seksual', 'hubungan suami istri', 'seks']],
+    ['bpjs', ['bpjs', 'jkn', 'jaminan kesehatan', 'jaminan', 'asuransi', 'ditanggung', 'dibayari', 'dibiayai', 'biaya', 'harga', 'ongkos']],
+    ['diuretik', ['diuretik', 'furosemid', 'furosemide', 'lasix', 'obat kencing', 'obat pembuang cairan']],
+    ['sglt2i', ['sglt2', 'sglt2i', 'dapagliflozin', 'empagliflozin', 'gliflozin']],
+    ['mra', ['mra', 'spironolakton', 'spironolactone', 'eplerenon', 'antagonis mineralokortikoid']],
+    ['bb', ['berat badan', 'timbang', 'menimbang', 'penimbangan', 'timbangan']],
+    ['garam', ['garam', 'natrium', 'asin', 'makanan asin', 'penyedap']],
+    ['ginjal', ['ginjal', 'kreatinin', 'egfr', 'fungsi ginjal', 'ureum']],
+    ['kalium', ['kalium', 'potassium', 'elektrolit']],
+    ['eko', ['ekokardiografi', 'ekokardiogram', 'eko jantung', 'echo', 'usg jantung', 'lvef', 'fraksi ejeksi']],
+    ['rontgen', ['foto toraks', 'foto thorax', 'foto dada', 'rontgen dada', 'rontgen', 'rontgen thoraks', 'cxr']],
+    ['bnp', ['nt probnp', 'ntprobnp', 'bnp', 'probnp']],
+    ['oksigen', ['oksigen', 'o2', 'nasal kanul', 'kanul nasal', 'nrm']],
+    ['auskultasi', ['auskultasi', 'dengarkan dada', 'mendengarkan', 'stetoskop', 'steteskop', 'stetoskop dada']],
+    ['palpasi', ['palpasi', 'meraba', 'raba']],
+    ['inspeksi', ['inspeksi', 'dilihat', 'amati', 'pengamatan', 'lihat bentuk']],
+    ['jvp', ['jvp', 'vena jugularis', 'tekanan vena jugularis', 'vena leher', 'distensi vena']],
+    ['bising', ['bising', 'murmur', 'bunyi tambahan']],
+    ['manset', ['manset', 'cuff', 'kantong udara tensimeter']],
+    ['tensimeter', ['tensimeter', 'sfigmomanometer', 'spigmomanometer', 'alat tensi', 'alat ukur tekanan darah']],
+    ['telemetri', ['telemetri', 'monitor jantung', 'monitoring jantung', 'pemantauan jantung kontinu', 'pantau irama']],
+    ['pulang', ['pulang', 'dipulangkan', 'boleh pulang', 'rawat jalan']],
+    ['rawat', ['rawat inap', 'dirawat', 'opname', 'diopname', 'masuk rumah sakit', 'dirawat inap']],
+    ['saksi', ['saksi', 'yang melihat', 'orang di sekitar', 'yang menyaksikan', 'anak yang melihat']],
+    ['pacu', ['pacu jantung', 'pacu transkutan', 'pacemaker', 'pacing', 'pacu', 'alat pacu']],
+    ['dopamin', ['dopamin', 'dopamine', 'infus jembatan', 'vasopresor', 'noradrenalin', 'norepinefrin']],
+    ['bradikardia', ['bradikardia', 'denyut lambat', 'nadi lambat', 'detak lambat', 'irama lambat']],
+    ['hipoperfusi', ['hipoperfusi', 'akral dingin', 'tidak stabil', 'instabil', 'syok hemodinamik']],
+    ['blokav', ['blok av', 'av blok', 'blok derajat tiga', 'blok total', 'complete heart block', 'blok jantung']],
+    ['henti', ['hentikan', 'berhenti', 'stop', 'setop', 'tahan', 'hindari', 'jangan diteruskan']],
+    ['lanjut', ['lanjutkan', 'teruskan', 'diteruskan', 'berlanjut', 'terus berlanjut']],
+    ['pasien', ['penderita', 'pasien']],
+    ['ekg', ['ekg 12 sadapan', 'rekaman ekg', 'rekam ekg', 'rekam listrik jantung', 'elektrokardiografi', 'ekg']],
+    ['dispnea', ['dispnea', 'dyspnea', 'sesak', 'napas tersengal', 'tersengal', 'engap']],
+    ['radiasi', ['radiasi', 'menjalar', 'menyebar', 'merambat', 'tembus ke']],
+    ['diaforesis', ['diaforesis', 'keringat']],
+    ['ortopnea', ['ortopnea', 'tidur bantal', 'bantal', 'tidur tinggi']],
+    ['edema', ['edema', 'bengkak', 'sembab', 'kaki bengkak', 'pembengkakan']],
+    ['kolesterol', ['kolesterol', 'lemak darah', 'lipid', 'ldl']],
+    ['diabetes', ['diabetes', 'kencing manis', 'gula tinggi', 'dm']],
+    ['hipertensi', ['hipertensi', 'darah tinggi', 'tekanan darah tinggi', 'tensi tinggi']],
+    ['keluarga', ['keluarga', 'saudara', 'orang tua', 'kerabat', 'adik', 'kakak', 'ayah', 'istri', 'suami', 'anak']],
+    ['alkohol', ['alkohol', 'minuman keras', 'miras', 'minum minuman']],
+    ['jamu', ['jamu', 'herbal', 'suplemen', 'obat tradisional', 'obat warung']],
+    ['nsaid', ['nsaid', 'ibuprofen', 'antinyeri', 'pereda nyeri', 'obat pegal', 'diklofenak', 'obat nyeri']],
+    ['stres', ['stres', 'stress', 'tekanan pikiran', 'beban pikiran', 'cemas', 'depresi', 'mood', 'suasana hati']],
+    ['tidur', ['tidur', 'kualitas tidur', 'susah tidur', 'insomnia']],
+    ['teachback', ['teach back', 'teachback', 'ulangi dengan kata sendiri', 'sebutkan ulang', 'jelaskan ulang', 'mengulang kembali']],
+    ['persetujuan', ['persetujuan', 'setuju', 'bersedia', 'izin tindakan', 'consent']],
+    ['empati', ['empati', 'memahami perasaan', 'wajar merasa', 'tidak aneh', 'paham perasaan', 'tidak sendirian']],
+    ['berhentirokok', ['berhenti merokok', 'stop merokok', 'hentikan rokok', 'program berhenti merokok']]
+  ];
+  var LEKSIKON_URUT = [];
+  LEKSIKON.forEach(function (k) { k[1].forEach(function (v) { LEKSIKON_URUT.push([v, k[0]]); }); });
+  LEKSIKON_URUT.sort(function (a, b) { return b[0].length - a[0].length; });
+
   // Kelas sinonim (setelah stemming). Anggota dipetakan ke anggota pertama.
   var KELAS = [
     ['nyeri', 'sakit', 'perih', 'pedih', 'ngilu', 'cekot', 'nyut'],
@@ -89,6 +182,7 @@
     t = t.replace(/[^a-z0-9à-ÿ\s]/g, ' ').replace(/\s+/g, ' ').trim();
     t = ' ' + t + ' ';
     FRASA.forEach(function (f) { t = t.split(' ' + f[0] + ' ').join(' ' + f[1] + ' '); });
+    LEKSIKON_URUT.forEach(function (f) { if (t.indexOf(f[0]) >= 0) t = t.split(' ' + f[0] + ' ').join(' ' + f[1] + ' '); });
     return t.replace(/\s+/g, ' ').trim();
   }
 
@@ -116,7 +210,17 @@
     return cacheStem[w];
   }
 
+  var cacheTok = {}, ukuranCache = 0;
   function tokenisasi(teks) {
+    var kunci = String(teks);
+    if (cacheTok[kunci]) return cacheTok[kunci].slice();
+    var hasil = tokenisasiBaru(teks);
+    if (ukuranCache > 20000) { cacheTok = {}; ukuranCache = 0; }
+    cacheTok[kunci] = hasil; ukuranCache++;
+    return hasil.slice();
+  }
+
+  function tokenisasiBaru(teks) {
     var kata = norm(teks).split(' '), hasil = [], lihat = {};
     kata.forEach(function (k) {
       if (!k || STOP[k]) return;
@@ -151,6 +255,8 @@
     (ucapan.keluarga || []).forEach(function (kel) {
       kel.ids.forEach(function (id) { contoh[id] = (contoh[id] || []).concat(kel.ucapan || []); });
     });
+    var peta = {};
+    (ucapan.keluarga || []).forEach(function (kel, n) { kel.ids.forEach(function (id) { peta[id] = 'k' + n; }); });
     var df = {}, docs = [];
     aksiList.forEach(function (a, urutan) {
       var ex = [tokenisasi(a.label)];
@@ -162,7 +268,7 @@
     });
     var N = docs.length;
     function idf(w) { return Math.log(1 + (N - (df[w] || 0) + 0.5) / ((df[w] || 0) + 0.5)); }
-    return { stasiun: st.id, docs: docs, df: df, N: N, idf: idf, unk: Math.log(1 + N) * 0.6, aksi: aksiList };
+    return { stasiun: st.id, docs: docs, df: df, N: N, idf: idf, unk: Math.log(1 + N) * 0.6, aksi: aksiList, keluarga: peta };
   }
 
   function skorContoh(ix, q, w) {
@@ -188,7 +294,10 @@
     };
   }
 
-  var AMBANG = { satu: 0.52, tambahan: 0.62, sisaMin: 0.28, selisih: 0.04, maks: 4 };
+  var AMBANG = { satu: 0.35, tambahan: 0.55, sisaMin: 0.28, selisih: 0.04, margin: 0.1, maks: 4 };
+
+  // Aksi dianggap satu keluarga bila id-nya hanya beda nomor akhir (cek_irama_1..5) atau dinyatakan di data ucapan.
+  function keluargaId(id) { return String(id).replace(/_?\d+$/, ''); }
 
   function segmen(ucapan) {
     return String(ucapan || '').split(/[,;.?!\n]+|\s(?:dan|atau|serta|lalu|kemudian|juga|terus|sama|plus)\s/i)
@@ -243,6 +352,12 @@
       if (putaran === 0) hasil.skorTertinggi = puncak;
       if (puncak < ambangIni) break;
       var dekat = kandidat.filter(function (k) { return puncak - k.r.skor <= amb.selisih; });
+      if (amb.margin) {
+        // ambigu bila ada aksi di luar keluarga puncak yang skornya terlalu dekat
+        var kelPuncak = keluargaId(kandidat[0].doc.id);
+        var saingan = kandidat.filter(function (k) { return k !== kandidat[0] && keluargaId(k.doc.id) !== kelPuncak && puncak - k.r.skor < amb.margin && !(ix.keluarga[k.doc.id] && ix.keluarga[k.doc.id] === ix.keluarga[kandidat[0].doc.id]); })[0];
+        if (saingan) { hasil.ambigu = [kandidat[0].doc.id, saingan.doc.id]; break; }
+      }
       var pilih = dekat[0];
       if (opsi.tersedia) {
         var tersedia = dekat.filter(function (k) { return opsi.tersedia(k.doc.id); });

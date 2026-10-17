@@ -1,0 +1,452 @@
+{
+ "stasiun": "06",
+ "aksi": {
+  "salam": [
+   "Selamat siang Bu, saya dokter jaga di IGD, tenang ya, kami langsung menolong Ibu sekarang.",
+   "Siang Bu, saya dokternya, Ibu jangan khawatir, kita tangani sesaknya.",
+   "halo bu saya dokter jaga igd ibu sudah di tangan kami ya",
+   "Perkenalkan Bu, saya dokter yang bertugas hari ini. Ibu aman di sini, tim kami akan segera membantu Ibu.",
+   "Assalamualaikum Bu, dengan dokter jaga ya, kita tolong dulu Ibu sekarang."
+  ],
+  "nilai_distres": [
+   "Saya nilai beratnya sesak dulu: frekuensi napas, saturasi, apakah Ibu bisa bicara lancar, dan apakah otot bantu napasnya terpakai.",
+   "Hitung laju napasnya dan lihat SpO2, ada tarikan di dinding dada atau leher tidak?",
+   "cek respiratory distress, RR sama sat",
+   "Sus, tolong hitung berapa kali Ibu bernapas dalam semenit, saya lihat apakah bisa bicara satu kalimat penuh dan apakah memakai otot-otot leher.",
+   "Saya amati usaha napas pasien: cepat atau tidak, kalimatnya terputus-putus atau tidak, dan ada retraksi atau tidak."
+  ],
+  "duduk": [
+   "Posisikan Ibu duduk tegak ya.",
+   "Bu, jangan tiduran dulu, duduk setengah tegak saja biar lebih lega.",
+   "naikkan kepala tempat tidur tinggi-tinggi, posisi semi-Fowler",
+   "Sus, tolong ganjal punggung Ibu pakai bantal dan tegakkan badannya.",
+   "Tegakkan posisinya, high Fowler, supaya napasnya lebih ringan."
+  ],
+  "monitor": [
+   "Sus, tolong pasang monitor jantung, saturasi, dan tensi otomatis.",
+   "Hubungkan pasien ke monitor, pantau irama, SpO2, dan tekanan darah terus-menerus.",
+   "pasang bedside monitor",
+   "Pasang elektroda monitor, manset tensi otomatis, dan probe saturasi untuk pemantauan kontinu.",
+   "Tolong sambungkan alat pantau jantung dan tekanan darahnya ya, Sus."
+  ],
+  "iv": [
+   "Sus, tolong cari pembuluh di lengan, pasang infus, lalu sampel darahnya kirim ke lab.",
+   "Kita butuh akses vena, pasang abocath sekarang dan sekalian ambil darah buat laboratorium.",
+   "buka IV line terus sampling darah ya",
+   "Saya minta jalur pembuluh darah dipasang lebih dulu, lalu spesimen darah langsung dikirim untuk pemeriksaan lab.",
+   "Akses intravena dulu, Sus, darahnya sekalian diambil buat cek lab."
+  ],
+  "o2": [
+   "Saturasinya di bawah 90, Sus tolong berikan oksigen sekarang.",
+   "kasih O2 lewat nasal kanul, sat-nya cuma 88",
+   "Mulai terapi oksigen ya, selang hidung dulu, alirkan sesuai kebutuhan.",
+   "Sat rendah, Sus tolong sambungkan tabung oksigen dan pasang kanul di hidung Ibu.",
+   "Ibu, saya bantu dengan oksigen tambahan lewat selang hidung ya."
+  ],
+  "paralel": [
+   "Pasien ini tidak stabil, jadi kita nilai dan obati sekaligus, jangan tunggu hasil.",
+   "Kondisinya gawat, assessment dan terapi jalan bersamaan ya, Sus.",
+   "jangan sequential, kerjakan pemeriksaan dan pengobatan paralel",
+   "Tim, ini pasien tidak stabil. Saya periksa sambil terapi jalan terus, jadi kita bagi tugas.",
+   "Karena instabil, kita tidak boleh menunggu semua pemeriksaan selesai. Tangani sambil kita cari penyebabnya."
+  ],
+  "baring": [
+   "Bu, tolong berbaring telentang dulu ya, saya mau periksa.",
+   "Rebahkan pasien datar di bed.",
+   "Ibu tiduran saja dulu, biar saya periksa dengan nyaman.",
+   "Sus, telentangkan pasien rata supaya mudah diperiksa.",
+   "Silakan berbaring terlentang Bu, supaya saya bisa mendengar paru dan memeriksa perut."
+  ],
+  "ortopnea": [
+   "Apakah sesak Ibu bertambah kalau berbaring? Tidur pakai berapa bantal? Sering terbangun malam karena sesak?",
+   "Kalau tidur harus ganjal tinggi-tinggi ya Bu? Pernah tiba-tiba kebangun tengah malam megap-megap?",
+   "ada ortopnea atau PND?",
+   "tidurnya setengah duduk atau bisa rata bu, malam suka bangun sesak nggak",
+   "Saat rebahan jadi tambah engap ya? Saya mau tahu berapa tumpuk bantal yang Ibu butuhkan agar bisa tidur."
+  ],
+  "aktivitas": [
+   "Seberapa jauh Ibu sanggup berjalan sekarang sebelum sesak?",
+   "Jalan dari kamar ke ruang tamu masih kuat, Bu? Atau sudah ngos-ngosan?",
+   "bisa naik tangga nggak bu sekarang",
+   "Aktivitas sehari-hari Ibu terbatas tidak, misalnya mandi atau berpakaian sendiri, apakah sudah sesak?",
+   "Toleransi aktivitas Ibu sekarang bagaimana? Berapa meter bisa berjalan tanpa berhenti?"
+  ],
+  "edema": [
+   "Kakinya ada bengkak nggak, Bu?",
+   "Pergelangan kaki terasa menggembung? Sandal atau sepatu jadi terasa sempit akhir-akhir ini?",
+   "ada pembengkakan di tungkai bu",
+   "Betis atau punggung kaki Ibu terasa membesar dan kencang beberapa hari ini? Sejak kapan mulainya?",
+   "Apakah Ibu menyadari ada edema di kedua kaki belakangan ini?"
+  ],
+  "bb": [
+   "Berat badan Ibu naik akhir-akhir ini?",
+   "Timbangan Ibu bertambah berapa kilo dalam seminggu terakhir?",
+   "bb naik gak bu belakangan ini",
+   "Apakah Ibu merasa badan jadi lebih berat dan pakaian makin ketat, sampai ada penambahan beberapa kilo?",
+   "Ada pertambahan bobot tubuh yang mendadak dalam beberapa hari ini?"
+  ],
+  "urin": [
+   "Buang air kecil Ibu berkurang?",
+   "Pipisnya makin sedikit ya Bu belakangan ini?",
+   "kencingnya masih lancar atau jumlahnya menurun bu",
+   "Volume urin Ibu dalam sehari terakhir bagaimana, apakah lebih sedikit dari biasanya?",
+   "Ibu merasa jarang kencing dan sekali keluar hanya sedikit-sedikit?"
+  ],
+  "riwayat_gj": [
+   "Sejak kapan Ibu punya penyakit jantung dan apa penyebabnya?",
+   "Penyakit jantungnya didiagnosis kapan Bu? Dulu dokter bilang karena apa?",
+   "Pernah serangan jantung atau dipasang ring sebelumnya?",
+   "Riwayat gagal jantungnya mulai tahun berapa dan dulu kenapa bisa begitu?",
+   "Saya ingin tahu latar belakang sakit jantung Ibu: mulai kapan, penyebabnya apa, dan bagaimana penanganannya dulu."
+  ],
+  "obat": [
+   "Obat apa saja yang Ibu minum sekarang?",
+   "Sehari-hari minum obat apa Bu? Bawa daftar obatnya?",
+   "obat rutinnya apa aja bu",
+   "Tolong sebutkan semua obat jantung dan obat lain yang rutin Ibu konsumsi.",
+   "Resep terakhir dari dokter jantung Ibu isinya apa saja?"
+  ],
+  "kepatuhan": [
+   "Obatnya diminum teratur? Ada yang habis?",
+   "Ibu rutin minum obat sesuai anjuran dokter atau sering lupa? Ada obat yang kehabisan?",
+   "obatnya pernah putus gak bu",
+   "Selama sebulan ini, adakah obat yang terlewat atau stoknya habis dan belum ditebus?",
+   "Kepatuhan minum obat Ibu bagaimana, ada jadwal yang bolong?"
+  ],
+  "garam": [
+   "Bagaimana asupan garam dan cairan Ibu belakangan ini?",
+   "Akhir-akhir ini makan asin-asinan atau minum banyak?",
+   "makannya gimana bu seminggu ini, banyak yang asin?",
+   "Ada perubahan pola makan atau minum belakangan ini, misalnya lebih banyak makanan asin dan minum lebih banyak?",
+   "Diet rendah garam dijalankan tidak? Sehari minum berapa banyak?"
+  ],
+  "nsaid": [
+   "Apakah Ibu minum obat pereda nyeri seperti ibuprofen?",
+   "Belakangan minum obat antinyeri, misalnya untuk pegal atau sendi?",
+   "pernah minum obat nyeri warung ga bu, kayak ibuprofen atau asam mefenamat",
+   "Ada konsumsi obat anti-inflamasi nonsteroid atau obat sakit sendi beberapa hari ini?",
+   "Sebelum sesak ini, Ibu sempat beli obat sakit badan sendiri di apotek?"
+  ],
+  "nyeri_dada": [
+   "Adakah rasa nyeri di dada Ibu?",
+   "Dadanya sakit atau terasa ditindih, Bu?",
+   "ada keluhan chest pain gak bu",
+   "Apakah ada rasa tertekan atau terbakar di dada yang menjalar ke lengan atau rahang?",
+   "Selain sesak, ada tidak rasa sakit di area dada Ibu, apalagi yang seperti angina?"
+  ],
+  "berdebar": [
+   "Apakah Ibu merasakan jantungnya berdebar?",
+   "Terasa jantungnya deg-degan atau berdetak cepat tidak teratur, Bu?",
+   "ada palpitasi gak",
+   "Pernah merasa detak jantung melompat atau berdebar kencang sendiri belakangan ini?",
+   "Jantung Ibu terasa berdegup kencang tanpa sebab?"
+  ],
+  "infeksi": [
+   "Ada demam, atau batuk yang berdahak, Bu?",
+   "Sebelum sesak ini ada meriang, pilek, atau batuk berdahak?",
+   "panas badan ga bu, batuk ada dahaknya?",
+   "Ada tanda infeksi saluran napas, seperti suhu tinggi dan dahak kuning atau hijau?",
+   "Tiga hari ini badannya hangat atau batuk-batuk ada lendirnya?"
+  ],
+  "alergi": [
+   "Ibu ada alergi terhadap obat?",
+   "Ibu pernah alergi terhadap sesuatu, entah makanan atau suntikan?",
+   "ada riwayat reaksi obat sebelumnya bu, kayak ruam atau bibir bengkak",
+   "Pernah gatal-gatal atau bentol setelah minum obat tertentu?",
+   "Sebelum saya beri obat, ada hipersensitivitas terhadap obat tertentu yang perlu saya ketahui?"
+  ],
+  "komorbid": [
+   "Apakah ada penyakit lain seperti diabetes, penyakit ginjal, atau PPOK?",
+   "Selain jantung, Ibu punya sakit gula, ginjal, atau paru menahun?",
+   "ada penyakit penyerta lain gak bu, kencing manis gitu",
+   "Riwayat komorbid Ibu apa saja, misalnya DM, CKD, atau asma dan PPOK?",
+   "Ada penyakit kronis lain yang Ibu derita sekarang?"
+  ],
+  "pekerjaan": [
+   "Dulunya Ibu kerja apa, Bu?",
+   "Kalau boleh tahu, profesi Ibu apa, Bu?",
+   "kerjaan ibu sehari-hari apa",
+   "Dulu Ibu berprofesi sebagai apa sebelum pensiun?",
+   "Latar belakang pekerjaan Ibu seperti apa?"
+  ],
+  "jvp": [
+   "Saya periksa JVP dulu.",
+   "Lihat vena jugularis di leher, tekanan vena jugularnya berapa?",
+   "cek JVP",
+   "Saya amati pulsasi vena leher pada posisi 45 derajat dan ukur tingginya dari sudut sternum.",
+   "Apakah vena-vena di leher tampak membesar? Saya nilai tekanan vena sentral secara klinis."
+  ],
+  "paru": [
+   "Saya auskultasi paru.",
+   "Dengarkan bunyi napas di kedua lapang paru depan dan belakang pakai stetoskop.",
+   "periksa paru-parunya, ada ronki atau mengi?",
+   "Coba tarik napas dalam Bu, saya dengarkan di punggung dan dada.",
+   "Stetoskop ke paru ya, saya cari ronki dan wheezing."
+  ],
+  "jantung": [
+   "Saya auskultasi jantung.",
+   "Dengarkan bunyi jantung: S1 S2, ada gallop atau bising?",
+   "periksa jantung, ada murmur tidak",
+   "Stetoskop saya letakkan di apeks dan batas sternum, mendengarkan bunyi jantung dan bising.",
+   "Cek suara jantungnya Bu, saya cari bunyi tambahan."
+  ],
+  "abdomen": [
+   "Saya periksa perut.",
+   "Palpasi hepar dan perut, ada pembesaran hati atau cairan di perut?",
+   "cek abdomen",
+   "Saya raba perut kanan atas, ada hati yang membesar atau nyeri? Ada asites?",
+   "Perutnya kembung atau membuncit? Coba saya tekan dan ketuk."
+  ],
+  "edema_tungkai": [
+   "Saya periksa edema pada tungkai.",
+   "Saya tekan tulang kering kedua kaki, lihat ada pitting atau tidak.",
+   "cek bengkak kaki, tekan dan lihat cekungannya",
+   "Tolong perlihatkan betis kedua kaki, saya nilai derajat edemanya sampai setinggi apa.",
+   "Periksa pembengkakan kedua tungkai bawah, simetris atau tidak, dan sampai lutut atau tidak."
+  ],
+  "perfusi": [
+   "Saya nilai perfusi perifer: akral dan capillary refill.",
+   "Raba tangan dan kaki, hangat atau dingin? Tekan kuku lihat berapa lama merahnya kembali.",
+   "cek akral sama CRT",
+   "Apakah ujung jari dingin dan pucat? Saya hitung waktu isi kapiler.",
+   "Saya tentukan profil perfusi, warm atau cold, dengan meraba ekstremitas."
+  ],
+  "neuro": [
+   "Periksa status neurologis pasien secara lengkap.",
+   "Saya periksa saraf kranial, kekuatan otot, refleks, dan sensorik.",
+   "cek GCS sekalian tes motorik dan sensorik seluruh tubuh",
+   "Periksa neurologi: kesadaran, kekuatan anggota gerak, refleks fisiologis dan patologis.",
+   "Coba angkat kedua tangan, gerakkan kaki, senyum. Saya cek defisit neurologis menyeluruh."
+  ],
+  "ekg": [
+   "Tolong rekam EKG 12 sadapan sekarang.",
+   "Sus, kita buat EKG ya, dua belas lead.",
+   "rekam jantung dulu, 12 lead",
+   "Saya minta elektrokardiogram lengkap untuk melihat irama dan iskemia.",
+   "Rekaman listrik jantungnya tolong dibuat, saya cek ada ST elevasi atau tidak."
+  ],
+  "troponin": [
+   "Cek troponin.",
+   "Kirim penanda cedera otot jantung, ulang serial kalau perlu.",
+   "periksa enzim jantung",
+   "Saya perlu tahu apakah ada kerusakan otot jantung akut, tolong diperiksa troponinnya.",
+   "Troponin hs ya Sus, nanti diulang."
+  ],
+  "bnp": [
+   "Periksa NT-proBNP.",
+   "Kirim BNP atau NT-proBNP.",
+   "cek peptida natriuretik",
+   "Tolong periksa kadar natriuretic peptide untuk mengonfirmasi gagal jantung.",
+   "Penanda gagal jantung dari darah ya, Sus."
+  ],
+  "ginjal": [
+   "Cek kreatinin dan elektrolit.",
+   "Tolong periksa fungsi ginjal dan kadar natrium kalium.",
+   "ureum creatinine sama Na K ya",
+   "Saya minta panel renal dan elektrolit darah untuk melihat fungsi ginjal.",
+   "Mau lihat fungsi ginjalnya, sekalian cek kalium, natrium, dan eGFR."
+  ],
+  "hb": [
+   "Periksa hemoglobin dan darah rutin.",
+   "Tolong cek Hb dan lekosit, darah lengkap.",
+   "DPL ya Sus",
+   "Saya perlu tahu apakah Ibu anemia, tolong cek hitung darah lengkap.",
+   "Kadar sel darah merah dan leukosit juga dikirim."
+  ],
+  "foto_toraks": [
+   "Minta foto toraks.",
+   "Tolong rontgen dada, portabel saja.",
+   "foto thorax AP sekarang",
+   "Saya butuh gambaran radiologi dada untuk melihat kongesti dan efusi pleura.",
+   "CXR tolong dikirim ke radiologi."
+  ],
+  "echo": [
+   "Saya jadwalkan ekokardiografi, segera atau saat rawat inap.",
+   "Nanti tolong echo jantung, lihat EF-nya.",
+   "perlu USG jantung untuk lihat fungsi pompa",
+   "Tolong lakukan ekokardiogram untuk menilai fraksi ejeksi dan katup, bisa bedside atau setelah masuk ruangan.",
+   "Echo ya, fungsi sistolik ventrikel kiri."
+  ],
+  "ct_angio": [
+   "Tolong buat CT angiografi untuk arteri koroner.",
+   "Kita CT scan pembuluh darah koroner ya.",
+   "CTA koroner sekarang",
+   "Saya ingin menilai penyempitan arteri koroner dengan CT kontras.",
+   "Tolong jadwalkan CT jantung dengan zat kontras untuk melihat sumbatan koroner."
+  ],
+  "kultur": [
+   "Ambil kultur darah dan mulai antibiotik empiris.",
+   "Kita beri antibiotik spektrum luas sambil kirim kultur.",
+   "periksa kuman di darah, kasih antibiotik dulu",
+   "Saya curiga infeksi, jadi tolong ambil biakan darah dan berikan antibiotik.",
+   "Sus, biakan darah dua set lalu mulai antibiotik."
+  ],
+  "furosemid_80": [
+   "Berikan furosemid 80 mg IV bolus.",
+   "Sus, Lasix 80 miligram lewat vena, langsung masuk.",
+   "diuretik 80 mg intravena sekarang",
+   "Beri furosemide eighty mg IV, pelan-pelan.",
+   "Lasix delapan puluh bolus ya Sus."
+  ],
+  "furosemid_40": [
+   "Furosemid 40 mg IV bolus ya, sama dengan dosis oral hariannya.",
+   "Sus, Lasix 40 miligram lewat vena.",
+   "diuretik 40 mg intravena sekarang",
+   "Kasih furosemide empat puluh IV, sama dengan dosis minum hariannya.",
+   "Lasix 40 bolus ya."
+  ],
+  "furosemid_20": [
+   "Berikan furosemid 20 mg IV.",
+   "Lasix 20 miligram lewat vena dulu, Sus.",
+   "diuretik dosis rendah, 20 mg intravena",
+   "Furosemide dua puluh IV bolus, kita lihat responsnya dulu.",
+   "Lasix 20 mg IV ya."
+  ],
+  "furosemid_po": [
+   "Beri furosemid 40 mg per oral.",
+   "Minumkan Lasix tablet 40 mg ya.",
+   "Lasix tablet 40 miligram diminum saja, Bu.",
+   "Berikan diuretik oral, tablet furosemid empat puluh.",
+   "Kasih obat kencing yang diminum 40 mg dulu."
+  ],
+  "niv": [
+   "Pasang NIV, CPAP atau BiPAP, karena distres napasnya menetap.",
+   "Sus, siapkan masker CPAP, pasien masih sesak berat.",
+   "kasih ventilasi tekanan positif non invasif",
+   "Pakaikan sungkup bantuan napas bertekanan positif tanpa intubasi.",
+   "Coba BiPAP dulu, belum perlu dipasang selang napas."
+  ],
+  "nitrat": [
+   "Berikan nitrat sublingual atau drip, sistoliknya 138 jadi aman.",
+   "Sus, ISDN sublingual ya, tensinya masih bagus.",
+   "vasodilator, nitrogliserin, tekanan darah cukup",
+   "Tekanan darah sistolik masih adekuat, saya mulai nitrogliserin untuk mengurangi preload.",
+   "Pasang drip gliseril trinitrat, dititrasi sesuai tensi."
+  ],
+  "kateter": [
+   "Pasang kateter urin dan pantau urin tiap jam.",
+   "Sus, tolong DC dipasang, urinnya ditampung per jam.",
+   "pasang selang kencing, hitung produksi urin",
+   "Pasang kateter untuk memantau keluaran urin per jam.",
+   "Pasang Foley kateter ya dan catat tiap jam."
+  ],
+  "balans": [
+   "Tolong catat balans cairan, dan pasien ditimbang.",
+   "Sus, tolong dicatat intake output, dan berat badannya ditimbang.",
+   "monitor I/O sama BB harian",
+   "Hitung cairan masuk dan keluar tiap shift, targetnya negatif.",
+   "Tolong timbang pasien dan catat keseimbangan cairan."
+  ],
+  "elektrolit_ulang": [
+   "Elektrolit dan kreatinin dipantau berkala ya.",
+   "Ulangi cek kalium, natrium, dan fungsi ginjal secara berkala.",
+   "periksa ulang elektrolit besok pagi",
+   "Karena diuretik dosis tinggi, kita pantau kalium dan kreatinin secara berkala selama perawatan.",
+   "Jadwalkan pemeriksaan lab ulang untuk elektrolit dan fungsi ginjal setelah diuresis."
+  ],
+  "ttv_berkala": [
+   "Tanda vital dipantau berkala, Sus.",
+   "Sus, tensi nadi napas saturasi dicek tiap 15 menit.",
+   "observasi TTV terus",
+   "Tolong observasi tekanan darah, nadi, laju napas, dan saturasi secara serial.",
+   "vital sign tiap seperempat jam ya."
+  ],
+  "stop_nsaid": [
+   "Ibuprofen dihentikan, terapi gagal jantung dilanjutkan sesuai kondisi.",
+   "Ibuprofennya stop ya Bu, obat jantung lainnya tetap lanjut.",
+   "Obat antinyeri golongan NSAID dihentikan.",
+   "Stop semua NSAID, pakai obat jantung yang lain sesuai kondisi sekarang.",
+   "Jangan lagi minum obat nyeri yang tadi. Terapi rumatan gagal jantung tetap dijalankan."
+  ],
+  "rawat": [
+   "Rawat di HCU atau ruang rawat jantung.",
+   "Ibu kita masukkan ke HCU ya.",
+   "Pasien perlu opname, atur tempat di ruang intermediate jantung.",
+   "Sus, tolong hubungi bagian rawat inap, pasien dirawat di high care.",
+   "Indikasi masuk ruang rawat kardiologi, kita siapkan transfer."
+  ],
+  "konsul": [
+   "Konsultasi ke kardiologi.",
+   "Saya hubungi dokter jantung jaga untuk minta pendapat.",
+   "Telepon sejawat kardiolog, laporkan kasusnya.",
+   "Tolong panggilkan konsulen kardiologi untuk menilai pasien ini.",
+   "Konsul SpJP via telepon ya."
+  ],
+  "morfin": [
+   "Berikan morfin IV supaya sesaknya berkurang.",
+   "Morphine intravena dulu, supaya Ibu lebih tenang dan tidak gelisah.",
+   "kasih opioid biar sesaknya reda",
+   "Saya beri morfin dosis kecil lewat vena untuk meredakan dispnea dan kecemasan.",
+   "Suntik morfin ya Sus."
+  ],
+  "inotrop": [
+   "Inotrop IV mulai sekarang.",
+   "Siapkan dobutamin drip.",
+   "Kasih obat penguat otot jantung lewat infus.",
+   "Tekanan darah memang stabil, tapi saya mulai inotropik untuk menaikkan curah jantung.",
+   "Sus, dobutamin dititrasi pelan, mulai dari dosis rendah."
+  ],
+  "cairan_bolus": [
+   "Bolus NaCl 0,9% 500 mL ya, Sus.",
+   "Sus, guyur NaCl setengah liter.",
+   "kasih cairan infus 500 cc cepat",
+   "Saya beri bolus salin isotonik lima ratus mililiter.",
+   "Loading cairan kristaloid 500 mL ya."
+  ],
+  "beta_blocker_iv": [
+   "Penghambat beta IV untuk menurunkan nadinya.",
+   "Nadinya 104, kasih metoprolol intravena biar turun.",
+   "Sus, beta blocker suntik ya buat takikardinya.",
+   "Saya turunkan laju jantung pakai obat golongan beta blocker lewat vena.",
+   "Kontrol denyut nadi dengan esmolol atau metoprolol IV."
+  ],
+  "ibuprofen": [
+   "Ibuprofen diberikan untuk nyeri lututnya.",
+   "Kasih ibuprofen biar lututnya tidak sakit lagi.",
+   "Lututnya sakit ya Bu? Saya beri obat antinyeri ibuprofen.",
+   "Berikan NSAID untuk meredakan nyeri sendi Ibu.",
+   "Obat pereda nyeri lutut, ibuprofen, tolong diberikan Sus."
+  ],
+  "jelaskan": [
+   "Bu, jantung Ibu sedang kewalahan sehingga cairan menumpuk di paru dan kaki. Kami beri obat pengeluar cairan dan bantuan napas, dan Ibu perlu dirawat.",
+   "Saya jelaskan ke keluarga ya, jantungnya lagi lemah, air menumpuk di paru-paru makanya sesak. Kami keluarkan airnya dan Ibu harus opname.",
+   "Pak Bu, intinya jantung ibu tidak kuat memompa jadi air menumpuk, kita obati dan ibu harus dirawat dulu",
+   "Penjelasan untuk pasien dan keluarga: kondisinya cukup berat tapi bisa ditangani, kita keluarkan cairan berlebih dan beri bantuan napas, rawat inap diperlukan.",
+   "Mohon dengarkan sebentar, saya terangkan apa yang terjadi pada Ibu dan rencana pengobatannya dengan bahasa yang mudah."
+  ],
+  "edukasi": [
+   "Nanti Ibu harus teratur minum obat, batasi garam, timbang berat badan tiap pagi, dan jangan minum obat nyeri seperti ibuprofen, ya.",
+   "Pesan untuk di rumah: obat jangan sampai habis, makan jangan terlalu asin, tiap pagi menimbang badan.",
+   "edukasi pulang: patuh obat, diet rendah garam, jangan NSAID, kalau BB naik cepat atau sesak lagi segera ke IGD",
+   "Ibu dan keluarga perlu tahu tanda bahaya: sesak bertambah, kaki bengkak lagi, berat badan naik mendadak, segera kembali ke rumah sakit.",
+   "Supaya tidak kambuh, kontrol rutin, kurangi asin, jangan konsumsi obat pereda nyeri sembarangan."
+  ],
+  "jargon": [
+   "Ibu ini dekompensasio kordis, ada edema pulmo akut dan efusi pleura.",
+   "Diagnosisnya ADHF dengan edema paru dan efusi pleura bilateral, Bu.",
+   "Ibu ini decomp cordis, ada edema pulmo sama efusi",
+   "Bu, ada kongesti paru dan overload volume akibat HFrEF yang dekompensasi akut.",
+   "Kondisi Ibu: gagal jantung akut dekompensasi tipe warm and wet dengan kongesti pulmonal."
+  ]
+ },
+ "keluarga": [],
+ "negatif": [
+  "Apakah Ibu merokok atau minum alkohol?",
+  "Ada keluarga Ibu yang punya penyakit jantung atau meninggal mendadak?",
+  "Tolong aktifkan kode biru, pasien henti jantung!",
+  "Saya akan lakukan intubasi dan pasang ventilator sekarang.",
+  "Cuaca hari ini panas sekali ya.",
+  "Sus, tolong ambilkan segelas air minum untuk keluarga pasien.",
+  "Tolong catat stok oksigen di gudang farmasi sebelum shift berakhir.",
+  "hmm sebentar ya tadi saya mau ngomong apa ya"
+ ],
+ "ganda": [
+  {"ucapan": "Selamat siang Bu, saya dokter jaga. Sus tolong pasang monitor dan berikan oksigen, saturasinya rendah.", "aksi": ["salam", "monitor", "o2"]},
+  {"ucapan": "Kakinya ada bengkak, Bu? Berat badan naik? Kencingnya makin sedikit?", "aksi": ["edema", "bb", "urin"]},
+  {"ucapan": "Obat apa yang Ibu minum, dan apakah diminum teratur atau ada yang habis?", "aksi": ["obat", "kepatuhan"]},
+  {"ucapan": "Saya periksa JVP, lalu dengarkan paru dan jantungnya.", "aksi": ["jvp", "paru", "jantung"]},
+  {"ucapan": "Tolong EKG 12 lead, cek troponin dan NT-proBNP sekarang.", "aksi": ["ekg", "troponin", "bnp"]},
+  {"ucapan": "Furosemid 40 mg IV sekarang, pasang kateter urin, dan catat balans cairan juga.", "aksi": ["furosemid_40", "kateter", "balans"]}
+ ],
+ "isian": []
+}

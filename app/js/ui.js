@@ -2,7 +2,7 @@
 (function (g) {
   'use strict';
   var OSCE = g.OSCE, U = OSCE.util, el = U.el;
-  var UI = (OSCE.ui = { sesi: null, hasil: null, widget: null, widgetUtama: null, penguji: null, tab: null, langsung: false, draf: {}, cari: '' });
+  var UI = (OSCE.ui = { sesi: null, hasil: null, widget: null, widgetUtama: null, penguji: null, tab: null, langsung: false, draf: {}, cari: '', mode: 'latihan', tes: null, pembersih: null });
   var KUNCI_RIWAYAT = 'osce.riwayat.v1';
   var LABEL_GLOBAL = ['', 'Tidak lulus', 'Borderline', 'Lulus', 'Sangat baik'];
   var DESKRIPSI_GLOBAL = [
@@ -16,6 +16,7 @@
   function app() { return document.getElementById('app'); }
 
   function bersihkan() {
+    if (UI.pembersih) { var f = UI.pembersih; UI.pembersih = null; try { f(); } catch (e) { /* abaikan */ } }
     if (UI.widget) { UI.widget.hancurkan(); UI.widget = null; }
     if (UI.widgetUtama) { UI.widgetUtama.hancurkan(); UI.widgetUtama = null; }
     if (UI.penguji && UI.penguji.berhenti) { UI.penguji.berhenti(); UI.penguji = null; }
@@ -29,6 +30,7 @@
   function chip(teks, kelas) { return el('span', { class: 'chip' + (kelas ? ' ' + kelas : ''), teks: teks }); }
   function tautan(href, teks, kelas) { return el('a', { href: href, class: 'tombol' + (kelas ? ' ' + kelas : ''), teks: teks }); }
   function tombol(teks, aksi, kelas) { return el('button', { type: 'button', class: 'tombol' + (kelas ? ' ' + kelas : ''), onclick: aksi, teks: teks }); }
+  UI.alat = { pasang: pasang, chip: chip, tautan: tautan, tombol: tombol, vitalChips: function (v) { return vitalChips(v); }, bersihkan: bersihkan, riwayat: function () { return Riwayat; } };
 
   /* ---------- riwayat ---------- */
 
@@ -49,21 +51,22 @@
 
   UI.beranda = function () {
     var kartu = OSCE.daftarStasiun().map(function (st) {
-      var akhir = Riwayat.terakhir(st.id, 'latihan');
+      var akhir = Riwayat.terakhir(st.id, 'latihan') || Riwayat.terakhir(st.id, 'tes');
       return el('article', { class: 'kartu' },
         el('p', { class: 'kartu-no', teks: 'Stasiun ' + st.id }),
         el('h3', { teks: st.judul }),
         el('p', { class: 'chip-baris' }, chip(st.durasiMenit + ' menit'), chip(st.skorMaks + ' poin'), chip(st.meta.Jenis || '', 'redup')),
-        akhir ? el('p', { class: 'kartu-akhir', teks: 'Latihan terakhir: ' + akhir.skor + '/' + akhir.maks + ' (' + akhir.persen + '%), ' + akhir.global }) : null,
+        akhir ? el('p', { class: 'kartu-akhir', teks: (akhir.tipe === 'tes' ? 'Tes terakhir: ' : 'Latihan terakhir: ') + akhir.skor + '/' + akhir.maks + ' (' + akhir.persen + '%), ' + akhir.global }) : null,
         el('div', { class: 'kartu-aksi' },
           st.interaksi ? tautan('#/briefing/' + st.id, 'Mulai latihan', 'utama') : chip('Segera hadir'),
+          st.interaksi ? tautan('#/tes/' + st.id, 'Mulai tes') : null,
           tautan('#/penguji/' + st.id, 'Mode penguji')));
     });
     var riwayat = Riwayat.semua().slice(0, 5);
     pasang(el('div', { class: 'beranda' },
       el('section', { class: 'hero' },
         el('h1', { teks: 'Simulator OSCE Kardiovaskular' }),
-        el('p', { teks: 'Latih stasiun OSCE secara mandiri dengan pasien dan data simulasi, atau pakai lembar penilaian digital sebagai penguji. Seluruh checklist berasal dari dokumen stasiun di repositori ini.' }),
+        el('p', { teks: 'Latih stasiun OSCE dengan daftar tindakan (latihan), uji diri tanpa menu lewat percakapan ketik atau suara (tes), atau pakai lembar penilaian digital sebagai penguji. Seluruh checklist berasal dari dokumen stasiun di repositori ini.' }),
         el('p', { class: 'peringatan' }, el('strong', { teks: 'DRAF v0.1. ' }), 'Untuk pembelajaran; bukan alat penilaian resmi. Konten belum direview kardiolog dan angka klinis belum diverifikasi ke teks lengkap guideline.')),
       el('section', {}, el('h2', { teks: 'Pilih stasiun' }), el('div', { class: 'kartu-kisi' }, kartu)),
       el('section', {},
@@ -79,7 +82,7 @@
         return el('tr', {},
           el('td', { teks: U.tanggal(r.waktu) }),
           el('td', { teks: r.stasiun + ' ' + r.judul }),
-          el('td', { teks: r.tipe === 'penguji' ? 'Penguji' + (r.kandidat ? ' (' + r.kandidat + ')' : '') : 'Latihan' }),
+          el('td', { teks: r.tipe === 'penguji' ? 'Penguji' + (r.kandidat ? ' (' + r.kandidat + ')' : '') : r.tipe === 'tes' ? 'Tes' : 'Latihan' }),
           el('td', { teks: r.skor + '/' + r.maks + ' (' + r.persen + '%)' }),
           el('td', { teks: r.global + (r.kritisGagal ? ' · butir kritis tak terpenuhi: ' + r.kritisGagal : '') }));
       }))));
@@ -112,6 +115,8 @@
         tombol('Mulai (' + U.fmtWaktu(def.waktu) + ')', function () {
           UI.sesi = OSCE.mulaiSesi(id);
           UI.hasil = null;
+          UI.mode = 'latihan';
+          UI.tes = null;
           UI.langsung = langsung.checked;
           UI.tab = def.panel[0].id;
           UI.draf = {};
@@ -124,10 +129,70 @@
     return el('p', { class: 'chip-baris' }, vital.map(function (v) { return chip(v[0] + ': ' + v[1], 'vital'); }));
   }
 
+  // Panel jawaban terstruktur (dropdown/centang). Dipakai latihan, dan mode tes bila LLM tidak tersedia.
+  UI.panelForm = function (sesi, p, segarkan) {
+    var wadah = el('div', { class: 'panel-form' });
+    if (p.catatan) wadah.appendChild(el('p', { class: 'catatan', teks: p.catatan }));
+    if (sesi.formTerkirim(p.id)) {
+      var entri = sesi.log.filter(function (e) { return e.tipe === 'form' && e.id === p.id; })[0];
+      wadah.appendChild(el('p', { class: 'ok', teks: 'Jawaban bagian ini sudah dikirim dan tidak dapat diubah.' }));
+      wadah.appendChild(el('pre', { class: 'ringkas', teks: entri ? entri.respons : '' }));
+      return wadah;
+    }
+    var awal = UI.draf[p.id] || {};
+    var form = el('form', { class: 'form-jawab', onsubmit: function (e) { e.preventDefault(); } });
+    var baca = {};
+    p.bidang.forEach(function (b) {
+      var nilai = awal[b.id], baris;
+      if (b.tipe === 'select') {
+        var sel = el('select', { 'aria-label': b.label, data: { bidang: b.id } },
+          el('option', { value: '', teks: '— pilih —' }),
+          b.opsi.map(function (o) { return el('option', { value: o[0], teks: o[1], selected: nilai === o[0] }); }));
+        baca[b.id] = function () { return sel.value; };
+        baris = el('label', { class: 'bidang' }, el('span', { teks: b.label }), sel);
+      } else if (b.tipe === 'multi') {
+        var kotak = b.opsi.map(function (o) {
+          return el('label', { class: 'pil' }, el('input', { type: 'checkbox', value: o[0], checked: (nilai || []).indexOf(o[0]) >= 0 }), ' ', o[1]);
+        });
+        var set = el('fieldset', { class: 'bidang', data: { bidang: b.id } }, el('legend', { teks: b.label }), el('div', { class: b.opsi.length > 8 ? 'kisi-cek' : 'tumpuk' }, kotak));
+        baca[b.id] = function () {
+          return Array.prototype.map.call(set.querySelectorAll('input:checked'), function (i) { return i.value; });
+        };
+        baris = set;
+      } else if (b.tipe === 'cek') {
+        var cek = el('input', { type: 'checkbox', checked: !!nilai, data: { bidang: b.id } });
+        baca[b.id] = function () { return cek.checked; };
+        baris = el('label', { class: 'bidang pil' }, cek, ' ', b.teks || b.label);
+      } else {
+        var angka = el('input', { type: 'number', min: b.min, max: b.max, step: 1, value: nilai == null ? '' : nilai, 'aria-label': b.label, data: { bidang: b.id } });
+        baca[b.id] = function () { return angka.value === '' ? '' : Number(angka.value); };
+        baris = el('label', { class: 'bidang' }, el('span', { teks: b.label + (b.satuan ? ' (' + b.satuan + ')' : '') }), angka);
+      }
+      form.appendChild(baris);
+    });
+    function bacaSemua() {
+      var o = {};
+      p.bidang.forEach(function (b) { o[b.id] = baca[b.id](); });
+      return o;
+    }
+    form.addEventListener('input', function () { UI.draf[p.id] = bacaSemua(); });
+    form.addEventListener('change', function () { UI.draf[p.id] = bacaSemua(); });
+    wadah.appendChild(form);
+    wadah.appendChild(el('div', { class: 'aksi-bawah' },
+      tombol('Kirim jawaban (−' + (p.biaya || 0) + ' dtk)', function () {
+        if (sesi.selesai) return;
+        var r = sesi.kirimForm(p.id, bacaSemua());
+        if (!r.ok) U.toast(r.alasan, 'peringatan');
+        segarkan();
+      }, 'utama')));
+    return wadah;
+  };
+
   /* ---------- ruang simulasi ---------- */
 
   UI.ruang = function (id) {
     var sesi = UI.sesi;
+    if (sesi && UI.mode === 'tes') { location.hash = '#/tes-sesi/' + id; return; }
     if (!sesi || sesi.stasiun.id !== id) { location.hash = '#/briefing/' + id; return; }
     var st = sesi.stasiun, def = sesi.def;
     var jam = el('output', { class: 'jam', 'aria-label': 'Sisa waktu simulasi' });
@@ -239,70 +304,12 @@
       return wadah;
     }
 
-    function panelForm(p) {
-      var wadah = el('div', { class: 'panel-form' });
-      if (p.catatan) wadah.appendChild(el('p', { class: 'catatan', teks: p.catatan }));
-      if (sesi.formTerkirim(p.id)) {
-        var entri = sesi.log.filter(function (e) { return e.tipe === 'form' && e.id === p.id; })[0];
-        wadah.appendChild(el('p', { class: 'ok', teks: 'Jawaban bagian ini sudah dikirim dan tidak dapat diubah.' }));
-        wadah.appendChild(el('pre', { class: 'ringkas', teks: entri ? entri.respons : '' }));
-        return wadah;
-      }
-      var awal = UI.draf[p.id] || {};
-      var form = el('form', { class: 'form-jawab', onsubmit: function (e) { e.preventDefault(); } });
-      var baca = {};
-      p.bidang.forEach(function (b) {
-        var nilai = awal[b.id], baris;
-        if (b.tipe === 'select') {
-          var sel = el('select', { 'aria-label': b.label, data: { bidang: b.id } },
-            el('option', { value: '', teks: '— pilih —' }),
-            b.opsi.map(function (o) { return el('option', { value: o[0], teks: o[1], selected: nilai === o[0] }); }));
-          baca[b.id] = function () { return sel.value; };
-          baris = el('label', { class: 'bidang' }, el('span', { teks: b.label }), sel);
-        } else if (b.tipe === 'multi') {
-          var kotak = b.opsi.map(function (o) {
-            return el('label', { class: 'pil' }, el('input', { type: 'checkbox', value: o[0], checked: (nilai || []).indexOf(o[0]) >= 0 }), ' ', o[1]);
-          });
-          var set = el('fieldset', { class: 'bidang', data: { bidang: b.id } }, el('legend', { teks: b.label }), el('div', { class: b.opsi.length > 8 ? 'kisi-cek' : 'tumpuk' }, kotak));
-          baca[b.id] = function () {
-            return Array.prototype.map.call(set.querySelectorAll('input:checked'), function (i) { return i.value; });
-          };
-          baris = set;
-        } else if (b.tipe === 'cek') {
-          var cek = el('input', { type: 'checkbox', checked: !!nilai, data: { bidang: b.id } });
-          baca[b.id] = function () { return cek.checked; };
-          baris = el('label', { class: 'bidang pil' }, cek, ' ', b.teks || b.label);
-        } else {
-          var angka = el('input', { type: 'number', min: b.min, max: b.max, step: 1, value: nilai == null ? '' : nilai, 'aria-label': b.label, data: { bidang: b.id } });
-          baca[b.id] = function () { return angka.value === '' ? '' : Number(angka.value); };
-          baris = el('label', { class: 'bidang' }, el('span', { teks: b.label + (b.satuan ? ' (' + b.satuan + ')' : '') }), angka);
-        }
-        form.appendChild(baris);
-      });
-      function bacaSemua() {
-        var o = {};
-        p.bidang.forEach(function (b) { o[b.id] = baca[b.id](); });
-        return o;
-      }
-      form.addEventListener('input', function () { UI.draf[p.id] = bacaSemua(); });
-      form.addEventListener('change', function () { UI.draf[p.id] = bacaSemua(); });
-      wadah.appendChild(form);
-      wadah.appendChild(el('div', { class: 'aksi-bawah' },
-        tombol('Kirim jawaban (−' + (p.biaya || 0) + ' dtk)', function () {
-          if (sesi.selesai) return;
-          var r = sesi.kirimForm(p.id, bacaSemua());
-          if (!r.ok) U.toast(r.alasan, 'peringatan');
-          segarkan();
-        }, 'utama')));
-      return wadah;
-    }
-
     function renderPanel() {
       if (UI.widget) { UI.widget.hancurkan(); UI.widget = null; }
       isi.textContent = '';
       var p = panelAktif();
       if (p.tipe === 'aksi') isi.appendChild(panelAksi(p));
-      else if (p.tipe === 'form') isi.appendChild(panelForm(p));
+      else if (p.tipe === 'form') isi.appendChild(UI.panelForm(sesi, p, segarkan));
       else if (p.tipe === 'widget') {
         if (p.catatan) isi.appendChild(el('p', { class: 'catatan', teks: p.catatan }));
         var wadah = el('div', { class: 'wadah-widget' });
@@ -363,12 +370,14 @@
     if (!sesi.selesai) sesi.akhiri();
     var ev = sesi.evaluasi();
     var st = sesi.stasiun;
-    UI.hasil = { id: st.id, stasiun: st, ev: ev, waktu: new Date().toISOString(), log: sesi.log.slice(), langsung: UI.langsung };
+    var tes = UI.mode === 'tes';
+    UI.hasil = { id: st.id, stasiun: st, ev: ev, waktu: new Date().toISOString(), log: sesi.log.slice(), langsung: UI.langsung, mode: UI.mode, transkrip: tes && UI.tes ? UI.tes.transkrip.slice() : null, jalurTes: tes && UI.tes ? UI.tes.jalur : null };
     Riwayat.tambah({
-      tipe: 'latihan', stasiun: st.id, judul: st.judul, waktu: UI.hasil.waktu,
+      tipe: tes ? 'tes' : 'latihan', stasiun: st.id, judul: st.judul, waktu: UI.hasil.waktu,
       skor: ev.total, maks: ev.maks, persen: ev.persen, global: ev.global.label,
       kritisGagal: ev.kritisGagal.length, berisiko: ev.berisiko.length
     });
+    if (tes && UI.tes && UI.tes.bersihkan) UI.tes.bersihkan();
     UI.sesi = null;
     location.hash = '#/hasil';
   };
@@ -422,7 +431,7 @@
 
     pasang(el('article', { class: 'hasil' },
       tautan('#/', '← Beranda', 'tipis'),
-      el('p', { class: 'kartu-no', teks: 'Hasil · Stasiun ' + st.id }),
+      el('p', { class: 'kartu-no', teks: (h.mode === 'tes' ? 'Hasil tes · Stasiun ' : 'Hasil · Stasiun ') + st.id }),
       el('h1', { teks: st.judul }),
       el('section', { class: 'ringkasan' },
         el('div', { class: 'skor-besar' }, el('span', { class: 'angka', teks: ev.total }), el('span', { class: 'dari', teks: ' / ' + ev.maks }), el('span', { class: 'persen', teks: ev.persen + '%' })),
@@ -436,18 +445,20 @@
       ev.tidakTepat.length ? el('section', {}, el('h2', { teks: 'Tindakan tidak tepat' }),
         el('ul', {}, ev.tidakTepat.map(function (x) { return el('li', {}, x.label, ' — ', el('em', { teks: x.alasan })); }))) : null,
       el('section', {}, el('h2', { teks: 'Pertanyaan lanjutan penguji' }), el('div', { class: 'md', html: U.md(st.pertanyaanLanjutan) })),
-      el('section', {}, el('h2', { teks: 'Contoh urutan ideal' }), el('ol', { class: 'ideal' }, langkahIdeal(st).map(function (t) { return el('li', { teks: t }); }))),
-      el('section', {}, el('h2', { teks: 'Catatan pembuat soal' }), el('div', { class: 'md', html: U.md(st.catatan) })),
+      h.mode === 'tes' ? UI.transkripView(h) : [
+        el('section', {}, el('h2', { teks: 'Contoh urutan ideal' }), el('ol', { class: 'ideal' }, langkahIdeal(st).map(function (t) { return el('li', { teks: t }); }))),
+        el('section', {}, el('h2', { teks: 'Catatan pembuat soal' }), el('div', { class: 'md', html: U.md(st.catatan) }))],
       el('section', {}, el('h2', { teks: 'Rujukan' }), el('div', { class: 'md', html: U.md(st.rujukan) })),
       el('details', {}, el('summary', { teks: 'Rekam tindakan Anda (' + h.log.length + ')' }),
         el('ol', { class: 'rekam' }, h.log.map(function (e) {
           return el('li', {}, el('span', { class: 'wkt', teks: U.fmtWaktu(e.t) }), ' ', e.label);
         }))),
       el('div', { class: 'aksi-bawah' },
-        tautan('#/briefing/' + st.id, 'Ulangi stasiun', 'utama'),
+        tautan((h.mode === 'tes' ? '#/tes/' : '#/briefing/') + st.id, 'Ulangi stasiun', 'utama'),
         tombol('Cetak', function () { g.print(); }),
         tombol('Unduh hasil (JSON)', function () {
           U.unduh('hasil-osce-' + st.id + '.json', JSON.stringify({
+            mode: h.mode || 'latihan', jalurTes: h.jalurTes || undefined, transkrip: h.transkrip || undefined,
             stasiun: st.id, judul: st.judul, waktu: h.waktu, skor: ev.total, maks: ev.maks, persen: ev.persen, global: ev.global,
             butir: ev.butir.map(function (b) { return { id: b.id, kritis: b.kritis, diperoleh: b.diperoleh, maks: b.skor }; }),
             tidakTepat: ev.tidakTepat, berisiko: ev.berisiko
@@ -612,9 +623,9 @@
       el('ul', {},
         el('li', { teks: 'EKG dan bunyi jantung disintesis (ilustrasi), bukan rekaman pasien.' }),
         el('li', { teks: 'Aplikasi tidak dapat menilai teknik fisik. Kedalaman kompresi, posisi tangan, dan penempatan stetoskop nyata harus dilatih pada manikin dan pasien simulasi.' }),
-        el('li', { teks: 'Pasien simulasi menjawab dari bank respons tetap; pertanyaan di luar bank tidak tersedia.' }),
+        el('li', { teks: 'Pasien simulasi menjawab dari bank respons tetap; pertanyaan di luar bank tidak dijawab. Pada mode tes, ucapan bebas dipetakan ke bank itu (LLM atau pencocokan kata); ketepatan pemetaan belum diuji pada kandidat sungguhan.' }),
         el('li', { teks: 'Riwayat hanya tersimpan di peramban ini.' })),
       el('h2', { teks: 'Privasi' }),
-      el('p', { teks: 'Seluruh proses berjalan di peramban Anda. Tidak ada data yang dikirim ke server.' })));
+      el('p', { teks: 'Secara bawaan seluruh proses berjalan di peramban Anda dan tidak ada data yang dikirim ke server. Dua fitur opsional memakai internet: (1) pemahaman ucapan dengan LLM (Claude, Anthropic) pada mode tes, bila Anda mengaktifkannya di Pengaturan, mengirim teks ucapan Anda beserta daftar tindakan stasiun; (2) mikrofon memakai pengenalan ucapan bawaan peramban, yang di Chrome dan Edge mengirim audio ke server Google atau Microsoft. Kasus di aplikasi ini fiktif; jangan menyebut data pasien nyata. Kunci API hanya disimpan di tab ini dan hilang saat tab ditutup.' })));
   };
 })(window);

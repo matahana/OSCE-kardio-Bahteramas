@@ -1,0 +1,361 @@
+{
+ "stasiun": "01",
+ "aksi": {
+  "salam": [
+   "Selamat siang, Pak. Perkenalkan, saya dokter yang bertugas di IGD hari ini.",
+   "siang pak saya dokter jaga ya",
+   "Halo Pak, saya yang akan menangani Bapak di sini, saya dokternya.",
+   "Permisi Pak, saya dokter dari ruang gawat darurat, saya akan mendampingi Bapak mulai sekarang.",
+   "Assalamualaikum Pak, saya yang akan merawat Bapak malam ini, kita tangani keluhannya sama-sama ya."
+  ],
+  "identitas": [
+   "Boleh saya cocokkan data Bapak dulu? Nama lengkap dan umur Bapak berapa?",
+   "namanya siapa pak, umurnya berapa",
+   "Atas nama siapa ini ya? Dan usianya berapa tahun?",
+   "Saya cek identitas dulu ya, Pak. Tolong sebutkan nama lengkap dan tanggal lahir.",
+   "Supaya data tidak tertukar dengan pasien lain, mohon sebutkan nama lengkap dan usia Bapak sekarang."
+  ],
+  "tujuan": [
+   "Agar pertolongannya tepat sasaran, saya perlu mengajukan beberapa pertanyaan. Apakah Bapak mengizinkan?",
+   "izin tanya-tanya sebentar ya pak boleh",
+   "Boleh saya wawancara Bapak sebentar tentang keluhannya?",
+   "Mohon persetujuan Bapak, saya akan menggali riwayat keluhan ini.",
+   "Pak, saya perlu bertanya beberapa hal tentang nyeri dada Bapak supaya penanganannya cepat dan tepat. Bapak bersedia, ya?"
+  ],
+  "lokasi": [
+   "Bagian dada yang mana yang sakit, Pak? Coba tunjuk pakai jari.",
+   "sakitnya di mana pak tunjukin",
+   "Titik yang paling terasa nyeri letaknya di mana persisnya?",
+   "Di sisi kiri, kanan, atau tengah dada? Tolong tunjuk dengan satu jari.",
+   "Saya perlu tahu lokasi pastinya. Bisa Bapak tunjukkan dengan tangan bagian dada mana yang paling nyeri, dan apakah area nyerinya sempit atau luas?"
+  ],
+  "onset": [
+   "Sudah berapa lama dadanya sakit? Masih terasa sampai sekarang?",
+   "mulai jam berapa pak sakitnya",
+   "Awal mula nyerinya kapan, Pak, dan apakah masih berlangsung?",
+   "Onset nyeri kapan, durasinya sudah berapa lama, terus-menerus atau sempat hilang?",
+   "Coba ceritakan dari awal, kapan sakit ini pertama kali Bapak rasakan hari ini, dan apakah sampai sekarang masih berlangsung?"
+  ],
+  "kualitas": [
+   "Rasa sakitnya seperti apa, Pak? Berat seperti tertindih, tajam menusuk, atau panas?",
+   "rasanya gimana pak sakitnya",
+   "Bagaimana sifat nyerinya? Coba gambarkan dengan kata-kata Bapak sendiri.",
+   "Karakter nyeri: diremas, diikat, atau tajam?",
+   "Saya ingin tahu kualitas nyerinya. Apakah terasa tumpul dan berat, berdenyut, atau tajam? Silakan jelaskan sebebas Bapak."
+  ],
+  "penjalaran": [
+   "Sakitnya ikut terasa di tempat lain juga, Pak? Misalnya tangan, bahu, atau rahang?",
+   "nyebar ke tangan nggak pak",
+   "Ada rasa nyeri yang merambat ke leher, rahang, atau lengan?",
+   "Radiasi nyeri ke mana?",
+   "Selain di dada, apakah ada bagian tubuh lain yang ikut nyeri atau terasa kebas, misalnya lengan kiri, bahu, leher, atau gigi? Coba ceritakan."
+  ],
+  "pencetus": [
+   "Kira-kira apa yang mencetuskan sakit ini, Pak?",
+   "kambuh gara-gara apa pak, ada pemicunya nggak",
+   "Faktor pencetus nyerinya apa? Emosi, kecapekan, atau yang lain?",
+   "Coba ingat, ada sesuatu yang membuat nyeri ini muncul, misalnya marah, kaget, atau udara dingin?",
+   "Apakah ada hal tertentu yang selalu mendahului datangnya nyeri ini, Pak? Pikirkan dulu sebelum menjawab."
+  ],
+  "pereda": [
+   "Ada yang membuat sakitnya berkurang? Misalnya istirahat atau minum obat?",
+   "udah dicoba duduk diam atau minum sesuatu, enakan nggak pak",
+   "Apa yang meredakan nyeri, apa yang memperberat?",
+   "Kalau Bapak diam dan beristirahat, nyerinya reda atau tetap sama?",
+   "Sebelum ke sini sudah mencoba cara apa untuk mengurangi sakitnya, dan apakah ada hasilnya? Apakah ada posisi atau tindakan yang membuatnya makin parah?"
+  ],
+  "keparahan": [
+   "Kalau dikasih angka dari nol sampai sepuluh, sakitnya Bapak nilai berapa?",
+   "parah banget nggak pak sakitnya",
+   "Intensitas nyerinya bagaimana: ringan, sedang, atau berat sekali?",
+   "Tingkat nyeri berapa dari 10?",
+   "Kalau sakit paling hebat yang pernah Bapak alami dianggap sepuluh, yang sekarang ini kira-kira nilainya berapa? Tolong sebutkan angkanya."
+  ],
+  "sesak": [
+   "Napas Bapak terasa pendek atau engap?",
+   "ada sesak nggak pak",
+   "Merasa kurang udara atau susah bernapas sejak sakit ini muncul?",
+   "Dispnea? Ada napas tersengal?",
+   "Selain nyeri, apakah Bapak juga merasa napas jadi pendek-pendek dan dada terasa penuh, seperti tidak cukup udara?"
+  ],
+  "keringat": [
+   "Bapak berkeringat dingin nggak?",
+   "badannya basah kuyup ya pak padahal nggak panas",
+   "Diaforesis ada?",
+   "Apakah tiba-tiba badan jadi basah sekali, seperti habis kehujanan, padahal ruangan tidak panas?",
+   "Pak, saat nyeri ini muncul apakah badan Bapak terasa dingin lembap dan bercucuran keringat? Saya tanyakan karena itu salah satu tanda penting."
+  ],
+  "mual": [
+   "Perutnya terasa enek, Pak?",
+   "mual atau muntah nggak pak",
+   "Ada rasa eneg di perut, seperti ingin mengeluarkan isi lambung?",
+   "Selain sakit dada, apakah perut ikut bergejolak sampai Bapak ingin muntah?",
+   "Bapak merasa nausea, atau isi perut seperti mau naik?"
+  ],
+  "berdebar": [
+   "Jantungnya terasa deg-degan atau berdebar kencang, Pak?",
+   "ada palpitasi nggak",
+   "Detak jantung terasa cepat atau tidak teratur, seperti melompat-lompat?",
+   "dag dig dug nggak pak dadanya",
+   "Selain nyeri, apakah Bapak sadar akan denyut jantungnya sendiri, misalnya terasa kencang, terlalu cepat, atau seperti ada yang terlewat?"
+  ],
+  "sinkop": [
+   "Apakah tadi sempat jatuh atau tidak sadar sebentar?",
+   "pingsan nggak pak",
+   "Kepala terasa melayang, pandangan menggelap, seperti mau pingsan?",
+   "Ada sinkop?",
+   "Sejak nyeri ini mulai, apakah sempat hilang kesadaran sesaat atau nyaris jatuh karena pusing hebat?"
+  ],
+  "pola": [
+   "Ini pertama kalinya Bapak merasakan sakit dada seperti ini, atau sebelumnya sudah pernah?",
+   "dua minggu ini sering sakit dada nggak pak",
+   "Dalam beberapa minggu terakhir, apakah nyeri seperti ini sudah sering muncul, dan apakah makin sering atau makin berat?",
+   "Episode sebelumnya bagaimana? Makin sering, makin lama, makin berat?",
+   "Riwayat keluhan serupa dalam dua minggu terakhir ada?"
+  ],
+  "aktivitas_hari_ini": [
+   "Sebelum sakit mulai, Bapak sedang melakukan apa?",
+   "tadi habis ngapain pak sebelum sakit",
+   "Kegiatan terakhir yang Bapak lakukan sebelum dada terasa sakit itu apa?",
+   "Hari ini Bapak sempat melakukan kegiatan apa saja sebelum nyerinya datang?",
+   "Coba ceritakan kronologi aktivitas Bapak sejak pagi hingga nyeri ini muncul."
+  ],
+  "makan_terakhir": [
+   "Bapak terakhir makan jam berapa, apa menunya?",
+   "udah sarapan belum tadi pak",
+   "Perutnya terakhir diisi jam berapa? Menunya apa?",
+   "Jam berapa tadi perut Bapak terakhir diisi, dan dengan apa? Ini penting kalau nanti perlu tindakan.",
+   "Sarapan atau makan siang tadi? Sudah ada yang dimakan sejak bangun?"
+  ],
+  "pernah_dirawat": [
+   "Pernah dirawat inap di rumah sakit karena sakit dada seperti ini?",
+   "dulu pernah opname gara-gara sakit begini nggak",
+   "Dulu sempat masuk RS gara-gara sakit dada begini?",
+   "Riwayat rawat inap dengan keluhan serupa?",
+   "Apakah sebelumnya Bapak pernah ditangani atau diinapkan di rumah sakit untuk nyeri dada yang mirip dengan hari ini?"
+  ],
+  "ekg_sebelumnya": [
+   "Pernah direkam jantungnya sebelumnya, Pak?",
+   "pernah di-ECG belum",
+   "Dulu waktu medical check-up, ada rekaman jantung? Hasilnya bagaimana?",
+   "Apakah Bapak punya hasil rekam jantung lama yang bisa kami bandingkan?",
+   "Sebelum hari ini, pernah dilakukan pemeriksaan listrik jantung, mungkin saat cek kesehatan atau berobat sebelumnya?"
+  ],
+  "disobek": [
+   "Nyerinya terasa seperti dirobek atau tercabik, Pak?",
+   "sakitnya kayak ada yang nyobek dada pak, tembus ke belakang?",
+   "Apakah nyeri datang mendadak, sangat hebat, seperti dikoyak sampai tembus ke punggung?",
+   "Rasa robek di dada?",
+   "Saya perlu menyingkirkan penyakit pembuluh darah besar. Apakah nyerinya terasa seperti merobek, dan tembus sampai ke belakang?"
+  ],
+  "pleuritik": [
+   "Kalau tarik napas dalam, sakitnya nambah nggak pak?",
+   "ada panas atau batuk-batuk?",
+   "Apakah nyeri berubah ketika Bapak berbaring, duduk, atau miring? Ada demam?",
+   "Nyeri pleuritik? Demam, batuk?",
+   "Saya ingin menyingkirkan penyebab dari selaput paru atau selaput jantung. Apakah sakitnya bertambah saat napas dalam atau batuk, dan apakah ada demam beberapa hari ini?"
+  ],
+  "emboli": [
+   "Baru-baru ini Bapak habis bepergian jauh, misalnya naik pesawat atau perjalanan darat panjang?",
+   "kaki bengkak nggak pak",
+   "Ada tirah baring lama atau baru selesai operasi dalam beberapa minggu ini?",
+   "Betis terasa nyeri atau bengkak sebelah?",
+   "Riwayat imobilisasi lama atau tungkai bengkak? Saya memeriksa kemungkinan sumbatan di paru."
+  ],
+  "gerd": [
+   "Apakah sakitnya ada hubungan dengan makan, rasanya panas atau asam naik ke tenggorokan?",
+   "dada ditekan sakit nggak pak",
+   "Bapak punya riwayat maag atau asam lambung?",
+   "Setelah makan nyerinya makin terasa, atau malah ulu hati yang perih?",
+   "Kalau saya tekan di dinding dada Bapak, apakah nyerinya muncul atau bertambah? Dan apakah ada rasa terbakar yang naik dari perut?"
+  ],
+  "ht": [
+   "Apakah Bapak ada penyakit tekanan darah tinggi?",
+   "tensinya biasanya tinggi nggak pak",
+   "Pernah dibilang dokter punya hipertensi?",
+   "Riwayat hipertensi? Kalau ada, sudah berapa lama?",
+   "Selama ini tekanan darah Bapak bagaimana? Apakah pernah diberi tahu bahwa angkanya tinggi?"
+  ],
+  "dm": [
+   "Ada riwayat kencing manis atau diabetes?",
+   "punya gula nggak pak",
+   "Gula darahnya pernah dinyatakan tinggi?",
+   "Apakah Bapak penderita DM? Sejak kapan?",
+   "Selama ini Bapak rutin kontrol gula? Ada penyakit gula yang sedang diobati?"
+  ],
+  "dislipidemia": [
+   "Pernah cek kolesterol belum, Pak?",
+   "kolesterolnya tinggi nggak",
+   "Apakah pernah diperiksa lemak darah atau profil lipid? Hasilnya bagaimana?",
+   "Pernah dibilang trigliserida atau LDL Bapak tinggi?",
+   "Terakhir kali dicek lemak darahnya itu kapan, Pak, dan apakah ada hasil yang lewat batas normal?"
+  ],
+  "rokok": [
+   "Bapak perokok? Sehari berapa batang, sudah berapa tahun?",
+   "ngerokok nggak pak",
+   "Ada kebiasaan mengisap tembakau, Pak? Sudah sejak usia berapa?",
+   "Apakah Bapak biasa menghisap rokok atau tembakau?",
+   "Riwayat merokok: jumlah per hari dan lama kebiasaannya?"
+  ],
+  "keluarga": [
+   "Ada anggota keluarga Bapak yang punya penyakit jantung?",
+   "orang tua atau saudara ada yang kena serangan jantung nggak pak",
+   "Pernah ada kerabat dekat yang meninggal mendadak di usia muda?",
+   "Riwayat jantung di keluarga?",
+   "Bapak atau ibu Bapak, atau saudara kandung, apakah ada yang sakit jantung atau meninggal tiba-tiba di usia yang masih muda?"
+  ],
+  "riwayat_jantung": [
+   "Sebelumnya Bapak pernah didiagnosis penyakit jantung atau stroke?",
+   "pernah dipasang ring atau operasi bypass nggak pak",
+   "Apakah pernah menjalani kateterisasi jantung atau tindakan di pembuluh darah jantung?",
+   "Riwayat serangan jantung dan stroke?",
+   "Saya ingin tahu masa lalu medis Bapak: apakah ada masalah di jantung, serangan otak, atau prosedur seperti pemasangan ring dan bypass?"
+  ],
+  "obat": [
+   "Bapak sehari-hari minum obat apa saja?",
+   "obat rutinnya apa pak",
+   "Boleh sebutkan nama obat yang rutin dikonsumsi? Bawa resepnya?",
+   "Saat ini sedang dalam pengobatan apa?",
+   "Untuk keamanan pemberian obat nanti, saya perlu tahu semua obat yang Bapak konsumsi secara teratur, lengkap dengan dosisnya kalau Bapak ingat."
+  ],
+  "alergi": [
+   "Apakah Bapak punya alergi terhadap obat tertentu?",
+   "alergi obat nggak pak",
+   "Pernah muncul gatal-gatal atau biduran setelah disuntik atau minum antibiotik?",
+   "Riwayat reaksi hipersensitivitas? Terutama antibiotik atau aspirin.",
+   "Sebelum kami memberikan terapi apa pun, adakah zat yang pernah menimbulkan reaksi hebat pada Bapak, misalnya ruam, gatal, atau bibir membengkak?"
+  ],
+  "perdarahan": [
+   "Pernah muntah darah atau BAB hitam seperti aspal?",
+   "ada riwayat tukak lambung berdarah nggak pak",
+   "Pernah stroke karena pembuluh darah di otak pecah?",
+   "Riwayat perdarahan di saluran cerna atau otak?",
+   "Kami mungkin perlu memberi obat pengencer darah. Karena itu saya perlu tahu apakah Bapak pernah mengalami perdarahan serius, misalnya dari lambung atau otak."
+  ],
+  "narkoba": [
+   "Bapak pernah memakai narkoba, misalnya kokain atau sabu?",
+   "pakai obat terlarang nggak pak",
+   "Ada penggunaan zat adiktif atau obat-obatan haram?",
+   "Riwayat NAPZA?",
+   "Pertanyaan ini rutin untuk semua pasien nyeri dada: apakah Bapak pernah menggunakan zat yang bisa memengaruhi jantung, seperti sabu atau ekstasi?"
+  ],
+  "alkohol": [
+   "Apakah Bapak biasa minum minuman beralkohol?",
+   "doyan miras atau mabuk-mabukan nggak pak",
+   "Konsumsi bir, tuak, atau minuman keras lain? Seberapa sering?",
+   "Bapak suka minum-minum? Sering?",
+   "Bagaimana kebiasaan Bapak terkait minuman keras, apakah ada dan seberapa sering dalam seminggu?"
+  ],
+  "olahraga": [
+   "Bapak rutin olahraga?",
+   "biasa jogging atau senam nggak pak",
+   "Seminggu berapa kali Bapak berolahraga?",
+   "Aktivitas fisik terjadwal seperti jalan pagi atau gym?",
+   "Saya ingin tahu gaya hidup Bapak. Apakah Bapak punya kebiasaan bergerak teratur, misalnya jalan cepat, bersepeda, atau berenang?"
+  ],
+  "stres": [
+   "Akhir-akhir ini ada hal yang membebani pikiran Bapak?",
+   "lagi banyak pikiran nggak pak",
+   "Ada tekanan di pekerjaan atau urusan lain yang bikin Bapak tegang belakangan ini?",
+   "Tingkat stres belakangan ini bagaimana?",
+   "Bapak merasa tertekan, gelisah, atau sulit tidur karena memikirkan sesuatu akhir-akhir ini? Boleh diceritakan kalau Bapak berkenan."
+  ],
+  "diet": [
+   "Bagaimana kebiasaan makan Bapak setiap hari?",
+   "biasanya makan apa aja pak sehari-hari, suka yang berminyak?",
+   "Menu harian Bapak seperti apa?",
+   "Pola konsumsi: sering makanan berlemak, asin, atau manis?",
+   "Saya perlu menilai gaya hidup Bapak sebagai faktor risiko. Biasanya santapan Bapak dalam seminggu seperti apa, dan seberapa sering jajan di luar?"
+  ],
+  "berat_badan": [
+   "Berat badan Bapak naik atau turun belakangan ini?",
+   "badannya makin gemuk atau makin kurus pak",
+   "Timbangan Bapak ada berubah dalam beberapa bulan terakhir?",
+   "BB berubah nggak?",
+   "Apakah ukuran pakaian Bapak berubah, misalnya jadi lebih sempit atau lebih longgar, tanpa Bapak sengaja diet?"
+  ],
+  "herbal": [
+   "Bapak ada minum jamu atau suplemen?",
+   "minum ramuan tradisional nggak pak",
+   "Konsumsi vitamin, herbal, atau obat-obatan tradisional?",
+   "Selain obat dari dokter, ada produk herbal atau minuman penambah stamina yang Bapak pakai?",
+   "Saya perlu tahu apakah ada produk tradisional atau suplemen yang Bapak konsumsi, karena bisa berinteraksi dengan obat."
+  ],
+  "stroke_keluarga": [
+   "Adakah anggota keluarga yang pernah kena stroke atau kencing manis?",
+   "ortu atau saudara ada yang sakit gula nggak pak",
+   "Riwayat serangan otak atau gula darah tinggi pada orang tua dan saudara kandung?",
+   "Ibu atau ayah Bapak ada yang menderita diabetes atau pernah stroke?",
+   "Penyakit turunan lain yang saya perlu tahu: apakah di keluarga ada yang punya sakit gula atau pernah lumpuh sebelah badan?"
+  ],
+  "ginjal": [
+   "Apakah Bapak ada penyakit ginjal?",
+   "pernah cuci darah nggak pak",
+   "Kreatinin Bapak pernah dibilang tinggi?",
+   "Ada riwayat gagal ginjal?",
+   "Karena obat dan kontras nanti bergantung pada fungsi ginjal, apakah Bapak pernah punya masalah di situ, misalnya batu atau gagal ginjal?"
+  ],
+  "ringkas": [
+   "Saya rangkum dulu ya, Pak: sakit di tengah dada sejak sejam lalu, menjalar ke lengan kiri dan rahang, ada keringat dingin, plus riwayat hipertensi, diabetes, dan merokok. Ada yang keliru?",
+   "oke pak saya ulang ya sakit dada sejam menjalar ke tangan kiri keringat dingin ada tensi gula ngerokok betul begitu",
+   "Rangkuman: nyeri dada tipikal 1 jam, penjalaran lengan-rahang kiri, diaforesis; faktor risiko HT, DM, rokok. Benar?",
+   "Supaya tidak ada yang keliru, saya simpulkan dulu ya: sakit dada berat sejak sekitar satu jam, disertai keringat dingin, dan Bapak punya risiko jantung seperti hipertensi, diabetes, dan merokok. Apakah sudah sesuai?",
+   "Intinya begini ya Pak, keluhan utamanya nyeri dada yang sedang berlangsung dengan penjalaran ke sisi kiri, dan ada beberapa faktor risiko. Ada yang mau Bapak koreksi atau tambahkan?"
+  ],
+  "rencana": [
+   "Sekarang kami akan rekam jantung Bapak, pasang monitor, dan ambil darah. Hasilnya menentukan pengobatan selanjutnya.",
+   "oke pak kita ECG dulu sama cek darah ya habis itu baru tau obatnya",
+   "Rencana awal: ECG 12 sadapan, monitoring, pemeriksaan darah.",
+   "Langkah berikutnya, kami periksa listrik jantung dan sampel darah Bapak, lalu dipantau terus di tempat tidur ini. Dari hasilnya kami putuskan terapi.",
+   "Saya jelaskan rencananya supaya Bapak tenang: pertama jantung direkam, kedua dipasang alat pemantau, ketiga diambil darah untuk cek enzim jantung. Semuanya segera kami kerjakan."
+  ],
+  "empati": [
+   "Saya mengerti Bapak sedang cemas dan kesakitan. Tenang ya Pak, kami di sini untuk menolong Bapak.",
+   "tenang ya pak, bapak nggak sendirian, kami temani terus",
+   "Pasti tidak nyaman sekali rasanya. Kami akan menangani ini dengan sungguh-sungguh.",
+   "Wajar kok Bapak takut, kami paham. Percayakan pada kami.",
+   "Saya tahu ini menakutkan. Mari kita hadapi bersama, Pak. Tim kami akan menjaga Bapak sampai keluhannya teratasi, dan kalau ada yang ditakutkan silakan sampaikan kepada saya."
+  ],
+  "menikah": [
+   "Bapak sudah berumah tangga?",
+   "udah nikah belum pak",
+   "Status perkawinan Bapak apa?",
+   "Sudah punya istri dan anak, Pak? Berapa orang?",
+   "Sambil menunggu, boleh saya tahu apakah Bapak sudah menikah, dan sudah berapa lama?"
+  ],
+  "penghasilan": [
+   "Kira-kira pendapatan Bapak sebulan berapa?",
+   "gajinya sebulan berapa pak",
+   "Untung dari toko tiap bulan sekitar berapa?",
+   "Pendapatan per bulan?",
+   "Untuk data kami, boleh tahu berapa besar uang yang Bapak peroleh setiap bulannya dari usaha dagang?"
+  ],
+  "masuk_angin": [
+   "Tenang saja Pak, ini paling cuma masuk angin kok.",
+   "nggak apa-apa pak paling cuma kembung",
+   "Bukan penyakit serius kok, Pak, hanya kecapekan dan perut kembung biasa.",
+   "Ini hal sepele, Pak. Nanti juga hilang sendiri kalau dikerok.",
+   "Jangan terlalu khawatir, Pak, dari gejalanya sepertinya bukan masalah jantung, hanya gangguan ringan di perut atau otot, jadi Bapak bisa tenang."
+  ]
+ },
+ "keluarga": [],
+ "negatif": [
+  "Wah, hujan deras ya di luar, Pak, tadi macet nggak di jalan?",
+  "Berapa tinggi badan Bapak, kira-kira seratus enam puluh?",
+  "Apakah Bapak mengalami gangguan tidur atau sering mendengkur keras?",
+  "Tolong hubungi bagian administrasi untuk mengurus kartu BPJS Bapak.",
+  "Apakah penglihatan Bapak kabur atau pendengarannya terganggu?",
+  "Bapak sudah vaksin COVID-19 dan influenza belum?",
+  "Eee... apa ya... oke lanjut aja.",
+  "Tolong siapkan defibrilator dan troli emergensi di samping tempat tidur."
+ ],
+ "ganda": [
+  {"ucapan": "Selamat siang Pak, saya dokter jaga IGD, boleh saya tahu nama dan umur Bapak?", "aksi": ["salam", "identitas"]},
+  {"ucapan": "Sakitnya di sebelah mana Pak, sudah berapa lama, dan nyebar ke lengan nggak?", "aksi": ["lokasi", "onset", "penjalaran"]},
+  {"ucapan": "Ada keringat dingin, mual, atau sesak sama sakit dadanya?", "aksi": ["keringat", "mual", "sesak"]},
+  {"ucapan": "Bapak punya darah tinggi atau gula, dan merokok nggak?", "aksi": ["ht", "dm", "rokok"]},
+  {"ucapan": "Ada alergi obat? Terus obat rutin yang diminum apa saja?", "aksi": ["alergi", "obat"]},
+  {"ucapan": "Saya paham Bapak cemas. Jadi intinya nyeri dada sejak sejam dengan keringat dingin, benar ya? Sekarang kami rekam jantung dan periksa darah dulu.", "aksi": ["empati", "ringkas", "rencana"]}
+ ],
+ "isian": []
+}

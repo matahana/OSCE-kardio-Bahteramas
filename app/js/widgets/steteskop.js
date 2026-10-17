@@ -214,8 +214,8 @@
       U.el('div', { class: 'steteskop-badan' }, badan, nadi),
       status,
       kunci,
-      U.el('label', { class: 'pil' }, cekBantuan, ' Bantuan teks (deskripsi bunyi; tidak mengurangi skor tetapi dicatat)'),
-      bantuan));
+      opsi.tanpaBantuan ? null : U.el('label', { class: 'pil' }, cekBantuan, ' Bantuan teks (deskripsi bunyi; tidak mengurangi skor tetapi dicatat)'),
+      opsi.tanpaBantuan ? null : bantuan));
 
     return { hancurkan: function () { hentikan(); clearTimeout(dengar.timer); } };
   };

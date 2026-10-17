@@ -1,0 +1,294 @@
+{
+ "stasiun": "11",
+ "aksi": {
+  "cuci_tangan": [
+   "Sebelum memeriksa, saya mencuci tangan dulu.",
+   "Saya bersihkan tangan dengan sabun dan air mengalir atau handrub.",
+   "cuci tangan dulu",
+   "Saya pakai handrub berbasis alkohol sebelum menyentuh pasien, sesuai lima momen kebersihan tangan.",
+   "Permisi sebentar ya Bu, saya higienkan tangan dulu."
+  ],
+  "salam_izin": [
+   "Selamat siang, Bu. Saya dokter yang akan memeriksa jantung dan nadi Ibu; kalau ada yang kurang nyaman bilang ya. Boleh kita mulai?",
+   "Halo Bu Rahayu, saya dokter di poli jantung, saya periksa Ibu sekarang ya, kalau sakit atau tidak nyaman kasih tahu saya.",
+   "permisi bu saya dokternya mau periksa ibu ya boleh kita mulai",
+   "Perkenalkan Bu, saya dokter yang bertugas hari ini. Saya akan melakukan pemeriksaan fisik pada dada dan nadi, mohon izin dan sampaikan bila Ibu merasa tidak nyaman.",
+   "Bu, kita mulai pemeriksaannya ya, sebelumnya saya minta persetujuan Ibu dulu dan Ibu boleh minta berhenti kapan saja."
+  ],
+  "posisi45": [
+   "Ibu, saya atur sandaran tempat tidur sampai kira-kira empat puluh lima derajat, lalu pakaian bagian dada dibuka dengan tetap ditutup kain.",
+   "Tolong Ibu bersandar setengah duduk ya, bajunya saya buka sedikit, saya tutup dengan selimut supaya tidak terlihat.",
+   "atur posisi setengah duduk 45 derajat, buka dada, jaga privasi",
+   "Kepala tempat tidur saya naikkan hingga 45 derajat ya Bu.",
+   "Silakan bersandar nyaman, saya buka bagian atas pakaian Ibu untuk pemeriksaan dada dan saya tutupi dengan kain supaya tetap sopan."
+  ],
+  "inspeksi_umum": [
+   "Saya amati dulu keadaan umum pasien dari ujung tempat tidur: tampak sakit atau tidak, sesak atau tidak, dan gizinya bagaimana.",
+   "Dari kaki tempat tidur, saya lihat penampilan Ibu secara keseluruhan.",
+   "lihat dulu secara umum dari ujung kasur",
+   "Pasien tampak nyaman saat istirahat? Saya hitung napasnya dan perhatikan warna kulit secara umum dari jarak pandang.",
+   "Pandangan pertama saya dari ujung ranjang: Ibu ini tampak kesakitan, pucat, atau kebiruan tidak, dan napasnya cepat atau tidak."
+  ],
+  "tangan": [
+   "Saya periksa kedua tangan Ibu: jari tabuh, bintik perdarahan di bawah kuku, hangat atau dingin, dan seberapa cepat kuku kembali merah setelah ditekan.",
+   "Coba julurkan tangannya, Bu, saya raba suhu telapak dan lihat kuku-kukunya.",
+   "cek tangan pasien, clubbing, splinter, capillary refill",
+   "Saya tekan ujung kuku lalu lepas dan hitung berapa detik warnanya kembali, sambil memeriksa jari tabuh dan tanda endokarditis di tangan.",
+   "Saya mulai dari tangan: apakah akralnya hangat, adakah lesi di telapak atau ujung jari, dan bagaimana perfusi perifernya."
+  ],
+  "nadi_radial_30": [
+   "Saya raba nadi di pergelangan tangan dan hitung selama tiga puluh detik, sambil menilai iramanya teratur atau tidak.",
+   "Nadi radial saya hitung setengah menit, lalu dikalikan dua.",
+   "hitung nadi setengah menit",
+   "Karena denyutnya terasa tidak beraturan, saya hitung nadinya cukup lama, yaitu 30 detik.",
+   "Coba tangannya Bu, saya rasakan denyut di pergelangan selama setengah menit untuk mengetahui kecepatan dan keteraturannya."
+  ],
+  "nadi_10dtk": [
+   "Saya hitung nadi radial selama sepuluh detik lalu dikali enam.",
+   "Nadinya saya raba 10 detik saja terus x6 ya.",
+   "hitung denyut nadi sepuluh detik kali enam",
+   "Supaya cepat, saya hitung nadi pergelangan tangan dalam waktu singkat, sepuluh detik, kemudian saya kalikan enam untuk mendapatkan laju per menit.",
+   "Denyut di pergelangan saya cacah selama seperenam menit lalu saya konversi ke per menit."
+  ],
+  "nadi_karakter": [
+   "Saya nilai volume nadi, bandingkan nadi kanan dan kiri, dan sebutkan iramanya teratur atau tidak.",
+   "Denyutnya terasa penuh atau lemah? Kedua sisi sama kuat? Teratur nggak?",
+   "bandingkan nadi kiri dan kanan, besar kecilnya, sama irama",
+   "Saya raba kedua pergelangan tangan untuk melihat apakah kekuatannya sebanding, dan apakah ada selisih waktu denyut di lengan dan di paha, serta menyebut ritmenya.",
+   "Karakter nadinya bagaimana: amplitudo, simetri, dan ritme? Saya sebutkan hasilnya."
+  ],
+  "wajah_mata_mulut": [
+   "Saya periksa wajah Ibu: apakah pipinya kemerahan, kelopak mata bagian dalam pucat atau tidak, bagian putih mata kuning atau tidak, dan lidah serta bibir kebiruan atau tidak.",
+   "Coba buka mulutnya dan lihat ke atas, Bu; saya lihat mata dan lidahnya.",
+   "cek konjungtiva sklera lidah sama pipi",
+   "Saya perhatikan muka, mata, dan rongga mulut untuk mencari anemia, ikterus, dan sianosis sentral.",
+   "Tarik kelopak mata bawah sedikit ya, saya lihat apakah ada pucat; lalu julurkan lidah supaya saya periksa warnanya."
+  ],
+  "jvp": [
+   "Untuk menilai tekanan vena jugularis, pasien saya posisikan 45 derajat, kepala menoleh sedikit, lalu saya cari denyut vena jugularis interna dan ukur tinggi vertikalnya dari sudut sternum.",
+   "Saya lihat denyutan vena di leher Ibu dan ukur seberapa tinggi dari sudut Louis.",
+   "jvp berapa cm di atas sternal angle",
+   "Kepala Ibu menoleh sedikit ke kiri ya, saya cari denyutan vena di sisi leher yang menunjukkan tekanan atrium kanan.",
+   "Saya cek tekanan vena sentral secara non-invasif lewat vena leher, ukur dalam sentimeter, dan perhatikan bentuk gelombangnya."
+  ],
+  "karotis_satu_sisi": [
+   "Saya raba nadi karotis di leher, satu sisi saja dulu, dengan lembut, lalu menilai volumenya dan kontur gelombangnya.",
+   "Saya cek denyut leher sebelah kanan dulu, nanti baru yang kiri, tidak bersamaan.",
+   "raba karotis satu-satu ya, jangan dua-duanya",
+   "Dengan jari telunjuk dan tengah, saya tekan ringan di sisi leher untuk merasakan denyut arteri karotis, hanya satu sisi pada satu waktu.",
+   "Saya periksa arteri di leher bergantian, per sisi, untuk menilai kuat lemahnya denyut dan ada getaran atau tidak."
+  ],
+  "karotis_dua_sisi": [
+   "Saya raba arteri karotis kiri dan kanan sekaligus pada saat yang sama.",
+   "Kedua nadi leher saya periksa serentak ya Bu.",
+   "raba karotis kanan kiri bareng",
+   "Saya letakkan jari di kedua sisi leher pada saat bersamaan untuk membandingkan denyutnya.",
+   "Supaya cepat, dua-duanya saya tekan di leher sekaligus, kiri dan kanan, lalu bandingkan volumenya."
+  ],
+  "inspeksi_prekordium": [
+   "Saya lihat dada bagian jantung: ada bekas operasi, bentuk dada menonjol atau cekung, dan ada denyut yang terlihat.",
+   "Saya inspeksi dinding dada depan, adakah luka sayatan, kelainan bentuk, atau gerakan yang kelihatan?",
+   "lihat dada dulu bekas luka atau denyutan",
+   "Saya perhatikan daerah di atas jantung, apakah ada pulsasi apeks yang tampak, benjolan, atau jaringan parut sternotomi.",
+   "Sebelum meraba, saya pandangi dulu dada Ibu dari samping, mencari tonjolan atau denyutan abnormal."
+  ],
+  "palpasi_apeks": [
+   "Saya raba denyut apeks dengan ujung jari: letaknya di sela iga berapa, bergeser atau tidak, dan sifat denyutnya.",
+   "Di mana titik impuls maksimal jantungnya? Saya cari dengan ujung dua jari.",
+   "palpasi apex, cari ictus cordis",
+   "Saya tentukan posisi ictus cordis terhadap garis midklavikula, lalu menilai apakah menyebar, mengangkat, atau tapping.",
+   "Dengan jari-jari saya, saya raba titik denyut paling kuat di dada kiri bawah dan menilai kualitasnya."
+  ],
+  "palpasi_heave_thrill": [
+   "Dengan telapak tangan, saya raba sisi kiri tulang dada untuk mencari heave, lalu area katup untuk getaran dan bunyi P2 yang teraba.",
+   "Saya cek ada getaran (thrill) di dada atau tidak, pakai pangkal telapak tangan.",
+   "raba parasternal kiri heave sama thrill",
+   "Saya rasakan dengan telapak tangan apakah ada dorongan ventrikel kanan di tepi sternum kiri atau fremitus di area katup.",
+   "Telapak tangan saya taruh di empat area katup untuk merasakan getaran bising dan tonjolan ventrikel kanan."
+  ],
+  "palpasi_karotis_bunyi": [
+   "Sambil mendengarkan jantung, saya raba nadi karotis supaya tahu mana bunyi pertama dan kedua.",
+   "Saya pegang denyut leher sambil auskultasi untuk menentukan kapan sistol.",
+   "raba karotis sambil dengar buat bedain S1 S2",
+   "Untuk menentukan fase siklus jantung, saya sinkronkan bunyi yang terdengar dengan denyut arteri di leher.",
+   "Mana bunyi sistolik dan mana diastolik? Saya tentukan dengan meraba denyut karotis bersamaan dengan stetoskop di dada."
+  ],
+  "miring_kiri": [
+   "Bu, tolong berbaring miring ke sisi kiri ya.",
+   "Saya minta Ibu rebah menyamping ke kiri supaya ujung jantung lebih dekat ke dinding dada.",
+   "miring kiri ya bu",
+   "Coba badannya dimiringkan ke arah kiri, tangan kiri di bawah kepala, supaya bunyi di apeks lebih jelas saya dengar.",
+   "Posisikan pasien dalam left lateral decubitus."
+  ],
+  "tahan_ekspirasi": [
+   "Tarik napas, lalu hembuskan semuanya dan tahan sebentar ya Bu.",
+   "Bu, buang napas habis-habisan, jangan tarik lagi, tahan dulu.",
+   "tahan napas habis ekspirasi",
+   "Saya minta Ibu menghembuskan napas sepenuhnya kemudian berhenti bernapas beberapa detik supaya saya bisa mendengar bising mitral lebih jelas.",
+   "Tahan napasnya setelah dihembuskan, ya, jangan bernapas dulu sampai saya bilang."
+  ],
+  "duduk_condong_ekspirasi": [
+   "Ibu duduk dulu, badannya condong ke depan, lalu hembuskan napas dan tahan.",
+   "Sekarang bangun duduk dan membungkuk ke depan, buang napas lalu tahan, saya mau dengar sepanjang tepi kiri sternum.",
+   "duduk bungkuk ke depan tahan napas habis ekspirasi",
+   "Untuk mendeteksi bising diastolik dari katup aorta, saya minta pasien dalam posisi duduk menunduk dan menahan napas setelah mengeluarkan udara.",
+   "Tolong Ibu duduk tegak lalu majukan badan, bungkukkan ke depan, kemudian tahan napas ya."
+  ],
+  "paru_basis": [
+   "Saya dengarkan paru bagian bawah belakang kiri dan kanan dengan stetoskop, Ibu tarik napas dalam.",
+   "Bu, napas dalam lewat mulut ya, saya dengar bagian dasar paru di punggung.",
+   "auskultasi paru basal cari ronki",
+   "Saya periksa apakah ada suara basah di dasar paru yang menandakan bendungan paru.",
+   "Saya geser stetoskop ke bagian punggung paling bawah kanan dan kiri untuk membandingkan suara napasnya."
+  ],
+  "hepar": [
+   "Saya raba perut kanan atas di bawah lengkung iga, apakah hati membesar.",
+   "Ibu tarik napas dalam, saya cari tepi hatinya.",
+   "palpasi liver, ada pembesaran?",
+   "Sekarang saya periksa organ hati lewat perut kanan atas, mencari pembesaran atau nyeri tekan akibat bendungan.",
+   "Saya tekan lembut di bawah rusuk kanan untuk merasakan tepi hati saat Ibu menarik napas."
+  ],
+  "edema": [
+   "Saya tekan area tulang kering dan punggung kaki, juga bagian tulang ekor, untuk melihat ada bengkak atau tidak.",
+   "Kaki Ibu ada bengkak? Saya tekan dengan jempol sebentar.",
+   "cek pitting edema tungkai dan sakral",
+   "Saya cari tanda penumpukan cairan di tungkai bawah dan punggung bawah dengan menekan lima detik.",
+   "Boleh saya lihat dan pegang kedua kaki dan pinggang bagian belakang Ibu untuk mencari sembab?"
+  ],
+  "rapikan": [
+   "Pemeriksaan selesai, saya rapikan pakaian Ibu kembali dan mengucapkan terima kasih.",
+   "Sudah ya Bu, silakan dirapikan bajunya, terima kasih atas kerja samanya.",
+   "makasih ya bu sudah selesai, bajunya saya bantu rapikan",
+   "Saya tutup kembali bagian dada Ibu dengan selimut dan berterima kasih karena sudah kooperatif.",
+   "Itu saja pemeriksaannya, Bu. Terima kasih banyak, silakan berpakaian lagi."
+  ]
+ },
+ "keluarga": [],
+ "negatif": [
+  "Tolong ukur tekanan darah di kedua lengan.",
+  "Tolong rekam EKG 12 sadapan sekarang.",
+  "Pekerjaan Ibu apa, apakah banyak memakai tangan?",
+  "Besok hujan nggak ya, Bu?",
+  "Saya periksa refleks lutut dan kekuatan otot tungkai ya.",
+  "uhm eh sebentar tadi sampai mana ya",
+  "Ibu pernah dioperasi atau dirawat di rumah sakit sebelumnya?",
+  "Saya ukur suhu tubuh Ibu dengan termometer."
+ ],
+ "ganda": [
+  {
+   "ucapan": "Saya cuci tangan dulu, lalu permisi Bu, saya mulai periksa ya.",
+   "aksi": ["cuci_tangan", "salam_izin"]
+  },
+  {
+   "ucapan": "Saya periksa tangan Ibu, lalu hitung nadi setengah menit sambil menilai irama.",
+   "aksi": ["tangan", "nadi_radial_30"]
+  },
+  {
+   "ucapan": "Saya lihat vena leher, raba satu karotis saja, lalu periksa mata dan mulut.",
+   "aksi": ["jvp", "karotis_satu_sisi", "wajah_mata_mulut"]
+  },
+  {
+   "ucapan": "Saya lihat dada dulu, lalu raba apeks dan tepi kiri sternum dengan telapak tangan.",
+   "aksi": ["inspeksi_prekordium", "palpasi_apeks", "palpasi_heave_thrill"]
+  },
+  {
+   "ucapan": "Ibu miring ke kiri ya, lalu hembuskan napas dan tahan.",
+   "aksi": ["miring_kiri", "tahan_ekspirasi"]
+  },
+  {
+   "ucapan": "Terakhir saya dengar dasar paru, raba hati, dan cek kaki ada bengkak atau tidak.",
+   "aksi": ["paru_basis", "hepar", "edema"]
+  }
+ ],
+ "isian": [
+  {
+   "ucapan": "S1 mengeras, P2 keras, ada opening snap, bising diastolik rumble di apeks, dan tidak ada bising sistolik bermakna.",
+   "bidang": {
+    "s1": "keras",
+    "p2": "keras",
+    "snap": true,
+    "diastolik": "rumble_apeks",
+    "sistolik": "tidak"
+   }
+  },
+  {
+   "ucapan": "Bunyi pertama keras, P2 menonjol, ada OS, dan murmur diastolik low-pitched rumbling di apeks. Sistolik bersih.",
+   "bidang": {
+    "s1": "keras",
+    "p2": "keras",
+    "snap": true,
+    "diastolik": "rumble_apeks",
+    "sistolik": "tidak"
+   }
+  },
+  {
+   "ucapan": "S1 keras dan ada opening snap.",
+   "bidang": {
+    "s1": "keras",
+    "snap": true
+   }
+  },
+  {
+   "ucapan": "Ada bising diastolik berdengung di apeks, P2 mengeras.",
+   "bidang": {
+    "diastolik": "rumble_apeks",
+    "p2": "keras"
+   }
+  },
+  {
+   "ucapan": "S1 melemah, ada bising pansistolik di apeks, tanpa bising diastolik.",
+   "bidang": {
+    "s1": "lemah",
+    "sistolik": "pansistolik",
+    "diastolik": "tidak"
+   }
+  },
+  {
+   "ucapan": "Tidak ada bising sistolik bermakna dan tidak ada bising diastolik decrescendo di tepi sternum kiri; yang ada hanya rumble di apeks.",
+   "bidang": {
+    "sistolik": "tidak",
+    "diastolik": "rumble_apeks"
+   }
+  },
+  {
+   "ucapan": "Kesimpulan: stenosis mitral dengan AF, kemungkinan etiologi rematik. Rencana EKG, ekokardiografi, kendali laju, antikoagulasi warfarin, dan profilaksis sekunder demam rematik.",
+   "bidang": {
+    "diagnosis": "ms_af",
+    "langkah": ["ekg", "echo", "kendali_laju", "avk", "profilaksis"]
+   }
+  },
+  {
+   "ucapan": "Kesan saya MS rematik dengan AF. Lanjut EKG dan echo, rate control, warfarin karena MS, dan benzatin penisilin untuk profilaksis sekunder DR.",
+   "bidang": {
+    "diagnosis": "ms_af",
+    "langkah": ["ekg", "echo", "kendali_laju", "avk", "profilaksis"]
+   }
+  },
+  {
+   "ucapan": "Saya simpulkan stenosis mitral dengan fibrilasi atrium.",
+   "bidang": {
+    "diagnosis": "ms_af"
+   }
+  },
+  {
+   "ucapan": "Perlu echo dan EKG segera.",
+   "bidang": {
+    "langkah": ["echo", "ekg"]
+   }
+  },
+  {
+   "ucapan": "Ini regurgitasi mitral. Saya beri DOAC untuk antikoagulasi dan lakukan echo.",
+   "bidang": {
+    "diagnosis": "mr",
+    "langkah": ["doac", "echo"]
+   }
+  },
+  {
+   "ucapan": "Bukan stenosis aorta dan bukan regurgitasi aorta; saya pikirkan MS dengan AF. Tidak perlu DOAC, pakai warfarin.",
+   "bidang": {
+    "diagnosis": "ms_af",
+    "langkah": ["avk"]
+   }
+  }
+ ]
+}

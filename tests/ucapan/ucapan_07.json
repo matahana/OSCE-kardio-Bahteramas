@@ -1,0 +1,307 @@
+{
+ "stasiun": "07",
+ "aksi": {
+  "salam": [
+   "Selamat pagi, Pak Arifin. Perkenalkan, saya dokter yang merawat Bapak. Apakah sekarang waktunya cocok untuk kita mengobrol sebentar tentang kepulangan Bapak?",
+   "pagi pak, saya dokternya ya, boleh ngobrol bentar soal pulang besok",
+   "Salam kenal, Pak. Saya dokter bangsal. Kita ngobrol sepuluh menitan ya.",
+   "Halo Pak Arifin, bagaimana kabarnya pagi ini? Kalau Bapak tidak keberatan, saya ingin duduk sebentar dan membicarakan rencana Bapak keluar dari rumah sakit besok.",
+   "Permisi Pak, saya yang akan menemani Bapak membahas persiapan pulang. Apakah Bapak sudah nyaman untuk kita mulai?"
+  ],
+  "gali_paham": [
+   "Pak Arifin, sebelum saya menjelaskan, boleh ceritakan dengan kata-kata Bapak sendiri, sejauh ini Bapak mengerti apa tentang sakit jantungnya?",
+   "menurut Bapak sebenarnya jantung Bapak kenapa sih, Pak?",
+   "Tanya dulu ya Pak, selama dirawat dokter dan perawat bilang apa soal penyakit Bapak?",
+   "Saya ingin tahu gambaran Bapak lebih dulu supaya penjelasan saya tidak mengulang yang sudah Bapak ketahui: apa yang Bapak pahami tentang kejadian di jantung Bapak beberapa hari lalu?",
+   "Menurut Bapak, apa yang terjadi pada jantung Bapak sampai harus dipasang ring?"
+  ],
+  "gali_khawatir": [
+   "Apa yang paling mengganjal di pikiran Bapak menjelang pulang, dan apa yang Bapak harapkan nanti di rumah?",
+   "Ada yang bikin Bapak takut atau was-was nggak, Pak? Terus pengennya gimana ke depannya?",
+   "Kekhawatiran Bapak apa, Pak?",
+   "Bapak pasti punya banyak beban setelah kejadian ini. Boleh Bapak ceritakan apa yang paling Bapak takutkan, dan apa yang Bapak inginkan bisa dilakukan lagi setelah keluar dari rumah sakit?",
+   "Yang paling berat Bapak pikirkan kalau pulang besok itu apa, Pak?"
+  ],
+  "agenda": [
+   "Hari ini ada beberapa hal yang ingin saya sampaikan: soal sakitnya, obat-obatan, kebiasaan di rumah, dan tanda-tanda yang harus diwaspadai. Bapak mau mulai dari mana?",
+   "Mau dibahas dari mana dulu, Pak? Obatnya, kebiasaannya, atau yang lain?",
+   "ada yang mau didahulukan pak? nanti kita urutkan sesuai kebutuhan Bapak",
+   "Topik kita ada empat, Pak. Silakan pilih mana yang paling Bapak butuhkan lebih dulu.",
+   "Biar nyambung dengan kebutuhan Bapak, kita atur dulu urutan obrolannya ya. Bapak maunya dengar apa duluan?"
+  ],
+  "langsung_ceramah": [
+   "Baik Pak, saya terangkan semuanya sekarang dari A sampai Z ya, Bapak dengarkan saja dulu dan jangan dipotong.",
+   "oke saya jelaskan semua sekaligus, kalau ada tanya belakangan saja",
+   "Saya langsung saja ya Pak, semuanya saya sampaikan satu kali jalan tanpa berhenti.",
+   "Dengarkan baik-baik, saya bicara dulu sampai selesai, tidak usah ada pertanyaan di tengah.",
+   "Pokoknya saya paparkan seluruh materinya sekarang, mulai penyakit, obat, sampai kontrol, tanpa jeda."
+  ],
+  "b_awam": [
+   "Jadi begini Pak, jantung itu otot yang butuh darah. Ada pembuluh yang buntu sehingga ototnya kekurangan darah, makanya Bapak nyeri hebat kemarin. Ring itu semacam penyangga yang membuka jalan darahnya lagi.",
+   "serangan jantung itu artinya ada saluran darah ke jantung yang mampet Pak, ring dipasang buat melebarkan lagi",
+   "Bayangkan pipa air yang tersumbat, Pak: aliran ke otot jantung terhenti, lalu kami pasang ring supaya pipanya terbuka kembali.",
+   "Gampangnya, pembuluh yang memberi makan jantung Bapak kemarin tertutup. Ring yang dipasang tugasnya menahan pembuluh itu tetap terbuka.",
+   "Saya terangkan dengan bahasa sederhana ya Pak: sumbatan di pembuluh jantung bikin jantung kekurangan darah, dan ring dipasang untuk membuka sumbatannya."
+  ],
+  "b_belum_sembuh": [
+   "Perlu Bapak tahu, ring itu hanya membereskan satu sumbatan. Penyebab dasarnya, yaitu pembuluh yang menyempit karena rokok, tensi, dan kolesterol, masih ada, jadi harus dijaga terus.",
+   "ring bukan obat sembuh Pak, penyakit pembuluhnya tetap ada dan harus dikendalikan seumur hidup",
+   "Jangan salah paham ya Pak, dipasang ring itu bukan berarti penyakitnya hilang.",
+   "Pembuluh Bapak yang lain masih bisa menyempit kalau kebiasaannya tidak berubah, jadi pencegahan itu tidak ada habisnya.",
+   "Ibaratnya kita sudah memperbaiki satu titik jalan yang macet, tetapi sumber kerusakannya masih ada, makanya upaya menjaga jantung terus berlanjut sepanjang hidup Bapak."
+  ],
+  "b_prognosis": [
+   "Kabar baiknya, kalau Bapak disiplin minum obat dan faktor risikonya dijaga, kebanyakan pasien bisa beraktivitas normal lagi, walaupun tetap ada kemungkinan kecil kejadian ulang.",
+   "ke depannya prospek Bapak bagus kok Pak asal patuh, meski risikonya nggak bisa nol",
+   "Hidup Bapak bisa tetap berkualitas selama rutin berobat dan kontrol.",
+   "Banyak pasien dengan kondisi seperti Bapak yang pulih dengan baik. Syaratnya patuh pengobatan. Memang tidak ada jaminan seratus persen, tetapi risikonya bisa ditekan jauh.",
+   "Soal masa depan Bapak, gambarannya cukup menggembirakan asalkan pengobatan tidak putus."
+  ],
+  "b_sembuh": [
+   "Selamat Pak, dengan ring ini jantung Bapak sudah beres, sembuh total, jadi tidak perlu cemas lagi.",
+   "udah sembuh Pak, ringnya sudah menyelesaikan masalah, tenang saja",
+   "Penyakit jantung Bapak sudah tuntas diobati oleh ring itu, tidak ada yang perlu dikhawatirkan lagi.",
+   "Bapak boleh lega, ring-nya sudah membereskan semuanya dan Bapak pulih sepenuhnya.",
+   "Sudah selesai ya Pak, kasus Bapak tuntas, tinggal pulang dan hidup seperti biasa."
+  ],
+  "b_jargon": [
+   "Pasien ini STEMI anterior, ada oklusi di LAD proksimal, sudah kita lakukan PCI primer dengan satu DES.",
+   "Pak, jadi Bapak kena STEMI, LAD-nya oklusi, ditangani PCI pakai DES.",
+   "Diagnosis Bapak infark miokard akut dengan elevasi segmen ST di dinding anterior, lesi culprit pada arteri descending anterior kiri proksimal, sudah direvaskularisasi perkutan memakai drug-eluting stent.",
+   "Jadi Pak, ada oklusi total di LAD proksimal akibat ruptur plak, lalu kami lakukan reperfusi dengan PCI dan DES.",
+   "STEMI anterior, LAD proksimal, PCI primer pakai DES. Mengerti ya Pak?"
+  ],
+  "c_antiplatelet": [
+   "Obat pengencer darah dua macam itu yang menjaga ring Bapak tetap lancar. Jangan disetop atas keputusan sendiri meskipun badan sudah terasa enak.",
+   "Bapak jangan berhenti minum aspirin sama ticagrelor ya, walau sudah enak badan",
+   "Kalau sudah tidak sakit pun, dua obat pencegah penyumbatan ring itu tetap lanjut ya Pak, kecuali dokter yang menyuruh berhenti.",
+   "Pak, pil pengencer darah itu jangan pernah dilewatkan atau dihentikan sendiri ya.",
+   "Obat penjaga ring yang saya berikan itu harus diminum terus. Kalau Bapak ragu atau ingin berhenti, bicarakan dulu dengan dokter, jangan putuskan sendiri."
+  ],
+  "c_statin": [
+   "Obat atorvastatin untuk kolesterol diminum malam hari setiap hari, fungsinya juga mengamankan plak di dinding pembuluh. Nanti kita cek LDL-nya apakah sudah mencapai target.",
+   "pak itu obat kolesterol, diminum tiap malam ya, nanti kolesterolnya kita cek lagi",
+   "Satu lagi obat penurun lemak darah, diminum malam hari, bukan cuma menurunkan kolesterol tapi juga membuat sumbatan lebih stabil.",
+   "Atorvastatin malam hari, rutin, target LDL kita pantau.",
+   "Soal obat kolesterol, manfaatnya ganda Pak: kadar lemak turun dan plak di pembuluh tidak mudah pecah. Jadi jangan telat minum, dan kolesterolnya kita periksa berkala."
+  ],
+  "c_bb_acei": [
+   "Ada dua obat lagi, bisoprolol dan ramipril, fungsinya melindungi jantung dan membantu menurunkan tensi.",
+   "bisoprolol sama ramipril itu buat jaga jantung dan turunin tensi Pak",
+   "Dua obat ini memperlambat detak jantung dan melebarkan pembuluh, jadi jantung tidak bekerja terlalu berat dan tekanan darah terkontrol.",
+   "Pak, obat untuk melindungi otot jantung sekaligus tensi itu golongan beta-blocker dan ACE inhibitor.",
+   "Dua obat tambahan ini supaya otot jantung Bapak terlindungi dari kerusakan lebih lanjut dan tekanan darah Bapak terjaga."
+  ],
+  "c_efek": [
+   "Kalau nanti ada perdarahan, BAB hitam, sesak sedikit, batuk kering terus, atau pusing dan lemas, segera kabari kami ya Pak.",
+   "efek samping yang perlu diwaspadai: mimisan atau tinja hitam, napas agak berat, batuk tidak berdahak, kepala melayang. kalau muncul lapor",
+   "Beritahu saya atau petugas kalau Bapak mengalami gusi berdarah, kotoran berwarna hitam, napas terasa sedikit pendek, atau batuk kering yang tidak sembuh-sembuh.",
+   "Obat-obat ini kadang punya efek yang tidak enak, misalnya mudah berdarah, batuk, atau pusing. Kalau Bapak rasakan itu, jangan dipendam, lapor ya.",
+   "Ada beberapa keluhan akibat obat yang wajar dilaporkan Pak, seperti mudah berdarah, tinja kehitaman, napas terasa berat sedikit, batuk kering, dan pusing."
+  ],
+  "c_praktis": [
+   "Minumnya yang teratur sesuai jadwal ya Pak, walau tidak ada keluhan. Kalau kontrol, bawa daftar obatnya. Dan jangan sembarang minum obat pereda nyeri seperti ibuprofen.",
+   "obatnya jangan sampai lupa atau bolong, bawa catatan obat pas kontrol, jangan minum obat pegal sembarangan",
+   "Tips minum obat: pakai alarm, bikin catatan jadwal, dan konsultasi dulu sebelum beli obat sakit kepala atau nyeri sendiri di warung.",
+   "Pak, supaya efektif semua obat harus diminum tepat waktu setiap hari, kartu obat dibawa tiap ke poli, dan jangan beli obat antinyeri bebas tanpa bertanya.",
+   "Bawa semua obat yang Bapak minum waktu kontrol, minum sesuai aturan walau Bapak merasa sehat, dan hindari obat antinyeri dari warung ya."
+  ],
+  "c_nitrat": [
+   "Kalau tiba-tiba dada terasa nyeri, Bapak duduk dulu, lalu taruh satu tablet isosorbid di bawah lidah.",
+   "sakit dada kambuh, Pak? duduk dulu, isosorbid dilarutkan sublingual, jangan ditelan",
+   "Isosorbid ini obat darurat, Pak. Dipakai saat dada sakit, posisi duduk, pilnya dilarutkan sublingual.",
+   "Simpan isosorbid dinitrat yang saya berikan di saku Bapak. Begitu dada sakit, duduk, dan biarkan pilnya larut di bawah lidah.",
+   "Cara pakai obat darurat jantung: posisi duduk, pil isosorbid sublingual, jangan sambil berdiri atau berjalan."
+  ],
+  "c_biaya_jujur": [
+   "Untuk soal biaya dan apakah ditanggung BPJS, jujur saya belum tahu pasti. Petugas farmasi nanti yang memastikan sebelum Bapak pulang. Yang penting obatnya jangan sampai berhenti hanya karena biaya.",
+   "waduh soal tanggungan saya belum bisa pastikan Pak, nanti dicek farmasi, tapi tolong jangan stop obat gara-gara uang",
+   "Saya tidak mau menjanjikan yang belum pasti, Pak. Urusan penjaminannya akan dipastikan bagian farmasi.",
+   "Soal harga, saya belum punya informasinya. Kita tanyakan ke apoteker rumah sakit dulu, dan apa pun hasilnya Bapak tetap harus lanjut minum obat.",
+   "Kalau pertanyaannya ditanggung atau tidak, saya akui belum tahu. Bagian farmasi akan memberi kepastian sebelum Bapak keluar."
+  ],
+  "c_boleh_berhenti": [
+   "Kalau nanti Bapak merasa sehat dan tidak ada keluhan, obatnya boleh dikurangi atau disetop sendiri.",
+   "kalau udah enakan, minum obatnya boleh dikurangin atau berhenti aja Pak",
+   "Begitu badan sudah segar kembali, Bapak tidak perlu lanjut minum semua obat itu.",
+   "Obat-obat ini sifatnya sementara, jadi kalau sudah tidak terasa sakit silakan Bapak berhenti sendiri.",
+   "Tidak apa-apa Pak, kalau sudah sehat obat bisa diselingi atau ditinggalkan, nanti kontrol saja kalau sakit lagi."
+  ],
+  "c_biaya": [
+   "Tenang saja Pak, semua obat ini dijamin BPJS, Bapak tidak perlu keluar uang.",
+   "obatnya gratis kok Pak, ditanggung asuransi",
+   "Soal biaya jangan dipikirkan, dijamin semuanya sudah tercover.",
+   "Dengan BPJS yang Bapak punya, semua obat ini pasti dibayari, tidak ada yang perlu dipikirkan.",
+   "Pembiayaan aman Pak, semua obat pulang ini dicover pemerintah, tidak ada yang perlu Bapak bayar."
+  ],
+  "c_nsaid_ok": [
+   "Kalau badan pegal atau nyeri otot, Bapak boleh minum ibuprofen secukupnya.",
+   "pegal-pegal minum ibuprofen aja Pak gapapa",
+   "Obat antinyeri seperti ibuprofen atau asam mefenamat aman kok dipakai bersama obat jantung ini.",
+   "Kalau sakit kepala atau linu, silakan beli obat pereda nyeri di apotek sesuka Bapak, tidak ada masalah.",
+   "Untuk nyeri sendi, Bapak bebas minum natrium diklofenak kalau perlu."
+  ],
+  "d_diet": [
+   "Soal makan, kurangi yang asin, gorengan, dan bersantan, perbanyak sayur, buah, dan ikan, serta jaga berat badan.",
+   "makannya dijaga ya Pak, jangan banyak gorengan sama gulai santan, sayur dan ikan diperbanyak",
+   "Pola makan sehat jantung: garam dikurangi, lemak jenuh dikurangi, lebih banyak serat dan ikan, dan turunkan sedikit berat badan.",
+   "Kalau makan di luar, pilih lauk yang dikukus, direbus, atau dibakar, bukan digoreng, minta kuah dan sambal dipisah, dan perbanyak lalapan.",
+   "Diet yang saya sarankan: rendah garam, rendah lemak jenuh, tinggi sayur buah dan ikan."
+  ],
+  "d_aktivitas": [
+   "Bapak boleh mulai bergerak lagi sedikit demi sedikit, dan saya akan daftarkan Bapak ke program rehabilitasi jantung supaya latihannya diawasi.",
+   "olahraga jangan langsung berat ya Pak, pelan-pelan, nanti kami arahkan ke rehab jantung",
+   "Latihan fisik itu perlu, tetapi bertahap: mulai jalan kaki ringan, lalu ditingkatkan di bawah supervisi tim rehabilitasi medik jantung.",
+   "Saya rujuk Bapak ke klinik rehab kardiak untuk latihan terawasi.",
+   "Supaya otot jantung makin kuat, Bapak perlu bergerak teratur namun tidak dipaksakan. Ada program latihan khusus pascaserangan jantung yang akan kami daftarkan untuk Bapak."
+  ],
+  "d_faktor": [
+   "Tekanan darah, kolesterol, gula darah, dan berat badan akan kita pantau terus dan dijaga supaya sesuai target.",
+   "angka tensi, kolesterol, gula, sama berat badan kita cek rutin ya Pak",
+   "Selain obat, ada empat hal yang kita kontrol berkala: tensi, lemak darah, gula, dan timbangan, semuanya diupayakan masuk target.",
+   "Hipertensi dan kolesterol tinggi yang jadi faktor risiko juga kita awasi dan kita turunkan ke batas aman.",
+   "Hasil lab dan tensi Bapak akan dipantau bolak-balik di poli, targetnya tercapai pelan-pelan."
+  ],
+  "d_mood": [
+   "Rasa cemas atau sedih sesudah serangan jantung itu lumrah dan ada bantuannya. Tidurnya bagaimana, Pak? Suasana hatinya belakangan ini bagaimana?",
+   "pak tidurnya nyenyak nggak? ada rasa sedih atau gelisah akhir-akhir ini",
+   "Bagaimana perasaan Bapak sejak kejadian itu, ada murung, susah tidur, atau gampang panik?",
+   "Banyak pasien jantung mengalami cemas atau depresi setelahnya. Saya ingin tanya kondisi mental Bapak: mood, kualitas tidur, dan minat beraktivitas.",
+   "Kondisi kejiwaan juga bagian dari pemulihan jantung. Bagaimana tidur Bapak malam-malam di sini, dan apakah suasana hati Bapak tetap baik?"
+  ],
+  "d_kembali": [
+   "Soal kembali narik angkot dan urusan hubungan suami-istri, semuanya bertahap Pak, kita evaluasi saat kontrol pertama. Aktivitas seksual umumnya aman kalau Bapak sudah bisa kegiatan sedang tanpa keluhan.",
+   "kapan boleh nyetir lagi dan hubungan intim itu nanti kita lihat di kontrol pertama ya Pak, tidak langsung",
+   "Pekerjaan sebagai sopir dan kehidupan seksual bisa dilanjutkan secara bertahap, kita tentukan waktu amannya setelah dievaluasi di poli.",
+   "Hubungan suami-istri aman jika Bapak sudah sanggup beraktivitas sedang tanpa gejala. Untuk menyetir, kita bahas lagi saat kontrol.",
+   "Bapak pasti ingin segera bekerja dan kembali normal bersama istri. Itu bisa, tetapi bertahap, dan tahap pertamanya kita nilai bersama saat kontrol."
+  ],
+  "d_rokok_boleh": [
+   "Merokok sedikit saja tidak apa-apa Pak, asal tidak banyak-banyak.",
+   "rokok boleh lah satu dua batang sehari, yang penting jangan banyak",
+   "Bapak tak perlu berhenti total, dikurangi saja sudah cukup baik untuk jantung.",
+   "Kalau sesekali menghisap rokok, jantung Bapak masih aman kok.",
+   "Ngerokok secukupnya itu masih ditoleransi, kalau lagi stres boleh satu batang."
+  ],
+  "d_rokok_marah": [
+   "Bapak kan sudah tahu rokok itu berbahaya, kok masih saja merokok?",
+   "kenapa sih Pak tetap ngerokok padahal tahu bahayanya, jadi ya kena serangan jantung",
+   "Ini akibat kebiasaan merokok Bapak selama tiga puluh tahun, salah Bapak sendiri.",
+   "Kalau dari dulu Bapak mau menurut dan berhenti merokok, kejadian ini tidak akan terjadi.",
+   "Sudah dikasih tahu berkali-kali tetap saja merokok, bandel sekali Bapak ini."
+  ],
+  "d_kembali_angka": [
+   "Minggu depan Bapak sudah boleh narik angkot lagi, dan hubungan suami-istri boleh dimulai hari ini.",
+   "nyetir lagi seminggu lagi aja Pak, soal hubungan intim bisa langsung hari ini",
+   "Tiga hari lagi Bapak sudah bisa bekerja seperti biasa, hubungan suami-istri juga boleh mulai malam ini.",
+   "Silakan Bapak kembali jadi sopir dalam seminggu dan berhubungan intim sejak sekarang, tidak ada pantangan.",
+   "Besok pulang, lusa sudah boleh mengemudi, dan urusan ranjang boleh langsung normal."
+  ],
+  "e_bahaya": [
+   "Kalau dada nyeri, napas sangat sesak, atau Bapak pingsan, langsung panggil ambulans atau ke IGD. Jangan nyetir sendiri dan jangan menunggu di rumah.",
+   "pak kalau sakit dada hebat atau pingsan jangan dipendam, telepon ambulans, bawa ke UGD",
+   "Tanda bahayanya: nyeri dada, sesak berat, pingsan. Begitu muncul, jangan ditunda, langsung cari pertolongan darurat.",
+   "Bapak jangan menyetir sendiri ke rumah sakit kalau serangannya kambuh, minta keluarga memanggil ambulans.",
+   "Ada kondisi yang tidak boleh ditunggu-tunggu, Pak: sakit dada, sesak yang berat, atau tiba-tiba lemas hingga pingsan. Segera ke instalasi gawat darurat."
+  ],
+  "e_kontrol": [
+   "Minggu pertama setelah pulang Bapak kontrol ke poli jantung, nanti kita rekam jantung, cek darah, dan lihat jantungnya dengan USG.",
+   "kontrol seminggu lagi di poli jantung ya Pak, bakal dicek ulang EKG, lab, eko",
+   "Jadwal kontrol Bapak sepekan setelah keluar dari sini, di poliklinik kardiologi.",
+   "Satu minggu lagi Bapak datang ke klinik jantung untuk pemeriksaan lanjutan: EKG, darah, dan ekokardiografi.",
+   "Jangan lupa datang lagi minggu depan Pak, untuk evaluasi hasil pengobatan dan pemeriksaan jantung ulang."
+  ],
+  "e_keluarga": [
+   "Bapak ajak istri atau anak waktu kontrol ya, supaya mereka ikut mengerti obat dan tanda bahaya.",
+   "pak nanti kontrolnya ditemani keluarga, biar mereka juga paham",
+   "Sebaiknya ada anggota keluarga yang mendampingi Bapak ke poli, supaya mereka bisa membantu mengingatkan minum obat.",
+   "Sebaiknya jangan datang sendirian waktu kontrol, Pak, bawa istri atau anak supaya mereka ikut mendengar penjelasan dokter.",
+   "Libatkan orang rumah dalam perawatan Bapak; ajak mereka datang saat kontrol agar sama-sama tahu apa yang harus dilakukan."
+  ],
+  "e_tunggu": [
+   "Kalau dada nyeri, istirahat saja dulu di rumah, kalau sampai setengah hari belum membaik baru ke IGD.",
+   "nyeri dada ditunggu aja dulu pak, kalau lama banget baru ke rumah sakit",
+   "Tidak perlu buru-buru ke rumah sakit kalau dada sakit, tiduran dulu beberapa jam.",
+   "Sakit dada setelah pulang biasanya cuma bekas luka, jadi tunggu sampai besok pagi dulu sebelum memutuskan berobat.",
+   "Kalau kambuh nyeri di dada, sabar dulu di rumah, kita lihat dulu perkembangannya seharian."
+  ],
+  "f_potongan": [
+   "Saya terangkan sedikit-sedikit ya Pak dan berhenti setiap selesai satu bagian. Sejauh ini ada yang kurang jelas?",
+   "sampai sini paham nggak Pak? ada yang mau ditanyakan?",
+   "Saya jeda dulu. Adakah bagian yang belum Bapak mengerti sebelum kita lanjut?",
+   "Biar kepala Bapak tidak keburu penuh, kita bahasnya per bagian. Untuk bagian tadi, ada yang masih membingungkan?",
+   "Berhenti sejenak Pak, kita pastikan dulu Bapak mengikuti penjelasan saya sejauh ini."
+  ],
+  "f_empati": [
+   "Wajar kok Pak kalau Bapak takut kejadian mendadak lagi, banyak yang merasa begitu setelah serangan jantung. Kita susun rencana supaya Bapak aman di rumah.",
+   "saya ngerti Pak perasaan Bapak, takut itu manusiawi, kita atur biar Bapak tenang di rumah",
+   "Rasa khawatir Bapak sangat bisa dimengerti, apalagi memikirkan anak yang masih sekolah. Kami akan siapkan langkah supaya Bapak merasa aman.",
+   "Tidak aneh Bapak merasa seperti itu setelah mengalami ini, perasaan itu dialami hampir semua pasien.",
+   "Saya turut merasakan kekhawatiran Bapak. Bapak tidak sendirian, kami mendampingi sampai Bapak siap."
+  ],
+  "f_teachback": [
+   "Supaya saya yakin penjelasannya sampai, coba Bapak ulangi dengan kata-kata sendiri: obat apa yang tidak boleh berhenti, dan apa yang Bapak lakukan kalau dada nyeri?",
+   "coba pak diulang lagi, kalau nyeri dada Bapak ngapain dan obat apa yang tidak boleh distop",
+   "Teach-back ya Pak: tolong ulangi poin penting tadi dengan bahasa Bapak sendiri.",
+   "Saya mau cek pemahaman Bapak. Tolong sebutkan ulang dua hal penting tadi: obat yang jangan pernah dilewatkan dan tindakan saat sakit dada.",
+   "Sekarang giliran Bapak menjelaskan balik ke saya ya, apa yang akan Bapak lakukan di rumah kalau dada sakit lagi dan obat mana yang harus terus diminum."
+  ],
+  "f_ringkas": [
+   "Jadi kesimpulannya Pak: ring membuka sumbatan tetapi pencegahan jalan terus, obat jangan disetop sendiri, berhenti merokok, ikut rehabilitasi, kontrol minggu pertama, dan nyeri dada langsung ke IGD. Ada yang mau ditanyakan lagi?",
+   "Saya rangkum ya Pak, intinya ada enam poin penting yang tadi kita bahas. Ada pertanyaan terakhir?",
+   "oke pak, ringkasnya tadi: obat rutin, stop rokok, rehab, kontrol, dan waspada nyeri dada. ada lagi yang mau ditanya?",
+   "Untuk menutup, saya ulang garis besarnya: jangan putus obat, jauhi rokok, latihan terawasi, datang kontrol, dan segera ke IGD kalau nyeri dada. Silakan bertanya kalau masih ada.",
+   "Sebagai penutup, saya sarikan semua pesan penting hari ini. Mudah-mudahan sudah jelas, ada hal lain yang mengganjal, Pak?"
+  ]
+ },
+ "keluarga": [
+  {
+   "ids": ["d_rokok", "d_rokok_tegas"],
+   "ucapan": [
+    "Berhenti merokok itu yang paling penting buat jantung Bapak sekarang. Saya tidak menyalahkan, kami siap bantu dengan konseling, permen atau koyo nikotin, atau obat.",
+    "Pak, rokok itu tidak ada batas aman, walau satu dua batang. Yuk kita bikin rencana berhenti bareng-bareng.",
+    "stop rokok ya Pak, nanti kami bantu, ada konseling dan obat penolongnya",
+    "Saya paham berhenti itu sulit, apalagi sudah tiga puluh tahun merokok. Tetapi ini langkah yang paling menyelamatkan, dan Bapak tidak sendirian karena ada program berhenti merokok di sini.",
+    "Merokok walaupun sedikit tetap merusak pembuluh Bapak. Bagaimana kalau kita susun jadwal berhenti dan saya hubungkan dengan klinik berhenti merokok?",
+    "Rokok harus ditinggalkan, Pak. Saya tidak sedang menghakimi, saya mau bantu supaya Bapak berhasil."
+   ]
+  }
+ ],
+ "negatif": [
+  "Coba saya dengarkan dulu bunyi jantung dan paru Bapak sebentar.",
+  "Apakah Bapak punya riwayat alergi terhadap obat tertentu?",
+  "Nanti saya jadwalkan MRI jantung untuk melihat jaringan parutnya ya, Pak.",
+  "Semalam tim sepak bola kesayangan Bapak menang atau kalah?",
+  "Tolong ambilkan saya segelas air putih dulu, Sus.",
+  "Ijazah terakhir Bapak apa, SMA atau SMP?",
+  "eee anu apa ya tadi saya mau bilang",
+  "Kenapa ya parkiran rumah sakit ini selalu penuh tiap pagi?"
+ ],
+ "ganda": [
+  {
+   "ucapan": "Selamat pagi Pak Arifin, saya dokternya. Sebelum mulai, Bapak sendiri paham tidak soal penyakit jantungnya, dan apa yang paling Bapak takutkan?",
+   "aksi": ["salam", "gali_paham", "gali_khawatir"]
+  },
+  {
+   "ucapan": "Obat pengencer darah jangan dihentikan sendiri ya Pak, dan obat kolesterolnya diminum tiap malam.",
+   "aksi": ["c_antiplatelet", "c_statin"]
+  },
+  {
+   "ucapan": "Kalau nyeri dada, duduk dan taruh tablet di bawah lidah, lalu kalau tidak membaik langsung telepon ambulans.",
+   "aksi": ["c_nitrat", "e_bahaya"]
+  },
+  {
+   "ucapan": "Makannya dikurangi garam dan gorengan, Bapak ikut latihan di rehab jantung, dan tensi serta kolesterolnya kita cek berkala.",
+   "aksi": ["d_diet", "d_aktivitas", "d_faktor"]
+  },
+  {
+   "ucapan": "Minggu depan kontrol di poli jantung ya Pak, dan bawa istri supaya ikut paham.",
+   "aksi": ["e_kontrol", "e_keluarga"]
+  },
+  {
+   "ucapan": "Ringnya bukan berarti sembuh ya Pak, penyakit dasarnya tetap ada. Tapi kalau patuh, prognosisnya baik dan Bapak bisa hidup normal.",
+   "aksi": ["b_belum_sembuh", "b_prognosis"]
+  }
+ ],
+ "isian": []
+}
