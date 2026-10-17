@@ -47,7 +47,8 @@ opsi form harus salah satu opsi, angka dalam rentang; ucapan yang berusaha menga
 (jaringan, kuota, format, penolakan) memakai resolver offline dan dicatat di transkrip.
 
 **Suara:** pengenalan ucapan memakai `SpeechRecognition` peramban (`id-ID`); di Chrome/Edge audio diproses server
-Google/Microsoft dan butuh internet, Firefox tidak mendukung. Suara pasien memakai `speechSynthesis` (suara terpasang di
+Google/Microsoft dan butuh internet, Firefox tidak mendukung. Mikrofon paling andal lewat `https` (GitHub Pages) atau
+`http://localhost`; dari `file://` peramban dapat menolak mikrofon atau meminta izin berulang (belum diuji pada peramban nyata). Suara pasien memakai `speechSynthesis` (suara terpasang di
 perangkat). "Percakapan suara" menyalakan mikrofon lagi otomatis setelah jawaban dibacakan, dan berhenti setelah dua
 kali senyap. Briefing tes meminta persetujuan privasi bila LLM atau mikrofon dipakai.
 
