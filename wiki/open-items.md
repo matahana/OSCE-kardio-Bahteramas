@@ -24,6 +24,14 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 - [ ] Uji coba waktu S12 di aplikasi: siklus RJP dipadatkan ≈ 45 dtk (D37); periksa apakah pemadatan itu wajar bagi kandidat atau sebaiknya jam S12 diubah.
 - [ ] Pertimbangkan pemeriksaan otomatis jumlah QRS pada EKG sintetis (08, 14) terhadap laju di `cek_interaksi.mjs`; saat ini laju diperiksa lewat tangkapan layar dan uji e2e.
 
+- [ ] **Mode tes (17 Okt 2026): ukur LLM sungguhan.** Jalankan `ANTHROPIC_API_KEY=... node tools/cek_llm.mjs --n=120` dan putuskan model/prompt; sesi pengembangan tidak punya kunci sehingga jalur LLM hanya diuji dengan server tiruan (`tools/uji_llm.mjs`).
+- [ ] **Pilot mode tes dengan mahasiswa**: ketepatan pemetaan ucapan, kelayakan biaya 3 dtk untuk ucapan tak dipahami, kenyamanan suara; data parafrase ditulis LLM dan belum mewakili kandidat. Ekspor transkrip membantu memperkaya `tests/ucapan`.
+- [ ] **Uji suara nyata** di Chrome/Edge desktop dan Android (uji otomatis hanya memakai tiruan Web Speech API); periksa akurasi pengenalan istilah medis berbahasa Indonesia.
+- [ ] **Pasang dan uji proxy** (`tools/proxy-llm/README.md`) di Cloudflare bila peserta tidak boleh memegang kunci; pasang rate limiting; ganti kode akses tiap ujian. Proxy kini mengunci bentuk permintaan dan dapat mengunci prompt sistem lewat hash (`SISTEM_SHA256`, `tools/proxy-llm/hash_prompt.mjs`); `Origin` dan kode akses tetap bukan identitas (D46), jadi rate limiting wajib.
+- [ ] Penguji dapat **mengoreksi skor dari transkrip** (saat ini transkrip hanya dibaca); pertimbangkan ekspor transkrip ke lembar penguji.
+- [ ] Ujian berisiko tinggi tanpa pengawasan memerlukan resolver dan skor di sisi server (skrip stasiun terunduh di peramban).
+- [ ] Opsi lanjutan: LLM lokal di peramban (tanpa internet) sebagai pengganti resolver offline yang terbatas (48% benar pada uji internal).
+
 ## P1 — kelengkapan
 
 - [ ] Gambar EKG stasiun 02, 08, dan 14 (`assets/ekg/`, syarat di README folder itu): EKG anonim dengan lisensi jelas; tambah juga EKG untuk S06 (sinus takikardia, Q V1–V3) bila memakai gambar.
@@ -32,7 +40,7 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 - [ ] Isi pemetaan ke SNPPDI/KKI (kolom di blueprint belum diisi).
 - [ ] Tetapkan lisensi repositori dan visibilitas (publik/privat).
 - [ ] Guideline katup (Otto 2020, Vahanian 2021) sudah dirujuk dari stasiun 03; **isinya belum dicocokkan** (butuh teks dari pengguna).
-- [ ] Aktifkan GitHub Pages bila ingin akses lewat tautan (perhatikan visibilitas repo).
+- [x] GitHub Pages aktif (pengguna, 13 Oktober 2026; deploy sukses untuk `main` terbaru). Tersisa: pengguna membuka URL situs di peramban untuk memastikan tampilan benar (sesi tidak dapat menjangkau `github.io`).
 - [ ] Ganti EKG/bunyi sintetis dengan rekaman berlisensi atau perluas variasi (S03: MR/MS/AR/S3; S04: nilai TD lain; S02: EKG lain) lewat varian interaksi.
 - [ ] Audit aksesibilitas dengan pembaca layar (alur keyboard sudah ada, belum diuji menyeluruh).
 
@@ -57,7 +65,7 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 
 - [x] PR #1, #3, dan #4 sudah di-merge pengguna ke `main` (13 Oktober 2026).
 - [x] **Penghambat CI PR #2 selesai (13 Oktober 2026, sesi 2 lanjutan 8):** pengguna memilih opsi 1, 2, dan 3 bertahap. Opsi 2: `cek_interaksi.mjs` mengenali stasiun tanpa interaksi sebagai "segera hadir" (`--ketat` menggagalkannya). Opsi 1: interaksi S07–S14 ditulis dan diuji satu per satu; widget EKG (AF, blok AV) dan steteskop (bising mitral bersyarat) diperluas. Opsi 3 tidak diperlukan (semua lolos). Hasil: `cek_skor.py`, `buat_data.py --cek`, `cek_interaksi.mjs --ketat` lulus untuk 14 stasiun; e2e Chromium 425 lulus, 0 gagal. **[PR #2](https://github.com/matahana/OSCE-kardio-Bahteramas/pull/2) di-merge atas perintah pengguna (squash `95f31cd`, 13 Oktober 2026).**
-- [ ] Pengguna mengaktifkan GitHub Pages (Settings → Pages → `main` / root); setelah itu verifikasi URL situs (jaringan sesi mungkin tidak menjangkau `github.io`).
+- [x] Pengguna mengaktifkan GitHub Pages (Settings → Pages → `main` / root). Verifikasi tampilan situs di peramban masih oleh pengguna (lihat P2 di atas).
 - [ ] Hapus `<meta name="robots" content="noindex, nofollow">` di `app/index.html` dan `index.html` setelah konten direview dan siap dipublikasikan.
 
 ## Pertanyaan terbuka untuk pengguna

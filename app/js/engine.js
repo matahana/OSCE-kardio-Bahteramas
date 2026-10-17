@@ -194,20 +194,29 @@
       if (info.berisiko) berisiko.push({ id: sumber, label: label, alasan: info.berisiko });
     }
 
-    function lakukan(idAksi) {
-      if (selesai) return { ok: false, alasan: 'Stasiun telah selesai.' };
+    // Memeriksa apakah aksi dapat dilakukan sekarang, tanpa efek samping.
+    // Hasil: {ok:true} atau {ok:false, kode:'selesai'|'tidak_dikenal'|'sudah'|'eksklusif'|'syarat', alasan}.
+    function bolehDilakukan(idAksi) {
+      if (selesai) return { ok: false, kode: 'selesai', alasan: 'Stasiun telah selesai.' };
       var e = idx.peta.get(idAksi);
-      if (!e || e.tipe !== 'aksi') return { ok: false, alasan: 'Aksi tidak dikenal: ' + idAksi };
+      if (!e || e.tipe !== 'aksi') return { ok: false, kode: 'tidak_dikenal', alasan: 'Aksi tidak dikenal: ' + idAksi };
       var a = e.aksi;
-      if (a.sekali !== false && selesaiAksi.has(a.id)) return { ok: false, alasan: 'Sudah dilakukan.' };
+      if (a.sekali !== false && selesaiAksi.has(a.id)) return { ok: false, kode: 'sudah', alasan: 'Sudah dilakukan.' };
       if (a.eksklusif) {
         var bentrok = idx.semua.some(function (x) {
           return x.id !== a.id && x.eksklusif === a.eksklusif && selesaiAksi.has(x.id);
         });
-        if (bentrok) return { ok: false, alasan: 'Pilihan lain untuk hal yang sama sudah diambil.' };
+        if (bentrok) return { ok: false, kode: 'eksklusif', alasan: 'Pilihan lain untuk hal yang sama sudah diambil.' };
       }
       var tolak = a.syarat ? a.syarat(ctx) : null;
-      if (tolak) return { ok: false, alasan: tolak };
+      if (tolak) return { ok: false, kode: 'syarat', alasan: tolak };
+      return { ok: true };
+    }
+
+    function lakukan(idAksi) {
+      var cek = bolehDilakukan(idAksi);
+      if (!cek.ok) return { ok: false, alasan: cek.alasan, kode: cek.kode };
+      var a = idx.peta.get(idAksi).aksi, e = idx.peta.get(idAksi);
       terpakai += a.biaya;
       selesaiAksi.set(a.id, terpakai);
       var resp = typeof a.respons === 'function' ? a.respons(ctx) : a.respons;
@@ -257,6 +266,62 @@
       formTerkirim.add(idPanel);
       terpakai += e.panel.biaya || 0;
       log.push({ tipe: 'form', id: idPanel, label: e.panel.label, respons: ringkas.join('\n'), t: terpakai, biaya: e.panel.biaya || 0 });
+      periksaJadwal();
+      return { ok: true };
+    }
+
+    // Mode tes: jawaban lisan masuk bertahap ke bidang formulir. Biaya waktu formulir dikenakan sekali, pada
+    // penyebutan pertama; bidang select/number memakai nilai terbaru, multi/cek bersifat menambah; bendera
+    // "tidak tepat/berisiko" dicatat sekali per pilihan yang pernah disebut.
+    var benderaForm = new Set();
+    function tambahJawaban(idPanel, parsial) {
+      if (selesai) return { ok: false, alasan: 'Stasiun telah selesai.' };
+      var e = idx.peta.get(idPanel);
+      if (!e || e.tipe !== 'form') return { ok: false, alasan: 'Panel form tidak dikenal: ' + idPanel };
+      parsial = parsial || {};
+      var pertama = !formTerkirim.has(idPanel);
+      var ringkas = [];
+      e.panel.bidang.forEach(function (b) {
+        if (!Object.prototype.hasOwnProperty.call(parsial, b.id)) return;
+        var nilai = parsial[b.id];
+        var pilihan = daftarPilihan(b);
+        if (b.tipe === 'multi') {
+          nilai = (Array.isArray(nilai) ? nilai : []).filter(function (v) { return pilihan[v]; });
+          if (!nilai.length) return;
+          var lama = Array.isArray(jawaban[b.id]) ? jawaban[b.id] : [];
+          nilai = lama.concat(nilai.filter(function (v) { return lama.indexOf(v) < 0; }));
+        } else if (b.tipe === 'select') {
+          if (!pilihan[nilai]) return;
+        } else if (b.tipe === 'number') {
+          if (nilai === '' || nilai == null || !isFinite(Number(nilai))) return;
+          nilai = Number(nilai);
+        } else if (b.tipe === 'cek') {
+          if (!nilai) return;
+          nilai = true;
+        } else if (b.tipe === 'teks') {
+          if (!nilai) return;
+          nilai = String(nilai);
+        }
+        jawaban[b.id] = nilai;
+        var terpilih = b.tipe === 'multi' ? nilai : b.tipe === 'select' ? [nilai] : [];
+        terpilih.forEach(function (v) {
+          var o = pilihan[v], kunci = b.id + ':' + v;
+          if (o && o[2] && !benderaForm.has(kunci)) { benderaForm.add(kunci); catatBendera(kunci, o[1], o[2]); }
+        });
+        ringkas.push(b.label + ': ' + ringkasJawaban(b, jawaban[b.id]));
+      });
+      if (!ringkas.length) return { ok: true, diisi: 0 };
+      if (pertama) { formTerkirim.add(idPanel); terpakai += e.panel.biaya || 0; }
+      log.push({ tipe: 'form', id: idPanel, label: e.panel.label, respons: ringkas.join('\n'), t: terpakai, biaya: pertama ? (e.panel.biaya || 0) : 0 });
+      periksaJadwal();
+      return { ok: true, diisi: ringkas.length };
+    }
+
+    // Mencatat peristiwa percakapan yang bukan aksi (mis. ucapan yang tidak dikenali) dan biayanya.
+    function catatTambahan(label, respons, biaya, rinci) {
+      if (selesai) return { ok: false, alasan: 'Stasiun telah selesai.' };
+      terpakai += biaya || 0;
+      log.push(Object.assign({ tipe: 'ucapan', label: label, respons: respons || '', t: terpakai, biaya: biaya || 0 }, rinci || {}));
       periksaJadwal();
       return { ok: true };
     }
@@ -315,8 +380,11 @@
       ctx: ctx,
       log: log,
       lakukan: lakukan,
+      bolehDilakukan: bolehDilakukan,
       emit: emit,
       kirimForm: kirimForm,
+      tambahJawaban: tambahJawaban,
+      catatTambahan: catatTambahan,
       akhiri: function () { akhiri('manual'); },
       evaluasi: evaluasi,
       sudah: ctx.sudah,

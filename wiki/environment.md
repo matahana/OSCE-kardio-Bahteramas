@@ -23,7 +23,7 @@ Pelajaran teknis dari sesi pertama supaya tidak perlu ditemukan ulang.
 - PR dibuat **draft**. Trailer commit/PR (Co-Authored-By, Claude-Session, tautan sesi) diberikan harness lewat system-reminder tiap sesi; ikuti yang tertera saat itu.
 - Repo ini belum punya `.github/pull_request_template.md` (per 13 Oktober 2026).
 - **Sesi paralel pada repo yang sama** terjadi (13 Okt 2026): PR #2 dibuka oleh sesi lain (branch `claude/happy-darwin-oxpyko`) saat sesi ini bekerja. Selalu jalankan `list_pull_requests` dengan `state: all` di awal sesi dan sebelum menulis "tidak ada PR terbuka" di wiki. Jangan menyunting atau merge PR dari sesi lain tanpa diminta pengguna.
-- **GitHub Pages tidak dapat diaktifkan dari sesi**: tidak ada tool MCP untuk Pages; `gh` terpasang tetapi `GH_TOKEN` tidak valid (jangan mencari token lain); integrasi tidak punya hak admin (pembuatan repo juga 403). Status dapat dibaca lewat `search_repositories` (`has_pages`, `private`, `visibility`). Pengguna mengaktifkan manual: Settings → Pages → *Deploy from a branch* → `main` / `(root)`. Deploy via Actions tidak dipilih karena `configure-pages` dengan `enablement` membutuhkan token admin dan akan gagal merah di `main` sebelum Pages aktif.
+- **GitHub Pages tidak dapat diaktifkan dari sesi**: tidak ada tool MCP untuk Pages; `gh` terpasang tetapi `GH_TOKEN` tidak valid (jangan mencari token lain); integrasi tidak punya hak admin (pembuatan repo juga 403). Status dapat dibaca lewat `search_repositories` (`has_pages`, `private`, `visibility`). Pengguna mengaktifkan manual: Settings → Pages → *Deploy from a branch* → `main` / `(root)`. Deploy via Actions tidak dipilih karena `configure-pages` dengan `enablement` membutuhkan token admin dan akan gagal merah di `main` sebelum Pages aktif. **Update 13 Okt 2026:** pengguna sudah mengaktifkannya; status dan deploy dapat dibaca tanpa hak admin lewat `search_repositories` (`has_pages`) dan `actions_list` (`list_workflow_runs`, workflow `pages-build-deployment`). `curl` ke `github.io` dari sesi ditolak (403 CONNECT).
 - Uji situs lewat HTTP lokal: `python3 -m http.server 8765 --directory <repo>` lalu Playwright ke `http://localhost:8765/` (akar mengalihkan ke `/app/`); lulus tanpa galat/404 pada 13 Okt 2026.
 
 ## Catatan sesi 2
@@ -103,3 +103,10 @@ Tool `mcp__PubMed__*` bersifat deferred; muat dengan ToolSearch (`select:mcp__Pu
 python3 -I tools/cek_skor.py            # cek jumlah skor semua stasiun (kode keluar 1 bila tidak cocok)
 git -C /home/user/osce-kardio-bahteramas status --short
 ```
+
+## Mode tes: catatan alat (17 Oktober 2026)
+
+- `api.anthropic.com` dapat dijangkau dari sesi (preflight CORS `OPTIONS` tanpa kunci dijawab 200 dan mengizinkan header `x-api-key`, `anthropic-version`, `anthropic-dangerous-direct-browser-access`). **Tidak ada kunci API** di sesi (`ANTHROPIC_API_KEY` kosong, `ant` tidak terpasang), jadi tidak ada panggilan model nyata; uji memakai server tiruan lokal (`tools/uji_llm.mjs`) dan `page.route` di Playwright.
+- Chromium headless punya `SpeechRecognition` dan `speechSynthesis` bawaan: tiruan harus menimpa dengan `Object.defineProperty(window, ...)` (penugasan biasa diabaikan atau kalah oleh nama tanpa prefiks). Lihat `tests/e2e_tes.mjs`. Tiruan pengenal punya mode `window.__suara.tahan` (hasil baru keluar saat `stop()`, `abort()` dihitung di `__suara.dibatalkan`) untuk menguji tombol Berhenti; tiruan API Anthropic punya `state.tunda` (ms) untuk menguji Keluar/Back saat permintaan berjalan.
+- Data ucapan (`tests/ucapan/*.json`) disusun oleh lima subagen paralel (model sonnet). Subagen berbagi folder scratchpad dan saling menimpa skrip bantu bernama sama; beri tiap subagen nama berkas unik. Hasil diperiksa dengan `tools/cek_resolver.mjs` (id valid, ukuran, akurasi).
+- `node tools/cek_resolver.mjs` ±25 dtk (2.309 kalimat × 5 lipatan); cache tokenisasi di `resolver.js` penting untuk kecepatan.

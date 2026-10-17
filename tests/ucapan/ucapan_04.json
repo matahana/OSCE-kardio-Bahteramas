@@ -1,0 +1,179 @@
+{
+ "stasiun": "04",
+ "aksi": {
+  "salam": [
+   "Selamat siang Bu, perkenalkan saya dokternya. Hari ini kita cek tensi dulu ya, boleh?",
+   "Siang Bu, boleh saya periksa tensinya sekarang?",
+   "halo bu selamat siang saya dokter mau ngecek tekanan darah ibu ya boleh",
+   "Permisi Bu, saya ingin mengukur tekanan darah Ibu dengan alat ini. Lengan Ibu akan terasa agak tertekan sebentar, tidak sakit. Apakah Ibu setuju?",
+   "Assalamualaikum Bu, saya periksa tensinya sekarang ya, bersedia kan?"
+  ],
+  "posisi_duduk": [
+   "Ibu silakan duduk bersandar ya, kaki jangan disilang, lengan saya topang setinggi jantung.",
+   "Santai aja Bu, badannya nempel ke sandaran kursi, dua telapak kaki rata di lantai.",
+   "atur posisi pasien dulu, punggung ke sandaran, kaki jangan menyilang, lengan taruh di meja sejajar dada",
+   "Saya posisikan lengan Ibu di atas meja sejajar dengan dada, kursinya jangan dimiringkan dan kakinya tidak ditumpuk ya.",
+   "Posisi yang benar untuk ukur tensi: duduk bersandar, kaki rata ke lantai, siku ditopang pada ketinggian jantung."
+  ],
+  "posisi_berdiri": [
+   "Ibu berdiri saja ya, saya ukur sambil berdiri.",
+   "Bu, tolong bangun dari kursi, kita ukur tensinya dalam posisi tegak.",
+   "ukur tensi pasien posisi berdiri aja bu biar cepet",
+   "Tidak perlu duduk Bu, tetap tegak di situ dan lengannya dibiarkan menggantung di samping badan.",
+   "Langsung saja, Ibu bangkit dan lemaskan lengan ke bawah, saya pasang alatnya."
+  ],
+  "tanya_kafein": [
+   "Sebelum diukur, Ibu tadi ada minum kopi, merokok, atau olahraga dalam setengah jam terakhir?",
+   "Barusan ngopi nggak Bu? Atau nyebat? Habis jalan cepat atau senam gitu?",
+   "ada konsumsi kafein atau nikotin sebelum datang?",
+   "Sebelum ke sini, Ibu ada minum teh atau kopi, merokok, atau aktivitas berat tidak? Ini perlu saya tahu karena bisa memengaruhi hasil tensi.",
+   "Tiga puluh menit terakhir ini Ibu ada minum yang mengandung kafein, atau naik tangga cepat gitu?"
+  ],
+  "istirahat": [
+   "Ibu istirahat dulu lima menit ya, jangan bicara.",
+   "Tenang dulu ya Bu, duduk diam sebentar sekitar lima menit sebelum saya ukur, jangan ngobrol dulu.",
+   "rileks dulu 5 menit ya bu",
+   "Kita tunggu Ibu tenang dulu. Selama kurang lebih lima menit mohon diam dan jangan bergerak supaya tensinya stabil.",
+   "Silakan beristirahat sejenak dalam keadaan tenang, jangan mengobrol, nanti baru saya periksa."
+  ],
+  "alat_kalibrasi": [
+   "Saya cek dulu alatnya akurat, jarumnya di nol, dan lengan baju Ibu digulung tidak ketat.",
+   "Bu, lengan bajunya tolong dilipat naik ya, jangan sampai menjepit lengan.",
+   "cek tensimeter sudah terkalibrasi belum, jarum di nol",
+   "Sebelum mulai, saya pastikan tensimeternya berfungsi baik dan terkalibrasi, dan lengan Ibu terbuka tanpa baju yang menekan.",
+   "Sleeve-nya digulung dulu ya Bu, lalu saya tes alatnya, manometer harus menunjuk angka nol."
+  ],
+  "bicara": [
+   "Sambil saya ukur, kita ngobrol santai saja ya Bu.",
+   "Bu, cerita-cerita dulu aja sambil saya pasang, biar nggak tegang.",
+   "ngobrol terus ya bu biar rileks selagi saya ukur tensinya",
+   "Sambil diukur, mari kita bahas keluarga dan pekerjaan Ibu supaya tidak tegang.",
+   "Ibu boleh bercerita bebas selama pengukuran berlangsung, saya dengarkan."
+  ],
+  "ukur_lingkar": [
+   "Saya lingkarkan pita ukur di lengan atas Ibu dulu.",
+   "Saya mau tahu keliling bagian atas tangan Ibu, saya pakai meteran ya.",
+   "keliling bisep berapa ya, saya meteran dulu",
+   "Sebelum memilih alat yang sesuai, saya meteran dulu bagian tengah antara bahu dan siku Ibu.",
+   "Tolong diam sebentar Bu, saya lilitkan meteran di bagian tengah lengan atas."
+  ],
+  "manset_kecil": [
+   "Saya pakai manset ukuran kecil ya.",
+   "Ambil cuff yang S, Bu.",
+   "pasang cuff ukuran paling mungil",
+   "Lengan Ibu ramping, jadi saya pakai bladder yang small.",
+   "Pilih lilitan tensimeter yang paling sempit, yang untuk lengan anak-anak atau yang kurus."
+  ],
+  "manset_standar": [
+   "Saya pakai manset ukuran dewasa standar.",
+   "Pilih cuff yang regular untuk dewasa.",
+   "pakai yang ukuran sedang aja",
+   "Lengan Ibu ukurannya pas untuk bladder dewasa biasa, jadi saya ambil yang normal.",
+   "Saya ambil lilitan tensimeter ukuran M yang lazim dipakai orang dewasa."
+  ],
+  "manset_besar": [
+   "Saya pakai manset ukuran besar.",
+   "Ambil cuff yang L, Bu.",
+   "pasang cuff ukuran paling gede",
+   "Lengan Ibu cukup besar, saya pakai bladder yang large.",
+   "Pilih lilitan tensimeter yang lebar untuk lengan gemuk atau berotot."
+  ],
+  "manset_pasang": [
+   "Saya pasang manset dua sampai tiga senti di atas lipat siku, bladder tepat di atas arteri brakialis.",
+   "Lilitkan cuff-nya rapi, ujung bawahnya kira-kira dua jari di atas lekukan siku, kantung udaranya pas di atas denyut nadi lengan.",
+   "pasang manset 2-3 cm di atas siku",
+   "Saya selipkan tepi bawah manset sekitar 2 sampai 3 cm di atas lipatan siku, tengah bladder tepat di arteri brakialis, tidak terlalu longgar tidak terlalu ketat.",
+   "Saya balutkan alatnya ke lengan atas, batas bawahnya sedikit di atas siku dan bagian karetnya mengenai pembuluh darah lengan."
+  ],
+  "manset_rendah": [
+   "Saya pasang manset sampai menutupi lipat siku.",
+   "Saya lilitkan cuff-nya rendah, sampai ke lekukan siku.",
+   "pasang manset di bawah, nutupin siku",
+   "Tepi bawah manset saya turunkan hingga tepat menutup lipatan siku Ibu, supaya terpasang kencang.",
+   "Ujung bawah cuff sampai menyentuh sendi siku, sengaja dipasang rendah."
+  ],
+  "stetoskop_brakialis": [
+   "Saya letakkan kepala stetoskop di arteri brakialis, tidak menyentuh manset atau selang.",
+   "Raba dulu denyut di lipat siku, lalu stetoskop ditaruh di situ, jangan kena karetnya.",
+   "taruh stetoskop di lipatan siku tepat di atas arteri, jangan nyentuh cuff",
+   "Diafragma stetoskop saya tempelkan pada lekukan siku di atas nadi lengan, menjaga agar tidak bersentuhan dengan lilitan maupun pipa karet.",
+   "Bell stetoskop ditempel di pembuluh darah lengan, di lipat siku, dan tidak menyentuh apa pun."
+  ],
+  "stetoskop_manset": [
+   "Saya selipkan stetoskop di bawah manset.",
+   "Saya tempelkan alat dengar di bawah cuff biar pas.",
+   "stetoskopnya diselipkan di dalam lilitan manset aja",
+   "Supaya praktis, kepala stetoskop saya tindih dengan lilitan tensimeter, jadi tidak lepas.",
+   "Ujung alat dengarnya saya jepit di dalam balutan lengan sehingga tertahan."
+  ],
+  "tunggu": [
+   "Kita tunggu satu sampai dua menit dulu dengan manset dikempeskan penuh, baru kita ulang.",
+   "Lengan Ibu diistirahatkan dulu sebentar, sekitar satu setengah menit, lalu saya ulangi lagi.",
+   "jeda 2 menit sebelum ukur lagi",
+   "Sebelum pengukuran kedua, saya biarkan udara keluar seluruhnya dan menunggu beberapa saat supaya aliran darah lengan pulih.",
+   "Tunggu sebentar ya Bu, tensinya kita ulang dua menit lagi."
+  ],
+  "dua_lengan": [
+   "Pada kunjungan pertama, tekanan darah diukur di kedua lengan, dan lengan yang lebih tinggi dipakai untuk pengukuran selanjutnya.",
+   "Nanti di kunjungan pertama kita cek tensi kanan dan kiri, yang hasilnya lebih tinggi jadi acuan seterusnya.",
+   "ukur dua lengan sekali di awal, pakai yang lebih tinggi",
+   "Saya catat bahwa saat datang pertama kali idealnya lengan kanan dan kiri keduanya diukur untuk melihat selisih, selanjutnya dipilih yang lebih tinggi.",
+   "Idealnya kunjungan perdana bandingkan tensi di kedua tangan, lalu pakai yang lebih besar."
+  ],
+  "jelaskan_awam": [
+   "Bu, tekanan darah Ibu tampak tinggi saat ini, tapi kita perlu mengukur ulang untuk memastikan. Soal obat, kita putuskan setelah konfirmasi.",
+   "Tensinya agak tinggi hari ini ya Bu, tapi belum tentu hipertensi, kita cek ulang dulu. Obat belum kita mulai sebelum jelas.",
+   "hasilnya tinggi bu tapi jangan khawatir dulu kita ukur lagi, belum perlu obat sekarang",
+   "Angka tekanan darah Ibu sekarang di atas normal, namun satu kali pengukuran belum cukup untuk memastikan. Kita ulang dan baru putuskan perlu obat atau tidak.",
+   "Saya jelaskan pelan-pelan ya Bu: tekanan di pembuluh darah Ibu sedang tinggi, kita pastikan dulu dengan cek ulang, jadi jangan buru-buru minum obat."
+  ],
+  "edukasi": [
+   "Saran saya, Ibu kurangi makanan asin, rajin bergerak, jaga berat badan, dan jangan merokok. Kontrol ulang ya, dan kalau sakit kepala hebat, nyeri dada, sesak, atau lemah separuh badan, langsung ke IGD.",
+   "Mulai sekarang makannya jangan terlalu asin Bu, olahraga ringan, timbangan dijaga.",
+   "pantangan garam sama rokok ya bu, sama olahraga rutin",
+   "Kalau tiba-tiba kepala sangat sakit, dada nyeri, napas sesak, atau badan sebelah lemas, segera datang ke rumah sakit. Selain itu rutin kontrol.",
+   "Gaya hidup sehat: diet rendah garam, jangan gemuk, banyak gerak, hindari asap rokok."
+  ],
+  "rapikan": [
+   "Baik Bu, sudah selesai. Saya bereskan alat dan cuci tangan dulu ya.",
+   "Terima kasih Bu, sudah selesai, silakan kembali ke ruang tunggu. Saya rapikan peralatan dulu.",
+   "sudah selesai bu terima kasih sudah kooperatif, alatnya saya simpan, saya cuci tangan",
+   "Pemeriksaan selesai, saya kembalikan tensimeter ke tempatnya dan membersihkan tangan sebelum mempersilakan pasien berikutnya.",
+   "Cukup sekian Bu, semoga lekas membaik, saya cuci tangan dan merapikan meja dulu."
+  ],
+  "jargon": [
+   "Tensi Ibu ini hipertensi derajat 2 ya.",
+   "Diagnosisnya HT stage 2, Bu.",
+   "hasil ukur ibu itu sudah masuk HT grade II",
+   "Bu, ini stage 2 hypertension menurut klasifikasi, sistolik dan diastoliknya di atas ambang.",
+   "Berdasarkan pengukuran, Ibu menderita HT derajat dua."
+  ]
+ },
+ "keluarga": [],
+ "negatif": [
+  "Apakah ada riwayat diabetes atau sakit ginjal di keluarga Ibu?",
+  "Tolong rekam EKG 12 sadapan sekarang juga.",
+  "Saya resepkan amlodipin 5 mg sekali sehari, ya.",
+  "Sakit kepalanya sudah berapa lama dan seperti apa nyerinya?",
+  "Saya ukur suhu tubuh Ibu dulu dengan termometer.",
+  "Sekarang saya dengarkan bunyi jantung dan paru Ibu.",
+  "Mohon bawakan berkas rekam medis dari bagian pendaftaran.",
+  "eh anu hmm tadi saya mau bilang apa ya"
+ ],
+ "ganda": [
+  {"ucapan": "Selamat siang Bu, saya mau ukur tensi ya. Ibu duduk bersandar, kaki jangan disilang, lengan saya topang setinggi jantung.", "aksi": ["salam", "posisi_duduk"]},
+  {"ucapan": "Ibu tadi ngopi atau merokok? Sekarang istirahat dulu lima menit, jangan bicara ya.", "aksi": ["tanya_kafein", "istirahat"]},
+  {"ucapan": "Saya ukur lingkar lengan atas Ibu dulu, lalu pakai manset dewasa standar.", "aksi": ["ukur_lingkar", "manset_standar"]},
+  {"ucapan": "Manset saya pasang dua sampai tiga senti di atas lipat siku, lalu stetoskop saya taruh di arteri brakialis tanpa menyentuh manset.", "aksi": ["manset_pasang", "stetoskop_brakialis"]},
+  {"ucapan": "Cek alat sudah di nol, lengan baju digulung dulu ya Bu, lalu Ibu istirahat lima menit.", "aksi": ["alat_kalibrasi", "istirahat"]},
+  {"ucapan": "Tensinya tampak tinggi, Bu, kita ukur ulang untuk memastikan. Sementara itu kurangi garam dan rajin bergerak, kalau sakit kepala hebat langsung datang ke IGD.", "aksi": ["jelaskan_awam", "edukasi"]}
+ ],
+ "isian": [
+  {"ucapan": "Tekanan darah rerata 148/94 mmHg. Di catatan saya cantumkan nilai rerata, lengan yang diukur, posisi pasien, ukuran manset, dan jam pengukuran. Klasifikasi hipertensi menurut ESC, konfirmasi dengan pemantauan di rumah dan ABPM.", "bidang": {"sist": 148, "dia": 94, "catat_apa": ["rerata", "lengan", "posisi", "manset", "waktu"], "klas": "ht", "acuan": "esc", "konfirmasi": ["hbpm", "abpm"]}},
+  {"ucapan": "Sistolik 156, diastolik 98. Catatannya saya isi rerata dua kali ukur, lengan, posisi duduk, ukuran manset, dan waktu. Ini HT, acuan PERKI, konfirmasi dengan pengukuran ulang di kunjungan lain atau HBPM.", "bidang": {"sist": 156, "dia": 98, "catat_apa": ["rerata", "lengan", "posisi", "manset", "waktu"], "klas": "ht", "acuan": "perki", "konfirmasi": ["ulang", "hbpm"]}},
+  {"ucapan": "Hasil ukur 154 per 96 mmHg, termasuk hipertensi.", "bidang": {"sist": 154, "dia": 96, "klas": "ht"}},
+  {"ucapan": "Yang saya tulis di catatan: lengan kiri, posisi duduk, manset standar, dan jam 10.15.", "bidang": {"catat_apa": ["lengan", "posisi", "manset", "waktu"]}},
+  {"ucapan": "190 per 120, krisis hipertensi, langsung mulai obat sekarang.", "bidang": {"sist": 190, "dia": 120, "klas": "krisis", "konfirmasi": ["obat_langsung"]}},
+  {"ucapan": "Ini bukan krisis hipertensi, hanya hipertensi biasa, 162/100 mmHg. Jangan langsung mulai obat, konfirmasi dulu dengan HBPM.", "bidang": {"sist": 162, "dia": 100, "klas": "ht", "konfirmasi": ["hbpm"]}}
+ ]
+}

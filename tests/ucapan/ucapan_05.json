@@ -1,0 +1,198 @@
+{
+ "stasiun": "05",
+ "aksi": {
+  "aman": [
+   "Sebelum menolong, saya pastikan dulu tempat ini aman untuk saya dan pasien.",
+   "Scene safe.",
+   "lihat sekeliling dulu ada bahaya nggak, lantai basah, kabel listrik terbuka",
+   "Saya cek lingkungan sekitar: tidak ada ancaman dan tidak ada risiko cedera tambahan bagi saya maupun bapak ini, jadi aman untuk mendekat.",
+   "Keamanan lokasi oke, saya boleh mendekati korban."
+  ],
+  "respons": [
+   "Saya tepuk-tepuk bahunya sambil memanggil: Pak, Pak, bisa dengar saya?",
+   "Cek kesadaran, tepuk bahu dan panggil namanya.",
+   "pak pak halo pak bangun pak sambil tepuk bahu",
+   "Saya periksa responsnya dengan menepuk bahu bapak ini dengan kuat dan memanggil dengan suara keras.",
+   "Bapak, bapak sadar? Saya goyangkan bahunya, apakah ada reaksi?"
+  ],
+  "tunjuk_bantuan": [
+   "Bapak yang berbaju biru, tolong aktifkan kode biru dan panggil bantuan sekarang!",
+   "Mas yang pakai kemeja biru, telepon tim emergency rumah sakit sekarang!",
+   "Pak, kamu yang di sana, hubungi tim resusitasi, bilang ada henti jantung di ruang tunggu poli jantung.",
+   "Bapak yang berdiri di dekat pintu, tolong minta bantuan medis lewat operator, cepat!",
+   "Mas, iya Mas yang itu, panggil ambulans atau tim code blue, saya tetap di sini menolong."
+  ],
+  "tunjuk_aed": [
+   "Ibu yang berkerudung, tolong ambilkan AED sekarang!",
+   "Mbak yang pakai jilbab, carikan alat kejut jantung di sekitar sini, cepat!",
+   "Bu, kamu ya, ambil defibrilator di pos satpam atau lobi, bawa ke sini.",
+   "Ibu yang di sebelah kiri, tolong ambilkan alat AED dan bawa kemari secepatnya!",
+   "Mbak, iya yang itu, tolong ambilkan mesin kejut listrik otomatis, bawa ke sini ya."
+  ],
+  "closed_loop": [
+   "Tolong ulangi perintah saya tadi.",
+   "Coba sebutkan lagi apa yang saya minta, biar saya yakin sudah jelas.",
+   "ulangi dulu pak bu biar nggak salah",
+   "Saya mau memastikan kalian menangkap tugasnya dengan benar, jadi tolong konfirmasi dengan mengulang instruksi tadi.",
+   "Bapak Ibu, apa yang tadi saya suruh? Coba dikonfirmasi."
+  ],
+  "instruksi_tenang": [
+   "Semuanya tolong tenang dan beri ruang, nanti bantu saya menyiapkan AED.",
+   "Mundur sedikit ya, jangan berkerumun, biar saya bisa bekerja.",
+   "tenang tenang jangan panik, kasih jalan",
+   "Bapak Ibu sekalian, mohon menjauh dari pasien beberapa langkah dan tetap tenang. Kalau ada yang bisa, bantu saya mengoperasikan alat nanti.",
+   "Tolong yang lain jangan menggerombol, sisihkan ruang di sekitar bapak ini."
+  ],
+  "cek_napas_nadi": [
+   "Saya periksa napas dan nadi karotis bersamaan, tidak lebih dari sepuluh detik.",
+   "Lihat dada naik turun sambil raba nadi di leher, maksimal 10 detik.",
+   "cek napas sama nadi leher sekalian",
+   "Saya letakkan dua jari di arteri leher sambil mengamati gerakan dada untuk menilai napas, dalam waktu paling lama sepuluh detik.",
+   "Bernapas normal tidak, ada denyut di leher tidak? Saya nilai dua-duanya bareng."
+  ],
+  "nyatakan_henti": [
+   "Pasien ini henti jantung.",
+   "Tidak ada napas normal dan tidak ada nadi, ini cardiac arrest.",
+   "oke ini cardiac arrest",
+   "Berdasarkan temuan tadi, saya simpulkan bapak ini mengalami henti jantung dan membutuhkan tindakan segera.",
+   "Jantungnya sudah berhenti, ini kondisi arrest."
+  ],
+  "teriak": [
+   "Tolong! Tolong! Ada orang pingsan di sini!",
+   "Toloooong!",
+   "siapa saja tolong ada yang jatuh nggak sadar",
+   "Hei semuanya, ada keadaan darurat, tolong bantu!",
+   "Ada yang bisa membantu? Tolong, ada orang tergeletak!"
+  ],
+  "cek_lama": [
+   "Saya raba nadi lehernya saja, saya tunggu sampai tiga puluh detik.",
+   "Cek nadi dulu yang lama, setengah menit, baru saya putuskan.",
+   "rabanya lama-lama ya, nadi doang, 30 detik",
+   "Saya ingin yakin betul, jadi saya periksa denyut arteri karotis tanpa melihat napas selama setengah menit penuh.",
+   "Coba saya pastikan dulu ada nadi atau tidak, saya raba pelan-pelan lebih dari setengah menit."
+  ],
+  "telepon_sendiri": [
+   "Saya tinggal sebentar untuk menelepon ambulans sendiri.",
+   "Bapak ini saya tinggal dulu ya, saya lari ke resepsionis minta bantuan sendiri.",
+   "saya telepon sendiri aja, saya tinggal sebentar",
+   "Saya keluar ruangan sebentar untuk menghubungi tim emergency lewat telepon di meja pendaftaran, pasien dibiarkan dulu.",
+   "Tunggu di sini, saya pergi memanggil dokter jaga sendiri."
+  ],
+  "ganti_penolong": [
+   "Bapak yang tadi, tolong gantikan saya melakukan kompresi.",
+   "Sudah dua menit, gantian ya, siapa yang bisa menekan dada gantikan saya.",
+   "ganti penekan dada tiap dua menit biar nggak capek",
+   "Supaya kualitas pijatan tetap baik, saya minta ada yang mengambil alih kompresi sekarang, saya mundur.",
+   "Mas, gantian pijat jantungnya dong, saya sudah lelah."
+  ],
+  "aed_nyala": [
+   "Nyalakan AED dan ikuti petunjuknya.",
+   "Tekan tombol power alat kejutnya, ikuti suara perintahnya.",
+   "AED on",
+   "Saya buka tas AED lalu aktifkan alatnya, kemudian mengikuti instruksi suara langkah demi langkah.",
+   "Hidupkan defibrilator otomatis itu sekarang."
+  ],
+  "pad_benar": [
+   "Saya pasang pad di bawah klavikula kanan dan di sisi kiri dada, dadanya sudah kering.",
+   "Lap dada sampai kering dulu, lalu tempel elektroda satu di kanan atas dekat tulang selangka, satu lagi di rusuk kiri.",
+   "elektroda kanan atas, satu lagi di kiri bawah, kulitnya dilap dulu",
+   "Sesuai gambar pada kemasan, satu elektroda di sebelah kanan atas tulang dada, yang lain di sisi samping kiri tempat denyut puncak jantung, kulit sudah dilap tidak basah.",
+   "Tempelkan kedua pad: satu di bawah tulang selangka kanan, satu di sisi samping dada kiri."
+  ],
+  "pad_salah": [
+   "Saya pasang pad di punggung dan perut.",
+   "Tempel elektrodanya satu di belakang dan satu di bagian perut.",
+   "pad satu di punggung satu lagi di perutnya",
+   "Saya tempelkan satu pad di bagian belakang badan dan yang satunya di perut bagian depan.",
+   "Elektroda di tulang belakang dan abdomen, ya."
+  ],
+  "aed_clear": [
+   "Semua menjauh! Jangan ada yang menyentuh pasien saat AED menganalisis.",
+   "Clear! Mundur semua, lepas tangan dari pasien.",
+   "awas semua jangan pegang pasien alatnya lagi baca",
+   "Saya pastikan tidak ada seorang pun yang bersentuhan dengan bapak ini, termasuk saya, selama alat menganalisis irama.",
+   "I'm clear, you're clear, everybody's clear."
+  ],
+  "syok": [
+   "Saya tekan tombol syok sekarang!",
+   "Kejut sekarang!",
+   "Shock! sambil menekan tombol oranye",
+   "Sesuai saran AED, saya tekan tombol kejut listrik sekarang.",
+   "Beri kejutan listrik sekarang."
+  ],
+  "cek_nadi_pascasyok": [
+   "Setelah syok, saya periksa nadi dulu.",
+   "Habis dikejut, saya cek nadi lehernya, ada atau tidak.",
+   "cek denyut pasca kejut",
+   "Sesudah kejutan diberikan, saya hentikan sebentar untuk meraba arteri karotis dan melihat apakah sirkulasi sudah kembali.",
+   "Sudah disyok, coba kita lihat nadinya muncul lagi nggak."
+  ],
+  "rjp_pascasyok": [
+   "Setelah syok, langsung lanjut kompresi dua menit.",
+   "Habis dikejut jangan berhenti, tekan dada lagi sekarang.",
+   "lanjut pijat jantung pasca syok 2 menit",
+   "Begitu kejutan selesai diberikan, saya langsung memulai siklus kompresi berikutnya tanpa memeriksa nadi, selama dua menit.",
+   "Sesudah dishock, kompresi lagi, jangan buang waktu."
+  ],
+  "aed_analisis2": [
+   "Dua menit sudah lewat, biarkan AED menganalisis irama lagi.",
+   "Analisis ulang iramanya, yang kedua kali ya.",
+   "AED nilai ulang ritme",
+   "Setelah satu siklus kompresi selesai, saya biarkan alat membaca ulang irama jantung untuk menentukan apakah perlu kejut berikutnya.",
+   "Saatnya reanalisis, alatnya kita biarkan membaca irama sekali lagi."
+  ],
+  "serah_terima": [
+   "Laporan ke tim: pasien henti jantung sekitar enam menit lalu, RJP sudah berjalan, sudah satu kali syok, iramanya VF.",
+   "Handover: laki-laki dewasa kolaps tiba-tiba, RJP enam menit, satu shock, ritme VF.",
+   "dok ini pasien arrest jam sepuluh lewat lima, sudah dikompresi sejak itu, disyok sekali, irama shockable",
+   "Silakan ambil alih. Ringkasnya: waktu kolaps tadi sekitar enam menit lalu, RJP terus-menerus dengan pergantian penolong, AED sudah memberi satu kali syok dan analisis berikutnya tidak menyarankan syok.",
+   "Update untuk tim ACLS: durasi resusitasi sekitar enam menit, jumlah kejutan satu kali, irama awal fibrilasi ventrikel."
+  ],
+  "serah_terima_kosong": [
+   "Ini pasien tadi jatuh.",
+   "Dok, ini pasiennya, tadi tiba-tiba ambruk di sini.",
+   "ini bapak yang tadi pingsan silakan dok",
+   "Tim, ini orangnya, tadi dia jatuh di ruang tunggu, silakan diambil alih.",
+   "Nih pasiennya ya, tadi kolaps, tolong ditangani."
+  ]
+ },
+ "keluarga": [
+  {
+   "ids": ["rjp_blok1", "rjp_lanjut"],
+   "ucapan": [
+    "Mulai kompresi dada sekarang, tiga puluh kompresi lalu dua napas.",
+    "RJP berkualitas sambil kita tunggu AED datang.",
+    "Lanjutkan pijat jantungnya jangan berhenti, satu menit lagi.",
+    "tekan dada terus, kuat dan cepat, 30 banding 2",
+    "Saya mulai resusitasi jantung paru sekarang.",
+    "Lanjut RJP lagi satu menit, terus tekan kuat dan cepat."
+   ]
+  }
+ ],
+ "negatif": [
+  "Berikan epinefrin 1 mg IV sekarang.",
+  "Tolong pasang jalur infus dan ambil darah untuk laboratorium.",
+  "Siapkan intubasi dan pasang ventilator.",
+  "Apakah bapak ini punya riwayat penyakit jantung atau alergi obat?",
+  "Tolong rekam EKG 12 sadapan dan periksa gula darahnya.",
+  "Ruang tunggu hari ini ramai sekali ya.",
+  "Tolong nyalakan lampu dan kipas angin di ruang tunggu ini.",
+  "hmm tadi kunci mobil saya di mana ya"
+ ],
+ "ganda": [
+  {"ucapan": "Lokasi aman, saya tepuk bahunya sambil memanggil pak pak bisa dengar saya, lanjut saya cek napas dan nadi lehernya sepuluh detik.", "aksi": ["aman", "respons", "cek_napas_nadi"]},
+  {"ucapan": "Bapak baju biru aktifkan kode biru, Ibu berkerudung ambilkan AED, sekarang tolong ulangi perintah saya.", "aksi": ["tunjuk_bantuan", "tunjuk_aed", "closed_loop"]},
+  {"ucapan": "Tidak ada napas normal dan tidak ada nadi, ini henti jantung, nyalakan AED sekarang.", "aksi": ["nyatakan_henti", "aed_nyala"]},
+  {"ucapan": "Pad saya tempel di bawah tulang selangka kanan dan sisi kiri dada, semuanya mundur jangan ada yang menyentuh pasien.", "aksi": ["pad_benar", "aed_clear"]},
+  {"ucapan": "Tekan tombol kejut sekarang, lalu langsung lanjut kompresi dua menit tanpa cek nadi.", "aksi": ["syok", "rjp_pascasyok"]},
+  {"ucapan": "Pak gantian kompresi dong, sudah dua menit, sementara itu biarkan AED menganalisis ulang iramanya.", "aksi": ["ganti_penolong", "aed_analisis2"]}
+ ],
+ "isian": [
+  {"ucapan": "Pasien telentang di permukaan keras, tangan di setengah bawah sternum, lengan lurus bahu tepat di atas dada, kedalaman 5 sampai 6 cm, dada dibiarkan recoil penuh, interupsi kurang dari 10 detik, rasio 30:2, buka jalan napas dengan head tilt chin lift, ventilasi satu detik sampai dada terangkat.", "bidang": {"posisi_pasien": "keras", "posisi_tangan": "sternum_bawah", "postur": "lurus", "kedalaman": "5_6", "recoil": "penuh", "interupsi": "kurang10", "rasio": "30_2", "jalan_napas": "htcl", "ventilasi": "1dtk"}},
+  {"ucapan": "Saya baringkan di alas keras atau lantai, heel of hand di separuh bawah tulang dada, siku lurus, tekan 5-6 senti, full recoil, jeda minimal di bawah sepuluh detik, 30 banding 2, HTCL, tiup sekitar 1 detik tiap napas dan lihat dada naik.", "bidang": {"posisi_pasien": "keras", "posisi_tangan": "sternum_bawah", "postur": "lurus", "kedalaman": "5_6", "recoil": "penuh", "interupsi": "kurang10", "rasio": "30_2", "jalan_napas": "htcl", "ventilasi": "1dtk"}},
+  {"ucapan": "Kompresinya 30:2, kedalaman 5 sampai 6 cm.", "bidang": {"rasio": "30_2", "kedalaman": "5_6"}},
+  {"ucapan": "Posisi tangan di setengah bawah sternum, lengan lurus, dan jalan napas dibuka dengan head tilt chin lift.", "bidang": {"posisi_tangan": "sternum_bawah", "postur": "lurus", "jalan_napas": "htcl"}},
+  {"ucapan": "Pasien saya biarkan di kasur empuk, tangan di ulu hati, kompresi 3 sampai 4 cm, rasio 15:2, tiupan kuat selama 3 detik.", "bidang": {"posisi_pasien": "kasur", "posisi_tangan": "xifoid", "kedalaman": "dangkal", "rasio": "15_2", "ventilasi": "3dtk"}},
+  {"ucapan": "Pasien jangan miring dan jangan di kasur, harus telentang di permukaan keras. Antar kompresi tidak boleh bersandar di dada, biarkan recoil penuh.", "bidang": {"posisi_pasien": "keras", "recoil": "penuh"}}
+ ]
+}

@@ -1,0 +1,486 @@
+{
+ "stasiun": "12",
+ "aksi": {
+  "aman": [
+   "Pastikan area ini aman untuk kita semua dan untuk pasien sebelum kita lanjut.",
+   "Cek sekeliling, apa ada bahaya buat tim? Lantai basah, kabel lepas, atau tabung oksigen bocor?",
+   "scene aman ya",
+   "Sus, tolong lihat dulu kondisi sekitar apakah aman sebelum kita menolong.",
+   "Sebelum bekerja saya pastikan tidak ada risiko cedera bagi penolong ataupun pasien di lokasi ini, dan tempat tidur siap untuk resusitasi."
+  ],
+  "cek_henti": [
+   "Saya cek responsnya, napas, dan nadi karotis bersamaan, tidak lebih dari sepuluh detik.",
+   "Pak Surya! Pak! Bapak dengar saya? ... sambil saya lihat dada naik turun dan raba nadi leher, maksimal 10 detik.",
+   "cek nadi leher sama napasnya sebentar, jangan lama-lama",
+   "Sebentar, kompresi berhenti singkat saja, saya raba karotis sambil melihat napas dan menilai kesadarannya selama sepuluh detik.",
+   "Respons, napas, nadi, sekaligus, maksimal 10 detik."
+  ],
+  "nyatakan_henti": [
+   "Pasien ini henti jantung. Catat waktunya.",
+   "Saya nyatakan Bapak ini mengalami cardiac arrest.",
+   "oke ini henti jantung ya",
+   "Tidak ada respons, tidak bernapas normal, nadi tidak ada: kita hadapi henti jantung sekarang.",
+   "Kesimpulan saya: Bapak mengalami henti jantung; mohon waktu kejadian dicatat dan kita lakukan resusitasi."
+  ],
+  "cek_henti_lama": [
+   "Saya raba nadi karotis selama tiga puluh detik dulu, kompresi berhenti sementara.",
+   "Berhenti kompresi dulu, saya pastikan nadinya tidak ada setengah menit penuh.",
+   "tahan kompresi, saya periksa nadi leher agak lama biar yakin, setengah menit",
+   "Supaya yakin betul tidak ada denyut, saya cek nadi karotis cukup lama sekitar 30 detik, semuanya hentikan kompresi dulu.",
+   "Hentikan pijatan, nadi leher saya periksa selama 30 detik."
+  ],
+  "panggil_tim": [
+   "Tolong aktifkan kode biru sekarang.",
+   "Sus, panggil tim resusitasi, telepon operator untuk kode biru.",
+   "panggil bantuan, kode biru",
+   "Saya butuh tambahan tenaga, tolong umumkan tim henti jantung ke seluruh rumah sakit.",
+   "Minta tim code blue datang ke bangsal ini secepatnya."
+  ],
+  "siapkan_troli": [
+   "Tolong dorong troli emergensi dan defibrilator ke samping tempat tidur.",
+   "Sus, ambilkan defib sama kereta obat darurat, taruh di sini.",
+   "bawa troli darurat sama defib ke sini",
+   "Peralatan resusitasi lengkap harus ada di dekat saya: alat kejut jantung beserta kereta obat emergensi.",
+   "Siapkan alat kejut dan troli obat darurat dekat pasien."
+  ],
+  "perkenalan": [
+   "Saya dokter jaga di sini, saya yang memimpin tim ini.",
+   "Perhatian semua, saya dokter jaga dan saya pemimpin tim resusitasi.",
+   "oke saya yang pegang komando ya, saya dokternya",
+   "Perkenalkan, saya dokter yang bertugas, mulai sekarang saya team leader, ikuti arahan saya.",
+   "Dengarkan semua, mulai detik ini saya yang mengatur resusitasi ini, mohon dukungannya."
+  ],
+  "peran_kompresi": [
+   "Perawat, kamu yang melakukan kompresi dada, dan nanti gantian setiap dua menit.",
+   "Sus, kamu bagian pijat jantung ya, nanti ditukar setiap siklus.",
+   "kamu kompresi",
+   "Tugasmu menekan dada pasien dengan cepat dan dalam, dan bergantian dengan rekannya tiap siklus.",
+   "Pertama, saya tunjuk satu orang sebagai penekan dada; setelah dua menit ia bergantian dengan orang lain."
+  ],
+  "peran_napas": [
+   "Kamu yang memegang jalan napas dan ventilasi dengan oksigen.",
+   "Kamu bertugas mengurus jalan napas dan napas buatannya ya.",
+   "kamu di kepala, airway sama napas buatan",
+   "Tugasmu berada di kepala pasien: buka jalan napas, pasang sungkup, dan beri tiupan dengan oksigen.",
+   "Saya tunjuk satu orang untuk bertanggung jawab atas pernapasan pasien selama resusitasi, menggunakan alat bantu napas dan oksigen."
+  ],
+  "peran_akses": [
+   "Kamu bagian infus dan obat: pasang akses IV atau IO dan berikan obatnya.",
+   "Sus, kamu yang masang infus dan nyuntik obat emergensi ya.",
+   "kamu akses dan obat",
+   "Tugasmu mencari jalur pembuluh darah, atau tulang bila perlu, lalu menyiapkan dan memberikan obat resusitasi atas perintah saya.",
+   "Saya tunjuk kamu sebagai penanggung jawab jalur vena dan semua pemberian obat."
+  ],
+  "peran_catat": [
+   "Kamu yang mencatat waktu, irama, dan obat ya.",
+   "Mbak, tolong jadi pencatat: jam berapa, ritme apa, dikasih obat apa.",
+   "kamu notulen, recorder",
+   "Saya tunjuk kamu sebagai pencatat kejadian, mulai dari jam henti sampai setiap obat dan perubahan irama.",
+   "Tugas kamu duduk di sana dan menulis semua tindakan, jam, dan hasil monitor sepanjang resusitasi."
+  ],
+  "nilai_kompresi": [
+   "Pastikan kompresinya berkualitas: lajunya, kedalamannya, dada mengembang penuh, dan jedanya minimal.",
+   "Tekanannya sudah cukup dalam dan cepat belum? Dadanya kembali penuh tiap kali?",
+   "kompresi udah bagus belum, dalam, cepat, recoil",
+   "Saya perhatikan mutu pijatannya, jangan sampai ada jeda panjang dan dada harus naik kembali sepenuhnya.",
+   "Saya mau memastikan standar kompresi dada terpenuhi: kecepatan, kedalaman, recoil sempurna, dan interupsi sesedikit mungkin."
+  ],
+  "pasang_pad": [
+   "Pasang pad defibrilator dan monitor sekarang, kompresi jangan berhenti.",
+   "Tempel bantalan elektroda di dada sambil terus menekan.",
+   "pasang pad sambil kompresi jalan terus",
+   "Sus, hubungkan pasien ke monitor jantung lewat pad di dada, tapi pijat tetap lanjut.",
+   "Saya minta elektroda defibrilator ditempelkan di dada kanan atas dan sisi kiri bawah tanpa menyela kompresi."
+  ],
+  "oksigen_bvm": [
+   "Berikan oksigen tinggi lewat balon sungkup.",
+   "Bagging pakai oksigen seratus persen ya.",
+   "kasih oksigen full pakai ambu bag",
+   "Tolong tiupkan napas buatan dengan masker dan kantong ventilasi yang disambung ke oksigen, dada harus terlihat naik.",
+   "Mulai ventilasi dengan alat bag-valve-mask yang dihubungkan ke oksigen konsentrasi maksimal."
+  ],
+  "cek_sadapan": [
+   "Pastikan sadapan dan pad terpasang benar dan gain monitor cukup; cek di dua sadapan.",
+   "Garis datarnya benar-benar asistol atau cuma kabel lepas? Cek kabel dan perbesar amplitudonya.",
+   "periksa lead sama gain, takut salah baca",
+   "Sebelum menyatakan irama datar, saya mau pastikan alat tidak salah: tempelan elektroda, kabel, dan penguatan sinyal.",
+   "Ganti ke sadapan lain lalu naikkan gain, kita pastikan ini bukan artefak."
+  ],
+  "nyatakan_asistol": [
+   "Iramanya asistol, tidak bisa dikejut, lanjutkan RJP.",
+   "Garis datar ini asistol; tidak perlu syok, terus kompresi.",
+   "asistol ya, lanjut pijat, jangan shock",
+   "Monitor menunjukkan tidak ada aktivitas listrik, itu asistol, jadi alat kejut tidak diperlukan dan resusitasi dilanjutkan.",
+   "Ini flat line, ritme non-shockable, kita lanjutkan kompresi."
+  ],
+  "nyatakan_pea": [
+   "Irama ini PEA, tetap tidak dapat disyok, lanjutkan RJP sesuai algoritme yang sama.",
+   "Ada gambaran listrik di monitor tapi nadinya tidak ada, itu PEA, jangan dikejut.",
+   "pea ya lanjut rjp",
+   "Aktivitas listrik tanpa denyut: ritme non-shockable, teruskan kompresi dan protokolnya.",
+   "Sekarang bukan garis datar lagi tapi nadi tetap tidak teraba, kita sebut pulseless electrical activity, lanjut protokol."
+  ],
+  "syok_asistol": [
+   "Isi defibrilator dan lakukan syok sekarang.",
+   "Charge, clear, shock!",
+   "kejut aja dulu",
+   "Saya minta alat kejut jantung diisi muatannya lalu berikan kejutan listrik ke pasien.",
+   "Siapkan defib, kita kasih shock sekarang untuk mengembalikan iramanya."
+  ],
+  "ganti_penolong": [
+   "Tolong gantian yang kompresi, yang lain naik.",
+   "Sudah dua menit, tukar penolongnya.",
+   "gantian pijat ya, kamu capek kan",
+   "Supaya kompresi tetap kuat, orang yang menekan dada diganti dengan rekan lain tanpa jeda lama.",
+   "Switch compressor sekarang."
+  ],
+  "akses_iv_io": [
+   "Pasang akses vena atau intraosseus, kompresi tetap jalan.",
+   "Sus, tolong pasang infus, kalau susah tusuk tulang saja.",
+   "pasang iv atau io",
+   "Kita perlu jalur untuk memasukkan obat: cari pembuluh darah di lengan, kalau gagal gunakan jalur tulang, jangan hentikan pijat.",
+   "Buatkan jalur pemberian obat sekarang, bisa lewat vena atau tulang."
+  ],
+  "jalan_napas_lanjut": [
+   "Pasang jalan napas lanjut tanpa menghentikan kompresi.",
+   "Siapkan intubasi atau alat jalan napas supraglotik, pijat tetap jalan.",
+   "intubasi ya, kompresi jangan putus",
+   "Kalau ada yang mahir, masukkan pipa endotrakeal atau LMA sementara kompresi tetap berlangsung, jeda sependek mungkin.",
+   "Amankan jalan napas dengan alat definitif, dikerjakan tanpa menyela pijat jantung."
+  ],
+  "kapnografi": [
+   "Pasang kapnografi.",
+   "Sambungkan alat ukur CO2 akhir ekspirasi ke jalan napas.",
+   "pasang etco2",
+   "Saya mau memantau karbon dioksida napas untuk menilai kualitas kompresi dan mendeteksi nadi kembali.",
+   "Tolong siapkan waveform capnography."
+  ],
+  "atropin": [
+   "Berikan atropin untuk irama yang lambat.",
+   "Atropin sulfat IV ya Sus, ritmenya lambat.",
+   "kasih atropin",
+   "Karena irama pelan, tolong suntikkan obat antikolinergik atropin.",
+   "Coba atropin dulu untuk bradikardia ini."
+  ],
+  "amiodaron": [
+   "Berikan amiodaron.",
+   "Sus, siapkan cordarone, antiaritmia IV.",
+   "amiodaron sekarang",
+   "Saya minta obat antiaritmia, amiodaron, diberikan bolus lewat jalur IV.",
+   "Kasih obat antiaritmia golongan amiodaron lewat IV sekarang."
+  ],
+  "sebut_h": [
+   "Kita telusuri penyebab reversibel golongan H: hipoksia, hipovolemia, hiperkalemia, hipotermia, dan asidosis.",
+   "Coba kita cek 5H dulu.",
+   "5 H, ada yang kena?",
+   "Pikirkan penyebab yang bisa dikoreksi yang berawalan H: oksigen rendah, volume kurang, kalium, suhu, dan keasaman darah.",
+   "Apakah ini karena kekurangan cairan, kadar kalium abnormal, hipoksia, kedinginan, atau darah terlalu asam?"
+  ],
+  "sebut_t": [
+   "Sekarang golongan T: tension pneumotoraks, tamponade, toksin, dan trombosis koroner atau paru.",
+   "Lanjut ke 4T ya, apa ada tanda tamponade atau pneumotoraks?",
+   "4 T gimana",
+   "Kita periksa sebab reversibel yang berawalan T: udara terjebak di rongga dada, cairan di kantung jantung, keracunan, dan sumbatan pembuluh darah koroner atau paru.",
+   "Apakah ada dugaan keracunan, emboli paru, serangan jantung, tamponade, atau paru kolaps menekan?"
+  ],
+  "minta_gas_darah": [
+   "Tolong periksa gas darah dengan kalium dan gula darah, cepat.",
+   "Ambil darah untuk AGD sama elektrolit, kalium dan glukosa, cito.",
+   "agd plus k sama gds sekarang",
+   "Saya perlu tahu pH, kadar kalium, dan glukosa pasien saat ini, tolong kirim sampel darah ke analisis segera.",
+   "Kirim sampel untuk analisis gas darah dan elektrolit sekarang juga."
+  ],
+  "tanya_riwayat": [
+   "Sus, ceritakan riwayat dialisisnya dan keluhan pasien sebelum henti.",
+   "Dia terakhir cuci darah kapan, dan sebelum ini ngeluh apa?",
+   "riwayat hd nya gimana sus",
+   "Tolong beri tahu saya latar belakang pasien ini: jadwal hemodialisisnya teratur atau tidak, dan apa yang dikeluhkan sebelum tidak sadar.",
+   "Tanya perawat yang merawat, terakhir kali pasien menjalani dialisis dan bagaimana kondisinya kemarin."
+  ],
+  "tanya_ekg_pagi": [
+   "Ada EKG pagi tadi? Tolong ambilkan.",
+   "Coba cari rekam jantung yang dibuat pagi ini, kalau ada.",
+   "ekg sebelumnya ada nggak sus",
+   "Saya ingin membandingkan dengan gambaran listrik jantung sebelum henti; adakah rekaman dari tadi pagi di status pasien?",
+   "Lihat dulu hasil perekaman jantung tadi pagi, bila sudah dikerjakan, tolong tunjukkan."
+  ],
+  "simpulkan_hiperkalemia": [
+   "Dugaan terkuat saya adalah hiperkalemia, kita tangani sekarang.",
+   "Kaliumnya tinggi, itu penyebabnya; langsung kita obati.",
+   "ini pasti hiperkalemia, treat sekarang",
+   "Melihat latar belakangnya, saya simpulkan penyebabnya kalium yang tinggi, dan kita terapi segera.",
+   "Penyebab utamanya kalium darah yang terlalu tinggi, kita mulai pengobatannya."
+  ],
+  "simpulkan_lain": [
+   "Saya kira penyebabnya tamponade atau pneumotoraks.",
+   "Kemungkinan terbesar paru kolaps tertekan atau cairan di sekitar jantung.",
+   "ini tamponade kayaknya, atau pneumo",
+   "Menurut saya yang paling mungkin adalah sumbatan mekanis di dada, yaitu darah atau cairan di kantung jantung atau udara terjebak di rongga pleura.",
+   "Penyebabnya bukan karena kalium, tetapi tension pneumotoraks atau tamponade jantung."
+  ],
+  "insulin_dekstrosa": [
+   "Berikan insulin reguler bersama dekstrosa lewat IV.",
+   "Insulin dan glukosa IV ya Sus supaya kaliumnya masuk ke sel.",
+   "insulin sama dextrose iv",
+   "Untuk memasukkan kalium ke dalam sel, suntikkan insulin kerja cepat yang dipasangkan dengan larutan gula supaya tidak hipoglikemia.",
+   "Kita beri paket insulin dan dekstrosa."
+  ],
+  "insulin_saja": [
+   "Berikan insulin reguler IV saja tanpa dekstrosa.",
+   "Insulin aja ya, nggak usah pakai glukosa.",
+   "insulin iv doang",
+   "Suntikkan insulin kerja cepat ke dalam vena untuk menurunkan kalium, tidak perlu ditambah larutan gula.",
+   "Saya minta insulin sendiri tanpa tambahan cairan dekstrosa."
+  ],
+  "pertimbangkan_bikarbonat": [
+   "Pertimbangkan natrium bikarbonat karena asidosis dan kalium tinggi.",
+   "Kasih bikarbonat ya, pH-nya rendah.",
+   "bicnat iv",
+   "Untuk menolong asidosis metabolik yang menyertai kalium tinggi, beri larutan basa natrium bikarbonat lewat vena.",
+   "Mungkin perlu bic nat, tolong siapkan."
+  ],
+  "tunggu_stop": [
+   "Hentikan RJP dulu sambil menunggu hasil gas darah.",
+   "Berhenti kompresi, kita tunggu hasil lab dulu.",
+   "stop pijat sampai hasil keluar",
+   "Supaya hasilnya tenang dibaca dan kita tidak salah langkah, semua berhenti memijat sampai laboratorium melapor.",
+   "Kita jeda resusitasi sebentar menunggu angka kalium dan pH muncul."
+  ],
+  "closed_loop": [
+   "Ulangi instruksi saya, dan laporkan setelah selesai dikerjakan.",
+   "Sus, ulangi perintah yang saya beri lalu kabari saya begitu sudah dilakukan.",
+   "ulang dulu perintahnya, kalau sudah bilang ya",
+   "Supaya tidak ada salah dengar, setiap perintah harus diulang oleh yang menerimanya dan dikonfirmasi saat sudah dikerjakan.",
+   "Tolong repeat order dan beri kabar kembali saat tindakan selesai."
+  ],
+  "catat_waktu": [
+   "Pencatat, sebutkan waktu berjalan dan catat jam henti, obat yang diberikan, dan irama tiap siklus.",
+   "Catat semua jamnya ya: kapan henti, kapan obat, ritme tiap cek.",
+   "tolong dicatat jamnya, obat, sama irama",
+   "Saya mau tahu sudah berapa lama resusitasi berlangsung, dan pastikan buku catatan mencantumkan waktu, obat, dan hasil analisis irama.",
+   "Waktu berjalan saya sebut tiap siklus; kamu catat lengkap dengan obat dan irama."
+  ],
+  "ringkas_tim": [
+   "Ringkasan buat tim: ritme saat ini, obat yang telah masuk, dan penyebab yang kita curigai.",
+   "Semuanya dengar ya, saya rekap situasi saat ini.",
+   "recap dulu: ritme, obat, sebabnya",
+   "Biar kita sepaham, saya jelaskan posisi kita sekarang: bagaimana irama jantungnya, obat apa saja yang telah diberikan, dan apa yang kita duga sebagai penyebabnya.",
+   "Update untuk tim: kita sudah sampai mana dan apa dugaan kita."
+  ],
+  "minta_masukan": [
+   "Ada yang punya masukan atau melihat penyebab lain yang terlewat?",
+   "Tim, ada yang kepikiran sesuatu yang belum kita bahas?",
+   "ada usul gak",
+   "Sebelum kita lanjut, saya terbuka untuk saran dari siapa pun yang melihat sesuatu yang saya lewatkan.",
+   "Silakan sampaikan kalau ada yang berbeda pendapat atau punya ide diagnosis lain."
+  ],
+  "koreksi_kompresi": [
+   "Kompresinya kurang dalam dan agak lambat, tolong lebih dalam dan cepat, lalu gantian dengan rekan.",
+   "Mbak, maaf ya, pijatannya masih dangkal. Tolong ditambah tekanannya dan nanti tukar dengan yang lain.",
+   "tekan lebih dalam dikit sus, terus tukar",
+   "Saya perhatikan kualitas kompresinya mulai menurun; dengan baik-baik saya minta penekan menambah kedalaman dan laju, dan bergantian.",
+   "Maaf mengganggu, kompresi perlu lebih kuat, mohon diperbaiki, dan sekalian gantian karena sudah lelah."
+  ],
+  "apresiasi_tim": [
+   "Terima kasih semuanya, kerja tim kalian bagus.",
+   "Makasih ya tim, terus semangat, tetap tenang.",
+   "good job semua",
+   "Saya hargai kerja keras kalian; mari kita lanjutkan dengan tenang dan jelas.",
+   "Terima kasih atas kerja samanya, tetap fokus ya."
+  ],
+  "bentak_tim": [
+   "Kompresi kamu salah! Kamu bisa kerja nggak sih?",
+   "Heh, yang benar dong, kamu bikin kacau semua!",
+   "salah terus kamu, ceroboh banget",
+   "Kalau kamu tidak becus menekan, minggir saja, di depan semua orang ini memalukan.",
+   "Saya sudah bilang berkali-kali, kenapa kamu masih salah juga?!"
+  ],
+  "kenali_rosc": [
+   "Nadi karotis sudah teraba, cek tekanan darah dan kapnografi, kompresi dihentikan, kita dapat ROSC.",
+   "Stop kompresi, ada nadi! Ukur tensi, lihat kapno.",
+   "nadinya balik, rosc, tensi berapa",
+   "Sepertinya sirkulasi spontan kembali: saya raba denyut di leher dan lengan, dan kita lihat tekanan darah serta grafik CO2 apakah naik.",
+   "Berhenti menekan sebentar, kita pastikan jantungnya berdenyut sendiri lagi."
+  ],
+  "oksigen_terkontrol": [
+   "Atur oksigennya secara titrasi dan ventilasi terkontrol, jangan sampai hipoksia atau hiperventilasi.",
+   "Turunkan oksigen sesuai saturasi, dan napasnya diatur, jangan terlalu cepat.",
+   "titrasi o2, spo2 dijaga",
+   "Kini nadi sudah kembali, jadi saya mau ventilasi yang pelan dan oksigen yang disesuaikan target saturasi.",
+   "Sesuaikan fraksi oksigen dengan saturasi pasien, dan hindari memberi napas buatan berlebihan."
+  ],
+  "atasi_hipotensi": [
+   "Tekanan darahnya rendah, tolong pasang akses yang adekuat, beri cairan secukupnya, dan siapkan vasopresor bila perlu.",
+   "Tensi turun, kita naikkan: cairan dulu, kalau tidak cukup pakai obat penaik tensi.",
+   "hipotensi diatasi, cairan sama noradrenalin kalau perlu",
+   "Saya mau tekanan darah pasien dipertahankan dengan akses yang bagus, cairan sesuai keadaan, dan vasopresor sebagai cadangan.",
+   "Tensinya terlalu rendah untuk perfusi organ, mohon segera ditangani."
+  ],
+  "ekg_12": [
+   "Rekam EKG 12 sadapan sekarang.",
+   "Tolong EKG lengkap ya, kita lihat ada STEMI atau tidak.",
+   "ekg 12 lead",
+   "Setelah nadi kembali, saya minta rekaman listrik jantung lengkap dari seluruh sadapan.",
+   "Buat rekam jantung dua belas sadapan untuk menyingkirkan serangan jantung dan melihat pengaruh kalium."
+  ],
+  "pantau_k_glukosa": [
+   "Pantau kalium dan glukosa secara serial, ulangi gas darah.",
+   "Ulangi cek kalium dan gula darah beberapa jam sekali.",
+   "kalium gula diulang berkala ya",
+   "Karena obat penurun kalium bisa menyebabkan gula turun dan kalium bisa naik lagi, tolong ulang pemeriksaan darah secara berkala.",
+   "Jadwalkan pengambilan sampel ulang untuk melihat tren kadar kalium dan gula darah."
+  ],
+  "dialisis_nefro": [
+   "Hubungi dokter ginjal, kita rencanakan hemodialisis darurat.",
+   "Telepon nefrolog, pasien butuh cuci darah segera.",
+   "konsul nefro, hd cito",
+   "Pasien tidak mungkin menunggu jadwal biasa; minta tim nefrologi menyiapkan dialisis emergensi.",
+   "Sus, tolong kabari konsultan ginjal agar mesin cuci darah disiapkan sekarang juga."
+  ],
+  "rawat_icu": [
+   "Pasien akan kami rawat di ICU.",
+   "Hubungi ICU, kita pindahkan pasien ke sana.",
+   "icu ya",
+   "Karena pasien tidak stabil pasca henti jantung, saya putuskan untuk dirawat intensif.",
+   "Minta tempat tidur di unit perawatan intensif untuk pasien ini."
+  ],
+  "ttm_neuro": [
+   "Rencanakan pemantauan neurologis dan kontrol suhu terarah.",
+   "Kita awasi kesadarannya, pupil dan GCS, dan atur suhu tubuhnya, jangan sampai demam.",
+   "ttm sama monitor saraf",
+   "Pasca henti jantung, otak harus dilindungi: nilai fungsi neurologis secara berkala dan jaga suhu pada target tertentu.",
+   "Siapkan manajemen suhu terarah dan evaluasi kerusakan otak."
+  ]
+ },
+ "keluarga": [
+  {
+   "ids": ["cek_irama_1", "cek_irama_2", "cek_irama_3", "cek_irama_4", "cek_irama_5"],
+   "ucapan": [
+    "Berhenti sebentar, kita analisis irama, lalu langsung lanjut kompresi.",
+    "Dua menit sudah, cek irama dan nadi, jedanya jangan lebih dari sepuluh detik.",
+    "cek ritme sekarang",
+    "Oke saatnya evaluasi: hentikan kompresi sesaat, lihat monitor, raba nadi, kemudian pijat lagi.",
+    "Sus, kita lihat irama di monitor ya, ada nadi atau tidak?",
+    "Siklus sudah habis, kompresi hentikan sebentar, saya lihat ritme di layar."
+   ]
+  },
+  {
+   "ids": ["siklus_1", "siklus_2", "siklus_3", "siklus_4"],
+   "ucapan": [
+    "Lanjutkan RJP dua menit lagi.",
+    "Terus kompresi satu siklus penuh tanpa jeda, ventilasi sesuai rasio.",
+    "lanjut rjp 2 menit",
+    "Pijat terus dua menit, jangan berhenti, sambil bernapas buatan sesuai irama.",
+    "Siklus berikutnya: kompresi tanpa henti, ventilasi seperti tadi, kita lihat lagi setelah dua menit."
+   ]
+  },
+  {
+   "ids": ["epinefrin_1", "epinefrin_2"],
+   "ucapan": [
+    "Berikan epinefrin sekarang.",
+    "Suntik adrenalin lewat jalur IV atau IO.",
+    "epi sekarang sus",
+    "Masukkan adrenalin sekarang, catat jamnya.",
+    "Saya minta vasopresor epinefrin disuntikkan sesuai protokol henti jantung.",
+    "Sus, adrenalin dong, lewat IV."
+   ]
+  },
+  {
+   "ids": ["kalsium_klorida", "kalsium_glukonat"],
+   "ucapan": [
+    "Berikan kalsium IV sekarang.",
+    "Beri kalsium lewat IV atau IO untuk menstabilkan membran jantung dari kalium tinggi.",
+    "kalsium cepat sus",
+    "Masukkan garam kalsium intravena, RJP jangan berhenti."
+   ]
+  },
+  {
+   "ids": ["ventilasi_cepat", "ventilasi_agresif"],
+   "ucapan": [
+    "Bagging lebih cepat dan lebih kuat supaya oksigennya masuk banyak.",
+    "Tiupnya dipercepat, Sus, dan lebih keras!",
+    "ventilasi digenjot terus",
+    "Supaya oksigenasi cepat membaik, napas buatannya diberikan sering dan penuh tenaga.",
+    "Percepat napas buatan, tekan balon sekuat mungkin."
+   ]
+  }
+ ],
+ "negatif": [
+  "Selamat pagi, bagaimana kabar tim hari ini?",
+  "Tolong buatkan foto toraks portabel sekarang.",
+  "Hubungi keluarga pasien dan kabari kondisi terbaru.",
+  "Besok libur nasional ya, ada yang tahu?",
+  "Tolong pasang kateter urin dan sonde lambung.",
+  "Berikan magnesium sulfat IV.",
+  "hmm tunggu sebentar saya lupa tadi mau bilang apa",
+  "Apakah pasien ini punya surat wasiat atau pesan jangan diresusitasi?"
+ ],
+ "ganda": [
+  {
+   "ucapan": "Panggil kode biru dan siapkan troli darurat di sisi tempat tidur.",
+   "aksi": ["panggil_tim", "siapkan_troli"]
+  },
+  {
+   "ucapan": "Kamu kompresi, kamu pegang jalan napas, dan kamu yang akses infus dan obat.",
+   "aksi": ["peran_kompresi", "peran_napas", "peran_akses"]
+  },
+  {
+   "ucapan": "Pasang pad sambil terus kompresi, dan kasih oksigen dengan bagging.",
+   "aksi": ["pasang_pad", "oksigen_bvm"]
+  },
+  {
+   "ucapan": "Minta gas darah dengan kalium, dan tanya perawat kapan terakhir kali dialisis.",
+   "aksi": ["minta_gas_darah", "tanya_riwayat"]
+  },
+  {
+   "ucapan": "Beri insulin dengan dekstrosa dan juga bikarbonat, kompresi jangan berhenti.",
+   "aksi": ["insulin_dekstrosa", "pertimbangkan_bikarbonat"]
+  },
+  {
+   "ucapan": "Hubungi nefrologi untuk cuci darah darurat dan putuskan pasien masuk ICU.",
+   "aksi": ["dialisis_nefro", "rawat_icu"]
+  }
+ ],
+ "isian": [
+  {
+   "ucapan": "Saya serah terima pakai SBAR. Situasi: pria 62 tahun pasca henti jantung dengan ROSC. Latar: PGK hemodialisis, melewatkan dua sesi. Henti jantung sekitar pukul 10.15, RJP kira-kira delapan menit, irama asistol lalu PEA lalu ROSC. Epinefrin dua kali, kalsium, insulin dengan dekstrosa, dan bikarbonat, semuanya dengan waktunya. Dugaan hiperkalemia, K 7,4, pH 7,18. Sekarang TD 88/50, nadi teraba, SpO2 93 persen. Mohon rawat ICU, dialisis darurat, dan pantau kalium serta glukosa berkala.",
+   "bidang": {
+    "bentuk_serah": "sbar",
+    "isi_serah": ["identitas", "waktu_henti", "irama", "obat", "penyebab", "kondisi", "rencana"]
+   }
+  },
+  {
+   "ucapan": "Dok ICU, ini Pak Surya laki-laki 62 tahun, PGK cuci darah, skip dua kali. Tadi henti jantung jam 10.15, RJP sekitar sepuluh menit, awalnya asistol terus PEA, sekarang ROSC. Sudah dikasih epi dua kali, kalsium, insulin D, bic, jamnya ada di catatan. Kami curiga hiperkalemia, kaliumnya 7,4. Sekarang tensi 88/50, SpO2 93, nadi ada. Minta masuk ICU, HD cito, dan K sama gula dipantau.",
+   "bidang": {
+    "isi_serah": ["identitas", "waktu_henti", "irama", "obat", "penyebab", "kondisi", "rencana"]
+   }
+  },
+  {
+   "ucapan": "SBAR ya Dok. Situasi: henti jantung sudah ROSC. Latar belakang pasien dialisis rutin, melewatkan dua sesi.",
+   "bidang": {
+    "bentuk_serah": "sbar",
+    "isi_serah": ["identitas"]
+   }
+  },
+  {
+   "ucapan": "Obat yang sudah diberikan: epinefrin dua kali, kalsium klorida, insulin dengan dekstrosa, dan bikarbonat. Dugaan penyebabnya hiperkalemia.",
+   "bidang": {
+    "isi_serah": ["obat", "penyebab"]
+   }
+  },
+  {
+   "ucapan": "Saya ceritakan bebas saja ya Dok, tidak urut. Sekarang tensinya sekitar 90 per 50 dan napasnya masih dibantu.",
+   "bidang": {
+    "bentuk_serah": "bebas",
+    "isi_serah": ["kondisi"]
+   }
+  },
+  {
+   "ucapan": "Ini bukan cerita bebas, saya pakai format SBAR. Penyebab dugaan kami bukan tamponade, melainkan hiperkalemia dengan kalium 7,4.",
+   "bidang": {
+    "bentuk_serah": "sbar",
+    "isi_serah": ["penyebab"]
+   }
+  }
+ ]
+}

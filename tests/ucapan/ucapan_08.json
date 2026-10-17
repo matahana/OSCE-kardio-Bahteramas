@@ -1,0 +1,271 @@
+{
+ "stasiun": "08",
+ "aksi": {
+  "stabil_nilai": [
+   "Bu Sumiati, saya cek dulu apakah kondisi Ibu stabil: tensinya, ada nyeri dada atau sesak, dan kesadarannya.",
+   "cek hemodinamik dulu, tensi berapa, ada tanda edema paru atau nyeri dada, pasien sadar penuh?",
+   "Pasiennya stabil atau tidak? Saya nilai dulu tekanan darah dan keluhan yang mengancam nyawa.",
+   "Sebelum bicara tatalaksana, saya pastikan dulu tidak ada tanda gawat: hipotensi, nyeri dada, paru basah, atau penurunan kesadaran.",
+   "Ibu merasa nyeri di dada atau napas terasa berat sekarang? Saya juga ukur tensi ulang untuk melihat apakah Ibu dalam keadaan aman."
+  ],
+  "kriteria_dc": [
+   "Kalau nanti pasien jadi tidak stabil, misalnya tensi jatuh, nyeri dada iskemik, edema paru, atau kesadaran turun, saya akan langsung kardioversi listrik sinkron.",
+   "Indikasi syok listrik di sini: bila terjadi gangguan hemodinamik berat, DC shock sinkron segera.",
+   "bila memburuk, hipotensi atau penurunan kesadaran, tidak menunggu obat, langsung DC sinkron",
+   "Catatan untuk penguji: Ibu ini sekarang stabil, namun jika ada instabilitas saya setrum sinkron tanpa menunda.",
+   "Kalau AF-nya menimbulkan instabilitas, jalur pertama bukan obat tetapi kardioversi elektrik sinkron saat itu juga."
+  ],
+  "monitor_iv": [
+   "Tolong pasang monitor jantung dan akses IV untuk Ibu Sumiati.",
+   "Sus, sambungkan Ibu ke alat pantau irama, terus pasang infus ya.",
+   "Saya minta disadap EKG kontinu dan dipasang jalur vena perifer dulu.",
+   "Pasang abocath dan sambungkan sadapan kontinu, saturasi serta tensi dipantau berkala.",
+   "Ibu kami pantau ritmenya terus-menerus ya, dan saya pasang jarum infus di lengan untuk jaga-jaga kalau perlu memberi obat."
+  ],
+  "pencetus_tiroid": [
+   "Ibu, apakah belakangan ini tangan gemetar, berat badan turun tanpa sebab, atau jadi tidak tahan panas?",
+   "ada keluhan gondok, keringat berlebihan, badan kurus drastis gitu Bu?",
+   "Saya ingin menyingkirkan kelenjar gondok yang terlalu aktif, apakah ada gejalanya seperti sering gerah, mudah gemetar, dan makin kurus?",
+   "tremor? turun BB? intoleransi panas?",
+   "Bu, akhir-akhir ini sering kegerahan, tangan bergetar, dan makan banyak tetapi badan malah makin kurus?"
+  ],
+  "pencetus_infeksi": [
+   "Bu, beberapa hari ini apakah demam, batuk, atau ada infeksi?",
+   "ada panas badan, pilek, atau habis sakit gitu Bu?",
+   "Sebelum berdebar ini, Ibu sempat meriang atau sakit tenggorokan?",
+   "Ada tanda radang di paru atau saluran kemih, misalnya badan menggigil dan dahak kental?",
+   "Belakangan Ibu sempat dirawat atau diberi antibiotik karena sakit?"
+  ],
+  "pencetus_alkohol": [
+   "Apakah Ibu biasa minum alkohol, atau baru-baru ini pesta minuman keras?",
+   "Bu suka minum bir atau tuak nggak?",
+   "Saya perlu tahu kebiasaan minum minuman beralkohol Ibu, seberapa sering dan berapa banyak.",
+   "Ada kebiasaan mengonsumsi miras, arak, atau sejenisnya?",
+   "Dalam beberapa hari terakhir sebelum jantung berdebar, Ibu sempat minum-minuman keras?"
+  ],
+  "pencetus_anemia": [
+   "Ibu, apakah ada perdarahan akhir-akhir ini, misalnya BAB hitam atau berdarah, atau mimisan?",
+   "Ibu tampak pucat atau cepat lelah? Pernah keluar darah dari mana-mana?",
+   "ada BAB hitam atau batuk darah nggak Bu",
+   "Saya ingin menyingkirkan kurang darah sebagai pemicu, adakah tanda perdarahan atau wajah pucat?",
+   "Riwayat perdarahan saluran cerna, atau Ibu pernah dibilang kurang darah?"
+  ],
+  "pencetus_elektrolit": [
+   "Apakah beberapa hari ini Ibu muntah-muntah, mencret, atau minum obat pengeluar air seperti furosemid?",
+   "Bu ada diare atau muntah? Minum obat kencing nggak?",
+   "Saya menanyakan kemungkinan cairan atau mineral tubuh Ibu terganggu: ada banyak kehilangan cairan lewat muntah, BAB cair, atau obat diuretik?",
+   "Ibu ada konsumsi pil diuretik atau habis dehidrasi?",
+   "Dalam seminggu ini apakah Ibu mengalami sakit perut dengan mencret atau muntah berulang?"
+  ],
+  "tanya_katup": [
+   "Ibu pernah dibilang dokter ada penyempitan katup jantung atau dipasang katup buatan?",
+   "ada riwayat operasi ganti katup jantung, Bu? atau penyempitan katup mitral?",
+   "Saya perlu memastikan tidak ada stenosis mitral sedang sampai berat atau katup mekanik, karena itu menentukan pilihan obat pengencer darah.",
+   "pernah echo terus katupnya disebut bocor atau menyempit? ada katup logam?",
+   "Apakah Ibu punya riwayat penyakit jantung rematik atau katup prostetik, serta pernah stroke atau perdarahan?"
+  ],
+  "cari_iskemia_rutin": [
+   "Untuk semua pasien AF yang baru ditemukan, saya jadwalkan treadmill atau uji iskemia dan CT angiografi paru.",
+   "sekalian saja kita CTPA dan stress test, siapa tahu ada emboli paru atau iskemia",
+   "Setiap fibrilasi atrium baru langsung kita kerjakan skrining iskemia miokard dan cari emboli paru, walau tidak ada gejala.",
+   "Ayo konsulkan ke radiologi untuk CT scan pembuluh paru dan uji beban jantung untuk Ibu, sebagai pemeriksaan rutin.",
+   "Biar yakin tidak ada penyebab tersembunyi, kita lakukan saja tes beban dan CT paru dengan kontras untuk Ibu."
+  ],
+  "lab_darah": [
+   "Tolong kirim darah lengkap untuk Ibu.",
+   "cek DL ya Sus, Hb leukosit trombosit",
+   "Saya minta pemeriksaan hematologi rutin: hemoglobin, leukosit, dan trombosit.",
+   "Sekalian ambil sampel darah untuk melihat kadar Hb dan jumlah sel darah putih serta trombosit.",
+   "Periksa Hb dan hitung jenis sel darah putih."
+  ],
+  "lab_elektrolit": [
+   "Minta cek elektrolit lengkap termasuk magnesium, plus kreatinin.",
+   "tolong Sus cek natrium kalium magnesium sama fungsi ginjal",
+   "Saya perlu tahu kadar kalium, magnesium, natrium, dan fungsi ginjalnya.",
+   "Kirim sampel untuk kimia darah: mineral tubuh dan ureum kreatinin.",
+   "K, Na, Mg, kreatinin, sekarang ya."
+  ],
+  "lab_tiroid": [
+   "Tolong periksa TSH untuk fungsi tiroidnya.",
+   "sekalian cek hormon tiroid ya, TSH dan FT4",
+   "Saya minta pemeriksaan laboratorium untuk menilai kelenjar gondok, supaya tahu apakah hipertiroid menjadi pemicu.",
+   "Ambil darah untuk kadar hormon pengatur kelenjar gondok.",
+   "Cek thyroid stimulating hormone ya, dan hormon tiroid bebas bila TSH-nya abnormal."
+  ],
+  "echo_tt": [
+   "Saya rencanakan ekokardiografi transtorakal, segera atau saat sudah dirawat.",
+   "nanti Ibu di-echo ya, USG jantung, lihat fungsi pompa dan katupnya",
+   "Untuk menilai struktur jantung, ukuran atrium kiri, dan fungsi ventrikel, kita lakukan USG jantung lewat dinding dada.",
+   "Konsul echo untuk Ibu, boleh di IGD kalau ada alat atau besok di ruang rawat.",
+   "Minta TTE ya, EF dan ukuran atrium kiri."
+  ],
+  "troponin": [
+   "Kita cek troponin karena ada depresi ST di sadapan lateral.",
+   "Sus tolong ambil darah untuk enzim jantung",
+   "Saya ingin menyingkirkan kerusakan otot jantung akibat iskemia, jadi kirim penanda nekrosis miokard.",
+   "Minta troponin sensitivitas tinggi.",
+   "Biar tahu ada tidaknya infark, periksa marker jantung dulu dari sampel darah."
+  ],
+  "presentasi": [
+   "Izin menyampaikan kasus secara sistematis: pertama interpretasi EKG, lalu diagnosis, kondisi stabil atau tidak, pencetus, dan rencana kendali laju, antikoagulan, dan strategi ritme.",
+   "Baik penguji, saya presentasikan runtut dari laju, irama, gelombang P, QRS, sumbu, ST, kemudian diagnosis dan rencana tatalaksana.",
+   "Saya serahterimakan kasus ini dengan urutan baku: temuan EKG, diagnosis, penilaian stabilitas, kemudian rencana terapi.",
+   "Izin presentasi singkat ya Dok: EKG dulu, diagnosis, stabilitas, pencetus, lalu rencana.",
+   "Ringkasan kasus saya paparkan dari yang terpenting secara berurutan, sampai ke rencana mengendalikan laju dan mencegah stroke."
+  ],
+  "presentasi_acak": [
+   "Saya sampaikan saja apa yang teringat dulu, nanti bisa loncat dari EKG ke obat lalu ke lab.",
+   "Izin lapor Dok, saya mulai dari obatnya dulu, baru EKG, terus balik ke pemeriksaan lagi.",
+   "Tidak usah berurutan ya, saya sebut temuannya sesuai yang terlintas di kepala.",
+   "ehm jadi pasiennya itu obatnya anu, lalu EKG-nya, oh iya labnya juga",
+   "Saya paparkan acak-acakan saja, yang penting semua tersampaikan walau urutannya campur aduk."
+  ]
+ },
+ "keluarga": [],
+ "negatif": [
+  "Tolong ambilkan foto toraks portabel sekarang, Sus.",
+  "Tolong cek gula darah sewaktu Ibu pakai glukometer.",
+  "Ibu tinggal di mana, dan di rumah bersama siapa saja?",
+  "Ibu pernah merokok atau tidak sebelumnya?",
+  "Panas sekali ya hari ini, AC IGD-nya mati lagi.",
+  "Bagaimana kalau kita pasang pacu jantung permanen untuk Ibu malam ini?",
+  "eee itu tadi apa ya namanya saya lupa",
+  "Terima kasih Bu sudah menunggu, semoga lekas membaik."
+ ],
+ "ganda": [
+  {
+   "ucapan": "Sus, pasang monitor dan infus. Saya nilai dulu stabil atau tidak, dan kalau memburuk saya langsung kardioversi sinkron.",
+   "aksi": ["monitor_iv", "stabil_nilai", "kriteria_dc"]
+  },
+  {
+   "ucapan": "Ada demam atau batuk, Bu? Minum alkohol juga tidak?",
+   "aksi": ["pencetus_infeksi", "pencetus_alkohol"]
+  },
+  {
+   "ucapan": "Tolong kirim darah lengkap, elektrolit, dan TSH sekarang.",
+   "aksi": ["lab_darah", "lab_elektrolit", "lab_tiroid"]
+  },
+  {
+   "ucapan": "Cek troponin ya, dan jadwalkan echo jantung di ruang rawat.",
+   "aksi": ["troponin", "echo_tt"]
+  },
+  {
+   "ucapan": "Ibu pernah ganti katup jantung? Dan akhir-akhir ini ada tangan gemetar atau turun berat badan?",
+   "aksi": ["tanya_katup", "pencetus_tiroid"]
+  },
+  {
+   "ucapan": "Ada BAB hitam atau perdarahan, Bu? Sekalian diare atau muntah-muntah beberapa hari ini?",
+   "aksi": ["pencetus_anemia", "pencetus_elektrolit"]
+  }
+ ],
+ "isian": [
+  {
+   "ucapan": "Laju sekitar 130 per menit, saya hitung dari jumlah QRS di strip enam detik dikali sepuluh. Irama ireguler total tanpa gelombang P yang jelas dan garis dasarnya berfibrilasi, QRS sempit, sumbu normal, ada depresi ST lateral ringan sesuai laju cepat. Kesimpulan saya AF dengan RVR.",
+   "bidang": {
+    "laju": 130,
+    "cara_hitung": "qrs6",
+    "keteraturan": "ireguler_total",
+    "gel_p": "tidak_fib",
+    "qrs": "sempit",
+    "sumbu": "normal",
+    "st": ["depresi_lateral"],
+    "dx": "fa_rvr"
+   }
+  },
+  {
+   "ucapan": "EKG-nya takikardia QRS sempit, RR ireguler total, P tidak tampak dengan baseline fibrilatif, rate 130, axis normal, ST depresi di lateral ringan kemungkinan karena rate, tidak ada elevasi ST. Diagnosis AF dengan RVR.",
+   "bidang": {
+    "laju": 130,
+    "keteraturan": "ireguler_total",
+    "gel_p": "tidak_fib",
+    "qrs": "sempit",
+    "sumbu": "normal",
+    "st": ["depresi_lateral", "tanpa_elevasi"],
+    "dx": "fa_rvr"
+   }
+  },
+  {
+   "ucapan": "Iramanya ireguler total dan tidak ada gelombang P. Ini fibrilasi atrium dengan respons cepat.",
+   "bidang": {
+    "keteraturan": "ireguler_total",
+    "gel_p": "tidak_fib",
+    "dx": "fa_rvr"
+   }
+  },
+  {
+   "ucapan": "Lajunya 130, QRS-nya sempit, sumbunya normal.",
+   "bidang": {
+    "laju": 130,
+    "qrs": "sempit",
+    "sumbu": "normal"
+   }
+  },
+  {
+   "ucapan": "Dengan 300 dibagi jumlah kotak besar R-R, lajunya sekitar 150, iramanya teratur dengan gelombang gigi gergaji, jadi ini flutter atrium.",
+   "bidang": {
+    "laju": 150,
+    "cara_hitung": "rr1",
+    "keteraturan": "teratur",
+    "gel_p": "gergaji",
+    "dx": "flutter"
+   }
+  },
+  {
+   "ucapan": "Tidak ada elevasi ST. Ada depresi ST lateral ringan, tapi iskemia belum bisa disingkirkan sebelum troponin keluar.",
+   "bidang": {
+    "st": ["tanpa_elevasi", "depresi_lateral", "singkir_iskemia"]
+   }
+  },
+  {
+   "ucapan": "Pasien stabil, jadi kendali laju dengan metoprolol atau diltiazem, tapi diltiazem hanya kalau EF-nya di atas 40 persen jadi echo dulu. CHA2DS2-VASc 4, saya mulai DOAC jangka panjang karena tidak ada stenosis mitral atau katup mekanik. Belum kardioversi elektif sebelum antikoagulasi memadai atau trombus disingkirkan, kontrol ritme saya konsulkan ke kardiolog. Tekanan darah dan gula darah dikontrol, dan edukasi kepatuhan DOAC.",
+   "bidang": {
+    "kendali_laju": ["bb", "ccb_nondhp"],
+    "ccb_catatan": true,
+    "skor_cha": 4,
+    "antikoagulan": "doac",
+    "kardioversi": "tunda",
+    "faktor": ["tekanan_darah", "gula", "kepatuhan"]
+   }
+  },
+  {
+   "ucapan": "Kendali laju pakai beta-blocker, misalnya bisoprolol oral. CHA2DS2-VA-nya 3, ada indikasi antikoagulan, pilih apixaban. Kardioversi ditunda sampai antikoagulasi adekuat atau trombus disingkirkan dengan TEE, pasien dirawat dan konsul kardiolog. Faktor risiko: tekanan darah, gula darah, berat badan, dan skrining sleep apnea.",
+   "bidang": {
+    "kendali_laju": ["bb"],
+    "skor_cha": 3,
+    "antikoagulan": "doac",
+    "kardioversi": "tunda",
+    "faktor": ["tekanan_darah", "gula", "berat", "apnea"]
+   }
+  },
+  {
+   "ucapan": "Saya beri metoprolol untuk lajunya, dan DOAC untuk cegah stroke.",
+   "bidang": {
+    "kendali_laju": ["bb"],
+    "antikoagulan": "doac"
+   }
+  },
+  {
+   "ucapan": "CHA2DS2-VASc-nya 4, jadi harus antikoagulan oral jangka panjang, saya pilih NOAC. Gula darah dan tensi nanti dikontrol.",
+   "bidang": {
+    "skor_cha": 4,
+    "antikoagulan": "doac",
+    "faktor": ["tekanan_darah", "gula"]
+   }
+  },
+  {
+   "ucapan": "Langsung amiodaron drip dan digoksin untuk lajunya, kardioversi listrik elektif sekarang juga, dan aspirin saja untuk cegah stroke karena pasiennya lansia.",
+   "bidang": {
+    "kendali_laju": ["amiodaron", "digoksin"],
+    "kardioversi": "segera",
+    "antikoagulan": "aspirin"
+   }
+  },
+  {
+   "ucapan": "Tidak ada stenosis mitral dan tidak ada katup mekanik, jadi DOAC. Saya tidak melakukan kardioversi elektif sekarang sebelum antikoagulasinya memadai.",
+   "bidang": {
+    "antikoagulan": "doac",
+    "kardioversi": "tunda"
+   }
+  }
+ ]
+}

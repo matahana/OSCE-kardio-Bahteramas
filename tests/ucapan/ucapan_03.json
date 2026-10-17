@@ -1,0 +1,123 @@
+{
+ "stasiun": "03",
+ "aksi": {
+  "salam": [
+   "Permisi Pak, izin saya dengarkan detak jantungnya ya.",
+   "Halo Pak, perkenalkan saya dokter yang bertugas hari ini. Tidak perlu khawatir, alatnya tidak sakit.",
+   "siang pak saya periksa jantungnya dulu ya",
+   "Assalamualaikum Pak. Boleh saya mulai pemeriksaannya sekarang?",
+   "Selamat siang Bapak, saya dokter yang akan memeriksa. Nanti saya menempelkan stetoskop di dada Bapak untuk mendengar bunyi jantung, apakah Bapak bersedia?"
+  ],
+  "cuci_tangan": [
+   "Sebelum menyentuh pasien, saya lakukan disinfeksi dengan hand rub dulu.",
+   "hand hygiene dulu",
+   "Saya basuh tangan pakai sabun dan air mengalir, enam langkah sesuai WHO.",
+   "Sanitizer dulu ya, baru mulai periksa.",
+   "Saya cuci tangan terlebih dahulu sebelum kontak dengan pasien."
+  ],
+  "posisi": [
+   "Bapak saya baringkan setengah duduk ya, bajunya dibuka dari bagian dada, saya tutup selimut supaya tidak malu.",
+   "atur posisi semi-Fowler, kepala dinaikkan sekitar tiga puluh sampai empat puluh lima derajat",
+   "Tolong Bapak tidur telentang dengan bantal ditinggikan sedikit, ya Pak.",
+   "Buka bajunya sedikit Pak, saya jaga privasinya.",
+   "Sebelum auskultasi, pasien saya baringkan telentang dengan kepala ditinggikan sekitar 30 sampai 45 derajat dan area dada saya buka seperlunya sambil menjaga privasi."
+  ],
+  "vital": [
+   "Tolong sebutkan tekanan darah dan denyut nadi pasien.",
+   "cek tensi sama TTV nya dulu",
+   "Saya ingin tahu hasil pengukuran tanda-tanda vital pasien.",
+   "Boleh saya minta data vital sign terbaru?",
+   "Sebelum mulai auskultasi, berapa tensi, frekuensi napas, dan suhu Bapak saat ini? Saya perlu data dasarnya."
+  ],
+  "steteskop_pakaian": [
+   "Saya letakkan stetoskop di atas bajunya saja.",
+   "dengar dari luar kaus aja pak biar cepat",
+   "Auskultasi lewat kain, tanpa membuka pakaian Bapak.",
+   "Diafragma saya tempel langsung di atas pakaian pasien.",
+   "Supaya Bapak tidak perlu membuka baju, saya dengarkan jantungnya lewat kaus yang sedang dipakai, tidak apa-apa kan?"
+  ],
+  "palpasi": [
+   "Sambil mendengarkan, saya raba nadi di leher supaya tahu mana bunyi sistol.",
+   "raba nadi dulu pas dengar jantung",
+   "Saya pegang nadi di pergelangan tangan pasien bersamaan dengan stetoskop untuk menentukan fase sistol dan diastol.",
+   "Timing bunyi jantung saya sinkronkan dengan denyut karotis.",
+   "Untuk membedakan bunyi pertama dan kedua serta menentukan bising ini jatuh pada fase apa, saya palpasi nadi pasien selagi auskultasi."
+  ],
+  "miring_kiri": [
+   "Pak, tolong miring ke kiri ya.",
+   "posisi left lateral decubitus buat dengar apeks",
+   "Bapak berbaring menyamping ke arah kiri, supaya puncak jantung lebih dekat ke dinding dada.",
+   "Coba tidur miring ke sisi kiri sebentar, Pak.",
+   "Untuk mendengar bising di bagian apeks dengan lebih jelas, saya mohon pasien dimiringkan ke kiri dan saya dengarkan lagi di area itu."
+  ],
+  "duduk_condong": [
+   "Bapak coba duduk, lalu badannya dimajukan sedikit ke depan, embuskan napas dan tahan ya.",
+   "duduk membungkuk terus tahan napas pak",
+   "Posisi leaning forward, tahan napas di akhir ekspirasi.",
+   "Bapak duduk tegak dulu, lalu bungkukkan badan ke depan, hembuskan napas habis dan tahan sebentar.",
+   "Untuk mendengar kemungkinan bising regurgitasi aorta di batas kiri sternum, saya minta pasien duduk membungkuk ke depan dan menahan napas setelah mengembuskan napas."
+  ],
+  "jelaskan_awam": [
+   "Begini Pak, ada bunyi tambahan di dada yang menandakan salah satu pintu jantung agak sempit. Untuk lebih yakin, nanti Bapak kita periksa dengan alat USG.",
+   "jadi gini pak, ada suara aliran darah yang nggak lancar di salah satu katup, biar jelas kita USG jantung dulu ya",
+   "Pintu di dalam dada Bapak kemungkinan mengecil sehingga terdengar bunyi. Nanti kita konfirmasi lewat echo.",
+   "Gampangnya begini Pak: ada lorong yang mengecil, sehingga darah lewatnya berdesing. Supaya yakin, nanti kita lihat gambar bagian dalam jantung dengan alat USG.",
+   "Tidak perlu takut ya Pak, yang saya dengar itu suara aliran darah melewati katup yang mungkin mengecil. Pemeriksaan USG jantung akan memastikan seberapa berat."
+  ],
+  "ringkas_struktur": [
+   "Biar mudah diikuti, saya sampaikan hasilnya berurutan: dari bunyi dasar, lalu ada tidaknya suara tambahan beserta kapan, di mana, dan bentuknya, ke mana ia merambat, sampai langkah selanjutnya.",
+   "urutannya gini ya pak, bunyi jantung dulu, terus bisingnya, nyebarnya ke mana, baru pemeriksaan lanjutan",
+   "Ringkasan: S1-S2, bising (waktu, lokasi, karakter), radiasi, rencana workup.",
+   "Biar rapi, saya sampaikan hasil auskultasi per bagian, mulai dari bunyi dasar sampai langkah berikutnya.",
+   "Temuan akan saya paparkan sistematis, dimulai dari bunyi jantung pertama dan kedua, lalu karakteristik bising, ke mana ia menjalar, dan akhirnya usulan pemeriksaan penunjang."
+  ],
+  "rapikan": [
+   "Pemeriksaan sudah selesai, Pak. Bajunya saya rapikan ya, terima kasih.",
+   "udah selesai pak makasih ya, kancing bajunya dibenerin dulu",
+   "Saya bantu pakaikan kembali baju Bapak dan tutup dengan selimut. Terima kasih atas kerja samanya.",
+   "Selesai. Pasien dirapikan, terima kasih.",
+   "Terima kasih banyak ya Pak sudah bersedia diperiksa. Silakan Bapak duduk, saya bantu membenahi pakaiannya."
+  ],
+  "jelaskan_jargon": [
+   "Dari pemeriksaan, Bapak menderita stenosis aorta, terdengar bising ejeksi sistolik.",
+   "Ini AS ya pak, ada murmur crescendo-decrescendo di aortic area",
+   "Pada auskultasi terdengar murmur ejeksi di aortic area yang menjalar ke karotis, sesuai AS degeneratif, Pak.",
+   "Diagnosisnya aortic stenosis dengan systolic ejection murmur, Pak.",
+   "Saya sampaikan hasilnya ya Pak: terdapat stenosis aorta degeneratif dengan bising sistolik tipe ejeksi yang menjalar ke arteri karotis."
+  ],
+  "diagnosis_pasti": [
+   "Bapak sudah pasti harus dioperasi ganti katup.",
+   "pak ini mah harus operasi, nggak ada pilihan lain",
+   "Tidak perlu periksa lagi, jelas Bapak butuh operasi katup.",
+   "Saya yakin seratus persen, katup Bapak harus diganti dengan yang baru lewat bedah.",
+   "Dari yang saya dengar saja saya sudah tahu, Bapak harus menjalani bedah jantung untuk katupnya, tidak usah menunggu pemeriksaan lain."
+  ]
+ },
+ "keluarga": [],
+ "negatif": [
+  "Bagaimana kabar keluarga di rumah, Pak?",
+  "Berapa tinggi dan berat badan Bapak?",
+  "Tolong lihat apakah ada pembengkakan di kedua tungkai dan vena jugularisnya.",
+  "Berapa menit lagi sisa waktu saya?",
+  "Mari kita bicarakan dulu rencana pengobatan diabetes Bapak.",
+  "Hmm... eh... oke lanjut saja.",
+  "Apakah Bapak memakai alat bantu dengar? Biar saya bicara lebih keras.",
+  "Tolong siapkan formulir persetujuan tindakan untuk operasi usus buntu."
+ ],
+ "ganda": [
+  {"ucapan": "Selamat siang Pak, saya dokter. Saya cuci tangan dulu ya, lalu Bapak saya baringkan setengah duduk.", "aksi": ["salam", "cuci_tangan", "posisi"]},
+  {"ucapan": "Tolong cek tensi dan nadinya dulu, terus Bapak miring ke kiri ya.", "aksi": ["vital", "miring_kiri"]},
+  {"ucapan": "Saya raba nadi sambil mendengarkan, lalu Bapak duduk membungkuk dan tahan napas ya.", "aksi": ["palpasi", "duduk_condong"]},
+  {"ucapan": "Bapak punya stenosis aorta dengan murmur ejeksi, jadi sudah pasti harus operasi katup.", "aksi": ["jelaskan_jargon", "diagnosis_pasti"]},
+  {"ucapan": "Ada suara aliran darah yang melewati katup yang menyempit, makanya kita perlu USG jantung. Saya rangkum temuan dari bunyi jantung sampai rencana, nah sudah selesai, bajunya saya rapikan ya, terima kasih.", "aksi": ["jelaskan_awam", "ringkas_struktur", "rapikan"]},
+  {"ucapan": "Cek tensi dan nadinya dulu, lalu saya auskultasi di atas bajunya saja supaya cepat.", "aksi": ["vital", "steteskop_pakaian"]}
+ ],
+ "isian": [
+  {"ucapan": "S2 melemah, A2 lemah. Ada bising sistolik ejeksi crescendo-decrescendo terkeras di area aorta, menjalar ke karotis. Kesan stenosis aorta. Pemeriksaan lanjutan: ekokardiografi, EKG, dan foto toraks.", "bidang": {"s1s2": "s2_lemah", "bising": "ada", "waktu": "sistolik", "lokasi": "aorta", "karakter": "ejeksi", "penjalaran": "karotis", "diagnosis": "as", "lanjutan": ["echo", "ekg", "foto"]}},
+  {"ucapan": "Bunyi jantung kedua melemah, ada murmur sistolik di sela iga dua kanan bentuk diamond, nyebar ke leher. Dugaan AS, rencana echo dan EKG.", "bidang": {"s1s2": "s2_lemah", "bising": "ada", "waktu": "sistolik", "lokasi": "aorta", "karakter": "ejeksi", "penjalaran": "karotis", "diagnosis": "as", "lanjutan": ["echo", "ekg"]}},
+  {"ucapan": "Bising sistolik di area aorta.", "bidang": {"bising": "ada", "waktu": "sistolik", "lokasi": "aorta"}},
+  {"ucapan": "Kemungkinan diagnosisnya aortic stenosis, perlu echo.", "bidang": {"diagnosis": "as", "lanjutan": ["echo"]}},
+  {"ucapan": "Bising pansistolik plateau di apeks, menjalar ke aksila, kesan regurgitasi mitral. Saya minta CT angiografi koroner dulu dan treadmill.", "bidang": {"bising": "ada", "waktu": "sistolik", "lokasi": "mitral", "karakter": "pansistolik", "penjalaran": "aksila", "diagnosis": "mr", "lanjutan": ["ct_angio", "treadmill"]}},
+  {"ucapan": "Tidak ada bising sama sekali di semua area, bunyi jantung S1 S2 normal, tidak ada S3.", "bidang": {"s1s2": "normal", "bising": "tidak"}}
+ ]
+}

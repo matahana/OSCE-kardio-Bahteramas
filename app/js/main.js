@@ -8,6 +8,9 @@
     [/^\/briefing\/(\d+)$/, function (m) { UI.briefing(m[1]); }],
     [/^\/sesi\/(\d+)$/, function (m) { UI.ruang(m[1]); }],
     [/^\/hasil$/, function () { UI.hasilView(); }],
+    [/^\/tes\/(\d+)$/, function (m) { UI.briefingTes(m[1]); }],
+    [/^\/tes-sesi\/(\d+)$/, function (m) { UI.ruangTes(m[1]); }],
+    [/^\/pengaturan$/, function () { UI.pengaturan(); }],
     [/^\/penguji\/(\d+)$/, function (m) { UI.pengujiView(m[1]); }],
     [/^\/riwayat$/, function () { UI.riwayatView(); }],
     [/^\/tentang$/, function () { UI.tentang(); }]

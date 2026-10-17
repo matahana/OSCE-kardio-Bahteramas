@@ -214,3 +214,36 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 **Hasil:** `main` memuat bank 14 stasiun, blueprint sirkuit, dan aplikasi dengan interaksi untuk seluruh 14 stasiun. Konten tetap **DRAF v0.2**, belum direview kardiolog; klaim di luar AF belum diverifikasi ke teks guideline.
 
 **Belum selesai:** tidak berubah dari entri lanjutan 8 (review kardiolog, verifikasi klaim, uji coba pengguna dan uji waktu S12, gambar EKG berlisensi, PERKI/PERHI, aktivasi GitHub Pages oleh pengguna).
+
+## [2026-10-13] sesi 2 (lanjutan 10) | Merge PR yang tersisa dan status GitHub Pages
+
+**Permintaan:** "merge semua PR yang ada agar semua siap di main", lalu "aktifkan GitHub Pages".
+
+**Tindakan:** daftar PR terbuka hanya berisi PR #5 (wiki, milik sesi ini; tidak ada PR sesi lain). Diperiksa bersih dan CI hijau, lalu squash-merge menjadi `a06033b`. Untuk Pages: `search_repositories` menunjukkan `has_pages: true` dan workflow `pages build and deployment` sukses untuk `5c52eb7`, `95f31cd`, dan `a06033b`, jadi **Pages sudah diaktifkan pengguna** (sekitar 17:17 UTC); sesi tidak dapat mengaktifkannya (API Pages ditolak proxy) dan tidak perlu. `github.io` tidak dapat dijangkau dari sesi (403), sehingga tampilan situs belum dilihat.
+
+**Hasil:** tidak ada PR terbuka selain PR wiki kecil ini; `overview`, `open-items`, dan `environment` dikoreksi (sebelumnya menulis Pages belum aktif).
+
+**Belum selesai:** pengguna membuka URL situs untuk memastikan tampilan; sisanya tidak berubah dari lanjutan 8.
+
+## [2026-10-17] sesi 2 (lanjutan 11) | Mode tes: ucapan bebas, LLM via internet, suara
+
+**Permintaan:** setelah pertanyaan "mengapa aplikasinya bukan interaktif (ketik/suara)?" dan opsi yang saya ajukan, pengguna menjawab: "boleh LLM lewat internet, lanjut buatkan suara. kenapa untuk tes masih seperti latihan? buat untuk tes, jawaban hanya muncul saat ditanya, dan jika tidak ditanya maka tidak muncul jawabannya". (Permintaan "aktifkan GitHub Pages" diulang; Pages sudah aktif sejak 13 Okt.)
+
+**Tindakan (branch `claude/happy-darwin-oxpyko`, PR #6 draft):**
+- **Engine:** `bolehDilakukan`, `tambahJawaban` (isian form bertahap dari ucapan; biaya form sekali), `catatTambahan` (ucapan tak dipahami).
+- **`app/js/resolver.js`** (offline): normalisasi, leksikon domain, IDF, margin antar-aksi, keluarga aksi (cek_irama_1..5), kalimat majemuk, ekstraksi isian sederhana.
+- **`app/js/llm.js`**: Claude Haiku 5.5 lewat `fetch` (kunci pengguna di `sessionStorage` atau proxy), keluaran JSON terstruktur, validasi ketat, pagar terhadap ucapan yang mengarahkan model, cadangan offline. **`tools/proxy-llm/`** (Cloudflare Worker + README).
+- **`app/js/suara.js`**: mikrofon `id-ID` dan suara pasien (Web Speech API), mode percakapan suara.
+- **`app/js/ujian.js` + `ui.js`**: tes tanpa menu (briefing dengan persetujuan privasi, ruang percakapan, widget tetap, form diucapkan bebas atau formulir pilihan sebagai cadangan, penolakan netral, hasil tanpa kunci + transkrip), halaman **Pengaturan**, rute `#/tes/NN`, `#/tes-sesi/NN`, `#/pengaturan`.
+- **Data:** 5 parafrase per aksi untuk 14 stasiun (2.309 kalimat) ditulis lima subagen; `tests/ucapan/`, generator `tools/buat_ucapan.py`, `app/data/ucapan.js`.
+- **Uji:** `tools/cek_resolver.mjs` (leave-one-out, di CI), `tools/uji_llm.mjs` (server tiruan; 54 asersi, di CI), `tests/e2e_tes.mjs` (61 asersi, Chromium; tiruan suara dan API), `tools/cek_llm.mjs` (evaluator LLM sungguhan untuk pemilik; `--simulasi` menguji kabelnya).
+
+**Hasil terukur:** resolver offline: 48% benar, 13,5% salah pilih, 38% tidak dipahami, majemuk recall 89%/presisi 96,5%, 89% negatif ditolak (kalimat uji ditulis LLM; leksikon disetel dengan melihat data, jadi agak optimistis). e2e latihan tetap 425 lulus; e2e tes 61 lulus. Mengucapkan label tiap langkah ideal lewat jalur offline memberi 96–100% (uji pipa, bukan uji pemahaman).
+
+**Yang TIDAK terverifikasi:** respons model sungguhan (tidak ada kunci API), pengenalan ucapan dan suara sungguhan (hanya tiruan), proxy di Cloudflare sungguhan, dan perilaku pada kandidat sungguhan.
+
+**Keputusan:** D39–D47. D14 menjadi bersyarat (LLM dan mikrofon opsional mengirim data keluar hanya setelah diaktifkan dan disetujui).
+
+**Tinjauan kode (subagen opus, hanya membaca) dan perbaikannya:** enam temuan, semua diverifikasi sebelum diterapkan. (1) Proxy meneruskan `system`/`messages` apa adanya → kini bentuk permintaan dikunci dan prompt sistem dapat dipin dengan hash (D46; batas perlindungan dicatat jujur). (2) Ucapan "constructor"/"__proto__"/"toString" melempar TypeError di resolver (peta `{}` biasa) dan mengunci input → semua peta berkunci kata kini `Object.create(null)`, `pahami` dibungkus Promise, peta di `llm.validasi` juga; terbukti dengan skrip pada resolver lama (TypeError) vs baru. (3) Kelanjutan asinkron setelah Keluar/Back/Forward → token ruang, `tes.segarkan`, suara dan mikrofon hanya bila ruang aktif; `hentiMendengar` memakai `batal`; `bicara` memberi nilai false bila terpotong. (4) Tombol Berhenti kini menghentikan percakapan suara. (5) Percakapan suara hanya lanjut bila jawaban selesai dibacakan. (6) Kontrak: placeholder kunci diperbaiki (penghapusan lewat tombol Hapus), `percakapan_sebelumnya` ikut dipotong, toast "dijeda karena senyap" kini benar-benar muncul (mikrofon mencoba ulang dua kali lalu dijeda). Tambahan: tanda vital di tes hanya yang tertulis di instruksi pintu dan `ringkasTes` dipakai (kebocoran kartu S12). Uji baru: `uji_llm` 74 asersi, `e2e_tes` 79 asersi (bagian "Ketahanan").
+
+**Belum selesai:** lihat [open-items](open-items.md) (ukur LLM sungguhan, pilot, uji suara nyata, proxy, koreksi skor oleh penguji).

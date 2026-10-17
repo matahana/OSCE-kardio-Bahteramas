@@ -1,0 +1,422 @@
+{
+ "stasiun": "13",
+ "aksi": {
+  "salam": [
+   "Selamat siang Pak Darmin, saya dokter yang bertugas hari ini, boleh saya mulai dengan beberapa pertanyaan soal keluhan dan obat Bapak?",
+   "Siang Pak, apa kabar? Saya dokternya hari ini ya",
+   "Halo Pak Darmin, silakan duduk. Saya yang akan memeriksa Bapak, kita ngobrol-ngobrol dulu ya",
+   "Assalamualaikum Pak, saya yang jaga poli jantung hari ini",
+   "Pak Darmin ya? Perkenalkan, saya dokter yang akan menangani Bapak. Sebelum mulai, saya ingin tahu bagaimana keadaan Bapak sekarang, mohon diceritakan apa adanya"
+  ],
+  "gejala_aktivitas": [
+   "Bapak sesaknya muncul kalau lagi ngapain? Kuat jalan berapa jauh?",
+   "Kalau naik tangga atau jalan agak jauh, napasnya masih terasa berat nggak Pak?",
+   "Kalau jalan dari rumah ke warung, Bapak sudah ngos-ngosan belum?",
+   "Seberapa kuat Bapak melakukan kegiatan sehari-hari sebelum napas terasa berat? Misalnya naik satu lantai atau jalan beberapa ratus meter",
+   "tanya kelas fungsional NYHA, sesak kalau jalan berapa meter"
+  ],
+  "ortopnea_pnd": [
+   "Bapak tidur pakai bantal berapa? Pernah kebangun malam-malam karena napas terengah?",
+   "Malam hari tidurnya nyenyak Pak? Kepala perlu diganjal tinggi biar napas enak?",
+   "Apakah ada ortopnea atau PND?",
+   "Tidur harus agak duduk nggak Pak, atau pernah bangun tengah malam kehabisan napas?",
+   "Kalau berbaring datar, napas Bapak terasa tercekik tidak? Soalnya pada gagal jantung orang sering harus tidur dengan kepala ditinggikan dan terbangun malam hari"
+  ],
+  "edema_bb": [
+   "Pergelangan kaki Bapak sembab nggak belakangan ini? Timbangannya gimana?",
+   "Berat badan Bapak stabil? Ada kaki yang menggembung?",
+   "Sebulan terakhir ini kaki sempat membesar atau sepatu terasa sempit? Bobot Bapak berubah?",
+   "Pak, bobot badan beberapa minggu ini naik atau tidak? Tungkai ada yang sembab?",
+   "Saya ingin tahu apakah ada penumpukan cairan akhir-akhir ini, seperti kaki yang bengkak atau berat badan yang naik tiba-tiba"
+  ],
+  "pusing_td": [
+   "Pernah kliyengan atau mau jatuh waktu bangun dari duduk, Pak? Tensimeter Bapak biasanya menunjukkan angka berapa?",
+   "Kepala suka berat atau berkunang-kunang? Kalau Bapak ukur tensi sendiri, angkanya berapa?",
+   "Pusing nggak Pak, terus catatan tensi di rumah berapa",
+   "Apakah Bapak punya alat pengukur tensi sendiri? Hasil pembacaan terakhir kira-kira berapa, dan ada keluhan seperti kliyengan?",
+   "Pak, saya perlu tahu apakah ada gejala tekanan darah rendah seperti pusing atau berkunang-kunang, dan berapa angka tensimeter di rumah"
+  ],
+  "obat_sekarang": [
+   "Bapak sekarang minum obat apa saja? Dosisnya sudah lama sama atau pernah diubah?",
+   "Coba ceritakan resep yang Bapak jalani sekarang, terakhir kali dinaikkan takarannya kapan?",
+   "Pak, tablet apa saja yang masuk tiap hari? Takarannya sudah lama segitu terus?",
+   "Telaah daftar resep dan sudah berapa lama takarannya belum berubah",
+   "Bisa Bapak ceritakan semua obat jantung, obat gula, dan obat kolesterol yang sedang dijalani, dan kapan terakhir kali dosisnya disesuaikan?"
+  ],
+  "kepatuhan": [
+   "Pernah lupa minum obat nggak Pak? Biasanya yang mana yang kelewat?",
+   "Seberapa teratur Bapak minum obat? Ada dosis yang bolong?",
+   "Bapak disiplin ya minumnya? Pernah bolos satu-dua kali?",
+   "cek kepatuhan minum obat",
+   "Dalam seminggu terakhir, adakah tablet yang tidak sempat diminum, entah pagi atau sore, dan kalau ada, apa alasannya?"
+  ],
+  "efek_samping": [
+   "Setelah minum obat-obat ini ada keluhan yang mengganggu nggak Pak, misalnya batuk-batuk terus?",
+   "Apakah Bapak merasa ada reaksi yang tidak enak dari obatnya?",
+   "Ada batuk kering atau keluhan lain akibat obat?",
+   "Dari obat-obat ini, ada yang bikin Bapak tidak nyaman? Tenggorokan gatal terus atau badan lemas?",
+   "Saya ingin memastikan obat-obatnya cocok dengan tubuh Bapak. Ada keluhan baru sejak mulai obat, seperti tenggorokan gatal yang tidak hilang-hilang atau keluhan lain yang baru muncul?"
+  ],
+  "nsaid_jamu": [
+   "Selain obat dari dokter, Bapak pernah beli obat pegal atau minum jamu?",
+   "Kalau badan pegal-pegal biasanya minum apa Pak? Ada ramuan atau obat warung?",
+   "Ada obat bebas, jamu, atau vitamin yang Bapak konsumsi sendiri?",
+   "Tanya obat tambahan di luar resep, termasuk NSAID dan herbal",
+   "Kadang orang suka minum ibuprofen, jamu, atau suplemen tanpa resep karena pegal. Apakah Bapak juga begitu?"
+  ],
+  "alergi_angioedema": [
+   "Bapak punya alergi obat? Pernah wajah atau bibir tiba-tiba membengkak?",
+   "Riwayat hipersensitivitas obat, atau pernah muka sembab mendadak?",
+   "Ada alergi? Pernah bibir atau kelopak mata bengkak mendadak?",
+   "Pak, pernah tidak habis minum obat tertentu muncul biduran atau lidah dan mulut membesar mendadak?",
+   "Untuk keamanan sebelum saya mengganti obat, saya perlu tahu apakah Bapak pernah mengalami reaksi hebat terhadap suatu obat, seperti pembengkakan di muka, lidah, atau tenggorokan"
+  ],
+  "penyebab_riwayat": [
+   "Gagal jantung Bapak ini awalnya dari apa? Pernah dipasang ring atau dikateter?",
+   "Pernah ada riwayat serangan jantung atau tindakan pada pembuluh jantung sebelumnya, Pak?",
+   "Kenapa jantung Bapak bisa lemah begini? Pernah dipasang stent atau dioperasi?",
+   "Etiologi gagal jantungnya apa, ada prosedur sebelumnya?",
+   "Boleh ceritakan sejarah penyakit jantung Bapak dari awal, kenapa sampai pompa jantungnya melemah, dan apa saja yang pernah dikerjakan di rumah sakit?"
+  ],
+  "komorbid_ginjal": [
+   "Bapak punya kencing manis atau penyakit ginjal?",
+   "Ada riwayat gula darah tinggi, atau masalah dengan ginjalnya?",
+   "Penyakit penyerta lain, Pak? Misalnya gula atau ginjal?",
+   "Pernah disebut ginjalnya bermasalah atau harus cuci darah? Gula darahnya bagaimana selama ini?",
+   "Tanya komorbid DM dan ginjal"
+  ],
+  "diet": [
+   "Sehari-hari Bapak biasa makan apa? Sering jajan di luar?",
+   "Makannya gimana Pak, masak sendiri atau beli di luar?",
+   "Tanya kebiasaan makan",
+   "Menu harian Bapak biasanya seperti apa, nasi dengan lauk apa, dan seberapa sering makan di warung?",
+   "Saya ingin tahu asupan harian Bapak, mulai sarapan hingga makan malam, karena makanan juga memengaruhi kondisi jantung"
+  ],
+  "kekhawatiran": [
+   "Bapak ada yang dikhawatirkan soal pengobatan ini?",
+   "Apa yang mengganjal di pikiran Bapak tentang obat-obatnya?",
+   "Ada unek-unek atau ketakutan sama terapinya, Pak?",
+   "Gimana perasaan Bapak soal pengobatan, ada yang bikin cemas?",
+   "Sebelum kita bahas rencana obat, saya ingin dengar dulu dari Bapak: apa saja yang membuat Bapak ragu, takut, atau tidak nyaman dengan pengobatan selama ini?"
+  ],
+  "tanda_vital": [
+   "Suster, tolong ukur tensi berbaring, nadi, saturasi, dan timbang badan Bapak",
+   "Saya periksa tensi, denyut nadi, saturasi oksigen, dan berat badannya dulu ya",
+   "Cek tanda-tanda vital dan BB",
+   "Boleh minta hasil observasi hari ini: tekanan darah posisi tidur, laju nadi, SpO2, serta bobot terkini?",
+   "Bapak berbaring dulu ya, saya ukur tekanan darah, hitung nadi, pasang oksimeter di jari, lalu nanti Bapak naik timbangan untuk dicek berat badannya"
+  ],
+  "tensi_berdiri": [
+   "Sekarang Bapak coba bangun dan tegak, saya periksa tensinya lagi",
+   "Cek tensi berdiri",
+   "Tolong ukur tekanan darah pasien dalam posisi tegak",
+   "Bapak bangun pelan-pelan dari tempat tidur, saya cek apakah tekanannya turun waktu posisi tegak",
+   "Coba tes ortostatik ya Pak, berdiri dulu satu-dua menit"
+  ],
+  "fisik_volume": [
+   "Saya periksa leher dulu untuk lihat vena jugularis, lalu dengar paru dan jantung, dan lihat kaki ada bengkak atau tidak",
+   "Bapak tarik napas dalam ya, saya dengarkan paru-parunya, dan nanti saya tekan tulang kering untuk cek pembengkakan",
+   "Cek JVP, ronki, galop, pitting edema",
+   "Ayo kita nilai status cairan tubuh Bapak, apakah menumpuk di paru atau kaki",
+   "Coba lihat urat leher Pak, saya mau tahu tekanan vena, ada suara napas tambahan atau tidak, ada irama kuda di jantung, dan kaki membengkak"
+  ],
+  "akral_perfusi": [
+   "Saya pegang tangan dan kaki Bapak ya, dingin atau hangat",
+   "Cek akral",
+   "Saya tekan ujung kuku Bapak untuk lihat berapa lama warnanya kembali",
+   "Coba raba ujung-ujung jari, apakah dingin, pucat, dan aliran darah ke tepi lancar",
+   "Periksa suhu ekstremitas dan waktu isi kapiler untuk menilai aliran darah ke perifer"
+  ],
+  "lab_awal": [
+   "Tolong periksa darah hari ini: elektrolit, fungsi ginjal, HbA1c, dan NT-proBNP",
+   "Minta cek lab dulu ya, kalium, natrium, kreatinin, Hb, gula 3 bulan, sama BNP",
+   "Ambil darah ya Sus, saya mau data dasar sebelum mengubah obat: garam darah, ginjal, anemia, kontrol gula, dan penanda stres jantung",
+   "Lab dasar: K, Na, Cr, eGFR, Hb, A1c, NT-proBNP",
+   "Sebelum memutuskan terapi, saya perlu data laboratorium: elektrolit darah, fungsi ginjal, kadar hemoglobin, kontrol gula jangka panjang, serta penanda gagal jantung"
+  ],
+  "status_besi": [
+   "Tolong periksa ferritin dan saturasi transferin",
+   "Cek kadar besi dalam tubuh Bapak, jangan lupa TSAT",
+   "Saya curiga ada kekurangan zat besi tersembunyi, tolong diperiksa cadangan besinya",
+   "Minta pemeriksaan cadangan zat besi ya, defisiensi besi sering ditemukan pada gagal jantung",
+   "Cek iron status"
+  ],
+  "ekg": [
+   "Tolong rekam EKG 12 sadapan",
+   "Minta rekam jantung ya Suster",
+   "Saya mau lihat irama dan gambaran listrik jantung Bapak, tolong dibuatkan elektrokardiogram",
+   "ekg dulu",
+   "Bapak berbaring, kita pasang kabel-kabel di dada, tangan, dan kaki untuk rekam listrik jantung"
+  ],
+  "eko": [
+   "Saya mau lihat hasil echo yang terakhir",
+   "Hasil USG jantung empat bulan lalu bagaimana?",
+   "Coba buka hasil ekokardiografi yang sebelumnya",
+   "Berapa EF Bapak pada pemeriksaan terakhir, bagaimana ukuran bilik dan katupnya?",
+   "Bisa minta data pencitraan pompa jantung dari pemeriksaan sebelumnya? Saya ingin melihat fraksi ejeksi dan ukuran ruang jantung"
+  ],
+  "cath_ulang": [
+   "Kita jadwalkan kateterisasi jantung lagi sekarang juga",
+   "Saya minta angio koroner ulang segera",
+   "Sebaiknya Bapak dikateter lagi untuk melihat pembuluh jantungnya, hari ini",
+   "Siapkan cath lab, kita cek ring dan pembuluh koroner lagi",
+   "Saya khawatir ada penyempitan baru, jadi Bapak perlu pemeriksaan pembuluh darah jantung dengan kateter secepatnya"
+  ],
+  "edukasi_sglt2i": [
+   "Saya akan tambahkan obat golongan SGLT2 inhibitor. Efek sampingnya bisa infeksi jamur di kemaluan dan badan kekurangan cairan, jadi nanti ada aturan hari sakit",
+   "Obat gula-jantung baru ini, Pak, bisa bikin gatal atau infeksi di daerah kemaluan, dan kalau lagi muntah atau mencret harus dihentikan sementara",
+   "Pak, obat dari golongan gliflozin bisa membuat sering kencing dan kurang cairan. Kalau Bapak sakit dan tidak bisa makan minum, jangan diminum dulu dan hubungi saya",
+   "Jelaskan efek samping dapagliflozin dan sick day rules",
+   "Kalau nanti diare atau demam sehingga asupan berkurang, obat gliflozinnya ditunda dulu ya Pak"
+  ],
+  "hentikan_nsaid": [
+   "Pak, mulai sekarang ibuprofennya distop ya, dan jamu pegal linu jangan diminum lagi",
+   "Untuk pegal-pegal, jangan pakai obat nyeri yang biasa dibeli bebas, nanti cairan menumpuk dan ginjal terbebani. Coba kompres hangat atau parasetamol",
+   "Antinyeri warung itu tolong distop ya Pak, bahaya buat jantung dan ginjal Bapak",
+   "Setop ibuprofen dan jamu, saya carikan alternatif untuk pegalnya",
+   "Untuk pegal-pegalnya nanti kita carikan cara lain yang aman buat jantung, dan racikan herbal yang biasa Bapak minum juga sebaiknya jangan dilanjutkan"
+  ],
+  "nsaid_boleh": [
+   "Kalau pegalnya parah, ibuprofen sesekali tidak apa-apa Pak, asal jangan tiap hari",
+   "Boleh minum obat nyeri seperti itu kadang-kadang, tapi jangan keseringan ya",
+   "Obat antinyeri warung masih aman kok kalau cuma sekali-sekali",
+   "Ibuprofen boleh kalau perlu, dibatasi saja",
+   "Tidak perlu khawatir Pak, obat nyeri itu dua-tiga kali sebulan masih bisa ditoleransi, yang penting tidak rutin"
+  ],
+  "tanda_bahaya": [
+   "Segera telepon saya kalau Bapak kliyengan hebat sampai hampir jatuh, muka membesar, kencing berkurang banyak, atau muntah-muntah sampai tidak bisa minum, dan obatnya ditahan dulu",
+   "Segera ke rumah sakit kalau Bapak tiba-tiba lemas hampir jatuh, muka sembab, air seni berkurang drastis, atau tidak sanggup makan dan minum karena mual hebat",
+   "Ada beberapa gejala bahaya yang perlu Bapak waspadai setelah obat diubah, salah satunya muka sembab dan kepala melayang hebat. Kalau terjadi, jangan tunggu jadwal kontrol",
+   "Kasih tahu gejala yang wajib lapor",
+   "Kalau Bapak diare berat, tidak bisa minum, atau pingsan, jangan lanjut minum obat dulu dan segera kontak kami"
+  ],
+  "pantau_td": [
+   "Nanti kalau obat sudah dinaikkan, Bapak tolong ukur tensi di rumah tiap hari dan catat, terutama kalau terasa pusing atau lemas",
+   "Kita pantau tekanan darahnya ya Pak setelah ada perubahan obat, apakah turun berlebihan",
+   "Catat tensi harian di rumah, lapor kalau drop",
+   "Setelah ada tambahan obat Bapak mungkin merasa agak melayang. Tolong periksa tensimeter secara teratur supaya kita tahu kalau tekanan Bapak terlalu rendah",
+   "Saya rencanakan monitoring TD dan gejala hipotensi pasca titrasi"
+  ],
+  "pantau_lab": [
+   "Seminggu-dua minggu lagi kita ambil darah lagi untuk melihat kalium dan fungsi ginjal",
+   "Setelah obatnya diubah, kita cek ulang kadar kalium dan kreatinin ya",
+   "Jadwalkan lab ulang elektrolit dan ginjal pasca penyesuaian obat",
+   "Sesudah penambahan obat, Bapak perlu periksa darah lagi supaya ginjal dan kadar garam darah tetap aman",
+   "Nanti kita jadwalkan pemeriksaan darah ulang setelah obatnya diganti, ya Pak"
+  ],
+  "timbang_bb": [
+   "Tolong timbang badan tiap pagi sebelum sarapan, dan kabari kalau naik cepat",
+   "Setiap bangun tidur, naik timbangan dulu ya Pak, catat angkanya",
+   "Pantau bobot harian, kalau naik 2 kg dalam 3 hari lapor ke saya",
+   "Kenaikan bobot yang cepat itu tanda cairan menumpuk, jadi tolong dipantau di timbangan tiap hari dan dilaporkan ke saya",
+   "Nanti di rumah, timbangannya dipakai tiap pagi sesudah buang air kecil, ya Pak, hasilnya dicatat"
+  ],
+  "jadwal_kontrol": [
+   "Bapak kontrol lagi satu sampai dua minggu ke depan ya",
+   "Kita ketemu lagi dua minggu lagi, cocok Pak?",
+   "Bapak datang ke poli lagi minggu depan atau dua minggu lagi, nanti kita lihat hasilnya",
+   "Buat jadwal kunjungan ulang 1-2 minggu",
+   "Supaya aman dengan perubahan obat ini, saya ingin bertemu Bapak lagi dalam waktu dekat, kira-kira sepuluh sampai empat belas hari lagi, hari apa Bapak bisa?"
+  ],
+  "edukasi_garam": [
+   "Bapak sebaiknya kurangi makanan asin dan bersantan kalau makan di warung",
+   "Garamnya dikurangi ya Pak, jangan banyak lauk asin dan kuah santan",
+   "Batasi natrium, hindari ikan asin dan gulai",
+   "Kalau jajan di luar, pilih yang tidak terlalu asin, minta kuahnya dipisah, dan kurangi masakan bersantan supaya cairan tidak menumpuk",
+   "Soal makan, tolong hati-hati sama rasa gurih dan asin, termasuk lauk kering dan kuah gulai"
+  ],
+  "edukasi_aktivitas": [
+   "Bapak sebaiknya rutin berolahraga ringan, misalnya jalan pagi, dan ikut program rehab jantung",
+   "Tetap bergerak ya Pak, jalan kaki pelan-pelan tiap hari lebih baik daripada diam saja",
+   "Olahraga teratur dan rehabilitasi kardiak dianjurkan",
+   "Saya akan merujuk Bapak ke program latihan terawasi untuk pasien jantung, supaya otot dan stamina membaik tanpa memaksa jantung",
+   "Jangan takut bergerak, Pak. Mulai dari jalan santai lima belas menit, tambah pelan-pelan, atau ikut senam jantung sehat"
+  ],
+  "edukasi_rokok": [
+   "Pak, ada kebiasaan mengisap tembakau atau tidak? Kalau ada, sebaiknya dihentikan",
+   "Ada kebiasaan ngerokok atau pakai vape, Pak? Itu sebaiknya dihindari",
+   "Tanya status merokok, anjurkan berhenti",
+   "Apakah Bapak perokok aktif, atau tinggal dengan perokok? Asap rokok sangat memperburuk jantung",
+   "Soal tembakau, Bapak ada kebiasaan itu? Kalau ada, kita bantu berhenti, kalau tidak, pertahankan"
+  ],
+  "jelaskan_alasan": [
+   "Jadi Pak, tiap obat ini punya tugas sendiri: ada yang melindungi pompa jantung, ada yang menjaga ginjal, dan semuanya membuat Bapak lebih panjang umur dan jarang masuk rumah sakit",
+   "Saya terangkan satu-satu ya kenapa obat ini perlu, supaya Bapak paham gunanya buat jangka panjang",
+   "Obat-obatnya itu seperti tim, Pak, saling menguatkan, bukan sekadar menambah-nambah",
+   "Saya jelaskan kegunaan masing-masing tablet dan manfaatnya untuk bertahun-tahun ke depan, pakai bahasa sehari-hari",
+   "Bapak mungkin bertanya kenapa obatnya banyak. Setiap obat bekerja di jalur yang berbeda untuk menguatkan jantung dan memperlambat kerusakannya, jadi hasilnya lebih baik kalau digabung"
+  ],
+  "jawab_ginjal": [
+   "Bapak tidak perlu terlalu takut soal ginjal, kami akan cek fungsi ginjalnya berkala dan obatnya dinaikkan pelan-pelan",
+   "Soal ginjal, tenang Pak, darahnya kita periksa rutin dan dosisnya naik sedikit-sedikit",
+   "Kekhawatiran Bapak soal ginjal itu wajar. Kita pasang pengaman: laboratorium dipantau, perubahan obat dilakukan satu per satu",
+   "Ginjal aman, kita awasi terus, obat ditambah sedikit demi sedikit",
+   "Saya paham Bapak takut ginjalnya rusak. Karena itu kami tidak mengubah semuanya sekaligus, dan kami akan memeriksa fungsi ginjal secara teratur sebagai pengaman"
+  ],
+  "jawab_biaya": [
+   "Untuk BPJS-nya saya belum bisa pastikan Pak, nanti saya tanyakan ke farmasi dulu",
+   "Ditanggung atau tidaknya obat itu, saya sendiri belum tahu, jadi saya cek dulu ya dan tidak mau memberi janji",
+   "Mengenai pembiayaan obat baru, saya perlu konfirmasi ke bagian farmasi dulu, jadi saya belum bisa menjamin",
+   "Tanya farmasi dulu soal jaminan, saya tidak berani janji",
+   "Pertanyaan Bapak soal biaya itu penting; jujur saya tidak tahu pastinya, akan saya cari tahu dan kabari Bapak, tanpa menjanjikan yang belum jelas"
+  ],
+  "janji_bpjs": [
+   "Tenang Pak, semua obat barunya pasti ditanggung BPJS",
+   "Bapak tidak usah pikir biaya, dijamin gratis semua lewat BPJS",
+   "Saya pastikan seluruh obat tambahan ini masuk tanggungan BPJS, Bapak tidak akan bayar sepeser pun",
+   "Pasti ditanggung kok Pak",
+   "Soal biaya aman, obat-obat yang saya resepkan hari ini semuanya ada di daftar penjaminan, Bapak tenang saja"
+  ],
+  "teach_back": [
+   "Supaya saya yakin penjelasan tadi jelas, coba Bapak ceritakan kembali rencananya dengan kata-kata Bapak sendiri",
+   "Tolong Bapak ulangi pakai bahasa Bapak, tadi saya bilang apa saja yang harus dilakukan?",
+   "Boleh Bapak jelaskan balik ke saya apa yang akan dilakukan di rumah?",
+   "Teach back, minta pasien mengulang",
+   "Biar tidak ada yang terlewat, saya ingin dengar dari Bapak sendiri bagaimana Bapak akan menjalankan semua yang kita bicarakan tadi"
+  ],
+  "rangkum_sepakat": [
+   "Jadi kesimpulannya, rencana kita hari ini sudah jelas ya Pak, Bapak setuju?",
+   "Saya ringkas ya rencana kita hari ini supaya jelas",
+   "Oke, intinya begitu ya. Kita sepakat dengan rencana ini?",
+   "Rangkum rencana, cek pasien setuju",
+   "Sebelum selesai, saya rekap dulu semua yang kita putuskan hari ini dan tanya apakah Bapak sepakat dengan jadwalnya"
+  ]
+ },
+ "keluarga": [],
+ "negatif": [
+  "Wah ramai sekali ya poli hari ini",
+  "Tadi Bapak ke sini naik apa, macet nggak di jalan?",
+  "Apakah Bapak merasakan nyeri dada waktu beraktivitas?",
+  "Bapak sudah pernah vaksin influenza atau pneumokokus?",
+  "Tolong jadwalkan tes treadmill untuk Bapak",
+  "Bapak minum alkohol atau kopi berlebihan?",
+  "Bapak jualan apa di pasar, dan berapa jam berdiri tiap hari?",
+  "hmm eh anu itu apa tadi ya"
+ ],
+ "ganda": [
+  {
+   "ucapan": "Sesak kalau jalan berapa jauh Pak, terus tidurnya pakai bantal berapa?",
+   "aksi": [
+    "gejala_aktivitas",
+    "ortopnea_pnd"
+   ]
+  },
+  {
+   "ucapan": "Saya ukur tensi dan nadinya dulu, lalu saya periksa paru dan kaki Bapak",
+   "aksi": [
+    "tanda_vital",
+    "fisik_volume"
+   ]
+  },
+  {
+   "ucapan": "Tolong rekam EKG, sama saya mau lihat hasil echo yang terakhir",
+   "aksi": [
+    "ekg",
+    "eko"
+   ]
+  },
+  {
+   "ucapan": "Pak, pernah lupa minum obat? Ada batuk atau reaksi lain karena obatnya?",
+   "aksi": [
+    "kepatuhan",
+    "efek_samping"
+   ]
+  },
+  {
+   "ucapan": "Ibuprofennya distop ya Pak, garamnya dikurangi, dan tiap pagi tolong ditimbang",
+   "aksi": [
+    "hentikan_nsaid",
+    "edukasi_garam",
+    "timbang_bb"
+   ]
+  },
+  {
+   "ucapan": "Saya minta cek kalium dan kreatinin, sama ferritin dan saturasi transferin sekalian",
+   "aksi": [
+    "lab_awal",
+    "status_besi"
+   ]
+  }
+ ],
+ "isian": [
+  {
+   "ucapan": "Kesan HFrEF, EF 30%, CMP iskemik, GDMT belum optimal. Pilar: ARNI atau ACEi, BB, MRA, SGLT2i. Hari ini start SGLT2i dulu; kunjungan depan tambah MRA setelah K dan eGFR oke, uptitrasi bisoprolol, switch ke ARNI dengan washout, cek ferritin dan TSAT, dan reevaluasi EF untuk pertimbangan ICD. Furosemid hanya bila ada kongesti, sekarang euvolemik.",
+   "bidang": {
+    "diagnosis": "hfref_belum",
+    "golongan": [
+     "arni_acei_arb",
+     "bb",
+     "mra",
+     "sglt2i"
+    ],
+    "langkah_hari_ini": [
+     "sglt2i"
+    ],
+    "rencana_berikutnya": [
+     "mra_syarat",
+     "bb_titrasi",
+     "arni_jeda",
+     "cek_besi",
+     "evaluasi_perangkat"
+    ],
+    "diuretik": "kongesti"
+   }
+  },
+  {
+   "ucapan": "HFrEF dengan terapi yang masih suboptimal. Hari ini saya mulai dapagliflozin dan titrasi bisoprolol naik pelan-pelan. MRA dan ganti ke sacubitril-valsartan kita jadwalkan kunjungan berikutnya, MRA setelah labnya memenuhi syarat dan ARNI setelah washout dari ramipril. Furosemid prn saja, pasien euvolemik.",
+   "bidang": {
+    "diagnosis": "hfref_belum",
+    "langkah_hari_ini": [
+     "sglt2i",
+     "bb_titrasi"
+    ],
+    "rencana_berikutnya": [
+     "mra_syarat",
+     "arni_jeda"
+    ],
+    "diuretik": "kongesti"
+   }
+  },
+  {
+   "ucapan": "Hari ini tambah SGLT2i sama naikkan dosis bisoprolol saja dulu.",
+   "bidang": {
+    "langkah_hari_ini": [
+     "sglt2i",
+     "bb_titrasi"
+    ]
+   }
+  },
+  {
+   "ucapan": "Kunjungan berikutnya cek status besi dan nilai ulang EF setelah terapi optimal untuk pertimbangan ICD oleh kardiolog.",
+   "bidang": {
+    "rencana_berikutnya": [
+     "cek_besi",
+     "evaluasi_perangkat"
+    ]
+   }
+  },
+  {
+   "ucapan": "Pasien tidak sesak berat jadi saya anggap sudah optimal. Dasarnya digoksin dan diuretik. Furosemid rutin tiap hari. Hari ini langsung semuanya, SGLT2i, MRA, ARNI, dan naikkan bisoprolol sekaligus.",
+   "bidang": {
+    "diagnosis": "hfref_optimal",
+    "golongan": [
+     "digoksin",
+     "diuretik_dasar"
+    ],
+    "langkah_hari_ini": [
+     "semua"
+    ],
+    "diuretik": "rutin"
+   }
+  },
+  {
+   "ucapan": "Euvolemik dan tidak ada kongesti, jadi furosemid tidak perlu rutin. Bukan ARNI langsung hari ini, ramipril belum diganti. SGLT2i ditambahkan hari ini.",
+   "bidang": {
+    "diuretik": "kongesti",
+    "langkah_hari_ini": [
+     "sglt2i"
+    ]
+   }
+  }
+ ]
+}

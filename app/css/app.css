@@ -293,3 +293,32 @@ summary { cursor: pointer; font-weight: 600; }
   .kotak, .ringkasan, .tabel-bungkus { box-shadow: none; }
   .sticky-ringkas { position: static; }
 }
+
+/* ---------- mode tes: percakapan, suara, pengaturan ---------- */
+.sr-saja { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.kecil { font-size: .8rem; }
+.percakapan { list-style: none; margin: 0; padding: 0; max-height: 56vh; overflow-y: auto; display: flex; flex-direction: column; gap: .5rem; }
+.gelembung { max-width: 90%; padding: .5rem .8rem; border-radius: 14px; white-space: pre-line; overflow-wrap: anywhere; }
+.gelembung .kecil { display: block; font-size: .72rem; opacity: .8; margin-bottom: .1rem; }
+.gelembung.anda { align-self: flex-end; background: var(--aksen); color: var(--aksen-teks); border-bottom-right-radius: 4px; }
+.gelembung.pasien { align-self: flex-start; background: var(--permukaan-2); border: 1px solid var(--garis); border-bottom-left-radius: 4px; }
+.gelembung.alat { align-self: flex-start; background: var(--permukaan); border: 1px dashed var(--garis-kuat); font-size: .9rem; }
+.gelembung.sistem { align-self: center; background: var(--bahaya-bg); color: var(--bahaya); font-weight: 600; font-size: .9rem; text-align: center; }
+.input-ucapan { display: flex; flex-direction: column; gap: .5rem; }
+.ucapan { width: 100%; font: inherit; padding: .6rem .7rem; border: 1px solid var(--garis-kuat); border-radius: 8px; background: var(--permukaan); color: var(--teks); resize: vertical; min-height: 4.5rem; }
+.ucapan:disabled { opacity: .6; }
+.baris-tombol { display: flex; gap: .5rem; flex-wrap: wrap; }
+.tombol.mic.aktif { background: var(--bahaya); border-color: var(--bahaya); color: #fff; animation: denyut 1.2s ease-in-out infinite; }
+@keyframes denyut { 0%, 100% { box-shadow: 0 0 0 0 rgba(179, 38, 30, .45); } 50% { box-shadow: 0 0 0 8px rgba(179, 38, 30, 0); } }
+.opsi-suara { display: flex; flex-direction: column; gap: .25rem; }
+.status-tes { min-height: 1.4rem; margin: 0; }
+.alat-tes { margin-top: 1rem; border-top: 1px solid var(--garis); padding-top: .75rem; }
+.kotak-setuju { background: var(--peringatan-bg); border: 1px solid var(--peringatan); border-radius: 8px; padding: .6rem .8rem; margin: .75rem 0; }
+.pengaturan .kotak { margin-bottom: 1rem; }
+.bidang-pengaturan { margin: .5rem 0 .75rem; }
+.ruang-tes .kolom-log .percakapan { max-height: 56vh; }
+@media (min-width: 1101px) { .ruang-tes .kolom-log .percakapan { max-height: calc(100vh - 240px); } .ruang-tes .ada-widget .kolom-log .percakapan { max-height: 40vh; } }
+@media (prefers-reduced-motion: reduce) { .tombol.mic.aktif { animation: none; } }
+/* mode tes: di layar sempit percakapan di atas, kotak ketik di bawah; jawaban terbaru hanya untuk pembaca layar */
+.ruang-tes .respons-terbaru { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; padding: 0; margin: 0; }
+@media (max-width: 1100px) { .ruang-tes .kolom-log { order: 2; } .ruang-tes .kolom-aksi { order: 3; } .ruang-tes .percakapan { max-height: 48vh; } }

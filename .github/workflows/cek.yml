@@ -22,3 +22,9 @@ jobs:
         run: python3 -I tools/buat_data.py --cek
       - name: Interaksi konsisten dengan checklist
         run: node tools/cek_interaksi.mjs
+      - name: Data ucapan sinkron dengan sumbernya
+        run: python3 -I tools/buat_ucapan.py --cek
+      - name: Resolver ucapan offline memenuhi ambang (leave-one-out)
+        run: node tools/cek_resolver.mjs
+      - name: Modul LLM dan proxy (server tiruan, tanpa kunci API)
+        run: node tools/uji_llm.mjs
