@@ -159,6 +159,9 @@ try {
   cek(teks.includes(lokasi.respons.slice(0, 30)), 'pertanyaan lokasi dijawab dengan skrip lokasi');
   cek(!teks.includes(sesak.respons.slice(0, 20)) && !(await page.locator('body').innerText()).includes(sesak.respons), 'jawaban yang tidak ditanyakan (sesak) tidak muncul di mana pun');
   cek((await jam(page)) === '07:48', 'biaya waktu aksi lokasi (12 dtk) dikenakan: ' + (await jam(page)));
+  await page.waitForFunction(() => window.__suara.diucapkan.length >= 1);
+  const lisan1 = await page.evaluate(() => window.__suara.diucapkan[0]);
+  cek(/Di sini/.test(lisan1) && !/[()]|mengepalkan/.test(lisan1), 'suara pasien tidak membacakan petunjuk gerak dalam kurung: ' + JSON.stringify(lisan1));
   await ucap(page, 'kucing makan ikan di dapur');
   teks = await teksPercakapan(page);
   cek(/kurang mengerti|belum paham|bisa diulang/i.test(teks), 'ucapan tak dikenal → pasien tidak paham');
@@ -192,6 +195,24 @@ try {
   cek(teks.includes('Belum bisa dilakukan saat ini'), 'aksi yang belum memenuhi syarat dijawab netral tanpa petunjuk');
   cek(!/pad|monitor|Pasang/.test(teks.replace('Anda', '')), 'jawaban penolakan tidak membocorkan syarat');
   cek(await jam(page) === '07:57', 'penolakan memakan 3 dtk');
+  await page.context().close();
+
+  /* ---------- kebocoran kartu pasien (S12) ---------- */
+  console.log('Kartu pasien tidak membocorkan jawaban (S12)');
+  page = await halamanBaru();
+  await page.goto(URL_APP + '#/tes/12');
+  await page.waitForSelector('.briefing');
+  let kartu = await page.locator('.briefing').innerText();
+  cek(!/dialisis dua kali|melewatkan|tidak teraba|Tidak normal/i.test(kartu.replace(/Anda dokter[\s\S]*?Tugas/i, '')), 'briefing S12 tidak menampilkan temuan yang harus ditanyakan');
+  await page.click('button:has-text("Mulai tes")');
+  await page.waitForSelector('.ruang-tes');
+  kartu = await page.locator('.kolom-pasien').innerText();
+  cek(!/melewatkan|lemas sejak kemarin|Nadi karotis|Tidak teraba|Napas: Tidak/i.test(kartu), 'kartu pasien S12 di tes tidak memuat riwayat dialisis, nadi, atau napas');
+  cek(/gagal ginjal kronik|hemodialisis/i.test(kartu), 'kartu pasien S12 tetap memuat informasi dari instruksi pintu');
+  await page.context().close();
+  page = await halamanBaru();
+  await mulaiTes(page, '01');
+  cek((await page.locator('.kolom-pasien .chip.vital').count()) === 5, 'S01: lima tanda vital yang tertulis di instruksi pintu tetap tampil');
   await page.context().close();
 
   /* ---------- suara ---------- */

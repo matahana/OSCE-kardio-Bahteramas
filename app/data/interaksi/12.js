@@ -61,7 +61,7 @@
   }
 
   g.OSCE.daftar('12', {
-    pasien: { nama: 'Bapak Surya (62 tahun)', ringkas: 'Pasien PGK dengan hemodialisis, lemas sejak kemarin, melewatkan dua sesi dialisis; ditemukan tidak responsif', keadaan: 'Telentang di tempat tidur, tidak responsif. Kompresi dada sedang dilakukan perawat; troli darurat dan defibrilator di sisi tempat tidur. Anda pemimpin tim.' },
+    pasien: { nama: 'Bapak Surya (62 tahun)', ringkas: 'Pasien PGK dengan hemodialisis, lemas sejak kemarin, melewatkan dua sesi dialisis; ditemukan tidak responsif', ringkasTes: 'Pasien gagal ginjal kronik dengan hemodialisis; ditemukan tidak responsif', keadaan: 'Telentang di tempat tidur, tidak responsif. Kompresi dada sedang dilakukan perawat; troli darurat dan defibrilator di sisi tempat tidur. Anda pemimpin tim.' },
     tandaVital: [['Kesadaran', 'Tidak responsif'], ['Napas', 'Tidak normal'], ['Nadi karotis', 'Tidak teraba'], ['Kompresi', 'Berlangsung (perawat)']],
     waktu: 480,
     petunjuk: 'Anda pemimpin tim: ucapkan perintah lewat tab di bawah. Jam berjalan menurut biaya tiap perintah; satu siklus RJP dipadatkan menjadi ± 45 detik. Irama berubah menurut jumlah siklus dan terapi Anda. Dosis tidak dinilai.',

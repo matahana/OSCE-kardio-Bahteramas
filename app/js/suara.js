@@ -27,6 +27,7 @@
   // Menyederhanakan teks agar enak dibacakan suara sintetis.
   function untukUcapan(teks) {
     var t = String(teks == null ? '' : teks);
+    t = t.replace(/\([^)]*\)/g, ' '); // petunjuk gerak/keadaan dalam kurung bukan ucapan pasien
     t = t.replace(/\bmmHg\b/g, 'milimeter merkuri').replace(/\bx\/menit\b/g, 'kali per menit').replace(/°C/g, ' derajat Celsius')
       .replace(/SpO₂|SpO2/g, 'saturasi oksigen').replace(/mg\/dL/g, 'miligram per desiliter').replace(/mmol\/L/g, 'milimol per liter')
       .replace(/(\d+)\s*\/\s*(\d+)/g, '$1 per $2').replace(/%/g, ' persen').replace(/\bdtk\b/g, 'detik')
