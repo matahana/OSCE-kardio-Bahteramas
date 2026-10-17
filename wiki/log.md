@@ -224,3 +224,24 @@ Hanya ditambah (append-only), terbaru di bawah. Format entri: `## [tanggal] jeni
 **Hasil:** tidak ada PR terbuka selain PR wiki kecil ini; `overview`, `open-items`, dan `environment` dikoreksi (sebelumnya menulis Pages belum aktif).
 
 **Belum selesai:** pengguna membuka URL situs untuk memastikan tampilan; sisanya tidak berubah dari lanjutan 8.
+
+## [2026-10-17] sesi 2 (lanjutan 11) | Mode tes: ucapan bebas, LLM via internet, suara
+
+**Permintaan:** setelah pertanyaan "mengapa aplikasinya bukan interaktif (ketik/suara)?" dan opsi yang saya ajukan, pengguna menjawab: "boleh LLM lewat internet, lanjut buatkan suara. kenapa untuk tes masih seperti latihan? buat untuk tes, jawaban hanya muncul saat ditanya, dan jika tidak ditanya maka tidak muncul jawabannya". (Permintaan "aktifkan GitHub Pages" diulang; Pages sudah aktif sejak 13 Okt.)
+
+**Tindakan (branch `claude/happy-darwin-oxpyko`, PR #6 draft):**
+- **Engine:** `bolehDilakukan`, `tambahJawaban` (isian form bertahap dari ucapan; biaya form sekali), `catatTambahan` (ucapan tak dipahami).
+- **`app/js/resolver.js`** (offline): normalisasi, leksikon domain, IDF, margin antar-aksi, keluarga aksi (cek_irama_1..5), kalimat majemuk, ekstraksi isian sederhana.
+- **`app/js/llm.js`**: Claude Haiku 5.5 lewat `fetch` (kunci pengguna di `sessionStorage` atau proxy), keluaran JSON terstruktur, validasi ketat, pagar terhadap ucapan yang mengarahkan model, cadangan offline. **`tools/proxy-llm/`** (Cloudflare Worker + README).
+- **`app/js/suara.js`**: mikrofon `id-ID` dan suara pasien (Web Speech API), mode percakapan suara.
+- **`app/js/ujian.js` + `ui.js`**: tes tanpa menu (briefing dengan persetujuan privasi, ruang percakapan, widget tetap, form diucapkan bebas atau formulir pilihan sebagai cadangan, penolakan netral, hasil tanpa kunci + transkrip), halaman **Pengaturan**, rute `#/tes/NN`, `#/tes-sesi/NN`, `#/pengaturan`.
+- **Data:** 5 parafrase per aksi untuk 14 stasiun (2.309 kalimat) ditulis lima subagen; `tests/ucapan/`, generator `tools/buat_ucapan.py`, `app/data/ucapan.js`.
+- **Uji:** `tools/cek_resolver.mjs` (leave-one-out, di CI), `tools/uji_llm.mjs` (server tiruan; 54 asersi, di CI), `tests/e2e_tes.mjs` (61 asersi, Chromium; tiruan suara dan API), `tools/cek_llm.mjs` (evaluator LLM sungguhan untuk pemilik; `--simulasi` menguji kabelnya).
+
+**Hasil terukur:** resolver offline: 48% benar, 13,5% salah pilih, 38% tidak dipahami, majemuk recall 89%/presisi 96,5%, 89% negatif ditolak (kalimat uji ditulis LLM; leksikon disetel dengan melihat data, jadi agak optimistis). e2e latihan tetap 425 lulus; e2e tes 61 lulus. Mengucapkan label tiap langkah ideal lewat jalur offline memberi 96–100% (uji pipa, bukan uji pemahaman).
+
+**Yang TIDAK terverifikasi:** respons model sungguhan (tidak ada kunci API), pengenalan ucapan dan suara sungguhan (hanya tiruan), proxy di Cloudflare sungguhan, dan perilaku pada kandidat sungguhan.
+
+**Keputusan:** D39–D45. D14 menjadi bersyarat (LLM dan mikrofon opsional mengirim data keluar hanya setelah diaktifkan dan disetujui).
+
+**Belum selesai:** lihat [open-items](open-items.md) (ukur LLM sungguhan, pilot, uji suara nyata, proxy, koreksi skor oleh penguji).

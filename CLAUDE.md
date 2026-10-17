@@ -26,7 +26,8 @@ assets/ekg/               gambar EKG (belum ada; syaratnya di README folder itu)
 templates/                kerangka stasiun baru
 referensi/README.md       guideline dan pustaka (terverifikasi PubMed)
 app/                      aplikasi web statis; data/stasiun-data.js = HASIL GENERATOR (jangan disunting tangan)
-tests/e2e.mjs            uji end-to-end Chromium (Playwright)
+tests/e2e.mjs            uji end-to-end Chromium (Playwright); tests/e2e_tes.mjs = mode tes (suara dan API tiruan)
+tests/ucapan/            parafrase ucapan per aksi (data uji dan sumber app/data/ucapan.js)
 tools/                    cek_skor.py, buat_data.py (generator), cek_interaksi.mjs
 .github/workflows/cek.yml CI untuk tiga pemeriksaan tanpa browser
 ```
@@ -51,9 +52,10 @@ tools/                    cek_skor.py, buat_data.py (generator), cek_interaksi.m
 - Checklist hanya ada di `stasiun/*.md`. Setelah mengubah markdown stasiun: `python3 -I tools/buat_data.py` dan commit hasilnya. Jangan menyunting `app/data/stasiun-data.js`.
 - Isi interaksi (pertanyaan, respons, form, widget, pemetaan skor) ada di `app/data/interaksi/NN.js`; panduan lengkap di [`docs/aplikasi.md`](docs/aplikasi.md). Respons pasien harus konsisten dengan skrip SP di markdown stasiun.
 - Stasiun baru = markdown + generator + `interaksi/NN.js` + `<script>` di `app/index.html` + pembaruan `wiki/stations.md`. Stasiun yang belum punya interaksi tetap boleh ada di bank (beranda: "Segera hadir"; `cek_interaksi.mjs` melaporkannya tanpa gagal, `--ketat` menggagalkannya).
-- Sebelum commit perubahan aplikasi, jalankan: `python3 -I tools/cek_skor.py`, `python3 -I tools/buat_data.py --cek`, `node tools/cek_interaksi.mjs`, dan `node tests/e2e.mjs` (Playwright; jalur dan trik jam di `wiki/environment.md`). Semua harus lulus.
+- Sebelum commit perubahan aplikasi, jalankan: `python3 -I tools/cek_skor.py`, `python3 -I tools/buat_data.py --cek`, `node tools/cek_interaksi.mjs`, `python3 -I tools/buat_ucapan.py --cek`, `node tools/cek_resolver.mjs`, `node tools/uji_llm.mjs`, `node tests/e2e.mjs`, dan `node tests/e2e_tes.mjs` (Playwright; jalur dan trik jam di `wiki/environment.md`). Semua harus lulus.
 - Klaim klinis baru di aplikasi (alasan "tidak tepat/berisiko", dosis, ambang) dicatat di `wiki/guidelines-status.md` sebagai belum terverifikasi sampai dicek.
-- Aplikasi harus tetap jalan dari `file://` (skrip klasik, tanpa modul ES, tanpa CDN, tanpa fetch).
+- Aplikasi harus tetap jalan dari `file://` (skrip klasik, tanpa modul ES, tanpa CDN). Satu-satunya pemakaian jaringan adalah LLM opsional di `app/js/llm.js` (mati secara bawaan; ucapan hanya dikirim bila pengguna mengaktifkannya dan menyetujui) dan Web Speech API peramban; jangan menambah pemanggilan jaringan lain. Tidak boleh ada kunci API di repositori.
+- Mode tes: jawaban pasien selalu dari skrip stasiun; LLM hanya memetakan ucapan ke id aksi/isian dan keluarannya divalidasi. Ubah prompt/skema LLM hanya bersama `tools/uji_llm.mjs`; ubah resolver offline bersama `tools/cek_resolver.mjs`. Setelah mengubah `tests/ucapan/*.json`: `python3 -I tools/buat_ucapan.py`.
 
 ## Operasi wiki
 

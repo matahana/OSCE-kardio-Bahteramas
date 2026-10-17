@@ -103,3 +103,10 @@ Tool `mcp__PubMed__*` bersifat deferred; muat dengan ToolSearch (`select:mcp__Pu
 python3 -I tools/cek_skor.py            # cek jumlah skor semua stasiun (kode keluar 1 bila tidak cocok)
 git -C /home/user/osce-kardio-bahteramas status --short
 ```
+
+## Mode tes: catatan alat (17 Oktober 2026)
+
+- `api.anthropic.com` dapat dijangkau dari sesi (preflight CORS `OPTIONS` tanpa kunci dijawab 200 dan mengizinkan header `x-api-key`, `anthropic-version`, `anthropic-dangerous-direct-browser-access`). **Tidak ada kunci API** di sesi (`ANTHROPIC_API_KEY` kosong, `ant` tidak terpasang), jadi tidak ada panggilan model nyata; uji memakai server tiruan lokal (`tools/uji_llm.mjs`) dan `page.route` di Playwright.
+- Chromium headless punya `SpeechRecognition` dan `speechSynthesis` bawaan: tiruan harus menimpa dengan `Object.defineProperty(window, ...)` (penugasan biasa diabaikan atau kalah oleh nama tanpa prefiks). Lihat `tests/e2e_tes.mjs`.
+- Data ucapan (`tests/ucapan/*.json`) disusun oleh lima subagen paralel (model sonnet). Subagen berbagi folder scratchpad dan saling menimpa skrip bantu bernama sama; beri tiap subagen nama berkas unik. Hasil diperiksa dengan `tools/cek_resolver.mjs` (id valid, ukuran, akurasi).
+- `node tools/cek_resolver.mjs` ±25 dtk (2.309 kalimat × 5 lipatan); cache tokenisasi di `resolver.js` penting untuk kecepatan.

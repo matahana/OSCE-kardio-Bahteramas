@@ -24,6 +24,14 @@ Berurutan prioritas. Coret yang selesai dan catat di [log](log.md).
 - [ ] Uji coba waktu S12 di aplikasi: siklus RJP dipadatkan ≈ 45 dtk (D37); periksa apakah pemadatan itu wajar bagi kandidat atau sebaiknya jam S12 diubah.
 - [ ] Pertimbangkan pemeriksaan otomatis jumlah QRS pada EKG sintetis (08, 14) terhadap laju di `cek_interaksi.mjs`; saat ini laju diperiksa lewat tangkapan layar dan uji e2e.
 
+- [ ] **Mode tes (17 Okt 2026): ukur LLM sungguhan.** Jalankan `ANTHROPIC_API_KEY=... node tools/cek_llm.mjs --n=120` dan putuskan model/prompt; sesi pengembangan tidak punya kunci sehingga jalur LLM hanya diuji dengan server tiruan (`tools/uji_llm.mjs`).
+- [ ] **Pilot mode tes dengan mahasiswa**: ketepatan pemetaan ucapan, kelayakan biaya 3 dtk untuk ucapan tak dipahami, kenyamanan suara; data parafrase ditulis LLM dan belum mewakili kandidat. Ekspor transkrip membantu memperkaya `tests/ucapan`.
+- [ ] **Uji suara nyata** di Chrome/Edge desktop dan Android (uji otomatis hanya memakai tiruan Web Speech API); periksa akurasi pengenalan istilah medis berbahasa Indonesia.
+- [ ] **Pasang dan uji proxy** (`tools/proxy-llm/README.md`) di Cloudflare bila peserta tidak boleh memegang kunci; pasang rate limiting; ganti kode akses tiap ujian.
+- [ ] Penguji dapat **mengoreksi skor dari transkrip** (saat ini transkrip hanya dibaca); pertimbangkan ekspor transkrip ke lembar penguji.
+- [ ] Ujian berisiko tinggi tanpa pengawasan memerlukan resolver dan skor di sisi server (skrip stasiun terunduh di peramban).
+- [ ] Opsi lanjutan: LLM lokal di peramban (tanpa internet) sebagai pengganti resolver offline yang terbatas (48% benar pada uji internal).
+
 ## P1 — kelengkapan
 
 - [ ] Gambar EKG stasiun 02, 08, dan 14 (`assets/ekg/`, syarat di README folder itu): EKG anonim dengan lisensi jelas; tambah juga EKG untuk S06 (sinus takikardia, Q V1–V3) bila memakai gambar.
